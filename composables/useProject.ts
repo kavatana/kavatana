@@ -1,2 +1,7 @@
 import type { Project } from '~/types/content'
-export const useProject = (slug: string): Project | null => null
+import bayonhub from '~/content/projects/bayonhub.json'
+
+export const useProject = (slug: string): Project | null => {
+  const projects: Record<string, any> = { bayonhub }
+  return (projects[slug] as Project) || null
+}

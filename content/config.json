@@ -1,14 +1,13 @@
 {
   "name": "kavatana",
-  "tagline": "Founder-minded engineer.",
-  "description": "I take messy product ideas and turn them into real, shipped systems.",
+  "tagline": "Founder-engineer. I build products from idea to working system.",
+  "description": "Backend, full-stack, DevOps, product architecture, and AI-powered tools — owned end to end.",
   "url": "https://kavatana.me",
-  "email": "hello@kavatana.me",
+  "email": "kavatanaa@gmail.com",
   "social": {
     "github": "https://github.com/kavatana",
-    "linkedin": "https://linkedin.com/in/kavatana"
+    "linkedin": "https://www.linkedin.com/in/ka-vatana-99b85440a/"
   },
-  "ogImage": "/og-image.jpg",
-  "analyticsId": "plausible-id",
-  "availabilityStatus": "open but selective"
+  "ogImage": "/images/og-default.png",
+  "availabilityStatus": "Open to the right opportunity"
 }

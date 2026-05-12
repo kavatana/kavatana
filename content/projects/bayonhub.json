@@ -2,24 +2,69 @@
   "id": "bayonhub",
   "title": "BayonHub",
   "tagline": "Khmer-first classifieds marketplace for Cambodia",
-  "status": "live",
+  "status": "in-progress",
   "featured": true,
   "featuredOrder": 1,
   "year": 2024,
-  "endYear": 2024,
   "role": "Founder & Product Engineer",
-  "stack": ["Nuxt 3", "TypeScript", "NestJS", "PostgreSQL", "Redis", "Tailwind CSS", "Docker", "Cloudflare", "Vercel"],
-  "coverImage": "/images/bayonhub-cover.jpg",
-  "coverImageAlt": "BayonHub Marketplace Interface",
-  "screenshots": [],
-  "liveUrl": "https://bayonhub.com",
-  "repoUrl": "",
-  "problem": "Cambodia has no credible modern classifieds platform. Existing options are fragmented, low-trust, not designed for Khmer-speaking users.",
-  "constraints": ["solo execution", "no team", "no funding", "Khmer-language market with unique trust dynamics", "marketplace cold-start problem", "mobile-first Cambodian user behavior"],
-  "myRole": "Founder & Product Engineer — owned everything from product architecture to frontend, backend, DevOps, UX decisions, and monetization structure",
-  "solution": "Built connected product foundations first (search, listing flows, account/profile, trust, messaging) before any surface polish",
-  "callout": "Phased build discipline",
-  "tradeoffs": ["chose believable system coherence over flashy isolated features", "chose phased foundations over pretending to have a finished product early"],
-  "results": ["full buyer-to-seller flow live", "trust system with verification features", "Plus monetization structure", "SEO-canonical architecture", "10+ major product areas built and connected"],
-  "nextSteps": ["continued hardening", "listing quality systems", "discovery improvements", "re-engagement features"]
+  "stack": [
+    "Nuxt 3",
+    "TypeScript",
+    "NestJS",
+    "PostgreSQL",
+    "Redis",
+    "Tailwind CSS",
+    "Docker",
+    "Cloudflare",
+    "Vercel"
+  ],
+  "coverImage": "/images/projects/bayonhub/cover.webp",
+  "coverImageAlt": "BayonHub platform preview",
+  "screenshots": [
+    {
+      "src": "/images/projects/bayonhub/screenshots/01.webp",
+      "alt": "Listing detail page",
+      "caption": "Listing detail page showcasing rich product information and seller actions."
+    },
+    {
+      "src": "/images/projects/bayonhub/screenshots/02.webp",
+      "alt": "Search and discovery interface",
+      "caption": "Search and discovery interface."
+    },
+    {
+      "src": "/images/projects/bayonhub/screenshots/03.webp",
+      "alt": "Seller profile and trust indicators",
+      "caption": "Seller profile highlighting trust indicators and active listings."
+    },
+    {
+      "src": "/images/projects/bayonhub/screenshots/04.webp",
+      "alt": "Monetization upgrade flow",
+      "caption": "Upgrade flow for Plus monetization tiers."
+    }
+  ],
+  "problem": "Cambodia has no credible modern classifieds platform. Existing options are fragmented, low-trust, and not designed for Khmer-speaking users.",
+  "constraints": [
+    "Solo execution with no team or funding",
+    "Khmer-language market with unique trust dynamics",
+    "Marketplace cold-start problem",
+    "Mobile-first Cambodian user behavior"
+  ],
+  "myRole": "I owned everything from product architecture to frontend, backend, DevOps, UX decisions, and monetization structure as the solo Founder and Product Engineer.",
+  "solution": "Built a connected product foundation prioritizing search, listing flows, account management, trust indicators, and messaging before any surface polish.",
+  "tradeoffs": [
+    "Chose believable system coherence over flashy isolated features.",
+    "Chose phased foundations over pretending to have a finished product early."
+  ],
+  "results": [
+    "Delivered a full buyer-to-seller flow live in production.",
+    "Engineered a trust system incorporating phone and seller verification.",
+    "Implemented a tiered Plus monetization structure.",
+    "Established an SEO-canonical architecture for listings.",
+    "Built and connected 10+ major product areas."
+  ],
+  "nextSteps": [
+    "Continued hardening of core flows.",
+    "Implementation of listing quality systems.",
+    "Discovery improvements and re-engagement features."
+  ]
 }

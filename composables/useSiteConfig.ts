@@ -1,2 +1,3 @@
 import type { SiteConfig } from '~/types/content'
-export const useSiteConfig = (): SiteConfig | null => null
+import config from '~/content/config.json'
+export const useSiteConfig = (): SiteConfig => config as SiteConfig

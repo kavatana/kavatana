@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "backend",
+    "title": "Backend Systems",
+    "description": "Building robust, scalable server-side architectures, APIs, and databases.",
+    "items": ["NestJS, PostgreSQL, Redis", "Docker, Nginx", "REST APIs, CI/CD"]
+  },
+  {
+    "id": "product",
+    "title": "Product & Architecture",
+    "description": "Designing and developing complete systems with clean code and maintainable structure.",
+    "items": ["Nuxt 3, TypeScript, Tailwind CSS", "System design", "Full-stack product building", "Product strategy"]
+  },
+  {
+    "id": "devops",
+    "title": "DevOps & Infrastructure",
+    "description": "Automating deployments, managing infrastructure, and ensuring production reliability.",
+    "items": ["Docker, Cloudflare, Vercel", "Deployment pipelines", "Production stability", "Cross-environment configuration"]
+  },
+  {
+    "id": "ai",
+    "title": "AI & Automation",
+    "description": "Integrating intelligent workflows and agents into functional products.",
+    "items": ["OpenAI API", "RAG pipelines", "AI agent workflows", "LangChain, chatbot products", "Tool-use agents"]
+  }
+]

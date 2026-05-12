@@ -1,1 +1,8 @@
-[]
+[
+  { "id": "marketing", "label": "Marketing Websites" },
+  { "id": "full-stack", "label": "Full-Stack Web Apps" },
+  { "id": "admin", "label": "Admin Dashboards" },
+  { "id": "saas", "label": "SaaS MVPs" },
+  { "id": "chatbot", "label": "AI Chatbot Products" },
+  { "id": "agents", "label": "AI Agent Tools" }
+]

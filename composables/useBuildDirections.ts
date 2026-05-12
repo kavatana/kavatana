@@ -1,2 +1,3 @@
 import type { BuildDirection } from '~/types/content'
-export const useBuildDirections = (): BuildDirection[] => []
+import buildDirections from '~/content/build-directions.json'
+export const useBuildDirections = (): BuildDirection[] => buildDirections as BuildDirection[]

@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": "bayonhub",
+    "type": "project",
+    "title": "Founder & Product Engineer",
+    "organization": "BayonHub",
+    "startYear": 2024,
+    "description": "Built Khmer-first classifieds marketplace from scratch, spanning Nuxt 3 frontend, NestJS backend, and DevOps."
+  }
+]
