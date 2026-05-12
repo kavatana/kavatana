@@ -1,0 +1,14 @@
+{
+  "name": "kavatana",
+  "tagline": "Founder-minded engineer.",
+  "description": "I take messy product ideas and turn them into real, shipped systems.",
+  "url": "https://kavatana.me",
+  "email": "hello@kavatana.me",
+  "social": {
+    "github": "https://github.com/kavatana",
+    "linkedin": "https://linkedin.com/in/kavatana"
+  },
+  "ogImage": "/og-image.jpg",
+  "analyticsId": "plausible-id",
+  "availabilityStatus": "open but selective"
+}

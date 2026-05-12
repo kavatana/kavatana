@@ -1,0 +1,29 @@
+# Component Surface Map
+
+- **AppHeader**
+  - **Pages**: All pages
+  - **Data**: Navigation links, current route state
+- **AppFooter**
+  - **Pages**: All pages
+  - **Data**: Current year, navigation links, social links
+- **AppNav** (Mobile Drawer)
+  - **Pages**: All pages (mobile view)
+  - **Data**: Navigation links, current route state
+- **BayonHub Flagship Card**
+  - **Pages**: `/` (Home), `/projects`
+  - **Data**: `Project` (BayonHub)
+- **Capability List**
+  - **Pages**: `/` (Home), `/about`
+  - **Data**: `CapabilityGroup[]`
+- **Build Directions Block**
+  - **Pages**: `/` (Home), `/projects`
+  - **Data**: `BuildDirection[]`
+- **Timeline**
+  - **Pages**: `/about`
+  - **Data**: `TimelineEntry[]`
+- **CTA Block**
+  - **Pages**: `/`, `/about`, `/projects`, `/projects/bayonhub`
+  - **Data**: CTA text and link destination
+- **Contact Form**
+  - **Pages**: `/contact`
+  - **Data**: Form inputs (name, email, message)
