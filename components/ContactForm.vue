@@ -83,8 +83,9 @@ const submitForm = async () => {
   try {
     const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT || ''
     if (!endpoint) {
-      await new Promise(r => setTimeout(r, 1000))
-      status.value = 'success'
+      status.value = 'error'
+      errorMessage.value = 'Contact form is not connected yet. Please email me directly.'
+      isLoading.value = false
       return
     }
     

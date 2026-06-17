@@ -17,6 +17,11 @@ export default defineNuxtConfig({
       meta: [
         { name: 'theme-color', content: '#0c0c0f' }
       ],
+      link: [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap' }
+      ],
       script: process.env.NODE_ENV === 'production' ? [
         {
           src: 'https://plausible.io/js/pa-6-q4Va4bm5e9BpiJU-RZS.js',
@@ -28,10 +33,10 @@ export default defineNuxtConfig({
       ] : []
     }
   },
-  ssr: false,
+  ssr: true,
   site: {
     url: 'https://kavatana.me',
-    name: 'kavatana'
+    name: 'Ka Vatana'
   },
   modules: ['@nuxtjs/sitemap'],
   nitro: {

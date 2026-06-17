@@ -33,15 +33,15 @@ import { usePortfolioConfig } from '~/composables/usePortfolioConfig'
 const config = usePortfolioConfig()
 
 useHead({
-  title: 'Contact · kavatana',
+  title: 'Contact · Ka Vatana',
   meta: [
     { name: 'description', content: 'Get in touch for opportunities or collaborations.' },
-    { property: 'og:title', content: 'Contact · kavatana' },
+    { property: 'og:title', content: 'Contact · Ka Vatana' },
     { property: 'og:description', content: 'Get in touch for opportunities or collaborations.' },
     { property: 'og:url', content: 'https://kavatana.me/contact' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Contact · kavatana' },
+    { name: 'twitter:title', content: 'Contact · Ka Vatana' },
     { name: 'twitter:description', content: 'Get in touch for opportunities or collaborations.' }
   ],
   link: [
