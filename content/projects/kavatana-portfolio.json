@@ -1,0 +1,33 @@
+{
+  "id": "kavatana-portfolio",
+  "title": "Kavatana Portfolio",
+  "tagline": "This website — my personal developer portfolio",
+  "status": "live",
+  "statusLabel": "Live Project",
+  "featured": false,
+  "year": 2025,
+  "role": "Designer & Builder",
+  "stack": [
+    "Nuxt 4",
+    "Vue 3",
+    "TypeScript",
+    "Vanilla CSS",
+    "Plausible Analytics"
+  ],
+  "problem": "I needed a place to show who I am, what I'm building, and what I'm learning — without overstating my experience or understating my ambition.",
+  "myRole": "I designed and built this site myself, making decisions about stack, content structure, design tokens, accessibility, and SEO.",
+  "whatIBuilt": [
+    "A Nuxt 4 portfolio with a design token CSS system.",
+    "JSON-driven content model so text is separate from code.",
+    "Mobile-responsive layout with accessible navigation.",
+    "SEO metadata, Open Graph tags, sitemap, and structured data."
+  ],
+  "whatILearned": [
+    "How to structure a real Nuxt 4 project with composables.",
+    "CSS design tokens and how to maintain a consistent design system.",
+    "Accessibility foundations: skip links, focus traps, reduced-motion.",
+    "The importance of honest personal branding over impressive-sounding copy."
+  ],
+  "liveUrl": "https://kavatana.me",
+  "githubUrl": "https://github.com/kavatana/kavatana"
+}

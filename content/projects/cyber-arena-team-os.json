@@ -1,0 +1,28 @@
+{
+  "id": "cyber-arena-team-os",
+  "title": "Cyber Arena Team OS",
+  "tagline": "Local cybersecurity & CTF learning workspace",
+  "status": "local-only",
+  "statusLabel": "Local Learning Project",
+  "featured": false,
+  "year": 2025,
+  "role": "Solo learner & builder",
+  "stack": [
+    "Python",
+    "CLI",
+    "Shell scripting"
+  ],
+  "problem": "I wanted a structured way to practice cybersecurity concepts, document CTF challenges, and build good security study habits.",
+  "myRole": "Built and maintained a local Python CLI workspace for structured security study and learning organisation. Runs only on my local machine — not a deployed app.",
+  "whatIBuilt": [
+    "A Python CLI tool for tracking CTF challenges and progress.",
+    "Structured note-taking and documentation workflows.",
+    "A personal security study log."
+  ],
+  "whatILearned": [
+    "Basic Python CLI application structure.",
+    "How CTF challenges work and how to approach them systematically.",
+    "Good habits for documenting technical learning."
+  ],
+  "repoNote": "Local-only project. Not deployed. Repository is private."
+}

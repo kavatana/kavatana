@@ -2,25 +2,30 @@ export interface Project {
   id: string
   title: string
   tagline: string
-  status: 'live' | 'archived' | 'in-progress'
+  status: 'live' | 'archived' | 'in-progress' | 'local-only' | 'concept'
+  statusLabel?: string
   featured: boolean
   featuredOrder?: number
   year: number
   endYear?: number
   role: string
-  stack: string[]
-  coverImage: string
-  coverImageAlt: string
+  stack?: string[]
+  coverImage?: string
+  coverImageAlt?: string
   screenshots?: Screenshot[]
   liveUrl?: string
-  repoUrl?: string
+  githubUrl?: string
+  repoNote?: string
   problem: string
-  constraints: string[]
-  myRole: string
-  solution: string
+  context?: string
+  constraints?: string[]
+  myRole?: string
+  solution?: string
   callout?: string
-  tradeoffs: string[]
-  results: string[]
+  tradeoffs?: string[]
+  whatIBuilt?: string[]
+  whatILearned?: string[]
+  results?: string[]
   nextSteps?: string[]
 }
 
@@ -35,6 +40,7 @@ export interface CapabilityGroup {
   title: string
   description: string
   items: string[]
+  learningNote?: string
 }
 
 export interface BuildDirection {
@@ -44,7 +50,7 @@ export interface BuildDirection {
 
 export interface TimelineEntry {
   id: string
-  type: 'role' | 'project' | 'milestone'
+  type: 'education' | 'environment' | 'role' | 'project' | 'milestone'
   title: string
   organization?: string
   startYear: number
@@ -52,10 +58,20 @@ export interface TimelineEntry {
   description: string
 }
 
+export interface LearningCategory {
+  id: string
+  category: string
+  items: string[]
+}
+
 export interface SiteConfig {
   name: string
+  fullName?: string
   tagline: string
+  subtitle?: string
   description: string
+  role?: string
+  availability?: string
   url: string
   email: string
   social: {
@@ -70,4 +86,6 @@ export interface SiteConfig {
 export interface AboutContent {
   bio: string[]
   role: string
+  aiNote?: string
+  currentFocus?: string[]
 }

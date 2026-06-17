@@ -1,0 +1,52 @@
+[
+  {
+    "id": "frontend",
+    "category": "Frontend Development",
+    "items": [
+      "Vue 3 & Nuxt 4",
+      "TypeScript basics",
+      "Responsive CSS & design systems",
+      "Component thinking & reusability"
+    ]
+  },
+  {
+    "id": "backend",
+    "category": "Backend & APIs",
+    "items": [
+      "Node.js & NestJS (learning)",
+      "PostgreSQL & Redis (learning)",
+      "REST API design patterns",
+      "Docker & basic deployment"
+    ]
+  },
+  {
+    "id": "ai",
+    "category": "AI-Assisted Development",
+    "items": [
+      "Using Claude & ChatGPT in workflows",
+      "Writing better prompts",
+      "Reviewing and verifying AI output",
+      "When not to trust AI suggestions"
+    ]
+  },
+  {
+    "id": "product",
+    "category": "Product Thinking",
+    "items": [
+      "Identifying real user problems",
+      "MVP scoping",
+      "User flow design",
+      "Cambodia-first product context"
+    ]
+  },
+  {
+    "id": "discipline",
+    "category": "Engineering Discipline",
+    "items": [
+      "GitHub hygiene & clean commits",
+      "Security awareness basics",
+      "Documentation habits",
+      "Reading and understanding other people's code"
+    ]
+  }
+]

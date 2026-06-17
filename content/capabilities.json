@@ -1,26 +1,27 @@
 [
   {
+    "id": "frontend",
+    "title": "Frontend Development",
+    "description": "Building responsive, accessible interfaces with modern web technologies.",
+    "items": ["Vue 3 & Nuxt 4", "TypeScript", "Vanilla CSS & design systems", "Responsive / mobile-first UI"]
+  },
+  {
     "id": "backend",
-    "title": "Backend Systems",
-    "description": "Building robust, scalable server-side architectures, APIs, and databases.",
-    "items": ["NestJS, PostgreSQL, Redis", "Docker, Nginx", "REST APIs, CI/CD"]
+    "title": "Backend & APIs",
+    "description": "Learning to build server-side systems, databases, and APIs that connect to real user flows.",
+    "items": ["Node.js & NestJS (learning)", "PostgreSQL & Redis (learning)", "REST API design", "Docker & deployment basics"]
   },
   {
     "id": "product",
     "title": "Product & Architecture",
-    "description": "Designing and developing complete systems with clean code and maintainable structure.",
-    "items": ["Nuxt 3, TypeScript, Tailwind CSS", "System design", "Full-stack product building", "Product strategy"]
-  },
-  {
-    "id": "devops",
-    "title": "DevOps & Infrastructure",
-    "description": "Automating deployments, managing infrastructure, and ensuring production reliability.",
-    "items": ["Docker, Cloudflare, Vercel", "Deployment pipelines", "Production stability", "Cross-environment configuration"]
+    "description": "Thinking about user problems first, then choosing the architecture that solves them simply.",
+    "items": ["User flow design", "System design basics", "Full-stack product building", "Cambodia-first product thinking"]
   },
   {
     "id": "ai",
-    "title": "AI & Automation",
-    "description": "Integrating intelligent workflows and agents into functional products.",
-    "items": ["OpenAI API", "RAG pipelines", "AI agent workflows", "LangChain, chatbot products", "Tool-use agents"]
+    "title": "AI-Assisted Development",
+    "description": "Learning to use AI tools as a workflow accelerator — not a replacement for understanding.",
+    "items": ["Claude & ChatGPT workflows", "AI-assisted code review", "Prompt engineering basics", "Verifying AI output critically"],
+    "learningNote": "Actively learning — I use these tools carefully and verify the results."
   }
 ]

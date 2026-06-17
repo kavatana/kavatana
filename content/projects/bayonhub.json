@@ -1,12 +1,13 @@
 {
   "id": "bayonhub",
   "title": "BayonHub",
-  "tagline": "Khmer-first classifieds marketplace for Cambodia",
+  "tagline": "Khmer-first classifieds marketplace experiment for Cambodia",
   "status": "in-progress",
+  "statusLabel": "Active Learning Project",
   "featured": true,
   "featuredOrder": 1,
   "year": 2024,
-  "role": "Founder & Product Engineer",
+  "role": "Solo builder & learner",
   "stack": [
     "Nuxt 3",
     "TypeScript",
@@ -24,7 +25,7 @@
     {
       "src": "/images/projects/bayonhub/screenshots/01.webp",
       "alt": "Listing detail page",
-      "caption": "Listing detail page showcasing rich product information and seller actions."
+      "caption": "Listing detail page showing product information and seller actions."
     },
     {
       "src": "/images/projects/bayonhub/screenshots/02.webp",
@@ -33,38 +34,47 @@
     },
     {
       "src": "/images/projects/bayonhub/screenshots/03.webp",
-      "alt": "Seller profile and trust indicators",
-      "caption": "Seller profile highlighting trust indicators and active listings."
+      "alt": "Seller profile",
+      "caption": "Seller profile with active listings."
     },
     {
       "src": "/images/projects/bayonhub/screenshots/04.webp",
-      "alt": "Monetization upgrade flow",
-      "caption": "Upgrade flow for Plus monetization tiers."
+      "alt": "Upgrade flow",
+      "caption": "Upgrade flow for Plus tier experiment."
     }
   ],
-  "problem": "Cambodia has no credible modern classifieds platform. Existing options are fragmented, low-trust, and not designed for Khmer-speaking users.",
+  "problem": "Cambodia has no widely trusted, Khmer-friendly digital classifieds platform. I wanted to explore what one might look like.",
+  "context": "This is a solo learning project built to practice full-stack architecture, product flow design, and Cambodia-first product thinking. It is not a funded startup or launched business.",
   "constraints": [
-    "Solo execution with no team or funding",
-    "Khmer-language market with unique trust dynamics",
-    "Marketplace cold-start problem",
-    "Mobile-first Cambodian user behavior"
+    "Solo student project — no team or funding",
+    "Learning full-stack architecture while building",
+    "Designing for Khmer-language users and mobile-first behavior",
+    "Navigating the marketplace cold-start problem as a concept"
   ],
-  "myRole": "I owned everything from product architecture to frontend, backend, DevOps, UX decisions, and monetization structure as the solo Founder and Product Engineer.",
-  "solution": "Built a connected product foundation prioritizing search, listing flows, account management, trust indicators, and messaging before any surface polish.",
+  "myRole": "I built everything myself — frontend, backend, basic DevOps, and product decisions — as a learning exercise. Every part of it taught me something I didn't know before starting.",
+  "solution": "Built a foundational buyer-to-seller flow: search, listings, account management, and basic seller trust signals — focused on learning, not on launching.",
   "tradeoffs": [
-    "Chose believable system coherence over flashy isolated features.",
-    "Chose phased foundations over pretending to have a finished product early."
+    "Prioritized working flows over visual polish.",
+    "Phased the build to learn one layer at a time instead of doing everything at once."
   ],
-  "results": [
-    "Delivered a full buyer-to-seller flow live in production.",
-    "Engineered a trust system incorporating phone and seller verification.",
-    "Implemented a tiered Plus monetization structure.",
-    "Established an SEO-canonical architecture for listings.",
-    "Built and connected 10+ major product areas."
+  "whatIBuilt": [
+    "A buyer-to-seller listing flow with search and categories.",
+    "Basic account management and seller profile concept.",
+    "A simple trust indicator experiment (phone verification idea).",
+    "A tiered listing model as a monetization concept to explore."
   ],
+  "whatILearned": [
+    "How to structure a Nuxt + NestJS full-stack project from scratch.",
+    "Database schema design for a marketplace (users, listings, categories).",
+    "How to think about trust in two-sided marketplace products.",
+    "Why phased, connected flows matter more than isolated flashy features.",
+    "How Docker and Vercel work together for deployment.",
+    "How much harder building a real product is than following a tutorial."
+  ],
+  "repoNote": "Repository is private while I complete a security and code quality cleanup.",
   "nextSteps": [
-    "Continued hardening of core flows.",
-    "Implementation of listing quality systems.",
-    "Discovery improvements and re-engagement features."
+    "Continue cleaning up code and improving security.",
+    "Improve listing quality and discovery flows.",
+    "Write proper documentation for what I built and why."
   ]
 }
