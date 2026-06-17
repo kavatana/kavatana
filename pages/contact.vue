@@ -28,9 +28,9 @@
 </template>
 
 <script setup lang="ts">
-import { useSiteConfig } from '~/composables/useSiteConfig'
+import { usePortfolioConfig } from '~/composables/usePortfolioConfig'
 
-const config = useSiteConfig()
+const config = usePortfolioConfig()
 
 useHead({
   title: 'Contact · kavatana',

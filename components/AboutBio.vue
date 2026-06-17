@@ -16,9 +16,9 @@
 </template>
 
 <script setup lang="ts">
-import { useSiteConfig } from '~/composables/useSiteConfig'
+import { usePortfolioConfig } from '~/composables/usePortfolioConfig'
 import { useAbout } from '~/composables/useAbout'
-const config = useSiteConfig()
+const config = usePortfolioConfig()
 const about = useAbout()
 </script>
 

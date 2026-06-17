@@ -13,8 +13,8 @@
 </template>
 
 <script setup lang="ts">
-import { useSiteConfig } from '~/composables/useSiteConfig'
-const config = useSiteConfig()
+import { usePortfolioConfig } from '~/composables/usePortfolioConfig'
+const config = usePortfolioConfig()
 </script>
 
 <style scoped>
