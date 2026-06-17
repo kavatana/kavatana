@@ -24,7 +24,9 @@
   --color-accent-hover: hsl(217, 91%, 40%);
   --color-error: hsl(0, 72%, 51%);
   --color-success: hsl(142, 71%, 40%);
+}
 
+:root {
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   
@@ -55,4 +57,3 @@
 
   --transition-fast: 150ms ease;
   --transition-base: 200ms ease;
-}
