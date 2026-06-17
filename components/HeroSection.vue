@@ -19,7 +19,9 @@
     <div class="hero-right" aria-hidden="true">
       <div class="identity-card">
         <div class="card-header">
-          <div class="card-avatar">KV</div>
+          <div class="card-avatar">
+            <img src="/images/kavatana.webp" alt="Ka Vatana" class="avatar-img" />
+          </div>
           <div class="card-info">
             <span class="card-name">Ka Vatana</span>
             <span class="card-location">📍 Cambodia</span>
@@ -225,9 +227,16 @@ const config = usePortfolioConfig()
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
-  font-size: var(--text-sm);
   flex-shrink: 0;
+  overflow: hidden;
+  border: 2px solid var(--color-surface-2);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: var(--color-bg);
 }
 
 .card-info {

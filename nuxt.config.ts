@@ -22,15 +22,31 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap' }
       ],
-      script: process.env.NODE_ENV === 'production' ? [
+      script: [
         {
-          src: 'https://plausible.io/js/pa-6-q4Va4bm5e9BpiJU-RZS.js',
-          async: true
+          innerHTML: `
+            (function() {
+              try {
+                var stored = localStorage.getItem('theme');
+                if (stored === 'dark' || stored === 'light') {
+                  document.documentElement.setAttribute('data-theme', stored);
+                } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+                  document.documentElement.setAttribute('data-theme', 'light');
+                }
+              } catch (e) {}
+            })();
+          `
         },
-        {
-          innerHTML: 'window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()'
-        }
-      ] : []
+        ...(process.env.NODE_ENV === 'production' ? [
+          {
+            src: 'https://plausible.io/js/pa-6-q4Va4bm5e9BpiJU-RZS.js',
+            async: true
+          },
+          {
+            innerHTML: 'window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()'
+          }
+        ] : [])
+      ]
     }
   },
   ssr: true,
