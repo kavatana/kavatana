@@ -110,6 +110,19 @@ onUnmounted(() => {
   flex-direction: column;
   padding: var(--space-md);
   box-shadow: -4px 0 15px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%);
+  animation: slide-in 0.3s forwards ease-out;
+}
+
+@keyframes slide-in {
+  to { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-drawer {
+    animation: none;
+    transform: translateX(0);
+  }
 }
 
 .drawer-header {

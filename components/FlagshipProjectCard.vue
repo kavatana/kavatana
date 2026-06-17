@@ -1,32 +1,62 @@
 <template>
   <div class="flagship-card" v-if="project">
-    <div class="card-content">
+    <div class="card-top">
+      <div class="card-meta">
+        <span class="status-badge" :class="`status-${project.status}`">{{ project.statusLabel || project.status }}</span>
+        <span class="meta-year">{{ project.year }}</span>
+        <span class="meta-role">{{ project.role }}</span>
+      </div>
+      <h2 class="project-title">{{ project.title }}</h2>
+      <p class="project-tagline">{{ project.tagline }}</p>
+      <p class="project-context" v-if="project.context">{{ project.context }}</p>
+    </div>
+
+    <div class="card-body">
       <div class="card-left">
-        <h2 class="project-title">{{ project.title }}</h2>
-        <p class="project-tagline">{{ project.tagline }}</p>
-        
-        <div class="status-chip" v-if="project.status === 'in-progress'">
-          In Progress
+        <!-- Problem -->
+        <div class="detail-block">
+          <h3 class="detail-heading">The problem I explored</h3>
+          <p class="detail-text">{{ project.problem }}</p>
         </div>
-        
-        <div class="meta-row">
-          <span>{{ project.year }}{{ project.endYear ? '–' + project.endYear : '' }}</span>
-          <span>·</span>
-          <span>{{ project.role }}</span>
+
+        <!-- What I built -->
+        <div class="detail-block" v-if="project.whatIBuilt?.length">
+          <h3 class="detail-heading">What I built</h3>
+          <ul class="detail-list">
+            <li v-for="item in project.whatIBuilt" :key="item">{{ item }}</li>
+          </ul>
         </div>
-        
-        <div class="stack-chips">
-          <span v-for="tech in project.stack" :key="tech" class="stack-chip">{{ tech }}</span>
+
+        <!-- Stack -->
+        <div class="detail-block" v-if="project.stack?.length">
+          <h3 class="detail-heading">Stack</h3>
+          <div class="stack-chips">
+            <span v-for="tech in project.stack" :key="tech" class="stack-chip">{{ tech }}</span>
+          </div>
         </div>
-        
-        <NuxtLink :to="'/projects/' + project.id" class="case-study-link" aria-label="View BayonHub case study">
-          View full case study &rarr;
+
+        <!-- Repo note -->
+        <div class="repo-note" v-if="project.repoNote">
+          <span class="repo-icon" aria-hidden="true">🔒</span>
+          {{ project.repoNote }}
+        </div>
+
+        <NuxtLink :to="'/projects/' + project.id" class="case-study-link">
+          Full case study &rarr;
         </NuxtLink>
       </div>
-      
+
       <div class="card-right">
-        <!-- Mock UI Preview -->
-        <div class="mock-ui" aria-hidden="true">
+        <!-- Real screenshots if available, else mock UI -->
+        <div v-if="hasScreenshots && project.screenshots" class="screenshot-preview">
+          <img
+            :src="project?.screenshots?.[0]?.src"
+            :alt="project?.screenshots?.[0]?.alt"
+            class="screenshot-img"
+            loading="lazy"
+          />
+        </div>
+        <div v-else class="mock-ui" aria-hidden="true">
           <div class="mock-nav">
             <div class="mock-logo"></div>
             <div class="mock-nav-items">
@@ -43,6 +73,14 @@
             </div>
           </div>
         </div>
+
+        <!-- What I learned -->
+        <div class="learned-block" v-if="project.whatILearned?.length">
+          <h3 class="learned-heading">What I learned</h3>
+          <ul class="learned-list">
+            <li v-for="item in project.whatILearned" :key="item">{{ item }}</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -51,6 +89,7 @@
 <script setup lang="ts">
 import { useProject } from '~/composables/useProject'
 const project = useProject('bayonhub')
+const hasScreenshots = project?.screenshots && project.screenshots.length > 0
 </script>
 
 <style scoped>
@@ -61,21 +100,95 @@ const project = useProject('bayonhub')
   box-shadow: -3px 0 0 0 var(--color-accent);
   overflow: hidden;
   margin: var(--space-xl) 0;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
-.flagship-card:hover {
-  transform: translateY(-2px);
-  box-shadow: -3px 0 0 0 var(--color-accent-hover), 0 4px 12px rgba(0, 0, 0, 0.2);
+.card-top {
+  padding: var(--space-xl);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
 }
 
-.card-content {
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid currentColor;
+}
+
+.status-badge.status-in-progress {
+  color: hsl(43, 96%, 65%);
+  border-color: hsl(43, 96%, 65%);
+  background-color: hsl(43, 96%, 65%, 0.08);
+}
+
+.status-badge.status-live {
+  color: var(--color-success);
+  border-color: var(--color-success);
+  background-color: hsl(142, 71%, 45%, 0.08);
+}
+
+.status-badge.status-local-only {
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+}
+
+.meta-year,
+.meta-role {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+.meta-role::before {
+  content: '·';
+  margin-right: var(--space-xs);
+}
+
+.project-title {
+  font-size: var(--text-3xl);
+  color: var(--color-text-primary);
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.project-tagline {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.project-context {
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  margin: 0;
+  padding: var(--space-sm);
+  background-color: hsl(217, 91%, 64%, 0.08);
+  border-left: 2px solid var(--color-accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  line-height: 1.5;
+}
+
+/* Body */
+.card-body {
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: 1024px) {
-  .card-content {
+  .card-body {
     flex-direction: row;
   }
 }
@@ -85,7 +198,7 @@ const project = useProject('bayonhub')
   padding: var(--space-xl);
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: var(--space-lg);
 }
 
 .card-right {
@@ -94,8 +207,8 @@ const project = useProject('bayonhub')
   border-left: 1px solid var(--color-border);
   padding: var(--space-xl);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-lg);
 }
 
 @media (max-width: 1023px) {
@@ -105,36 +218,44 @@ const project = useProject('bayonhub')
   }
 }
 
-.project-title {
-  font-size: var(--text-3xl);
-  color: var(--color-text-primary);
-  font-weight: 800;
-  margin: 0;
-}
-
-.project-tagline {
-  font-size: var(--text-lg);
-  color: var(--color-text-secondary);
-  margin: 0;
-}
-
-.status-chip {
-  align-self: flex-start;
-  border: 1px solid var(--color-accent);
-  color: var(--color-text-primary);
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--radius-sm);
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-}
-
-.meta-row {
+/* Detail blocks */
+.detail-block {
   display: flex;
-  gap: var(--space-sm);
-  color: var(--color-text-muted);
-  font-size: var(--text-sm);
+  flex-direction: column;
+  gap: var(--space-xs);
 }
 
+.detail-heading {
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.detail-text {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.detail-list {
+  margin: 0;
+  padding-left: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-list li {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Stack */
 .stack-chips {
   display: flex;
   flex-wrap: wrap;
@@ -145,9 +266,28 @@ const project = useProject('bayonhub')
   background-color: var(--color-surface-1);
   border: 1px solid var(--color-border);
   color: var(--color-text-primary);
-  padding: 4px 8px;
+  padding: 3px 8px;
   border-radius: var(--radius-sm);
   font-size: var(--text-xs);
+  font-family: var(--font-mono);
+}
+
+/* Repo note */
+.repo-note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xs);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  background-color: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  line-height: 1.5;
+}
+
+.repo-icon {
+  flex-shrink: 0;
 }
 
 .case-study-link {
@@ -155,20 +295,64 @@ const project = useProject('bayonhub')
   color: var(--color-accent);
   text-decoration: none;
   font-weight: 600;
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   transition: color var(--transition-fast);
   display: inline-block;
-  padding-top: var(--space-sm);
+  align-self: flex-start;
 }
 
 .case-study-link:hover {
   color: var(--color-accent-hover);
 }
 
-/* Mock UI Preview */
+/* Screenshots */
+.screenshot-preview {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.screenshot-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* What I learned */
+.learned-block {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+}
+
+.learned-heading {
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.learned-list {
+  margin: 0;
+  padding-left: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.learned-list li {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Mock UI */
 .mock-ui {
   width: 100%;
-  max-width: 400px;
   background-color: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
@@ -193,10 +377,7 @@ const project = useProject('bayonhub')
   border-radius: var(--radius-sm);
 }
 
-.mock-nav-items {
-  display: flex;
-  gap: var(--space-xs);
-}
+.mock-nav-items { display: flex; gap: var(--space-xs); }
 
 .mock-nav-item {
   width: 16px;
@@ -233,17 +414,7 @@ const project = useProject('bayonhub')
   border: 1px solid var(--color-border);
 }
 
-.mock-title {
-  height: 8px;
-  width: 80%;
-  background-color: var(--color-text-secondary);
-  border-radius: var(--radius-sm);
-}
-
-.mock-price {
-  height: 8px;
-  width: 50%;
-  background-color: var(--color-accent);
-  border-radius: var(--radius-sm);
-}
+.mock-title { height: 8px; width: 80%; background-color: var(--color-text-secondary); border-radius: var(--radius-sm); }
+.mock-price { height: 8px; width: 50%; background-color: var(--color-accent); border-radius: var(--radius-sm); }
+.mock-line { height: 8px; border-radius: var(--radius-sm); }
 </style>
