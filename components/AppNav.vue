@@ -12,13 +12,24 @@
         <NuxtLink to="/projects" class="nav-link" active-class="active" @click="close">Projects</NuxtLink>
         <NuxtLink to="/about" class="nav-link" active-class="active" @click="close">About</NuxtLink>
         <NuxtLink to="/contact" class="nav-link" active-class="active" @click="close">Contact</NuxtLink>
+        <div class="nav-divider"></div>
+        <button class="nav-link theme-link" @click="toggleTheme">
+          <span v-if="theme === 'dark'">Switch to Light Mode</span>
+          <span v-else>Switch to Dark Mode</span>
+          <svg v-if="theme === 'dark'" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg v-else width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
       </nav>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onUnmounted, watch, nextTick } from 'vue'
+import { ref, onUnmounted, watch, nextTick, onMounted } from 'vue'
 
 const props = defineProps({
   isOpen: Boolean
@@ -26,6 +37,25 @@ const props = defineProps({
 
 const emit = defineEmits(['close'])
 const drawer = ref<HTMLElement | null>(null)
+const theme = ref('dark')
+
+onMounted(() => {
+  theme.value = document.documentElement.getAttribute('data-theme') || 'dark'
+  
+  window.addEventListener('theme-changed', ((e: CustomEvent) => {
+    theme.value = e.detail
+  }) as EventListener)
+})
+
+const toggleTheme = () => {
+  const newTheme = theme.value === 'dark' ? 'light' : 'dark'
+  theme.value = newTheme
+  document.documentElement.setAttribute('data-theme', newTheme)
+  localStorage.setItem('theme', newTheme)
+  
+  // Dispatch custom event for AppHeader sync
+  window.dispatchEvent(new CustomEvent('theme-changed', { detail: newTheme }))
+}
 
 const close = () => {
   emit('close')
@@ -154,5 +184,23 @@ onUnmounted(() => {
 
 .nav-link.active {
   color: var(--color-accent);
+}
+
+.nav-divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: var(--space-sm) 0;
+}
+
+.theme-link {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
 }
 </style>

@@ -1,11 +1,8 @@
 # Ka Vatana
 
-Founder-engineer building practical software for Cambodia.
+Year 1 Software Engineering student from Cambodia, learning to build practical software.
 
-I take rough product ideas and turn them into working systems: product flow,
-frontend, backend, data, deployment, and operating details. My work is focused
-on useful products with clear user value, especially Khmer-first and
-mobile-first experiences.
+I am learning how to take rough product ideas and turn them into working systems: frontend, backend, data, and deployment. My work is focused on learning by building, especially Khmer-first and mobile-first experiences.
 
 ## Current Focus
 
