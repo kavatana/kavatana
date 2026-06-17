@@ -19,15 +19,15 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'About · kavatana',
+  title: 'About · Ka Vatana',
   meta: [
     { name: 'description', content: 'Background, approach, and experience.' },
-    { property: 'og:title', content: 'About · kavatana' },
+    { property: 'og:title', content: 'About · Ka Vatana' },
     { property: 'og:description', content: 'Background, approach, and experience.' },
     { property: 'og:url', content: 'https://kavatana.me/about' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'About · kavatana' },
+    { name: 'twitter:title', content: 'About · Ka Vatana' },
     { name: 'twitter:description', content: 'Background, approach, and experience.' }
   ],
   link: [
