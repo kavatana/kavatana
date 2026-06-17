@@ -19,3 +19,6 @@ This checklist requires your final manual verification before officially announc
 - [x] Verified `og:url` structures for `https://kavatana.me` and `https://kavatana.me/projects/bayonhub`.
 - [x] Verified `@nuxtjs/sitemap` automatically constructs compliant `sitemap.xml` structure at `https://kavatana.me/sitemap.xml`.
 - [x] Verified `robots.txt` resolves valid rules at `https://kavatana.me/robots.txt`.
+- [x] Verified `npm run generate` produces zero errors and prerenders all key routes (/, /about, /projects, /projects/bayonhub, /contact).
+- [x] Verified `nuxt.config.ts` deployment configuration for Vercel + Plausible.
+
