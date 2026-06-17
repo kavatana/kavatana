@@ -9,9 +9,22 @@
 
 html, body {
   background-color: var(--color-bg);
+  background-image: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  background-repeat: no-repeat;
   color: var(--color-text-primary);
   font-family: var(--font-sans);
   height: 100%;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 ::-webkit-scrollbar {
