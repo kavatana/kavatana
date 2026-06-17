@@ -1,10 +1,11 @@
 <template>
   <header class="app-header">
     <AppContainer class="header-container">
-      <NuxtLink to="/" class="wordmark">kavatana</NuxtLink>
+      <NuxtLink to="/" class="wordmark">Ka Vatana</NuxtLink>
       
       <nav aria-label="Main navigation" class="desktop-nav">
         <NuxtLink to="/projects" class="nav-link" active-class="active">Projects</NuxtLink>
+        <NuxtLink to="/#now" class="nav-link" active-class="active">Now</NuxtLink>
         <NuxtLink to="/about" class="nav-link" active-class="active">About</NuxtLink>
         <NuxtLink to="/contact" class="nav-link" active-class="active">Contact</NuxtLink>
         <button class="theme-toggle" @click="toggleTheme" aria-label="Toggle theme">
@@ -62,7 +63,9 @@ const emit = defineEmits(['open-nav'])
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: var(--color-bg);
+  background-color: color-mix(in srgb, var(--color-bg) 85%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -74,16 +77,17 @@ const emit = defineEmits(['open-nav'])
 }
 
 .wordmark {
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
   color: var(--color-text-primary);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .desktop-nav {
   display: none;
-  gap: var(--space-md);
+  gap: var(--space-lg);
   align-items: center;
 }
 

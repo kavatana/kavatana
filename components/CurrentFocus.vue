@@ -1,5 +1,5 @@
 <template>
-  <section class="current-focus">
+  <section class="current-focus" id="now">
     <div class="focus-header">
       <span class="section-label">Now</span>
       <h2 class="section-title">What I'm working on</h2>
@@ -81,7 +81,7 @@ const focusItems = [
 .focus-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
 @media (min-width: 640px) {
@@ -98,43 +98,51 @@ const focusItems = [
 
 .focus-item {
   display: flex;
-  gap: var(--space-sm);
+  gap: var(--space-md);
   align-items: flex-start;
-  padding: var(--space-md);
+  padding: var(--space-lg);
   background-color: var(--color-surface-1);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  transition: border-color var(--transition-base);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: var(--shadow-card);
 }
 
 .focus-item:hover {
   border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.08);
 }
 
 .focus-icon {
-  font-size: var(--text-base);
+  font-size: var(--text-xl);
   color: var(--color-accent);
   flex-shrink: 0;
-  margin-top: 2px;
   font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
 }
 
 .focus-text {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
 .focus-title {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-primary);
   font-weight: 600;
   line-height: 1.4;
+  letter-spacing: -0.01em;
 }
 
 .focus-desc {
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
-  line-height: 1.5;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
 }
 </style>

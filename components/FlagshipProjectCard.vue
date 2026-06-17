@@ -118,29 +118,28 @@ const hasScreenshots = project?.screenshots && project.screenshots.length > 0
 }
 
 .status-badge {
-  padding: 3px 8px;
-  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  border-radius: 12px;
   font-size: var(--text-xs);
-  font-family: var(--font-mono);
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  border: 1px solid currentColor;
+  border: 1px solid transparent;
 }
 
 .status-badge.status-in-progress {
-  color: hsl(43, 96%, 65%);
-  border-color: hsl(43, 96%, 65%);
-  background-color: hsl(43, 96%, 65%, 0.08);
+  color: hsl(43, 96%, 45%);
+  background-color: hsl(43, 96%, 65%, 0.15);
 }
 
 .status-badge.status-live {
   color: var(--color-success);
-  border-color: var(--color-success);
-  background-color: hsl(142, 71%, 45%, 0.08);
+  background-color: hsl(142, 71%, 45%, 0.1);
 }
 
 .status-badge.status-local-only {
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface-2);
   border-color: var(--color-border);
 }
 
@@ -194,7 +193,7 @@ const hasScreenshots = project?.screenshots && project.screenshots.length > 0
 }
 
 .card-left {
-  flex: 1;
+  flex: 0 0 40%;
   padding: var(--space-xl);
   display: flex;
   flex-direction: column;
@@ -202,7 +201,7 @@ const hasScreenshots = project?.screenshots && project.screenshots.length > 0
 }
 
 .card-right {
-  flex: 1;
+  flex: 0 0 60%;
   background-color: var(--color-surface-1);
   border-left: 1px solid var(--color-border);
   padding: var(--space-xl);
@@ -279,11 +278,8 @@ const hasScreenshots = project?.screenshots && project.screenshots.length > 0
   gap: var(--space-xs);
   font-size: var(--text-xs);
   color: var(--color-text-muted);
-  background-color: var(--color-surface-1);
-  border: 1px solid var(--color-border);
-  padding: var(--space-sm);
-  border-radius: var(--radius-sm);
   line-height: 1.5;
+  margin-top: var(--space-sm);
 }
 
 .repo-icon {

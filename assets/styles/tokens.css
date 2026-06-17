@@ -1,29 +1,35 @@
 :root {
-  --color-bg: hsl(240, 13%, 5%);
-  --color-surface-1: hsl(240, 10%, 9%);
-  --color-surface-2: hsl(240, 9%, 12%);
-  --color-border: hsl(240, 8%, 18%);
-  --color-text-primary: hsl(0, 0%, 94%);
-  --color-text-secondary: hsl(240, 5%, 55%);
-  --color-text-muted: hsl(240, 5%, 38%);
+  --color-bg: hsl(220, 20%, 6%);
+  --color-surface-1: hsl(220, 15%, 12%);
+  --color-surface-2: hsl(220, 15%, 16%);
+  --color-border: hsl(220, 10%, 22%);
+  --color-text-primary: hsl(220, 10%, 94%);
+  --color-text-secondary: hsl(220, 10%, 65%);
+  --color-text-muted: hsl(220, 10%, 45%);
   --color-accent: hsl(217, 91%, 64%);
   --color-accent-hover: hsl(217, 91%, 72%);
   --color-error: hsl(0, 72%, 51%);
   --color-success: hsl(142, 71%, 45%);
+  
+  --shadow-card: inset 0 0 0 1px var(--color-border);
+  --shadow-featured: inset 0 0 0 1px var(--color-border), 0 0 20px rgba(59, 130, 246, 0.15);
 }
 
 :root[data-theme="light"] {
-  --color-bg: hsl(0, 0%, 100%);
-  --color-surface-1: hsl(240, 5%, 96%);
-  --color-surface-2: hsl(240, 5%, 92%);
-  --color-border: hsl(240, 6%, 86%);
-  --color-text-primary: hsl(240, 10%, 10%);
-  --color-text-secondary: hsl(240, 5%, 35%);
-  --color-text-muted: hsl(240, 5%, 45%);
+  --color-bg: hsl(220, 15%, 98%);
+  --color-surface-1: hsl(0, 0%, 100%);
+  --color-surface-2: hsl(220, 10%, 96%);
+  --color-border: hsl(220, 15%, 90%);
+  --color-text-primary: hsl(220, 20%, 12%);
+  --color-text-secondary: hsl(220, 10%, 40%);
+  --color-text-muted: hsl(220, 10%, 55%);
   --color-accent: hsl(217, 91%, 50%);
   --color-accent-hover: hsl(217, 91%, 40%);
   --color-error: hsl(0, 72%, 51%);
   --color-success: hsl(142, 71%, 40%);
+  
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05), inset 0 0 0 1px var(--color-border);
+  --shadow-featured: 0 12px 30px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--color-border);
 }
 
 :root {
@@ -48,12 +54,10 @@
   --space-2xl: 4rem;
   --space-3xl: 6rem;
 
-  --radius: 4px;
-  --radius-sm: 2px;
+  --radius: 12px;
+  --radius-sm: 6px;
   --radius-none: 0px;
-
-  --shadow-card: inset 0 0 0 1px var(--color-border);
-  --shadow-featured: inset 0 0 0 1px var(--color-border), -2px 0 0 0 var(--color-accent);
 
   --transition-fast: 150ms ease;
   --transition-base: 200ms ease;
+}
