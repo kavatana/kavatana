@@ -1,10 +1,19 @@
 {
   "bio": [
-    "I take messy product ideas and turn them into real, shipped systems. As a product engineer, my work spans frontend, backend, DevOps, and system architecture. I don't just write code; I own the product lifecycle from conception to production stability.",
-    "Over the course of my career, I've focused on building tools and systems that solve genuine problems. My approach is grounded in the belief that software should be robust, maintainable, and designed with the end user in mind. I favor practical, phased foundations over isolated, flashy features, ensuring that what I build can actually scale and evolve.",
-    "My methodology incorporates AI-augmented workflows as a force multiplier, allowing me to execute complex builds efficiently while maintaining high standards for code quality and system architecture. I'm not an AI enthusiast treating tools as toys, but an engineer using automation to accelerate shipping real products.",
-    "Currently, I'm building BayonHub, a Khmer-first classifieds marketplace for Cambodia. As the solo founder and engineer, I've owned every aspect of the build—from the Nuxt 3 and NestJS architecture to DevOps and product strategy. The platform tackles unique market constraints, including trust dynamics and mobile-first behaviors, prioritizing functional integrity and connected user flows over superficial polish.",
-    "When I engage with an opportunity, it's to solve hard problems and deliver working systems."
+    "I'm Ka Vatana — a Year 1 Software Engineering student from Cambodia. I learn by building things, and I'm currently figuring out full-stack web development, product thinking, and how to use AI tools responsibly while I study.",
+    "My approach is straightforward: pick a real problem, try to build something useful for it, and reflect on what I'm learning along the way. Right now that means working on BayonHub — a classifieds marketplace experiment designed for Khmer-speaking users. It's an active learning project, not a polished product, but building it has taught me more about architecture, user flows, and tradeoffs than any tutorial could.",
+    "I work with AI tools (Claude, ChatGPT, Cursor-style workflows) to help me research, plan, code, and review — but I'm learning to verify, understand, and take responsibility for every result. AI helps me move faster; understanding what I'm building keeps it from becoming a liability.",
+    "I'm connected with Angkor Byte, a Cambodia × Japan company environment where I'm learning how engineering teams think about products, processes, and international collaboration. It's given me context I wouldn't get from studying alone.",
+    "I'm not trying to look like a senior developer. I'm trying to become a serious one — one honest commit at a time."
   ],
-  "role": "Founder & Engineer"
+  "role": "Year 1 Software Engineering Student · Cambodia",
+  "aiNote": "I use AI tools to help research, plan, code, and review — while learning to understand and verify the result myself.",
+  "currentFocus": [
+    "Full-stack fundamentals: HTML, CSS, TypeScript, Vue/Nuxt",
+    "Backend basics: APIs, databases, auth, deployment",
+    "GitHub hygiene and security awareness",
+    "AI-assisted development workflows",
+    "Product thinking for Cambodia-first problems",
+    "Learning to read and understand code, not just generate it"
+  ]
 }

@@ -1,7 +1,11 @@
 {
   "name": "kavatana",
-  "tagline": "Founder-engineer. I build products from idea to working system.",
-  "description": "Backend, full-stack, DevOps, product architecture, and AI-powered tools — owned end to end.",
+  "fullName": "Ka Vatana",
+  "tagline": "Building real software while learning how to build better software.",
+  "subtitle": "I'm learning full-stack development, AI-assisted workflows, and product thinking by building practical web projects — starting with BayonHub, a Khmer-first marketplace experiment for Cambodia.",
+  "description": "Ka Vatana is a Year 1 Software Engineering student from Cambodia learning full-stack development, AI-assisted workflows, and product building through practical web projects.",
+  "role": "Year 1 Software Engineering Student · Cambodia",
+  "availability": "Open to internships, collaborations, and learning opportunities",
   "url": "https://kavatana.me",
   "email": "kavatanaa@gmail.com",
   "social": {
@@ -9,5 +13,5 @@
     "linkedin": "https://www.linkedin.com/in/ka-vatana-99b85440a/"
   },
   "ogImage": "/images/og-default.png",
-  "availabilityStatus": "Open to the right opportunity"
+  "availabilityStatus": "Open to internships, collaborations, and learning opportunities"
 }

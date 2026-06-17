@@ -1,10 +1,26 @@
 [
   {
+    "id": "education",
+    "type": "education",
+    "title": "Software Engineering — Year 1",
+    "organization": "University (Cambodia)",
+    "startYear": 2025,
+    "description": "Studying Software Engineering fundamentals: programming, data structures, systems thinking, and engineering principles."
+  },
+  {
+    "id": "angkor-byte",
+    "type": "environment",
+    "title": "Learning Environment — Angkor Byte",
+    "organization": "Angkor Byte",
+    "startYear": 2025,
+    "description": "Joined an Angkor Byte company environment to learn product thinking, AI-assisted engineering workflows, and how international teams collaborate and ship software."
+  },
+  {
     "id": "bayonhub",
     "type": "project",
-    "title": "Founder & Product Engineer",
-    "organization": "BayonHub",
+    "title": "Solo Builder — BayonHub",
+    "organization": "BayonHub (Learning Project)",
     "startYear": 2024,
-    "description": "Built Khmer-first classifieds marketplace from scratch, spanning Nuxt 3 frontend, NestJS backend, and DevOps."
+    "description": "Building a Khmer-first classifieds marketplace from scratch as an active learning project — practicing full-stack architecture, product flow design, and Cambodia-first product thinking."
   }
 ]
