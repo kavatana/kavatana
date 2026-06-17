@@ -23,7 +23,7 @@
       <p class="prose-text">{{ project.myRole }}</p>
     </section>
     
-    <ProjectStack :stack="project.stack" v-if="project.stack" />
+    <ProjectStack :stack="project.stack" v-if="project.stack && project.stack.length > 0" />
     
     <section class="prose-section">
       <h2 class="section-title">Solution</h2>
@@ -34,7 +34,7 @@
       <p class="callout-text">{{ project.callout }}</p>
     </div>
     
-    <ProjectScreenshots :screenshots="project.screenshots" />
+    <ProjectScreenshots :screenshots="project.screenshots" v-if="project.screenshots && project.screenshots.length > 0" />
     
     <section class="prose-section" v-if="project.tradeoffs && project.tradeoffs.length">
       <h2 class="section-title">Tradeoffs</h2>
@@ -43,7 +43,7 @@
       </ul>
     </section>
     
-    <ProjectResults :results="project.results" />
+    <ProjectResults :results="project.results" v-if="project.results && project.results.length > 0" />
     
     <section class="prose-section" v-if="project.nextSteps && project.nextSteps.length">
       <h2 class="section-title">Next Steps</h2>
@@ -68,7 +68,7 @@ import { useProject } from '~/composables/useProject'
 
 const route = useRoute()
 const slug = route.params.slug as string
-const project = useProject(slug)
+const project = useProject(slug) as import('~/types/content').Project
 
 if (!project) {
   throw createError({ statusCode: 404, statusMessage: 'Project not found' })
