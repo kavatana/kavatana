@@ -1,43 +1,53 @@
-# GitHub Account Cleanup Plan
+# GitHub Account Cleanup Record
 
-Public audit snapshot from 2026-06-17:
+Applied cleanup on 2026-06-17 using authenticated GitHub CLI access.
 
 - Account: `kavatana`
-- Public name: `vatana`
 - Public repos: 4
-- Profile bio, company, location, public email, and Twitter fields are empty.
-- All public repos currently lack descriptions, topics, and licenses.
-- `bayonhub` has 1 open issue.
+- Public name: `Ka Vatana`
+- Profile website: `https://kavatana.me`
+- Profile bio: `Founder-engineer building Khmer-first products, marketplaces, learning tools, and practical AI systems.`
+- Profile company: `BayonHub`
+- Profile location: `Cambodia`
+- Hireable flag: enabled
+- Every public repo has a README.
+- Every public repo now has a description and topics.
+- Wikis and classic Projects are disabled on public repos because they were not
+  being used as part of the public profile surface.
+- Dependabot security updates are enabled on all public repos.
+- Secret scanning and push protection are enabled where GitHub exposes them.
+- No repositories were deleted, archived, or made private.
+- No licenses were added. This remains a deliberate product/legal decision.
+- GitHub reports account two-factor authentication is currently disabled.
 - The GitHub plugin install was approved in Codex, but no callable GitHub MCP
   tools were exposed in this session.
-- `gh` CLI is not installed locally.
-- SSH git access works for `kavatana/kavatana`.
+- `gh` CLI is installed locally and authenticated as `kavatana`.
 
 ## Profile Settings
-
-Recommended public profile values:
 
 | Field | Recommended value |
 | --- | --- |
 | Name | `Ka Vatana` |
 | Bio | `Founder-engineer building Khmer-first products, marketplaces, learning tools, and practical AI systems.` |
-| Company | `BayonHub` if you want the founder identity public; otherwise leave blank. |
-| Location | Add only if you want it public, for example `Cambodia`. |
+| Company | `BayonHub` |
+| Location | `Cambodia` |
 | Website | `https://kavatana.me` |
 | Social link | `https://www.linkedin.com/in/ka-vatana-99b85440a/` |
 
-Recommended pinned repositories:
+Recommended profile showcase repositories:
 
 1. `kavatana/kavatana`
 2. `kavatana/bayonhub`
 3. `kavatana/svaeng-yul`
-4. `kavatana/cyber-arena-team-os`, if you want security training work visible
+4. `kavatana/cyber-arena-team-os`
+
+GitHub's GraphQL API reports these repos in `itemShowcase`. The older
+`pinnedItems` list is empty, and no clean repository pin mutation is exposed by
+the current API surface.
 
 ## Repository Metadata
 
-Add descriptions and topics so visitors understand the account quickly.
-
-| Repo | Description | Suggested topics |
+| Repo | Description | Topics |
 | --- | --- | --- |
 | `kavatana` | `Personal portfolio and GitHub profile for Ka Vatana.` | `portfolio`, `nuxt`, `vue`, `typescript`, `vercel` |
 | `bayonhub` | `Khmer-first classifieds marketplace for Cambodia.` | `cambodia`, `khmer`, `marketplace`, `classifieds`, `nuxt`, `nestjs` |
@@ -46,25 +56,30 @@ Add descriptions and topics so visitors understand the account quickly.
 
 ## Repository Hygiene
 
-- Add a clear README to every public repo before pinning it.
+- Keep a clear README in every public repo before showcasing it.
 - Add a license only when you truly want public reuse. For business products,
   no license or an `All rights reserved` notice may be more appropriate than MIT.
-- Disable unused repo features: wiki, projects, and discussions if they are
-  empty.
-- Enable Dependabot alerts for public code.
 - Add branch protection on important `main` branches once CI exists.
-- Prefer archiving or making unfinished repos private over deleting them.
+- Prefer archiving or making unfinished repos private over deleting them, but do
+  this only after reviewing the repo's purpose.
 - Keep one public profile story: founder-engineer, Khmer-first products,
   practical systems, and shipped work.
+- Enable two-factor authentication manually from GitHub account settings.
 
 ## Automation Path
 
-To apply account-wide metadata automatically later, this session needs one of:
+Current automation path:
 
-1. A working GitHub MCP tool exposed to Codex.
-2. The GitHub CLI installed and authenticated with `gh auth login`.
-3. A GitHub token passed through a secure local environment variable, never in
-   chat.
+1. GitHub MCP tools are still not exposed to Codex in this session.
+2. GitHub CLI is installed and authenticated.
+3. Account metadata and repository settings can be managed with `gh api`.
 
-Until then, this repository can be updated through normal git/SSH, but profile
-settings and repository metadata must be changed manually in the GitHub UI.
+Manual-only remaining items:
+
+1. Enable two-factor authentication.
+2. Confirm the public email and social links you want shown on the GitHub
+   profile.
+3. Decide whether any repo should be private or archived after reviewing its
+   contents.
+4. Decide whether each repo should stay unlicensed or receive an explicit
+   license.
