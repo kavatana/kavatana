@@ -16,6 +16,10 @@ Applied cleanup on 2026-06-17 using authenticated GitHub CLI access.
   being used as part of the public profile surface.
 - Dependabot security updates are enabled on all public repos.
 - Secret scanning and push protection are enabled where GitHub exposes them.
+- The `kavatana/kavatana` dependency alerts were fixed by upgrading the
+  portfolio dependency tree and pushing commit `9ca95d9`.
+- Superseded Dependabot PRs `#1` through `#4` on `kavatana/kavatana` were
+  closed and their Dependabot branches were deleted.
 - No repositories were deleted, archived, or made private.
 - No licenses were added. This remains a deliberate product/legal decision.
 - GitHub reports account two-factor authentication is currently disabled.
