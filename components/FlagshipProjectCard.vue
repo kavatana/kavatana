@@ -21,6 +21,9 @@
       
       <div class="card-action">
         <span class="read-more">View Case Study &rarr;</span>
+        <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank" rel="noopener noreferrer" class="btn-live" @click.stop>
+          Visit Product &nearr;
+        </a>
       </div>
     </div>
   </NuxtLink>
@@ -175,6 +178,10 @@ defineProps<{
 .card-action {
   margin-top: auto;
   padding-top: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
 }
 
 .read-more {
@@ -189,6 +196,23 @@ defineProps<{
 .flagship-card:hover .read-more {
   transform: translateX(4px);
   color: var(--color-accent-hover);
+}
+
+.btn-live {
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--text-sm);
+  transition: all var(--transition-fast);
+}
+
+.btn-live:hover {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
 }
 
 @media (min-width: 1024px) {
