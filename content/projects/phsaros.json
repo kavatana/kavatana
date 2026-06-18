@@ -40,18 +40,19 @@
   ],
   "whatIBuilt": [
     "Live operations dashboard with KPIs, a 7-day revenue chart, and recent sales",
-    "Point of Sale with a searchable grid and stock-aware cart",
+    "Point of Sale with a searchable grid, mobile order bar, and bottom order sheet",
     "Atomic transactional checkout with real-time change calculation",
-    "Inventory CRUD with per-product low-stock thresholds and soft deletes",
-    "Categorized expense logging that feeds the dashboard's cash-out figure",
-    "Keyboard-first navigation (G-leader shortcuts, ? for help)"
+    "Inventory management with bottom-sheet forms and mobile card layouts",
+    "Mobile-first shell: top status bar + bottom tab nav",
+    "Persistent night mode: app-level theme controller with dark tokens"
   ],
   "whatILearned": [
     "Type-safe end-to-end development via Server Actions (eliminating REST/GraphQL boilerplate)",
     "Executing checkout as a single Prisma transaction (sale + items + stock decrement)",
     "Server-side Zod validation on every mutation",
     "Driver-adapter architecture: swapped SQLite for Neon Postgres by changing a single adapter",
-    "Product-grade UX: toasts, skeletons, empty/error/not-found states"
+    "Building responsive, mobile-first touch interfaces with Tailwind CSS",
+    "Implementing a robust light/dark theme token system across a complex dashboard"
   ],
   "results": [
     "7 application routes backed by 7 relational Prisma models",
@@ -60,34 +61,34 @@
   ],
   "screenshots": [
     {
-      "src": "/images/projects/phsaros/01-dashboard.png",
-      "alt": "Live dashboard: today's sales & expenses, low-stock alerts, and a 7-day revenue trend.",
+      "src": "/images/projects/phsaros/01-dashboard-desktop.png",
+      "alt": "Desktop dashboard view.",
       "caption": "Live dashboard: today's sales & expenses, low-stock alerts, and a 7-day revenue trend."
     },
     {
-      "src": "/images/projects/phsaros/02-pos.png",
-      "alt": "Point of Sale — a searchable, tap-to-add product grid with a running order cart.",
-      "caption": "Point of Sale — a searchable, tap-to-add product grid with a running order cart."
+      "src": "/images/projects/phsaros/05-pos-mobile.png",
+      "alt": "Mobile POS with bottom sheet.",
+      "caption": "Mobile-first POS: searchable grid, bottom tab nav, and transactional tap-to-add checkout flow."
     },
     {
-      "src": "/images/projects/phsaros/02b-pos-checkout.png",
-      "alt": "Checkout calculates change due in real time and commits the sale atomically.",
-      "caption": "Checkout calculates change due in real time and commits the sale atomically."
+      "src": "/images/projects/phsaros/06-dashboard-dark.png",
+      "alt": "Night mode dashboard view.",
+      "caption": "Persistent night mode: app-level theme controller applying dark tokens to the shell and charts."
     },
     {
-      "src": "/images/projects/phsaros/03-inventory.png",
-      "alt": "Inventory management with per-product low-stock thresholds and status badges.",
+      "src": "/images/projects/phsaros/04-dashboard-mobile.png",
+      "alt": "Mobile dashboard view.",
+      "caption": "Responsive dashboard scaling perfectly to a 360px phone screen."
+    },
+    {
+      "src": "/images/projects/phsaros/03-inventory-desktop.png",
+      "alt": "Inventory management.",
       "caption": "Inventory management with per-product low-stock thresholds and status badges."
     },
     {
-      "src": "/images/projects/phsaros/04-customers.png",
-      "alt": "Customer records with live order-history counts.",
-      "caption": "Customer records with live order-history counts."
-    },
-    {
-      "src": "/images/projects/phsaros/06-settings.png",
-      "alt": "Store settings — profile, currency/localization, and notification preferences.",
-      "caption": "Store settings — profile, currency/localization, and notification preferences."
+      "src": "/images/projects/phsaros/07-pos-dark.png",
+      "alt": "Night mode POS.",
+      "caption": "High-contrast dark mode for the POS terminal."
     }
   ]
 }
