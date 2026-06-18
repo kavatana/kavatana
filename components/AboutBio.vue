@@ -1,7 +1,7 @@
 <template>
   <section class="about-bio">
     <div class="bio-left">
-      <img src="/images/profile/ka-vatana.webp" alt="kavatana profile photo" class="profile-photo" width="250" height="250" fetchpriority="high" />
+      <img src="/images/profile/ka-vatana.jpg" alt="kavatana profile photo" class="profile-photo" width="250" height="250" fetchpriority="high" />
       <div class="photo-caption">
         <span class="name">{{ config?.name }}</span>
         <span class="role">{{ about?.role }}</span>

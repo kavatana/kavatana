@@ -1,4 +1,4 @@
-:root {
+:root, :root[data-theme="dark"] {
   --color-bg: hsl(220, 20%, 6%);
   --color-surface-1: hsl(220, 15%, 12%);
   --color-surface-2: hsl(220, 15%, 16%);
@@ -13,26 +13,7 @@
   
   --shadow-card: inset 0 0 0 1px var(--color-border);
   --shadow-featured: inset 0 0 0 1px var(--color-border), 0 0 20px rgba(59, 130, 246, 0.15);
-}
 
-:root[data-theme="light"] {
-  --color-bg: hsl(220, 15%, 98%);
-  --color-surface-1: hsl(0, 0%, 100%);
-  --color-surface-2: hsl(220, 10%, 96%);
-  --color-border: hsl(220, 15%, 90%);
-  --color-text-primary: hsl(220, 20%, 12%);
-  --color-text-secondary: hsl(220, 10%, 40%);
-  --color-text-muted: hsl(220, 10%, 55%);
-  --color-accent: hsl(217, 91%, 50%);
-  --color-accent-hover: hsl(217, 91%, 40%);
-  --color-error: hsl(0, 72%, 51%);
-  --color-success: hsl(142, 71%, 40%);
-  
-  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05), inset 0 0 0 1px var(--color-border);
-  --shadow-featured: 0 12px 30px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--color-border);
-}
-
-:root {
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   
@@ -60,4 +41,21 @@
 
   --transition-fast: 150ms ease;
   --transition-base: 200ms ease;
+}
+
+:root[data-theme="light"] {
+  --color-bg: hsl(220, 15%, 98%);
+  --color-surface-1: hsl(0, 0%, 100%);
+  --color-surface-2: hsl(220, 10%, 96%);
+  --color-border: hsl(220, 15%, 90%);
+  --color-text-primary: hsl(220, 20%, 12%);
+  --color-text-secondary: hsl(220, 10%, 40%);
+  --color-text-muted: hsl(220, 10%, 55%);
+  --color-accent: hsl(217, 91%, 50%);
+  --color-accent-hover: hsl(217, 91%, 40%);
+  --color-error: hsl(0, 72%, 51%);
+  --color-success: hsl(142, 71%, 40%);
+  
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05), inset 0 0 0 1px var(--color-border);
+  --shadow-featured: 0 12px 30px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--color-border);
 }

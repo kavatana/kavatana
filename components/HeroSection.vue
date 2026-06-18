@@ -22,7 +22,7 @@
     <div class="hero-right" aria-hidden="true">
       <div class="portrait-card">
         <div class="portrait-image-wrapper">
-          <img src="/images/profile/ka-vatana.webp" alt="Portrait of Ka Vatana" class="portrait-img" />
+          <img src="/images/profile/ka-vatana.jpg" alt="Portrait of Ka Vatana" class="portrait-img" />
         </div>
         <div class="portrait-details">
           <div class="focus-header">
