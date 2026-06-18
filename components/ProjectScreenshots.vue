@@ -9,7 +9,8 @@
             <span class="dot minimize"></span>
             <span class="dot maximize"></span>
           </div>
-          <img :src="img.src" :alt="img.alt" width="1200" height="630" loading="lazy" class="screenshot-img" />
+          <img :src="img.src" :alt="img.alt" width="1200" height="630" loading="lazy" class="screenshot-img" :class="{ 'theme-dark-only': img.srcLight }" />
+          <img v-if="img.srcLight" :src="img.srcLight" :alt="img.alt" width="1200" height="630" loading="lazy" class="screenshot-img theme-light-only" />
         </div>
         <div v-if="img.caption" class="screenshot-caption-wrapper">
           <h3 class="screenshot-caption-title">{{ img.caption.split('.')[0] }}</h3>

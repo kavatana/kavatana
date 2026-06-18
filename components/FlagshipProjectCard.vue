@@ -1,7 +1,8 @@
 <template>
   <NuxtLink :to="'/projects/' + project.id" class="flagship-card" v-if="project">
     <div class="card-image-wrap" v-if="project.coverImage">
-      <img :src="project.coverImage" :alt="project.coverImageAlt || project.title" class="card-image" loading="lazy" />
+      <img :src="project.coverImage" :alt="project.coverImageAlt || project.title" class="card-image" :class="{ 'theme-dark-only': project.coverImageLight }" loading="lazy" />
+      <img v-if="project.coverImageLight" :src="project.coverImageLight" :alt="project.coverImageAlt || project.title" class="card-image theme-light-only" loading="lazy" />
     </div>
     
     <div class="card-content">

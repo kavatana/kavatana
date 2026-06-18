@@ -16,7 +16,8 @@
           <span class="dot minimize"></span>
           <span class="dot maximize"></span>
         </div>
-        <img :src="project.coverImage" :alt="project.coverImageAlt" class="cover-image" width="1200" height="630" fetchpriority="high" />
+        <img :src="project.coverImage" :alt="project.coverImageAlt" class="cover-image" :class="{ 'theme-dark-only': project.coverImageLight }" width="1200" height="630" fetchpriority="high" />
+        <img v-if="project.coverImageLight" :src="project.coverImageLight" :alt="project.coverImageAlt" class="cover-image theme-light-only" width="1200" height="630" fetchpriority="high" />
       </div>
       
       <section class="prose-section">
