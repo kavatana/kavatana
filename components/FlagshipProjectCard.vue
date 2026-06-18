@@ -1,5 +1,6 @@
 <template>
-  <div class="flagship-card" v-if="project">
+  <BayonHubCaseStudy v-if="project && project.id === 'bayonhub'" :project="project" />
+  <div class="flagship-card" v-else-if="project">
     <div class="card-top">
       <div class="card-meta">
         <span class="status-badge" :class="`status-${project.status}`">{{ project.statusLabel || project.status }}</span>
