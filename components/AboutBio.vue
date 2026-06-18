@@ -1,7 +1,7 @@
 <template>
   <section class="about-bio">
     <div class="bio-left">
-      <img src="/images/profile/ka-vatana.jpg" alt="kavatana profile photo" class="profile-photo" width="250" height="250" fetchpriority="high" />
+      <img src="/images/profile/ka-vatana-transparent.png" alt="kavatana profile photo" class="profile-photo" width="250" height="250" fetchpriority="high" />
       <div class="photo-caption">
         <span class="name">{{ config?.name }}</span>
         <span class="role">{{ about?.role }}</span>
@@ -44,7 +44,7 @@ const about = useAbout()
 }
 
 .profile-photo {
-  background-color: var(--color-surface-2);
+  background-color: transparent;
   border: 1px solid var(--color-border);
   aspect-ratio: 1 / 1;
   width: 100%;
@@ -55,11 +55,8 @@ const about = useAbout()
 }
 
 :global([data-theme="dark"]) .profile-photo {
-  filter: grayscale(20%) contrast(1.1) brightness(0.9);
-  mask-image: radial-gradient(circle 60% at center, black 50%, transparent 100%);
-  -webkit-mask-image: radial-gradient(circle 60% at center, black 50%, transparent 100%);
-  background-color: transparent;
-  border-color: transparent;
+  filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.15));
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .photo-caption {
