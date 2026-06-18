@@ -1,15 +1,16 @@
 <template>
   <AppContainer>
-    <div class="page-header">
+    <div class="page-header animate-fade-up">
       <h1 class="page-title">About</h1>
       <p class="page-subtitle">Background, approach, and experience.</p>
     </div>
     
-    <AboutBio />
-    <AboutCapabilities />
-    <AboutTimeline />
+    <AboutBio class="animate-fade-up delay-100" />
+    <AboutCapabilities class="animate-fade-up delay-200" />
+    <AboutTimeline class="animate-fade-up delay-300" />
     
     <CtaBlock 
+      class="animate-fade-up delay-400"
       question="Open to the right opportunity"
       link-label="Let's talk &rarr;"
       link-href="/contact"

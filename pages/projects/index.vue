@@ -1,20 +1,21 @@
 <template>
   <AppContainer>
-    <div class="page-header">
+    <div class="page-header animate-fade-up">
       <h1 class="page-title">Projects</h1>
       <p class="page-subtitle">What I've built, what I'm working on, and how I think about building.</p>
     </div>
     
-    <FlagshipProjectCard />
+    <FlagshipProjectCard class="animate-fade-up delay-100" />
     
-    <div class="divider-section">
+    <div class="divider-section animate-fade-up delay-200">
       <div class="divider-line"></div>
       <p class="divider-label">More projects ship here as they're built.</p>
     </div>
     
-    <BuildDirections />
+    <BuildDirections class="animate-fade-up delay-300" />
     
     <CtaBlock 
+      class="animate-fade-up delay-400"
       question="Want to build something together?"
       link-label="Let's talk &rarr;"
       link-href="/contact"
