@@ -148,21 +148,15 @@ const shots = computed(() => {
 <style scoped>
 /* Base Card Styles to match FlagshipProjectCard */
 .bayonhub-case-study {
-  background-color: hsla(0, 0%, 10%, 0.6);
+  background-color: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 hsla(30, 20%, 94%, 0.05);
+  box-shadow: var(--glass-shadow);
   overflow: hidden;
   margin: var(--space-xl) 0;
   transition: all var(--transition-base);
-}
-
-:global([data-theme="light"]) .bayonhub-case-study {
-  background-color: hsl(0, 0%, 100%);
-  border-color: transparent;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 .card-top {
