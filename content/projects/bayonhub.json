@@ -1,50 +1,64 @@
 {
   "id": "bayonhub",
   "title": "BayonHub",
-  "tagline": "Khmer-first classifieds marketplace experiment for Cambodia",
+  "tagline": "Khmer-first Cambodian classifieds marketplace",
   "status": "in-progress",
   "statusLabel": "Active Learning Project",
   "featured": true,
   "featuredOrder": 1,
-  "year": 2024,
+  "year": 2026,
   "role": "Solo builder & learner",
   "stack": [
-    "Nuxt 3",
-    "TypeScript",
-    "NestJS",
+    "React 19",
+    "Vite 6",
+    "Tailwind CSS",
+    "Zustand",
+    "Prisma",
     "PostgreSQL",
     "Redis",
-    "Tailwind CSS",
-    "Docker",
-    "Cloudflare",
-    "Vercel"
+    "Cloudflare R2"
   ],
-  "coverImage": "/images/projects/bayonhub/cover.webp",
+  "coverImage": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-desktop.png",
   "coverImageAlt": "BayonHub platform preview",
   "screenshots": [
     {
-      "src": "/images/projects/bayonhub/screenshots/01.webp",
-      "alt": "Listing detail page",
-      "caption": "Listing detail page showing product information and seller actions."
+      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-desktop.png",
+      "alt": "Home Desktop View",
+      "caption": "Strongest hero and proof-section shot."
     },
     {
-      "src": "/images/projects/bayonhub/screenshots/02.webp",
-      "alt": "Search and discovery interface",
-      "caption": "Search and discovery interface."
+      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-mobile.png",
+      "alt": "Home Mobile View",
+      "caption": "Shows the mobile-first marketplace layout."
     },
     {
-      "src": "/images/projects/bayonhub/screenshots/03.webp",
-      "alt": "Seller profile",
-      "caption": "Seller profile with active listings."
+      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-search-desktop.png",
+      "alt": "Search Desktop",
+      "caption": "Buyer discovery, filters, and listing cards."
     },
     {
-      "src": "/images/projects/bayonhub/screenshots/04.webp",
-      "alt": "Upgrade flow",
-      "caption": "Upgrade flow for Plus tier experiment."
+      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-category-vehicles-desktop.png",
+      "alt": "Vehicles Category",
+      "caption": "Category browsing with premium seeded vehicles."
+    },
+    {
+      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-listing-mobile.png",
+      "alt": "Listing Detail",
+      "caption": "Seller trust, listing details, safety/contact surface."
+    },
+    {
+      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-post-mobile.png",
+      "alt": "Post Listing Flow",
+      "caption": "Seller posting flow on a phone-sized viewport."
+    },
+    {
+      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-pricing-desktop.png",
+      "alt": "Pricing Desktop",
+      "caption": "Monetization and upgrade surface."
     }
   ],
   "problem": "Cambodia has no widely trusted, Khmer-friendly digital classifieds platform. I wanted to explore what one might look like.",
-  "context": "This is a solo learning project built to practice full-stack architecture, product flow design, and Cambodia-first product thinking. It is not a funded startup or launched business.",
+  "context": "BayonHub was built to feel like a real local commerce product instead of a static landing page. The frontend works as a Vite PWA, supports Khmer and English, includes marketplace browsing and posting paths, and can run in localStorage fallback mode when no backend API is configured.",
   "constraints": [
     "Solo student project — no team or funding",
     "Learning full-stack architecture while building",
@@ -64,17 +78,17 @@
     "A tiered listing model as a monetization concept to explore."
   ],
   "whatILearned": [
-    "How to structure a Nuxt + NestJS full-stack project from scratch.",
+    "How to structure a React + Express full-stack project from scratch.",
     "Database schema design for a marketplace (users, listings, categories).",
     "How to think about trust in two-sided marketplace products.",
     "Why phased, connected flows matter more than isolated flashy features.",
     "How Docker and Vercel work together for deployment.",
     "How much harder building a real product is than following a tutorial."
   ],
-  "repoNote": "Repository is private while I complete a security and code quality cleanup.",
+  "repoNote": "Validated with frontend/backend lint, production builds, Chromium smoke tests, high/critical dependency audits, and a 13-check pre-deploy script.",
   "nextSteps": [
-    "Continue cleaning up code and improving security.",
-    "Improve listing quality and discovery flows.",
-    "Write proper documentation for what I built and why."
+    "Configure DNS for api.bayonhub.com and www.bayonhub.com.",
+    "Fill backend provider environment with real values.",
+    "Verify database, Redis, and R2 health on the production instance."
   ]
 }
