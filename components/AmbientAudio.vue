@@ -12,7 +12,7 @@
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
-    <audio ref="audioRef" loop preload="auto">
+    <audio ref="audioRef" loop preload="auto" autoplay>
       <source src="/audio/mystic-realm.mp3" type="audio/mpeg" />
     </audio>
   </button>
@@ -36,16 +36,16 @@ onMounted(() => {
           audioRef.value.play().then(() => {
             isPlaying.value = true
           }).catch(() => {})
-          
-          document.removeEventListener('click', playOnInteract)
-          document.removeEventListener('keydown', playOnInteract)
-          document.removeEventListener('scroll', playOnInteract)
         }
+        
+        ['click', 'keydown', 'pointerdown', 'touchstart'].forEach(e => {
+          document.removeEventListener(e, playOnInteract)
+        })
       }
       
-      document.addEventListener('click', playOnInteract)
-      document.addEventListener('keydown', playOnInteract)
-      document.addEventListener('scroll', playOnInteract)
+      ['click', 'keydown', 'pointerdown', 'touchstart'].forEach(e => {
+        document.addEventListener(e, playOnInteract, { once: true })
+      })
     })
   }
 })
