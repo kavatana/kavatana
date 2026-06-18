@@ -37,12 +37,12 @@ defineProps<{
 .flagship-card {
   display: flex;
   flex-direction: column;
-  background-color: hsla(0, 0%, 10%, 0.6);
+  background-color: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 hsla(30, 20%, 94%, 0.05);
+  box-shadow: var(--glass-shadow);
   overflow: hidden;
   margin: var(--space-xl) 0;
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -50,27 +50,16 @@ defineProps<{
   color: inherit;
 }
 
-:global([data-theme="light"]) .flagship-card {
-  background-color: hsl(0, 0%, 100%);
-  border-color: transparent;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
-}
-
 .flagship-card:hover {
   border-color: var(--color-accent);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 hsla(30, 20%, 94%, 0.08);
+  box-shadow: var(--glass-shadow-hover);
   transform: translateY(-4px);
-}
-
-:global([data-theme="light"]) .flagship-card:hover {
-  border-color: transparent;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
 .card-image-wrap {
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--glass-border);
   overflow: hidden;
   background: var(--color-surface-1);
 }
