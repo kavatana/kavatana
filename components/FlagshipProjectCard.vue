@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="'/projects/' + project.id" class="flagship-card" v-if="project">
+  <article class="flagship-card" v-if="project">
     <div class="card-image-wrap" v-if="project.coverImage">
       <img :src="project.coverImage" :alt="project.coverImageAlt || project.title" class="card-image" :class="{ 'theme-dark-only': project.coverImageLight }" loading="lazy" />
       <img v-if="project.coverImageLight" :src="project.coverImageLight" :alt="project.coverImageAlt || project.title" class="card-image theme-light-only" loading="lazy" />
@@ -11,7 +11,9 @@
         <span class="meta-year">{{ project.year }}</span>
       </div>
       
-      <h2 class="project-title">{{ project.title }}</h2>
+      <h2 class="project-title">
+        <NuxtLink :to="'/projects/' + project.id" class="card-link">{{ project.title }}</NuxtLink>
+      </h2>
       <p class="project-tagline">{{ project.tagline }}</p>
       
       <div class="stack-chips" v-if="project.stack?.length">
@@ -21,12 +23,12 @@
       
       <div class="card-action">
         <span class="read-more">View Case Study &rarr;</span>
-        <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank" rel="noopener noreferrer" class="btn-live" @click.stop>
+        <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank" rel="noopener noreferrer" class="btn-live">
           Visit Product &nearr;
         </a>
       </div>
     </div>
-  </NuxtLink>
+  </article>
 </template>
 
 <script setup lang="ts">
@@ -39,6 +41,7 @@ defineProps<{
 
 <style scoped>
 .flagship-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: var(--glass-bg);
@@ -50,7 +53,6 @@ defineProps<{
   overflow: hidden;
   margin: var(--space-xl) 0;
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  text-decoration: none;
   color: inherit;
 }
 
@@ -58,6 +60,23 @@ defineProps<{
   border-color: var(--color-accent);
   box-shadow: var(--glass-shadow-hover);
   transform: translateY(-4px);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.stack-chips, .btn-live {
+  position: relative;
+  z-index: 2;
 }
 
 .card-image-wrap {
@@ -176,12 +195,15 @@ defineProps<{
 }
 
 .card-action {
+  position: relative;
+  z-index: 2;
   margin-top: auto;
   padding-top: var(--space-lg);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-md);
+  flex-wrap: wrap;
 }
 
 .read-more {
