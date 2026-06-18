@@ -10,7 +10,12 @@
     <div v-else>
       <ProjectHero :project="project" />
       
-      <div class="cover-image-wrapper" v-if="project.coverImage">
+      <div class="premium-browser-frame cover-image-wrapper" v-if="project.coverImage">
+        <div class="frame-header">
+          <span class="dot close"></span>
+          <span class="dot minimize"></span>
+          <span class="dot maximize"></span>
+        </div>
         <img :src="project.coverImage" :alt="project.coverImageAlt" class="cover-image" width="1200" height="630" fetchpriority="high" />
       </div>
       
@@ -123,10 +128,43 @@ useHead({
 <style scoped>
 .cover-image-wrapper {
   margin: var(--space-xl) 0 var(--space-2xl);
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
+  /* premium-browser-frame handles borders and radius */
 }
+
+.premium-browser-frame {
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: var(--glass-shadow);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.premium-browser-frame:hover {
+  box-shadow: var(--glass-shadow-hover);
+  border-color: var(--color-border);
+}
+
+.frame-header {
+  height: 38px;
+  background-color: var(--glass-bg);
+  border-bottom: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.dot.close { background-color: #FF5F56; }
+.dot.minimize { background-color: #FFBD2E; }
+.dot.maximize { background-color: #27C93F; }
 
 .cover-image {
   width: 100%;
