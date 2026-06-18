@@ -22,7 +22,7 @@
     <div class="hero-right" aria-hidden="true">
       <div class="portrait-card">
         <div class="portrait-image-wrapper">
-          <img src="/images/profile/ka-vatana.jpg" alt="Portrait of Ka Vatana" class="portrait-img" />
+          <img src="/images/profile/ka-vatana-transparent.png" alt="Portrait of Ka Vatana" class="portrait-img" />
         </div>
         <div class="portrait-details">
           <div class="focus-header">
@@ -228,9 +228,7 @@
 }
 
 :global([data-theme="dark"]) .portrait-img {
-  filter: grayscale(20%) contrast(1.1) brightness(0.9);
-  mask-image: radial-gradient(circle 65% at center 40%, black 50%, transparent 100%);
-  -webkit-mask-image: radial-gradient(circle 65% at center 40%, black 50%, transparent 100%);
+  filter: contrast(1.05) saturate(1.05) drop-shadow(0 0 20px rgba(59, 130, 246, 0.2));
 }
 
 .portrait-details {
