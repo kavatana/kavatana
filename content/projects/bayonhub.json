@@ -22,6 +22,7 @@
   "coverImageLight": "/images/projects/bayonhub/screenshots/bayonhub-light-home-desktop.png",
   "coverImageAlt": "BayonHub platform preview",
   "liveUrl": "https://www.bayonhub.com",
+  "githubUrl": "https://github.com/kavatana/bayonhub",
   "screenshots": [
     {
       "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-desktop.png",
