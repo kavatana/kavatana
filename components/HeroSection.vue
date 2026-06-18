@@ -2,48 +2,42 @@
   <section class="hero-section">
     <div class="hero-left">
       <div class="hero-identity">
-        <span class="identity-badge">{{ config?.role }}</span>
-        <h1 class="hero-name">{{ config?.fullName || config?.name }}</h1>
+        <span class="identity-badge">🇰🇭 Year 1 Software Engineering Student · Cambodia</span>
+        <h1 class="hero-name">Ka Vatana</h1>
       </div>
-      <p class="hero-headline">{{ config?.tagline }}</p>
-      <p class="hero-subtitle">{{ config?.subtitle }}</p>
+      <p class="hero-headline">Building real software while learning how to build better software.</p>
+      <p class="hero-subtitle">
+        I’m a Year 1 Software Engineering student from Cambodia. I learn by building practical web projects, exploring AI-assisted workflows, and developing product thinking one commit at a time.
+      </p>
       <div class="hero-actions">
         <NuxtLink to="/projects" class="btn-primary">View projects</NuxtLink>
         <NuxtLink to="/contact" class="btn-secondary">Contact me &rarr;</NuxtLink>
       </div>
-      <div class="availability-badge" v-if="config?.availabilityStatus">
+      <div class="availability-badge">
         <span class="availability-dot" aria-hidden="true"></span>
-        {{ config.availabilityStatus }}
+        Open to internships, collaborations, and learning opportunities
       </div>
     </div>
+    
     <div class="hero-right" aria-hidden="true">
-      <div class="identity-card">
-        <div class="card-header">
-          <div class="card-avatar">
-            <img src="/images/kavatana.webp" alt="Ka Vatana" class="avatar-img" />
-          </div>
-          <div class="card-info">
-            <span class="card-name">Ka Vatana</span>
-            <span class="card-location">📍 Cambodia</span>
-          </div>
+      <div class="portrait-card">
+        <div class="portrait-image-wrapper">
+          <img src="/images/profile/ka-vatana.jpg" alt="Portrait of Ka Vatana" class="portrait-img" />
         </div>
-        <div class="card-divider"></div>
-        <div class="card-section">
-          <span class="card-label">Currently building</span>
-          <span class="card-value">BayonHub — Khmer marketplace</span>
-        </div>
-        <div class="card-section">
-          <span class="card-label">Learning</span>
-          <div class="card-chips">
-            <span class="chip">Vue / Nuxt</span>
+        <div class="portrait-details">
+          <div class="focus-header">
+            <span class="focus-title">Current Focus</span>
+            <span class="focus-subtitle">Full-stack · AI Tools · Product Building</span>
+          </div>
+          <div class="tech-chips">
+            <span class="chip">Nuxt</span>
+            <span class="chip">Vue</span>
             <span class="chip">TypeScript</span>
-            <span class="chip">NestJS</span>
-            <span class="chip">AI workflows</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Git & GitHub</span>
+            <span class="chip">AI Tools</span>
           </div>
-        </div>
-        <div class="card-section">
-          <span class="card-label">Environment</span>
-          <span class="card-value">Angkor Byte · Cambodia × Japan</span>
         </div>
       </div>
     </div>
@@ -51,8 +45,6 @@
 </template>
 
 <script setup lang="ts">
-import { usePortfolioConfig } from '~/composables/usePortfolioConfig'
-const config = usePortfolioConfig()
 </script>
 
 <style scoped>
@@ -66,7 +58,7 @@ const config = usePortfolioConfig()
 
 @media (min-width: 1024px) {
   .hero-section {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: var(--space-3xl);
   }
 }
@@ -76,43 +68,46 @@ const config = usePortfolioConfig()
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+  animation: fade-up 0.5s ease both;
 }
 
 .hero-identity {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
 }
 
 .identity-badge {
   display: inline-block;
   align-self: flex-start;
-  padding: 4px var(--space-sm);
-  border: 1px solid var(--color-accent);
-  color: var(--color-accent);
+  padding: 6px var(--space-sm);
+  background-color: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
   border-radius: var(--radius-sm);
   font-size: var(--text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   font-family: var(--font-mono);
+  font-weight: 500;
 }
 
 .hero-name {
   font-size: var(--text-display);
   color: var(--color-text-primary);
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1.05;
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .hero-headline {
-  font-size: var(--text-xl);
-  color: var(--color-text-secondary);
-  font-weight: 500;
-  line-height: 1.4;
+  font-size: var(--text-2xl);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  line-height: 1.3;
   margin: 0;
-  max-width: 520px;
+  max-width: 540px;
 }
 
 .hero-subtitle {
@@ -134,18 +129,20 @@ const config = usePortfolioConfig()
 
 .btn-primary {
   background-color: var(--color-accent);
-  color: var(--color-bg);
+  color: #fff; /* Always white text on primary button */
   padding: var(--space-sm) var(--space-lg);
   border-radius: var(--radius);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   font-size: var(--text-base);
   transition: background-color var(--transition-fast), transform var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
 }
 
 .btn-primary:hover {
   background-color: var(--color-accent-hover);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
 }
 
 .btn-secondary {
@@ -163,14 +160,16 @@ const config = usePortfolioConfig()
 .availability-badge {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-xs);
-  padding: 6px var(--space-sm);
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+  padding: 8px var(--space-md);
   background-color: var(--color-surface-1);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  font-size: var(--text-xs);
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
   color: var(--color-text-secondary);
   align-self: flex-start;
+  line-height: 1.4;
 }
 
 .availability-dot {
@@ -187,87 +186,60 @@ const config = usePortfolioConfig()
   50% { opacity: 0.4; }
 }
 
-/* Right column — Identity card */
+/* Right column — Portrait card */
 .hero-right {
-  display: none;
+  display: flex;
+  justify-content: center;
+  animation: fade-up 0.6s ease 0.15s both;
 }
 
-@media (min-width: 1024px) {
-  .hero-right {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-.identity-card {
+.portrait-card {
   background-color: var(--color-surface-1);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: var(--space-lg);
+  padding: var(--space-sm);
   width: 100%;
-  max-width: 320px;
+  max-width: 440px;
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
-  box-shadow: 0 0 40px rgba(59, 130, 246, 0.06);
-}
-
-.card-header {
-  display: flex;
-  align-items: center;
   gap: var(--space-sm);
+  box-shadow: var(--shadow-featured);
 }
 
-.card-avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  color: var(--color-bg);
+.portrait-image-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: calc(var(--radius) - 4px);
+  overflow: hidden;
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.15), transparent 70%);
+  border: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  overflow: hidden;
-  border: 2px solid var(--color-surface-2);
 }
 
-.avatar-img {
+.portrait-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: var(--color-bg);
+  object-position: center top;
+  filter: contrast(1.05) saturate(1.05);
 }
 
-.card-info {
+.portrait-details {
+  padding: var(--space-sm) var(--space-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.focus-header {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 
-.card-name {
-  font-size: var(--text-sm);
-  font-weight: 700;
-  color: var(--color-text-primary);
-}
-
-.card-location {
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
-}
-
-.card-divider {
-  height: 1px;
-  background-color: var(--color-border);
-}
-
-.card-section {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.card-label {
+.focus-title {
   font-size: var(--text-xs);
   color: var(--color-text-muted);
   text-transform: uppercase;
@@ -275,33 +247,26 @@ const config = usePortfolioConfig()
   font-family: var(--font-mono);
 }
 
-.card-value {
+.focus-subtitle {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
+  font-weight: 500;
 }
 
-.card-chips {
+.tech-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-xs);
+  gap: 6px;
 }
 
 .chip {
   background-color: var(--color-surface-2);
   border: 1px solid var(--color-border);
   color: var(--color-text-secondary);
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: var(--radius-sm);
   font-size: var(--text-xs);
-}
-
-/* Entrance animation */
-.hero-left {
-  animation: fade-up 0.5s ease both;
-}
-
-.hero-right {
-  animation: fade-up 0.5s ease 0.15s both;
+  font-family: var(--font-mono);
 }
 
 @media (prefers-reduced-motion: reduce) {

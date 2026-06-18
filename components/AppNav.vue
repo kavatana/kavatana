@@ -10,6 +10,7 @@
       </div>
       <nav class="mobile-nav">
         <NuxtLink to="/projects" class="nav-link" active-class="active" @click="close">Projects</NuxtLink>
+        <NuxtLink to="/#now" class="nav-link" active-class="active" @click="close">Now</NuxtLink>
         <NuxtLink to="/about" class="nav-link" active-class="active" @click="close">About</NuxtLink>
         <NuxtLink to="/contact" class="nav-link" active-class="active" @click="close">Contact</NuxtLink>
         <div class="nav-divider"></div>
@@ -179,7 +180,8 @@ onUnmounted(() => {
   color: var(--color-text-secondary);
   text-decoration: none;
   font-size: var(--text-lg);
-  padding: var(--space-xs) 0;
+  padding: var(--space-sm) 0;
+  font-weight: 500;
 }
 
 .nav-link.active {
