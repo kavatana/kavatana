@@ -24,6 +24,32 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const isPlaying = ref(false)
 const audioRef = ref<HTMLAudioElement | null>(null)
 
+onMounted(() => {
+  if (audioRef.value) {
+    // Attempt autoplay immediately
+    audioRef.value.play().then(() => {
+      isPlaying.value = true
+    }).catch(() => {
+      // Browser blocked autoplay, wait for first user interaction
+      const playOnInteract = () => {
+        if (!isPlaying.value && audioRef.value) {
+          audioRef.value.play().then(() => {
+            isPlaying.value = true
+          }).catch(() => {})
+          
+          document.removeEventListener('click', playOnInteract)
+          document.removeEventListener('keydown', playOnInteract)
+          document.removeEventListener('scroll', playOnInteract)
+        }
+      }
+      
+      document.addEventListener('click', playOnInteract)
+      document.addEventListener('keydown', playOnInteract)
+      document.addEventListener('scroll', playOnInteract)
+    })
+  }
+})
+
 const toggleAudio = () => {
   if (!audioRef.value) return
   

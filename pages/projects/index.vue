@@ -4,10 +4,17 @@
       <h1 class="page-title">Projects</h1>
       <p class="page-subtitle">What I've built, what I'm working on, and how I think about building.</p>
     </div>
+    <div class="projects-list">
+      <FlagshipProjectCard 
+        v-for="(project, index) in projects" 
+        :key="project.id" 
+        :project="project"
+        class="animate-fade-up"
+        :style="{ animationDelay: `${(index + 1) * 100}ms` }"
+      />
+    </div>
     
-    <FlagshipProjectCard class="animate-fade-up delay-100" />
-    
-    <div class="divider-section animate-fade-up delay-200">
+    <div class="divider-section animate-fade-up" :style="{ animationDelay: `${(projects.length + 1) * 100}ms` }">
       <div class="divider-line"></div>
       <p class="divider-label">More projects ship here as they're built.</p>
     </div>

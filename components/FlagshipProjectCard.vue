@@ -87,9 +87,13 @@
 </template>
 
 <script setup lang="ts">
-import { useProject } from '~/composables/useProject'
-const project = useProject('bayonhub')
-const hasScreenshots = project?.screenshots && project.screenshots.length > 0
+import type { Project } from '~/types/content'
+
+const props = defineProps<{
+  project: Project
+}>()
+
+const hasScreenshots = props.project?.screenshots && props.project.screenshots.length > 0
 </script>
 
 <style scoped>
