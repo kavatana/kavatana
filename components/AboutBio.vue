@@ -51,11 +51,15 @@ const about = useAbout()
   height: auto;
   object-fit: cover;
   display: block;
-  transition: filter var(--transition-normal);
+  transition: all var(--transition-normal);
 }
 
 :global([data-theme="dark"]) .profile-photo {
-  filter: brightness(0.85);
+  filter: grayscale(20%) contrast(1.1) brightness(0.9);
+  mask-image: radial-gradient(circle 60% at center, black 50%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle 60% at center, black 50%, transparent 100%);
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .photo-caption {
