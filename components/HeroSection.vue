@@ -224,11 +224,13 @@
   object-fit: cover;
   object-position: center top;
   filter: contrast(1.05) saturate(1.05);
-  transition: filter var(--transition-normal);
+  transition: all var(--transition-normal);
 }
 
 :global([data-theme="dark"]) .portrait-img {
-  filter: contrast(1.05) saturate(1.05) brightness(0.85);
+  filter: grayscale(20%) contrast(1.1) brightness(0.9);
+  mask-image: radial-gradient(circle 65% at center 40%, black 50%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle 65% at center 40%, black 50%, transparent 100%);
 }
 
 .portrait-details {
