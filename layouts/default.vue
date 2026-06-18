@@ -1,5 +1,6 @@
 <template>
   <div class="layout-default">
+    <div class="horizon-glow" aria-hidden="true"></div>
     <AppSkipLink />
     <AppHeader @open-nav="isNavOpen = true" />
     <AppNav :is-open="isNavOpen" @close="isNavOpen = false" />

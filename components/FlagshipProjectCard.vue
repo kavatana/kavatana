@@ -94,12 +94,19 @@ const hasScreenshots = project?.screenshots && project.screenshots.length > 0
 
 <style scoped>
 .flagship-card {
-  background-color: var(--color-surface-2);
+  background-color: hsla(0, 0%, 10%, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  box-shadow: -3px 0 0 0 var(--color-accent);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 hsla(30, 20%, 94%, 0.05);
   overflow: hidden;
   margin: var(--space-xl) 0;
+  transition: all var(--transition-base);
+}
+.flagship-card:hover {
+  border-color: hsla(28, 80%, 52%, 0.3);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 hsla(30, 20%, 94%, 0.08);
 }
 
 .card-top {
@@ -202,7 +209,7 @@ const hasScreenshots = project?.screenshots && project.screenshots.length > 0
 
 .card-right {
   flex: 0 0 60%;
-  background-color: var(--color-surface-1);
+  background-color: hsla(0, 0%, 8%, 0.4);
   border-left: 1px solid var(--color-border);
   padding: var(--space-xl);
   display: flex;
