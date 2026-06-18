@@ -387,10 +387,10 @@ const shots = computed(() => {
 }
 .bayonhub-phone-frame {
   overflow: hidden;
-  width: min(100%, 260px);
-  aspect-ratio: 390 / 1100;
-  border-radius: 32px;
-  border: 10px solid var(--color-border);
+  width: min(100%, 300px);
+  aspect-ratio: 440 / 956;
+  border-radius: 38px;
+  border: 12px solid var(--color-border);
   background: var(--color-surface-1);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
   margin: 0 auto;
@@ -422,7 +422,7 @@ const shots = computed(() => {
 
 @media (max-width: 767px) {
   .bayonhub-phone-frame {
-    width: min(78vw, 260px);
+    width: min(85vw, 300px);
   }
   .case-study-body {
     padding: var(--space-md);
