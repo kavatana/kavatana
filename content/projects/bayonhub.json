@@ -19,40 +19,48 @@
     "Cloudflare R2"
   ],
   "coverImage": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-desktop.png",
+  "coverImageLight": "/images/projects/bayonhub/screenshots/bayonhub-light-home-desktop.png",
   "coverImageAlt": "BayonHub platform preview",
   "screenshots": [
     {
       "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-desktop.png",
+      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-home-desktop.png",
       "alt": "Home Desktop View",
       "caption": "Strongest hero and proof-section shot."
     },
     {
       "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-mobile.png",
+      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-home-mobile.png",
       "alt": "Home Mobile View",
       "caption": "Shows the mobile-first marketplace layout."
     },
     {
       "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-search-desktop.png",
+      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-search-desktop.png",
       "alt": "Search Desktop",
       "caption": "Buyer discovery, filters, and listing cards."
     },
     {
       "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-category-vehicles-desktop.png",
+      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-category-vehicles-desktop.png",
       "alt": "Vehicles Category",
       "caption": "Category browsing with premium seeded vehicles."
     },
     {
       "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-listing-mobile.png",
+      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-listing-mobile.png",
       "alt": "Listing Detail",
       "caption": "Seller trust, listing details, safety/contact surface."
     },
     {
       "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-post-mobile.png",
+      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-post-mobile.png",
       "alt": "Post Listing Flow",
       "caption": "Seller posting flow on a phone-sized viewport."
     },
     {
       "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-pricing-desktop.png",
+      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-pricing-desktop.png",
       "alt": "Pricing Desktop",
       "caption": "Monetization and upgrade surface."
     }

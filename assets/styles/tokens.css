@@ -69,3 +69,8 @@
   --glass-shadow: 0 16px 40px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
   --glass-shadow-hover: 0 24px 60px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.04);
 }
+
+/* Theme Visibility Utilities */
+.theme-light-only { display: none !important; }
+:root[data-theme="light"] .theme-light-only { display: block !important; }
+:root[data-theme="light"] .theme-dark-only { display: none !important; }

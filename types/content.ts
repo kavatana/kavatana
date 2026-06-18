@@ -11,6 +11,7 @@ export interface Project {
   role: string
   stack?: string[]
   coverImage?: string
+  coverImageLight?: string
   coverImageAlt?: string
   screenshots?: Screenshot[]
   liveUrl?: string
@@ -31,6 +32,7 @@ export interface Project {
 
 export interface Screenshot {
   src: string
+  srcLight?: string
   alt: string
   caption?: string
 }
