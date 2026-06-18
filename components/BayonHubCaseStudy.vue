@@ -160,7 +160,8 @@ const shots = computed(() => {
 }
 
 :global([data-theme="light"]) .bayonhub-case-study {
-  background-color: hsla(0, 0%, 100%, 0.8);
+  background-color: hsla(0, 0%, 100%, 0.7);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05), inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
 }
 
 .card-top {

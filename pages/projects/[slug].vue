@@ -1,63 +1,72 @@
 <template>
   <AppContainer>
-    <ProjectHero :project="project" />
-    
-    <div class="cover-image-wrapper" v-if="project.coverImage">
-      <img :src="project.coverImage" :alt="project.coverImageAlt" class="cover-image" width="1200" height="630" fetchpriority="high" />
+    <div v-if="project.id === 'bayonhub'">
+      <div class="back-link-wrapper bayonhub-back">
+        <NuxtLink to="/projects" class="back-link">&larr; Back to Projects</NuxtLink>
+      </div>
+      <BayonHubCaseStudy :project="project" />
     </div>
-    
-    <section class="prose-section">
-      <h2 class="section-title">Problem</h2>
-      <p class="prose-text">{{ project.problem }}</p>
-    </section>
-    
-    <section class="prose-section" v-if="project.constraints && project.constraints.length">
-      <h2 class="section-title">Constraints</h2>
-      <ul class="dash-list">
-        <li v-for="constraint in project.constraints" :key="constraint"><span class="dash">&mdash;</span> {{ constraint }}</li>
-      </ul>
-    </section>
-    
-    <section class="prose-section">
-      <h2 class="section-title">My Role</h2>
-      <p class="prose-text">{{ project.myRole }}</p>
-    </section>
-    
-    <ProjectStack :stack="project.stack" v-if="project.stack && project.stack.length > 0" />
-    
-    <section class="prose-section">
-      <h2 class="section-title">Solution</h2>
-      <p class="prose-text">{{ project.solution }}</p>
-    </section>
-    
-    <div class="callout-block" v-if="project.callout">
-      <p class="callout-text">{{ project.callout }}</p>
-    </div>
-    
-    <ProjectScreenshots :screenshots="project.screenshots" v-if="project.screenshots && project.screenshots.length > 0" />
-    
-    <section class="prose-section" v-if="project.tradeoffs && project.tradeoffs.length">
-      <h2 class="section-title">Tradeoffs</h2>
-      <ul class="dash-list">
-        <li v-for="tradeoff in project.tradeoffs" :key="tradeoff"><span class="dash">&mdash;</span> {{ tradeoff }}</li>
-      </ul>
-    </section>
-    
-    <ProjectResults :results="project.results" v-if="project.results && project.results.length > 0" />
-    
-    <section class="prose-section" v-if="project.nextSteps && project.nextSteps.length">
-      <h2 class="section-title">Next Steps</h2>
-      <p class="prose-text" v-for="step in project.nextSteps" :key="step">{{ step }}</p>
-    </section>
-    
-    <CtaBlock 
-      question="Working on something similar?"
-      link-label="Let's talk &rarr;"
-      link-href="/contact"
-    />
-    
-    <div class="back-link-wrapper">
-      <NuxtLink to="/projects" class="back-link">&larr; Back to Projects</NuxtLink>
+
+    <div v-else>
+      <ProjectHero :project="project" />
+      
+      <div class="cover-image-wrapper" v-if="project.coverImage">
+        <img :src="project.coverImage" :alt="project.coverImageAlt" class="cover-image" width="1200" height="630" fetchpriority="high" />
+      </div>
+      
+      <section class="prose-section">
+        <h2 class="section-title">Problem</h2>
+        <p class="prose-text">{{ project.problem }}</p>
+      </section>
+      
+      <section class="prose-section" v-if="project.constraints && project.constraints.length">
+        <h2 class="section-title">Constraints</h2>
+        <ul class="dash-list">
+          <li v-for="constraint in project.constraints" :key="constraint"><span class="dash">&mdash;</span> {{ constraint }}</li>
+        </ul>
+      </section>
+      
+      <section class="prose-section">
+        <h2 class="section-title">My Role</h2>
+        <p class="prose-text">{{ project.myRole }}</p>
+      </section>
+      
+      <ProjectStack :stack="project.stack" v-if="project.stack && project.stack.length > 0" />
+      
+      <section class="prose-section">
+        <h2 class="section-title">Solution</h2>
+        <p class="prose-text">{{ project.solution }}</p>
+      </section>
+      
+      <div class="callout-block" v-if="project.callout">
+        <p class="callout-text">{{ project.callout }}</p>
+      </div>
+      
+      <ProjectScreenshots :screenshots="project.screenshots" v-if="project.screenshots && project.screenshots.length > 0" />
+      
+      <section class="prose-section" v-if="project.tradeoffs && project.tradeoffs.length">
+        <h2 class="section-title">Tradeoffs</h2>
+        <ul class="dash-list">
+          <li v-for="tradeoff in project.tradeoffs" :key="tradeoff"><span class="dash">&mdash;</span> {{ tradeoff }}</li>
+        </ul>
+      </section>
+      
+      <ProjectResults :results="project.results" v-if="project.results && project.results.length > 0" />
+      
+      <section class="prose-section" v-if="project.nextSteps && project.nextSteps.length">
+        <h2 class="section-title">Next Steps</h2>
+        <p class="prose-text" v-for="step in project.nextSteps" :key="step">{{ step }}</p>
+      </section>
+      
+      <CtaBlock 
+        question="Working on something similar?"
+        link-label="Let's talk &rarr;"
+        link-href="/contact"
+      />
+      
+      <div class="back-link-wrapper">
+        <NuxtLink to="/projects" class="back-link">&larr; Back to Projects</NuxtLink>
+      </div>
     </div>
   </AppContainer>
 </template>
@@ -192,5 +201,10 @@ useHead({
 
 .back-link:hover {
   color: var(--color-text-primary);
+}
+
+.bayonhub-back {
+  padding: var(--space-xl) 0 0 0;
+  justify-content: flex-start;
 }
 </style>
