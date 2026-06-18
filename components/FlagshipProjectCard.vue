@@ -51,8 +51,9 @@ defineProps<{
 }
 
 :global([data-theme="light"]) .flagship-card {
-  background-color: hsla(0, 0%, 100%, 0.7);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05), inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
+  background-color: hsl(0, 0%, 100%);
+  border-color: transparent;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 .flagship-card:hover {
@@ -62,7 +63,8 @@ defineProps<{
 }
 
 :global([data-theme="light"]) .flagship-card:hover {
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), inset 0 1px 0 hsla(0, 0%, 100%, 0.8);
+  border-color: transparent;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
 .card-image-wrap {
@@ -71,6 +73,16 @@ defineProps<{
   border-bottom: 1px solid var(--color-border);
   overflow: hidden;
   background: var(--color-surface-1);
+}
+
+@media (max-width: 767px) {
+  .card-image-wrap {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+:global([data-theme="light"]) .card-image-wrap {
+  border-bottom-color: rgba(0, 0, 0, 0.04);
 }
 
 .card-image {
@@ -91,6 +103,12 @@ defineProps<{
   flex-direction: column;
   gap: var(--space-md);
   flex: 1;
+}
+
+@media (max-width: 767px) {
+  .card-content {
+    padding: var(--space-lg) var(--space-md);
+  }
 }
 
 .card-meta {
