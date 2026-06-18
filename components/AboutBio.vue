@@ -51,6 +51,11 @@ const about = useAbout()
   height: auto;
   object-fit: cover;
   display: block;
+  transition: filter var(--transition-normal);
+}
+
+:global([data-theme="dark"]) .profile-photo {
+  filter: brightness(0.85);
 }
 
 .photo-caption {

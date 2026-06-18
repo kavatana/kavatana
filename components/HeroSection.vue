@@ -224,6 +224,11 @@
   object-fit: cover;
   object-position: center top;
   filter: contrast(1.05) saturate(1.05);
+  transition: filter var(--transition-normal);
+}
+
+:global([data-theme="dark"]) .portrait-img {
+  filter: contrast(1.05) saturate(1.05) brightness(0.85);
 }
 
 .portrait-details {
