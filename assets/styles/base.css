@@ -36,6 +36,29 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Page Transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s ease;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(8px);
+}
+
+/* Animation Utilities */
+.animate-fade-up {
+  animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

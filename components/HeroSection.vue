@@ -1,25 +1,25 @@
 <template>
   <section class="hero-section">
     <div class="hero-left">
-      <div class="hero-identity">
+      <div class="hero-identity animate-fade-up">
         <span class="identity-badge">🇰🇭 Year 1 Software Engineering Student · Cambodia</span>
         <h1 class="hero-name">Ka Vatana</h1>
       </div>
-      <p class="hero-headline">Building real software while learning how to build better software.</p>
-      <p class="hero-subtitle">
+      <p class="hero-headline animate-fade-up delay-100">Building real software while learning how to build better software.</p>
+      <p class="hero-subtitle animate-fade-up delay-200">
         I’m a Year 1 Software Engineering student from Cambodia. I learn by building practical web projects, exploring AI-assisted workflows, and developing product thinking one commit at a time.
       </p>
-      <div class="hero-actions">
+      <div class="hero-actions animate-fade-up delay-300">
         <NuxtLink to="/projects" class="btn-primary">View projects</NuxtLink>
         <NuxtLink to="/contact" class="btn-secondary">Contact me &rarr;</NuxtLink>
       </div>
-      <div class="availability-badge">
+      <div class="availability-badge animate-fade-up delay-400">
         <span class="availability-dot" aria-hidden="true"></span>
         Open to internships, collaborations, and learning opportunities
       </div>
     </div>
     
-    <div class="hero-right" aria-hidden="true">
+    <div class="hero-right animate-fade-up delay-500" aria-hidden="true">
       <div class="portrait-card">
         <div class="portrait-image-wrapper">
           <img src="/images/profile/ka-vatana-transparent.png" alt="Portrait of Ka Vatana" class="portrait-img" />

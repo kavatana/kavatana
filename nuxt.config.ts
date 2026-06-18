@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@assets': fileURLToPath(new URL('./assets', import.meta.url))
   },
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       htmlAttrs: {
         lang: 'en'
