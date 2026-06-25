@@ -1,0 +1,89 @@
+{
+  "id": "svaeng-yul",
+  "title": "Svaeng-Yul",
+  "tagline": "AI-assisted QCM practice platform for Cambodian healthcare students",
+  "status": "in-progress",
+  "statusLabel": "Interactive Demo",
+  "featured": true,
+  "featuredOrder": 3,
+  "year": 2026,
+  "role": "Solo full-stack design & engineering",
+  "stack": [
+    "Next.js 16",
+    "React 19",
+    "TypeScript",
+    "Tailwind CSS 4",
+    "Supabase (Auth / Postgres / RLS)",
+    "Anthropic API",
+    "Zod",
+    "Vercel"
+  ],
+  "coverImage": "/images/projects/svaeng-yul/dark/home-desktop.png",
+  "coverImageAlt": "Svaeng-Yul student dashboard in its midnight study-clinic theme",
+  "liveUrl": "https://svaeng-yul.vercel.app",
+  "githubUrl": "https://github.com/kavatana/svaeng-yul",
+  "problem": "Cambodian nursing and medical students practice with photocopied question banks that have no feedback loop. I wanted to build a calm, mobile-first place to practice QCM questions, see exactly where you are weak, and come back tomorrow — grounded in the local curriculum, not a generic quiz app.",
+  "context": "Svaeng-Yul is a question-bank practice platform built around one honest loop: Practice → Feedback → Weak Area → Retry → Mastery. It runs in a zero-setup demo mode (in-memory seed data, no account or keys needed) and, when configured, in a live mode backed by Supabase with row-level security. AI is optional everywhere — without an API key it falls back to safe, hand-written hints.",
+  "constraints": [
+    "Must work end-to-end with zero credentials so anyone can try it",
+    "Quiz answers can never be trusted from the client — scoring has to be server-side",
+    "AI hints must never leak the correct answer",
+    "Built for Khmer-language students on phones, late at night"
+  ],
+  "myRole": "I designed and built the whole thing — the data layer, the quiz engine, the gamification, the admin tools, and the AI safety wrappers — and curated the seed question bank with source notes.",
+  "solution": "A dual-mode architecture: one data-repository interface with an in-memory implementation for the demo and a Supabase implementation for live use, so the UI never changes. Quizzes are graded on the server, AI hints are filtered so they can't reveal the answer, and student-reported disputes get an AI advisory verdict that an admin always has the final say on.",
+  "callout": "The whole app runs with no login and no API keys — demo mode seeds a full study experience in memory, so a visitor can take a real quiz, climb the leaderboard, and read dispute reports without any setup.",
+  "tradeoffs": [
+    "Kept AI strictly advisory — it suggests, a human decides — instead of letting it edit content.",
+    "Started with a hand-curated, source-checked question bank over scraping a large noisy one.",
+    "Chose a single repository interface over two codebases so demo and live behaviour stay identical."
+  ],
+  "whatIBuilt": [
+    "A quiz engine with Practice, Timed, Weak-Area, and Challenge modes and server-side scoring.",
+    "AI hint generation with a safety layer that blocks any hint revealing the answer, plus a safe fallback when no key is present.",
+    "A student dispute-report flow with an AI advisory verdict and admin-final decision.",
+    "Gamification: XP, levels, streaks, and achievement badges tied to real study behaviour.",
+    "An admin suite: question-bank management, CSV import/export, user analytics, and report review.",
+    "Personalised recommendations that point each student at their lowest-accuracy subject."
+  ],
+  "whatILearned": [
+    "How to design one data-layer interface that serves both an offline demo and a real Postgres backend.",
+    "Why quiz grading must be server-authoritative and how to keep the answer key off the client.",
+    "How to put guardrails around an AI feature so it stays helpful without enabling cheating.",
+    "Designing row-level security so students can never edit answer keys or other students' data.",
+    "How to be honest about sources — flagging which seeded questions still need instructor verification."
+  ],
+  "results": [
+    "Runs fully credential-free in demo mode; lint, strict type-check, and production build all pass clean.",
+    "AI features degrade gracefully to safe canned content when no key is configured.",
+    "A seeded bank spanning multiple subjects with difficulty and cognitive-level distribution."
+  ],
+  "screenshots": [
+    {
+      "src": "/images/projects/svaeng-yul/dark/home-desktop.png",
+      "alt": "Student dashboard",
+      "caption": "The student dashboard: streaks, recommended weak subject, and the daily practice nudge."
+    },
+    {
+      "src": "/images/projects/svaeng-yul/dark/quiz-mobile.png",
+      "alt": "Quiz in progress on mobile",
+      "caption": "A quiz mid-flight on a phone — the primary way students actually study."
+    },
+    {
+      "src": "/images/projects/svaeng-yul/dark/result-desktop.png",
+      "alt": "Quiz result with feedback",
+      "caption": "Server-scored results with per-question feedback and the safe AI hint."
+    },
+    {
+      "src": "/images/projects/svaeng-yul/dark/leaderboard-desktop.png",
+      "alt": "Leaderboard",
+      "caption": "The all-time leaderboard — XP, levels, and ranks across students."
+    },
+    {
+      "src": "/images/projects/svaeng-yul/dark/admin-desktop.png",
+      "alt": "Admin dashboard",
+      "caption": "Admin view: question-bank stats, pending disputes, and analytics."
+    }
+  ],
+  "repoNote": "Validated with ESLint (zero errors), strict TypeScript, and a clean production build; verified the credential-free demo path end-to-end against a running server."
+}

@@ -3,7 +3,7 @@
   "title": "BayonHub",
   "tagline": "Khmer-first Cambodian classifieds marketplace",
   "status": "in-progress",
-  "statusLabel": "Active Learning Project",
+  "statusLabel": "Interactive Demo",
   "featured": true,
   "featuredOrder": 1,
   "year": 2026,
@@ -21,7 +21,7 @@
   "coverImage": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-desktop.png",
   "coverImageLight": "/images/projects/bayonhub/screenshots/bayonhub-light-home-desktop.png",
   "coverImageAlt": "BayonHub platform preview",
-  "liveUrl": "https://www.bayonhub.com",
+  "liveUrl": "https://bayonhub-demo.vercel.app",
   "githubUrl": "https://github.com/kavatana/bayonhub",
   "screenshots": [
     {
@@ -68,7 +68,7 @@
     }
   ],
   "problem": "Cambodia has no widely trusted, Khmer-friendly digital classifieds platform. I wanted to explore what one might look like.",
-  "context": "BayonHub was built to feel like a real local commerce product instead of a static landing page. The frontend works as a Vite PWA, supports Khmer and English, includes marketplace browsing and posting paths, and can run in localStorage fallback mode when no backend API is configured.",
+  "context": "BayonHub was built to feel like a real local commerce product instead of a static landing page. The frontend is a Vite PWA, fully bilingual (Khmer and English), with marketplace browsing, posting, and seller paths — plus Kasekor, a voice-first vertical aimed at farmers. The whole thing runs offline against a localStorage fallback, so the public demo works end-to-end with no backend, no account, and no keys.",
   "constraints": [
     "Solo student project — no team or funding",
     "Learning full-stack architecture while building",
@@ -76,16 +76,19 @@
     "Navigating the marketplace cold-start problem as a concept"
   ],
   "myRole": "I built everything myself — frontend, backend, basic DevOps, and product decisions — as a learning exercise. Every part of it taught me something I didn't know before starting.",
-  "solution": "Built a foundational buyer-to-seller flow: search, listings, account management, and basic seller trust signals — focused on learning, not on launching.",
+  "solution": "Built a foundational buyer-to-seller flow — search, listings, account management, and seller trust signals — and an offline-first architecture where every API call has a localStorage fallback, so the app stays fully usable on a spotty connection or with no backend at all. Kasekor sits alongside it as a distinct, discoverable vertical for farmers.",
+  "callout": "Offline-first by design: every data call falls back to localStorage, so the demo runs end-to-end with zero backend — exactly what Cambodia's network conditions need.",
   "tradeoffs": [
     "Prioritized working flows over visual polish.",
-    "Phased the build to learn one layer at a time instead of doing everything at once."
+    "Phased the build to learn one layer at a time instead of doing everything at once.",
+    "Made offline-first non-negotiable, accepting a heavier client over a backend dependency for the demo."
   ],
   "whatIBuilt": [
     "A buyer-to-seller listing flow with search and categories.",
     "Basic account management and seller profile concept.",
     "A simple trust indicator experiment (phone verification idea).",
-    "A tiered listing model as a monetization concept to explore."
+    "A tiered listing model as a monetization concept to explore.",
+    "Kasekor: a voice-first listing vertical for farmers, with fair-price hints and trust signals."
   ],
   "whatILearned": [
     "How to structure a React + Express full-stack project from scratch.",
@@ -97,8 +100,8 @@
   ],
   "repoNote": "Validated with frontend/backend lint, production builds, Chromium smoke tests, high/critical dependency audits, and a 13-check pre-deploy script.",
   "nextSteps": [
-    "Configure DNS for api.bayonhub.com and www.bayonhub.com.",
-    "Fill backend provider environment with real values.",
-    "Verify database, Redis, and R2 health on the production instance."
+    "Connect the live Express + Postgres backend behind the offline-first frontend.",
+    "Wire real SMS verification and ABA KHQR payments for launch.",
+    "Take Kasekor's voice capture from demo fallback to live AI extraction."
   ]
 }
