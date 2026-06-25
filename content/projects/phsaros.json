@@ -44,7 +44,9 @@
     "Atomic transactional checkout with real-time change calculation",
     "Inventory management with bottom-sheet forms and mobile card layouts",
     "Mobile-first shell: top status bar + bottom tab nav",
-    "Persistent night mode: app-level theme controller with dark tokens"
+    "Persistent night mode: app-level theme controller with dark tokens across every route",
+    "A server-rendered dashboard (React Server Component) so data lands in the first paint with a skeleton, not a loading flash",
+    "Accessible drawers and modals: focus trap, Escape-to-close, and ARIA dialog roles"
   ],
   "whatILearned": [
     "Type-safe end-to-end development via Server Actions (eliminating REST/GraphQL boilerplate)",
