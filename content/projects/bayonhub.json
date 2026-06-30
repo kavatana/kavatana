@@ -21,7 +21,7 @@
   "coverImage": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-desktop.png",
   "coverImageLight": "/images/projects/bayonhub/screenshots/bayonhub-light-home-desktop.png",
   "coverImageAlt": "BayonHub platform preview",
-  "liveUrl": "https://bayonhub-demo.vercel.app",
+  "liveUrl": "https://bayonhub-app.vercel.app",
   "githubUrl": "https://github.com/kavatana/bayonhub",
   "screenshots": [
     {
