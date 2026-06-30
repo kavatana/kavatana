@@ -20,7 +20,7 @@
   ],
   "coverImage": "/images/projects/svaeng-yul/dark/home-desktop.png",
   "coverImageAlt": "Svaeng-Yul student dashboard in its midnight study-clinic theme",
-  "liveUrl": "https://svaeng-yul.vercel.app",
+  "liveUrl": "https://svaeng-yul-demo.vercel.app",
   "githubUrl": "https://github.com/kavatana/svaeng-yul",
   "problem": "Cambodian nursing and medical students practice with photocopied question banks that have no feedback loop. I wanted to build a calm, mobile-first place to practice QCM questions, see exactly where you are weak, and come back tomorrow — grounded in the local curriculum, not a generic quiz app.",
   "context": "Svaeng-Yul is a question-bank practice platform built around one honest loop: Practice → Feedback → Weak Area → Retry → Mastery. It runs in a zero-setup demo mode (in-memory seed data, no account or keys needed) and, when configured, in a live mode backed by Supabase with row-level security. AI is optional everywhere — without an API key it falls back to safe, hand-written hints.",
@@ -62,17 +62,17 @@
     {
       "src": "/images/projects/svaeng-yul/dark/home-desktop.png",
       "alt": "Student dashboard",
-      "caption": "The student dashboard: streaks, recommended weak subject, and the daily practice nudge."
+      "caption": "The student dashboard: streak, level, XP, today's weak-subject focus, and the daily challenge."
     },
     {
-      "src": "/images/projects/svaeng-yul/dark/quiz-mobile.png",
-      "alt": "Quiz in progress on mobile",
-      "caption": "A quiz mid-flight on a phone — the primary way students actually study."
+      "src": "/images/projects/svaeng-yul/dark/home-mobile.png",
+      "alt": "Student dashboard on mobile",
+      "caption": "Mobile-first — the way students actually study, late at night on a phone."
     },
     {
-      "src": "/images/projects/svaeng-yul/dark/result-desktop.png",
-      "alt": "Quiz result with feedback",
-      "caption": "Server-scored results with per-question feedback and the safe AI hint."
+      "src": "/images/projects/svaeng-yul/dark/subjects-desktop.png",
+      "alt": "Subject browser",
+      "caption": "Browsing subjects, with weak-area targeting front and centre."
     },
     {
       "src": "/images/projects/svaeng-yul/dark/leaderboard-desktop.png",
@@ -81,8 +81,8 @@
     },
     {
       "src": "/images/projects/svaeng-yul/dark/admin-desktop.png",
-      "alt": "Admin dashboard",
-      "caption": "Admin view: question-bank stats, pending disputes, and analytics."
+      "alt": "Admin overview",
+      "caption": "Admin overview: question-bank stats, pending dispute reports, and weak-subject analytics."
     }
   ],
   "repoNote": "Validated with ESLint (zero errors), strict TypeScript, and a clean production build; verified the credential-free demo path end-to-end against a running server."

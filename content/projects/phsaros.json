@@ -23,7 +23,6 @@
   "coverImage": "/images/projects/phsaros/08-sidebar-expanded.png",
   "coverImageAlt": "PhsarOS dashboard with expanded navigation sidebar",
   "liveUrl": "https://phsaros.vercel.app",
-  "githubUrl": "https://github.com/kavatana/phsaros",
   "problem": "Small retailers need a fast, atomic point-of-sale system connected to a live operations dashboard without the enterprise bloat. They often resort to pen and paper because existing tools are slow, overly complex, or require expensive hardware.",
   "context": "A full-stack point-of-sale and back-office dashboard that lets a small shop ring up sales, track inventory, log expenses, and watch the day's numbers in real time.",
   "constraints": [

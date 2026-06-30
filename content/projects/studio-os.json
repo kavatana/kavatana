@@ -19,8 +19,7 @@
   ],
   "coverImage": "/images/projects/studio-os/dark/room-desktop.png",
   "coverImageAlt": "Studio OS home — a dark, warm 'digital room' dashboard",
-  "liveUrl": "https://studio-os-demo.vercel.app",
-  "githubUrl": "https://github.com/kavatana/studio-os",
+  "liveUrl": "https://kavatana-studio-os.vercel.app",
   "problem": "Most productivity tools feel like an admin dashboard — cold, demanding, and easy to abandon. I wanted a personal system that felt like coming home: somewhere to see the day's focus, protect what matters first, and keep small promises without guilt.",
   "context": "Studio OS is a personal life-operating-system I designed and built for myself, then redesigned around a 'digital room' metaphor — zones for today's focus, study, building, a calm corner, and a long-term horizon. It is fully offline: all state lives in localStorage, ambient focus music is synthesised live in the browser, and there is no backend or account. The public demo runs on a neutral demo persona so the concept can be explored without any of my private data.",
   "constraints": [
