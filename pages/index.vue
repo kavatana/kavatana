@@ -2,7 +2,7 @@
   <AppContainer>
     <HeroSection />
     <CurrentFocus />
-    <FlagshipProjectCard />
+    <FeaturedProjects />
     <WhatImLearning />
     <BuildDirections />
     <CtaBlock
