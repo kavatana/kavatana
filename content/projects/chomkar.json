@@ -18,6 +18,7 @@
     "Product strategy",
     "Agritech"
   ],
+  "liveUrl": "https://chomkar.com",
   "cardSummary": "Smallholder farmers in Cambodia lose value not from a lack of listings but from weak coordination — buyer demand, pre-harvest visibility, and trust rarely line up in time. Chomkar.com is a Khmer-first, offline-capable market-access product that models that full loop, with a live Cloudflare edge backend powering a claim-safe AI lesson helper and Khmer voice-to-text. It is my strongest current proof: a real Cambodia problem carried from framing to a deployed build, with strict honesty about what the software actually promises.",
   "proofPoints": [
     "Top 2 at Turing Hackathon Cycle 10 (theme: Market Access for Farmers).",
