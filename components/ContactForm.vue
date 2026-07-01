@@ -1,7 +1,7 @@
 <template>
   <div class="contact-form-card">
     <div v-if="status === 'success'" class="success-message" aria-live="polite">
-      <p>Message sent. I'll be in touch within a few days.</p>
+      <p>{{ successMessage }}</p>
     </div>
     
     <form v-else @submit.prevent="submitForm" aria-live="polite">
@@ -47,6 +47,9 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
+import { usePortfolioConfig } from '~/composables/usePortfolioConfig'
+
+const config = usePortfolioConfig()
 
 const form = reactive({
   name: '',
@@ -63,6 +66,7 @@ const errors = reactive({
 
 const status = ref<'idle' | 'loading' | 'success' | 'error'>('idle')
 const errorMessage = ref('')
+const successMessage = ref("Message sent. I'll be in touch within a few days.")
 const isLoading = ref(false)
 
 const submitForm = async () => {
@@ -70,43 +74,52 @@ const submitForm = async () => {
   errors.email = ''
   errors.message = ''
   errorMessage.value = ''
-  
+
   if (!form.name) errors.name = 'Name is required'
   if (!form.email) errors.email = 'Email is required'
   if (!form.message) errors.message = 'Message is required'
-  
+
   if (errors.name || errors.email || errors.message) return
-  
+
   status.value = 'loading'
   isLoading.value = true
-  
+
   try {
     const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT || ''
+
+    // No backend endpoint configured: fall back to the visitor's own email client.
+    // This always works with no server and is honest — nothing is silently dropped.
     if (!endpoint) {
-      status.value = 'error'
-      errorMessage.value = 'Contact form is not connected yet. Please email me directly.'
+      const to = config?.email || 'kavatanaa@gmail.com'
+      const subject = encodeURIComponent(`Portfolio contact${form.type ? ` (${form.type})` : ''} — ${form.name}`)
+      const body = encodeURIComponent(`${form.message}\n\n— ${form.name}\n${form.email}`)
+      if (import.meta.client) {
+        window.location.href = `mailto:${to}?subject=${subject}&body=${body}`
+      }
+      successMessage.value = 'Opening your email app with your message ready — just press send.'
+      status.value = 'success'
       isLoading.value = false
       return
     }
-    
+
     const response = await fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form)
     })
-    
+
     if (!response.ok) throw new Error('Failed to send message')
-    
+
+    successMessage.value = "Message sent. I'll be in touch within a few days."
     status.value = 'success'
-    
-    // Track success
+
     const { $trackEvent } = useNuxtApp()
     if ($trackEvent) {
       $trackEvent('contact_form_success')
     }
   } catch (err: any) {
     status.value = 'error'
-    errorMessage.value = 'An error occurred. Please try emailing directly.'
+    errorMessage.value = 'Something went wrong. Please email me directly instead.'
   } finally {
     isLoading.value = false
   }

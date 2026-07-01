@@ -27,7 +27,9 @@ useHead({
     { property: 'og:description', content: 'Ka Vatana background, studies, current projects, experience, and learning direction.' },
     { property: 'og:url', content: 'https://kavatana.me/about' },
     { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: 'https://kavatana.me/images/og-default.png' },
     { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:image', content: 'https://kavatana.me/images/og-default.png' },
     { name: 'twitter:title', content: 'About · Ka Vatana' },
     { name: 'twitter:description', content: 'Ka Vatana background, studies, current projects, experience, and learning direction.' }
   ],

@@ -12,43 +12,18 @@
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
-    <audio ref="audioRef" loop preload="auto" autoplay>
+    <audio ref="audioRef" loop preload="none">
       <source src="/audio/mystic-realm.mp3" type="audio/mpeg" />
     </audio>
   </button>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref } from 'vue'
 
+// Ambient music is opt-in: it never autoplays. A visitor taps the button to start it.
 const isPlaying = ref(false)
 const audioRef = ref<HTMLAudioElement | null>(null)
-
-onMounted(() => {
-  if (audioRef.value) {
-    // Attempt autoplay immediately
-    audioRef.value.play().then(() => {
-      isPlaying.value = true
-    }).catch(() => {
-      // Browser blocked autoplay, wait for first user interaction
-      const playOnInteract = () => {
-        if (!isPlaying.value && audioRef.value) {
-          audioRef.value.play().then(() => {
-            isPlaying.value = true
-          }).catch(() => {})
-        }
-        
-        ['click', 'keydown', 'pointerdown', 'touchstart'].forEach(e => {
-          document.removeEventListener(e, playOnInteract)
-        })
-      }
-      
-      ['click', 'keydown', 'pointerdown', 'touchstart'].forEach(e => {
-        document.addEventListener(e, playOnInteract, { once: true })
-      })
-    })
-  }
-})
 
 const toggleAudio = () => {
   if (!audioRef.value) return

@@ -33,7 +33,7 @@ useHead({
       property: 'og:description',
       content: config?.description || 'Year 1 Software Engineering student from Cambodia learning full-stack development, AI workflows, and product building.'
     },
-    { property: 'og:image', content: config?.ogImage || '/images/og-default.png' },
+    { property: 'og:image', content: 'https://kavatana.me' + (config?.ogImage || '/images/og-default.png') },
     { property: 'og:url', content: 'https://kavatana.me' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
@@ -42,7 +42,7 @@ useHead({
       name: 'twitter:description',
       content: config?.description || 'Year 1 Software Engineering student from Cambodia.'
     },
-    { name: 'twitter:image', content: config?.ogImage || '/images/og-default.png' }
+    { name: 'twitter:image', content: 'https://kavatana.me' + (config?.ogImage || '/images/og-default.png') }
   ],
   link: [
     { rel: 'canonical', href: 'https://kavatana.me' }

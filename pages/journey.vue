@@ -211,7 +211,9 @@ useHead({
     { property: 'og:description', content: 'Ka Vatana full education, experience, activities, awards, and growth timeline from high school to present.' },
     { property: 'og:url', content: 'https://kavatana.me/journey' },
     { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: 'https://kavatana.me/images/og-default.png' },
     { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:image', content: 'https://kavatana.me/images/og-default.png' },
     { name: 'twitter:title', content: 'Journey · Ka Vatana' },
     { name: 'twitter:description', content: 'Ka Vatana full education, experience, activities, awards, and growth timeline from high school to present.' }
   ],

@@ -58,7 +58,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/sitemap'],
   nitro: {
     prerender: {
-      routes: ['/', '/about', '/journey', '/projects', '/projects/chomkar', '/projects/bayonhub', '/contact']
+      routes: ['/', '/about', '/journey', '/contact', '/projects', '/projects/chomkar', '/projects/bayonhub', '/projects/phsaros', '/projects/svaeng-yul', '/projects/studio-os', '/projects/kavatana-portfolio', '/projects/cyber-arena-team-os']
     }
   },
   css: ['@assets/styles/tokens.css', '@assets/styles/base.css']

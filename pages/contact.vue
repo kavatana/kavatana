@@ -3,7 +3,7 @@
     <div class="page-header">
       <h1 class="page-title">Let's talk.</h1>
       <p class="page-subtitle">
-        I am currently open to the right opportunities. Whether it's a full-stack product build, system architecture, or a complex DevOps pipeline, I typically respond within 1-2 days.
+        I'm a Year 1 software-engineering student in Cambodia, open to internships, collaborations, and student-team projects — front-end and full-stack builds, product work, and learning together. Send me a message and I'll usually reply within a day or two.
       </p>
     </div>
     
@@ -40,7 +40,9 @@ useHead({
     { property: 'og:description', content: 'Get in touch for opportunities or collaborations.' },
     { property: 'og:url', content: 'https://kavatana.me/contact' },
     { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: 'https://kavatana.me/images/og-default.png' },
     { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:image', content: 'https://kavatana.me/images/og-default.png' },
     { name: 'twitter:title', content: 'Contact · Ka Vatana' },
     { name: 'twitter:description', content: 'Get in touch for opportunities or collaborations.' }
   ],
