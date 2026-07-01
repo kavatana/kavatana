@@ -20,6 +20,31 @@
     "Recharts",
     "Zod"
   ],
+  "cardSummary": "Small retailers often fall back to pen and paper because existing point-of-sale tools are slow, complex, or hardware-heavy. PhsarOS is a full-stack POS and operations dashboard where the hard part lives on the server: checkout runs as a single atomic Prisma transaction across a seven-model relational schema, every mutation is Zod-validated, and a live dashboard renders the day's numbers server-side. It is my clearest evidence of reasoning about data integrity and backend flow, not just building screens.",
+  "proofPoints": [
+    "Atomic checkout: sale + sale items + stock decrement committed in one Prisma transaction.",
+    "Prisma 7 + Neon Postgres relational schema (7 models) behind 7 application routes.",
+    "Server-side Zod validation on every mutation via type-safe Server Actions."
+  ],
+  "deploymentLine": "Vercel + Neon Postgres + Prisma server actions; a daily self-reset cron keeps the public demo clean.",
+  "deployment": {
+    "frontend": "Next.js 14 (App Router, React Server Components) on Vercel",
+    "backend": "Next.js Server Actions with Prisma 7",
+    "database": "Neon serverless Postgres (Prisma driver adapter)",
+    "hosting": "Vercel",
+    "status": "deployed"
+  },
+  "backendProof": [
+    "Transactional checkout executed as a single Prisma transaction (sale + sale items + stock decrement) for data integrity.",
+    "A relational schema of 7 Prisma models designed multi-tenant-ready.",
+    "Server-side Zod validation enforced on every mutation.",
+    "Type-safe Server Actions used instead of hand-rolled REST/GraphQL endpoints.",
+    "Neon serverless Postgres connected through a swappable Prisma driver adapter (SQLite → Neon by changing one adapter).",
+    "A server-rendered dashboard (React Server Component) so data lands in the first paint.",
+    "A daily self-reset cron job that resets the public demo database."
+  ],
+  "architectureNote": "PhsarOS is a Next.js 14 App Router app where the backend is expressed as type-safe Server Actions calling Prisma against Neon serverless Postgres, avoiding a separate REST/GraphQL layer. The checkout path is deliberately modeled as one Prisma transaction so a sale, its line items, and stock decrements either all commit or all roll back — chosen over offline-first capability as the priority tradeoff. A Prisma driver-adapter setup lets the same schema run on SQLite locally and Neon in production by swapping a single adapter, and the dashboard uses React Server Components so KPI data is present at first paint rather than after a client fetch.",
+  "whatThisProves": "I can design a relational schema and enforce data integrity with atomic transactions and server-side validation end-to-end — the core signal for backend capability.",
   "coverImage": "/images/projects/phsaros/08-sidebar-expanded.png",
   "coverImageAlt": "PhsarOS dashboard with expanded navigation sidebar",
   "liveUrl": "https://phsaros.vercel.app",
@@ -60,6 +85,7 @@
     "Lightning-fast ~88-101 kB first-load JS across operations routes",
     "Production build passes strict lint and type-check"
   ],
+  "nextBackendStep": "Add authenticated multi-tenant scoping and audit logging on top of the existing schema, and document the cron and Neon connection config so the deployment story is fully repo-backed.",
   "screenshots": [
     {
       "src": "/images/projects/phsaros/01-dashboard-desktop.png",

@@ -13,11 +13,36 @@
     "Vite 6",
     "Tailwind CSS",
     "Zustand",
+    "Express 5",
     "Prisma",
-    "PostgreSQL",
+    "PostgreSQL 16",
     "Redis",
     "Cloudflare R2"
   ],
+  "cardSummary": "Cambodia has no widely trusted, Khmer-first digital classifieds platform, and the ones that exist assume a stable connection many users do not have. BayonHub is a bilingual (Khmer/English) marketplace built offline-first: the public Vite PWA runs end-to-end with no backend, no account, and no keys because every API call falls back to localStorage. It proves the harder half of full-stack — a resilient client that degrades gracefully — while a full Express + Postgres + Prisma backend sits in the same repo, designed and ready to connect.",
+  "proofPoints": [
+    "Offline-first by contract: with no API URL set, every data call falls back to a versioned localStorage schema, so the demo works on a spotty connection or no backend at all.",
+    "Atomic promotion payment in one Prisma transaction: marking a payment PAID, creating the promotion, and flipping the listing to promoted commit together — a listing can never be promoted without a paid record.",
+    "Production-grade Express 5 API in-repo: helmet CSP/HSTS, a strict CORS allowlist, CSRF cookies, per-route rate limiters, and a /health check that pings Postgres, Redis, and R2 before returning ok."
+  ],
+  "deploymentLine": "Frontend demo on Vercel (localStorage fallback); Express + Postgres 16 + Redis + Cloudflare R2 backend present in-repo, not yet connected.",
+  "deployment": {
+    "frontend": "Vite PWA (React 19) on Vercel, running in localStorage-fallback mode",
+    "backend": "Express 5 + Prisma API in the repo (bayonhub-api); not yet deployed or connected",
+    "database": "PostgreSQL 16 via Prisma (docker-compose for local dev); no hosted production DB yet",
+    "hosting": "Frontend on Vercel; backend deploy documented in DEPLOY.md but not live",
+    "status": "demo"
+  },
+  "backendProof": [
+    "A full marketplace Prisma schema: ~25 Postgres models (User, Listing, Payment, ListingPromotion, Conversation, Message, KYCApplication, MerchantProfile, Review, and more) with enums, a tsvector search column, and composite indexes tuned for status/category/province feeds.",
+    "Multiple real prisma.$transaction blocks across payments, listings, auth, and admin — including view-count increment paired with a view-log insert, and user registration wrapped in an interactive transaction.",
+    "An Express 5 server wiring 15 route modules with helmet security headers, a strict CORS allowlist, CSRF middleware, request-id logging, and rate limiting.",
+    "A deep /health check that pings Postgres (SELECT 1), Redis, and Cloudflare R2 and returns a degraded 503 unless all three report ok.",
+    "Cloudflare R2 media storage via the AWS S3 SDK with presigned uploads, plus Redis for OTP, rate-limit state, and view de-duplication.",
+    "A DEPLOY.md production runbook and a pre-deploy-check.sh running lint, production builds, chunk-size limits, secret scanning, and env checks across frontend and backend."
+  ],
+  "architectureNote": "The repo is a two-app monorepo: bayonhub-app (Vite/React 19 PWA with Zustand stores and an Axios client) and bayonhub-api (Express 5 + Prisma + Postgres 16 + Redis + R2). The core decision is an offline-first contract enforced in the Axios client — when the API URL is empty or the network fails, every call transparently falls back to a namespaced localStorage schema, so the frontend has no hard dependency on the backend. The backend mirrors that same data model in Prisma and layers on security (helmet, CORS allowlist, CSRF, JWT with rotating refresh tokens, rate limiting) and integrity via multi-write transactions, so the two halves are designed to line up cleanly once connected.",
+  "whatThisProves": "I can design and reason about a full-stack system end-to-end — a resilient offline-first client and a security-conscious, transaction-safe Express/Prisma/Postgres backend with a real deploy runbook — not just wire up a single-layer tutorial.",
   "coverImage": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-desktop.png",
   "coverImageLight": "/images/projects/bayonhub/screenshots/bayonhub-light-home-desktop.png",
   "coverImageAlt": "BayonHub platform preview",
@@ -99,6 +124,7 @@
     "How much harder building a real product is than following a tutorial."
   ],
   "repoNote": "Validated with frontend/backend lint, production builds, Chromium smoke tests, high/critical dependency audits, and a 13-check pre-deploy script.",
+  "nextBackendStep": "Connect the existing Express + Postgres + Prisma API behind the offline-first frontend and deploy the backend (with Redis and R2) to a hosted platform such as AWS, Azure, or Railway, then point the frontend at the live API URL.",
   "nextSteps": [
     "Connect the live Express + Postgres backend behind the offline-first frontend.",
     "Wire real SMS verification and ABA KHQR payments for launch.",

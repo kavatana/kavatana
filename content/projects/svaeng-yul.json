@@ -18,6 +18,30 @@
     "Zod",
     "Vercel"
   ],
+  "cardSummary": "Cambodian nursing and medical students drill QCM questions from photocopied banks with no feedback loop and no way to see where they are weak. Svaeng-Yul is a mobile-first practice platform built around one honest loop — Practice, Feedback, Weak Area, Retry, Mastery — that grades every quiz on the server, keeps the answer key off the client entirely, and treats AI as an optional, guardrailed helper rather than a source of truth. It proves I can reason about a real backend: server-authoritative scoring, a dual-mode data layer, Postgres with row-level security, and AI features that fail safe.",
+  "proofPoints": [
+    "Server-authoritative scoring: the client-facing question type carries no correct answer, and a single server function decides correctness against stored questions.",
+    "One data-repository interface with two implementations (in-memory demo + Supabase live), selected at runtime, so the UI is identical whether or not credentials are configured.",
+    "AI hints pass through a reveal-detection check and fall back to a canned clue if they leak the answer; dispute analysis is advisory-only with an admin-final decision."
+  ],
+  "deploymentLine": "Next.js 16 on Vercel (live demo, in-memory data); optional Supabase backend with Auth, Postgres, and RLS behind one repository interface.",
+  "deployment": {
+    "frontend": "Next.js 16 (App Router) + React 19 + Tailwind 4 on Vercel",
+    "backend": "Next.js server actions and API routes; optional Supabase (Auth + Postgres) in live mode",
+    "database": "In-memory seed store in demo mode; Supabase Postgres with RLS in live mode",
+    "hosting": "Vercel",
+    "status": "demo"
+  },
+  "backendProof": [
+    "Server-side quiz scoring in a single gradeQuiz() source of truth, invoked by the submit API route and both repository implementations.",
+    "A dual-mode data layer that routes every call to either the in-memory or Supabase repository behind one typed interface, based on whether Supabase is configured.",
+    "Row-level security enabling RLS on 16 tables and deliberately omitting any student UPDATE policy on questions, so students can never alter a correct answer or explanation.",
+    "A Postgres schema across 5 ordered migrations (profiles, questions, quiz sessions/answers, hint requests, answer reports, badges, and user-authored QCM sets).",
+    "Server-side auth guards protecting API routes and admin pages; the Supabase service-role key is read only server-side and never shipped to the client.",
+    "An AI safety layer that rejects any hint naming or quoting an option and substitutes a safe fallback; both hint and dispute flows degrade to canned output when no API key is set."
+  ],
+  "architectureNote": "The app is organized around a single data-repository interface with two interchangeable implementations — an in-memory store seeded with subjects, questions, badges, and demo accounts for zero-setup demo mode, and a Supabase-backed store for live mode — chosen at runtime from environment variables, so no UI code changes between modes. Trust boundaries are explicit: quizzes are scored only on the server, the correct answer is never included in the payload sent to the client, and a shared grading function keeps demo and live scoring identical. AI is deliberately kept advisory and optional — hints run through a reveal-detection safety check with a canned fallback, and dispute verdicts only suggest an action a human admin must confirm — while Postgres RLS enforces that students can read published content but never edit answer keys or other students' data.",
+  "whatThisProves": "I can reason about backend trust boundaries — server-authoritative scoring, RLS, and fail-safe AI guardrails — and structure an app so a credential-free demo and a real Postgres backend share one code path.",
   "coverImage": "/images/projects/svaeng-yul/dark/home-desktop.png",
   "coverImageAlt": "Svaeng-Yul student dashboard in its midnight study-clinic theme",
   "liveUrl": "https://svaeng-yul-demo.vercel.app",
@@ -58,6 +82,7 @@
     "AI features degrade gracefully to safe canned content when no key is configured.",
     "A seeded bank spanning multiple subjects with difficulty and cognitive-level distribution."
   ],
+  "nextBackendStep": "Stand up a live Supabase project against the existing migrations and seed script, then run the app in live mode end-to-end (real Auth, Postgres, and RLS) as the next step toward a fully hosted backend.",
   "screenshots": [
     {
       "src": "/images/projects/svaeng-yul/dark/home-desktop.png",

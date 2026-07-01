@@ -1,29 +1,44 @@
 <template>
   <article class="flagship-card" v-if="project">
-    <div class="card-image-wrap" v-if="project.coverImage">
-      <img :src="project.coverImage" :alt="project.coverImageAlt || project.title" class="card-image" :class="{ 'theme-dark-only': project.coverImageLight }" loading="lazy" />
-      <img v-if="project.coverImageLight" :src="project.coverImageLight" :alt="project.coverImageAlt || project.title" class="card-image theme-light-only" loading="lazy" />
+    <div class="card-meta">
+      <span class="status-badge" :class="`status-${project.status}`">{{ project.statusLabel || project.status }}</span>
+      <span class="meta-year">{{ project.year }}{{ project.endYear ? '–' + project.endYear : '' }}</span>
+      <span class="meta-role" v-if="project.role">{{ project.role }}</span>
     </div>
-    
-    <div class="card-content">
-      <div class="card-meta">
-        <span class="status-badge" :class="`status-${project.status}`">{{ project.statusLabel || project.status }}</span>
-        <span class="meta-year">{{ project.year }}</span>
-      </div>
-      
-      <h2 class="project-title">
-        <NuxtLink :to="'/projects/' + project.id" class="card-link">{{ project.title }}</NuxtLink>
-      </h2>
-      <p class="project-tagline">{{ project.tagline }}</p>
-      
+
+    <h2 class="project-title">
+      <NuxtLink :to="'/projects/' + project.id" class="card-link">{{ project.title }}</NuxtLink>
+    </h2>
+
+    <p class="card-summary">{{ project.cardSummary || project.tagline }}</p>
+
+    <div class="card-block proof" v-if="project.proofPoints && project.proofPoints.length">
+      <span class="block-label">Proof</span>
+      <ul class="proof-list">
+        <li v-for="point in project.proofPoints.slice(0, 3)" :key="point">
+          <span class="proof-mark" aria-hidden="true"></span>{{ point }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="card-block deployment" v-if="project.deploymentLine">
+      <span class="block-label">Deployment</span>
+      <span class="deploy-text">
+        <span
+          v-if="project.deployment?.status"
+          class="deploy-dot"
+          :class="`deploy-${project.deployment.status}`"
+          aria-hidden="true"
+        ></span>{{ project.deploymentLine }}
+      </span>
+    </div>
+
+    <div class="card-action">
       <div class="stack-chips" v-if="project.stack?.length">
-        <span v-for="tech in project.stack.slice(0, 4)" :key="tech" class="stack-chip">{{ tech }}</span>
-        <span v-if="project.stack.length > 4" class="stack-chip">+{{ project.stack.length - 4 }}</span>
+        <span v-for="tech in project.stack.slice(0, 5)" :key="tech" class="stack-chip">{{ tech }}</span>
+        <span v-if="project.stack.length > 5" class="stack-chip stack-chip-more">+{{ project.stack.length - 5 }}</span>
       </div>
-      
-      <div class="card-action">
-        <span class="read-more">View Case Study &rarr;</span>
-      </div>
+      <span class="read-more">View case study &rarr;</span>
     </div>
   </article>
 </template>
@@ -41,24 +56,31 @@ defineProps<{
   position: relative;
   display: flex;
   flex-direction: column;
+  gap: var(--space-md);
   background-color: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius);
   box-shadow: var(--glass-shadow);
-  overflow: hidden;
-  margin: var(--space-xl) 0;
-  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  padding: var(--space-lg) var(--space-xl);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   color: inherit;
 }
 
 .flagship-card:hover {
   border-color: var(--color-accent);
   box-shadow: var(--glass-shadow-hover);
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
+@media (max-width: 767px) {
+  .flagship-card {
+    padding: var(--space-lg) var(--space-md);
+  }
+}
+
+/* Whole card is clickable via an overlay on the title link */
 .card-link {
   text-decoration: none;
   color: inherit;
@@ -69,55 +91,7 @@ defineProps<{
   position: absolute;
   inset: 0;
   z-index: 1;
-}
-
-.stack-chips, .btn-live {
-  position: relative;
-  z-index: 2;
-}
-
-.card-image-wrap {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-bottom: 1px solid var(--glass-border);
-  overflow: hidden;
-  background: var(--color-surface-1);
-}
-
-@media (max-width: 767px) {
-  .card-image-wrap {
-    aspect-ratio: 16 / 10;
-  }
-}
-
-:global([data-theme="light"]) .card-image-wrap {
-  border-bottom-color: rgba(0, 0, 0, 0.04);
-}
-
-.card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.flagship-card:hover .card-image {
-  transform: scale(1.05);
-}
-
-.card-content {
-  padding: var(--space-xl);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  flex: 1;
-}
-
-@media (max-width: 767px) {
-  .card-content {
-    padding: var(--space-lg) var(--space-md);
-  }
+  border-radius: var(--radius);
 }
 
 .card-meta {
@@ -129,7 +103,7 @@ defineProps<{
 
 .status-badge {
   padding: 4px 10px;
-  border-radius: 12px;
+  border-radius: 999px;
   font-size: var(--text-xs);
   font-weight: 600;
   text-transform: uppercase;
@@ -147,7 +121,9 @@ defineProps<{
   background-color: hsla(142, 71%, 45%, 0.1);
 }
 
-.status-badge.status-local-only {
+.status-badge.status-local-only,
+.status-badge.status-archived,
+.status-badge.status-concept {
   color: var(--color-text-secondary);
   background-color: var(--color-surface-2);
   border-color: var(--color-border);
@@ -159,48 +135,138 @@ defineProps<{
   font-family: var(--font-mono);
 }
 
+.meta-role {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  padding-left: var(--space-sm);
+  border-left: 1px solid var(--color-border);
+  line-height: 1.3;
+}
+
 .project-title {
-  font-size: var(--text-3xl);
+  font-size: var(--text-2xl);
   color: var(--color-text-primary);
   font-weight: 800;
   margin: 0;
   letter-spacing: -0.02em;
 }
 
-.project-tagline {
-  font-size: var(--text-lg);
+@media (min-width: 768px) {
+  .project-title {
+    font-size: var(--text-3xl);
+  }
+}
+
+.card-summary {
+  font-size: var(--text-base);
   color: var(--color-text-secondary);
   margin: 0;
+  line-height: 1.6;
+  max-width: 70ch;
+}
+
+@media (min-width: 768px) {
+  .card-summary {
+    font-size: var(--text-lg);
+  }
+}
+
+.card-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.block-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.proof-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.proof-list li {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
   line-height: 1.5;
+}
+
+.proof-mark {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.deploy-text {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.deploy-dot {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-text-muted);
+}
+
+.deploy-dot.deploy-deployed { background-color: var(--color-success); }
+.deploy-dot.deploy-demo { background-color: var(--color-accent); }
+.deploy-dot.deploy-planned { background-color: hsl(43, 96%, 55%); }
+.deploy-dot.deploy-local-only { background-color: var(--color-text-muted); }
+
+.card-action {
+  position: relative;
+  z-index: 2;
+  margin-top: var(--space-xs);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
 }
 
 .stack-chips {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
-  margin-top: var(--space-sm);
 }
 
 .stack-chip {
   background-color: var(--color-surface-1);
   border: 1px solid var(--color-border);
   color: var(--color-text-secondary);
-  padding: 4px 10px;
+  padding: 3px 9px;
   border-radius: var(--radius-sm);
   font-size: var(--text-xs);
   font-family: var(--font-mono);
 }
 
-.card-action {
-  position: relative;
-  z-index: 2;
-  margin-top: auto;
-  padding-top: var(--space-lg);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
-  flex-wrap: wrap;
+.stack-chip-more {
+  color: var(--color-text-muted);
 }
 
 .read-more {
@@ -209,29 +275,12 @@ defineProps<{
   color: var(--color-accent);
   font-weight: 600;
   font-size: var(--text-sm);
-  transition: all 0.2s ease;
+  white-space: nowrap;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .flagship-card:hover .read-more {
   transform: translateX(4px);
   color: var(--color-accent-hover);
-}
-
-@media (min-width: 1024px) {
-  .flagship-card {
-    flex-direction: row;
-    align-items: stretch;
-  }
-  
-  .card-image-wrap {
-    flex: 0 0 50%;
-    border-bottom: none;
-    border-right: 1px solid var(--color-border);
-    aspect-ratio: auto; /* let it stretch */
-  }
-  
-  .card-content {
-    justify-content: center;
-  }
 }
 </style>

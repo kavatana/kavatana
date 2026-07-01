@@ -9,67 +9,132 @@
 
     <div v-else>
       <ProjectHero :project="project" />
-      
-      <div class="premium-browser-frame cover-image-wrapper" v-if="project.coverImage">
-        <div class="frame-header">
-          <span class="dot close"></span>
-          <span class="dot minimize"></span>
-          <span class="dot maximize"></span>
-        </div>
-        <img :src="project.coverImage" :alt="project.coverImageAlt" class="cover-image" :class="{ 'theme-dark-only': project.coverImageLight }" width="1200" height="630" fetchpriority="high" />
-        <img v-if="project.coverImageLight" :src="project.coverImageLight" :alt="project.coverImageAlt" class="cover-image theme-light-only" width="1200" height="630" fetchpriority="high" />
-      </div>
-      
+
+      <section class="prose-section proves-section" v-if="project.whatThisProves || project.callout">
+        <h2 class="section-title">What this proves</h2>
+        <p class="prose-lead">{{ project.whatThisProves || project.callout }}</p>
+      </section>
+
       <section class="prose-section">
         <h2 class="section-title">Problem</h2>
         <p class="prose-text">{{ project.problem }}</p>
       </section>
-      
+
+      <section class="prose-section" v-if="project.myRole">
+        <h2 class="section-title">My role</h2>
+        <p class="prose-text">{{ project.myRole }}</p>
+      </section>
+
+      <section class="prose-section" v-if="project.whatIBuilt && project.whatIBuilt.length">
+        <h2 class="section-title">What I built</h2>
+        <ul class="dash-list">
+          <li v-for="item in project.whatIBuilt" :key="item"><span class="dash">&mdash;</span> {{ item }}</li>
+        </ul>
+      </section>
+
+      <section class="prose-section" v-if="project.architectureNote || project.solution">
+        <h2 class="section-title">Architecture</h2>
+        <p class="prose-text" v-if="project.architectureNote">{{ project.architectureNote }}</p>
+        <p class="prose-text prose-text-muted" v-if="project.solution">{{ project.solution }}</p>
+      </section>
+
+      <section
+        class="prose-section"
+        v-if="project.deployment || project.deploymentLine || (project.backendProof && project.backendProof.length)"
+      >
+        <h2 class="section-title">Backend / deployment</h2>
+
+        <div class="deploy-panel">
+          <dl class="deploy-grid" v-if="project.deployment">
+            <div class="deploy-row" v-if="project.deployment.status">
+              <dt class="deploy-key">Status</dt>
+              <dd class="deploy-val">
+                <span class="deploy-dot" :class="`deploy-${project.deployment.status}`" aria-hidden="true"></span>
+                {{ statusLabels[project.deployment.status] || project.deployment.status }}
+              </dd>
+            </div>
+            <div class="deploy-row" v-if="project.deployment.frontend">
+              <dt class="deploy-key">Frontend</dt>
+              <dd class="deploy-val">{{ project.deployment.frontend }}</dd>
+            </div>
+            <div class="deploy-row" v-if="project.deployment.backend">
+              <dt class="deploy-key">Backend</dt>
+              <dd class="deploy-val">{{ project.deployment.backend }}</dd>
+            </div>
+            <div class="deploy-row" v-if="project.deployment.database">
+              <dt class="deploy-key">Database</dt>
+              <dd class="deploy-val">{{ project.deployment.database }}</dd>
+            </div>
+            <div class="deploy-row" v-if="project.deployment.hosting">
+              <dt class="deploy-key">Hosting</dt>
+              <dd class="deploy-val">{{ project.deployment.hosting }}</dd>
+            </div>
+          </dl>
+          <p class="deploy-line" v-if="project.deploymentLine">{{ project.deploymentLine }}</p>
+        </div>
+
+        <div class="backend-proof" v-if="project.backendProof && project.backendProof.length">
+          <h3 class="subhead">Backend-adjacent proof</h3>
+          <ul class="dash-list">
+            <li v-for="item in project.backendProof" :key="item"><span class="dash">&mdash;</span> {{ item }}</li>
+          </ul>
+        </div>
+      </section>
+
+      <ProjectStack :stack="project.stack" v-if="project.stack && project.stack.length > 0" />
+
       <section class="prose-section" v-if="project.constraints && project.constraints.length">
         <h2 class="section-title">Constraints</h2>
         <ul class="dash-list">
           <li v-for="constraint in project.constraints" :key="constraint"><span class="dash">&mdash;</span> {{ constraint }}</li>
         </ul>
       </section>
-      
-      <section class="prose-section">
-        <h2 class="section-title">My Role</h2>
-        <p class="prose-text">{{ project.myRole }}</p>
-      </section>
-      
-      <ProjectStack :stack="project.stack" v-if="project.stack && project.stack.length > 0" />
-      
-      <section class="prose-section">
-        <h2 class="section-title">Solution</h2>
-        <p class="prose-text">{{ project.solution }}</p>
-      </section>
-      
-      <div class="callout-block" v-if="project.callout">
-        <p class="callout-text">{{ project.callout }}</p>
-      </div>
-      
-      <ProjectScreenshots :screenshots="project.screenshots" v-if="project.screenshots && project.screenshots.length > 0" />
-      
+
       <section class="prose-section" v-if="project.tradeoffs && project.tradeoffs.length">
         <h2 class="section-title">Tradeoffs</h2>
         <ul class="dash-list">
           <li v-for="tradeoff in project.tradeoffs" :key="tradeoff"><span class="dash">&mdash;</span> {{ tradeoff }}</li>
         </ul>
       </section>
-      
+
       <ProjectResults :results="project.results" v-if="project.results && project.results.length > 0" />
-      
-      <section class="prose-section" v-if="project.nextSteps && project.nextSteps.length">
-        <h2 class="section-title">Next Steps</h2>
-        <p class="prose-text" v-for="step in project.nextSteps" :key="step">{{ step }}</p>
+
+      <section class="prose-section" v-if="project.whatILearned && project.whatILearned.length">
+        <h2 class="section-title">What I learned</h2>
+        <ul class="dash-list">
+          <li v-for="item in project.whatILearned" :key="item"><span class="dash">&mdash;</span> {{ item }}</li>
+        </ul>
       </section>
-      
-      <CtaBlock 
+
+      <section class="prose-section" v-if="project.nextBackendStep">
+        <h2 class="section-title">Next backend step</h2>
+        <p class="prose-text">{{ project.nextBackendStep }}</p>
+      </section>
+
+      <section class="prose-section" v-if="project.nextSteps && project.nextSteps.length">
+        <h2 class="section-title">Next steps</h2>
+        <ul class="dash-list">
+          <li v-for="step in project.nextSteps" :key="step"><span class="dash">&mdash;</span> {{ step }}</li>
+        </ul>
+      </section>
+
+      <div class="repo-note" v-if="project.repoNote">
+        <span class="repo-icon" aria-hidden="true">&#10003;</span>
+        <span>{{ project.repoNote }}</span>
+      </div>
+
+      <ProjectScreenshots
+        :screenshots="project.screenshots"
+        title="Visual archive"
+        v-if="project.screenshots && project.screenshots.length > 0"
+      />
+
+      <CtaBlock
         question="Working on something similar?"
         link-label="Let's talk &rarr;"
         link-href="/contact"
       />
-      
+
       <div class="back-link-wrapper">
         <NuxtLink to="/projects" class="back-link">&larr; Back to Projects</NuxtLink>
       </div>
@@ -89,19 +154,26 @@ if (!project) {
   throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 }
 
+const statusLabels: Record<string, string> = {
+  deployed: 'Deployed',
+  demo: 'Live demo',
+  planned: 'Planned',
+  'local-only': 'Local-only'
+}
+
 useHead({
   title: `${project.title} · kavatana`,
   meta: [
     { name: 'description', content: project.tagline },
     { property: 'og:title', content: `${project.title} · kavatana` },
     { property: 'og:description', content: project.tagline },
-    { property: 'og:image', content: project.coverImage },
+    { property: 'og:image', content: project.coverImage || '/images/og-default.png' },
     { property: 'og:url', content: `https://kavatana.me/projects/${slug}` },
     { property: 'og:type', content: 'article' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: `${project.title} · kavatana` },
     { name: 'twitter:description', content: project.tagline },
-    { name: 'twitter:image', content: project.coverImage }
+    { name: 'twitter:image', content: project.coverImage || '/images/og-default.png' }
   ],
   link: [
     { rel: 'canonical', href: `https://kavatana.me/projects/${slug}` }
@@ -127,54 +199,13 @@ useHead({
 </script>
 
 <style scoped>
-.cover-image-wrapper {
-  margin: var(--space-xl) 0 var(--space-2xl);
-  /* premium-browser-frame handles borders and radius */
-}
-
-.premium-browser-frame {
-  background-color: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 12px;
-  box-shadow: var(--glass-shadow);
-  overflow: hidden;
-  transition: all var(--transition-base);
-}
-
-.premium-browser-frame:hover {
-  box-shadow: var(--glass-shadow-hover);
-  border-color: var(--color-border);
-}
-
-.frame-header {
-  height: 38px;
-  background-color: var(--glass-bg);
-  border-bottom: 1px solid var(--glass-border);
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  gap: 8px;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  opacity: 0.8;
-}
-
-.dot.close { background-color: #FF5F56; }
-.dot.minimize { background-color: #FFBD2E; }
-.dot.maximize { background-color: #27C93F; }
-
-.cover-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 .prose-section {
   padding: var(--space-xl) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.prose-section:first-of-type {
+  border-top: none;
 }
 
 .section-title {
@@ -186,8 +217,32 @@ useHead({
 .prose-text {
   font-size: var(--text-lg);
   color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 75ch;
+}
+
+.prose-text + .prose-text {
+  margin-top: var(--space-md);
+}
+
+.prose-text-muted {
+  color: var(--color-text-muted);
+}
+
+/* What this proves — prominent lead statement */
+.proves-section {
+  border-top: none;
+}
+
+.prose-lead {
+  font-size: var(--text-xl);
+  color: var(--color-text-primary);
   line-height: 1.6;
   margin: 0;
+  max-width: 70ch;
+  padding-left: var(--space-md);
+  border-left: 3px solid var(--color-accent);
 }
 
 .dash-list {
@@ -196,37 +251,130 @@ useHead({
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
+  max-width: 78ch;
 }
 
 .dash-list li {
   color: var(--color-text-secondary);
   font-size: var(--text-lg);
+  line-height: 1.6;
   display: flex;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
 }
 
 .dash {
   color: var(--color-accent);
+  flex: 0 0 auto;
 }
 
-.callout-block {
-  background-color: var(--color-surface-2);
-  border-left: 3px solid var(--color-accent);
+/* Backend / deployment panel */
+.deploy-panel {
+  background-color: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
   padding: var(--space-lg);
-  margin: var(--space-xl) 0;
-  border-radius: 0 var(--radius) var(--radius) 0;
 }
 
-.callout-text {
-  color: var(--color-text-primary);
-  font-size: var(--text-lg);
-  font-style: italic;
+.deploy-grid {
   margin: 0;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.deploy-row {
+  display: grid;
+  gap: 2px var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.deploy-row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+@media (min-width: 640px) {
+  .deploy-row {
+    grid-template-columns: 120px 1fr;
+    align-items: baseline;
+  }
+}
+
+.deploy-key {
+  margin: 0;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.deploy-val {
+  margin: 0;
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.deploy-dot {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-text-muted);
+}
+
+.deploy-dot.deploy-deployed { background-color: var(--color-success); }
+.deploy-dot.deploy-demo { background-color: var(--color-accent); }
+.deploy-dot.deploy-planned { background-color: hsl(43, 96%, 55%); }
+.deploy-dot.deploy-local-only { background-color: var(--color-text-muted); }
+
+.deploy-line {
+  margin: var(--space-md) 0 0;
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--color-border);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.backend-proof {
+  margin-top: var(--space-lg);
+}
+
+.subhead {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.repo-note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin: var(--space-xl) 0;
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-surface-2);
+  border-radius: var(--radius);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.repo-icon {
+  color: var(--color-success);
+  font-weight: 700;
+  flex: 0 0 auto;
 }
 
 .back-link-wrapper {
-  padding: 0 0 var(--space-3xl) 0;
+  padding: var(--space-xl) 0 var(--space-3xl) 0;
   display: flex;
   justify-content: center;
 }

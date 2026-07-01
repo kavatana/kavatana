@@ -28,6 +28,23 @@ export interface Project {
   whatILearned?: string[]
   results?: string[]
   nextSteps?: string[]
+  // Premium case-study fields (card + detail page)
+  cardSummary?: string
+  proofPoints?: string[]
+  deploymentLine?: string
+  deployment?: ProjectDeployment
+  backendProof?: string[]
+  architectureNote?: string
+  whatThisProves?: string
+  nextBackendStep?: string
+}
+
+export interface ProjectDeployment {
+  frontend?: string
+  backend?: string
+  database?: string
+  hosting?: string
+  status?: 'deployed' | 'demo' | 'planned' | 'local-only'
 }
 
 export interface Screenshot {
@@ -50,6 +67,20 @@ export interface BuildDirection {
   label: string
 }
 
+export interface BackendTrackItem {
+  id: string
+  area: string
+  detail: string
+}
+
+export interface BackendTrack {
+  title: string
+  status: string
+  intro: string
+  tracks: BackendTrackItem[]
+  proof: string
+}
+
 export interface TimelineEntry {
   id: string
   type: 'education' | 'environment' | 'role' | 'project' | 'milestone'
@@ -57,6 +88,7 @@ export interface TimelineEntry {
   organization?: string
   startYear: number
   endYear?: number
+  period?: string
   description: string
 }
 

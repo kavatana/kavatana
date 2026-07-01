@@ -12,6 +12,20 @@
     "CLI",
     "Shell scripting"
   ],
+  "cardSummary": "A local Python CLI workspace for practicing cybersecurity and CTF challenges in a structured, repeatable way. It turns scattered CTF notes into a tracked log of challenges, progress, and write-ups, and proves the ability to build a small CLI tool and organise technical learning systematically. Kept deliberately private and local-only — a security study habit, not a product.",
+  "proofPoints": [
+    "Local Python CLI for CTF learning structure: tracks challenges, progress, and study notes from the terminal.",
+    "Documentation-first workflow — structured note-taking and a personal security study log built as a repeatable habit.",
+    "Private/local-only; not deployed. Runs on a single machine by design."
+  ],
+  "deploymentLine": "Local-only; intentionally not public.",
+  "deployment": {
+    "frontend": "Python CLI (terminal)",
+    "status": "local-only"
+  },
+  "backendProof": [],
+  "architectureNote": "A single-machine Python CLI organised around study workflows: commands for logging CTF challenges, recording progress, and keeping structured notes. There is no server, database, or hosted API — persistence stays on the local filesystem, which is the intended scope for a private study tool. The design choice is deliberate simplicity: a small, maintainable CLI that reinforces consistent security study habits rather than a deployed application.",
+  "whatThisProves": "I can structure a small Python CLI application and build disciplined, documented technical learning habits around a real domain (cybersecurity and CTF).",
   "problem": "I wanted a structured way to practice cybersecurity concepts, document CTF challenges, and build good security study habits.",
   "myRole": "Built and maintained a local Python CLI workspace for structured security study and learning organisation. Runs only on my local machine — not a deployed app.",
   "whatIBuilt": [
@@ -24,5 +38,6 @@
     "How CTF challenges work and how to approach them systematically.",
     "Good habits for documenting technical learning."
   ],
+  "nextBackendStep": "",
   "repoNote": "Local-only project. Not deployed. Repository is private."
 }

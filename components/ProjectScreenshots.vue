@@ -1,6 +1,6 @@
 <template>
   <section class="project-screenshots" v-if="screenshots && screenshots.length">
-    <h2 class="section-title">Feature Tour</h2>
+    <h2 class="section-title">{{ title || 'Visual archive' }}</h2>
     <div class="screenshots-stack">
       <div v-for="(img, idx) in screenshots" :key="idx" class="screenshot-feature-block">
         <div class="premium-browser-frame">
@@ -25,6 +25,7 @@
 import type { Screenshot } from '~/types/content'
 defineProps<{
   screenshots?: Screenshot[]
+  title?: string
 }>()
 </script>
 

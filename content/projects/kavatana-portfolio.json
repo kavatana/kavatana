@@ -12,8 +12,26 @@
     "Vue 3",
     "TypeScript",
     "Vanilla CSS",
+    "@nuxtjs/sitemap",
     "Plausible Analytics"
   ],
+  "cardSummary": "A personal portfolio built as a real content system rather than a hand-coded page: every project, capability, and timeline entry lives in typed JSON that TypeScript composables read at build time, so copy stays separate from components. It proves I can structure a Nuxt 4 SSR app with a clean content model, ship production SEO (Open Graph, JSON-LD, sitemap), respect accessibility, and deploy to a custom domain on Vercel.",
+  "proofPoints": [
+    "JSON-driven content model: projects, about, capabilities, and timeline live in content/*.json, read through typed composables against a Project interface — copy stays out of components.",
+    "Production SEO on every route: per-page Open Graph + Twitter tags, canonical URLs, JSON-LD structured data, a sitemap route, and a robots.txt that references it.",
+    "Accessibility handled deliberately: a skip link, a mobile-nav dialog with keyboard focus handling and Escape-to-close, and reduced-motion fallbacks."
+  ],
+  "deploymentLine": "Nuxt 4 SSR on Vercel, custom domain kavatana.me — no backend or database.",
+  "deployment": {
+    "frontend": "Nuxt 4 (Vue 3, TypeScript, SSR) with @nuxtjs/sitemap",
+    "backend": "None — Nitro serves the SSR app and sitemap route; no API routes and no server directory",
+    "database": "None — content is static JSON in the repo",
+    "hosting": "Vercel, custom domain kavatana.me",
+    "status": "deployed"
+  },
+  "backendProof": [],
+  "architectureNote": "The site is a Nuxt 4 SSR app where content is fully decoupled from presentation: all copy is authored in content/*.json and surfaced through small typed composables that map slugs to data, validated against interfaces in types/content.ts. Routing is file-based with a dynamic /projects/[slug] page, and selected routes are prerendered for fast first paint. Cross-cutting concerns — SEO metadata, JSON-LD, sitemap, a CSS design-token system, and accessibility primitives (skip link, focus handling, reduced-motion) — are implemented as shared building blocks rather than duplicated per page.",
+  "whatThisProves": "I can design and ship a maintainable, SEO-correct, accessible frontend with clean data/presentation separation and real deployment discipline — not just a static one-off page.",
   "problem": "I needed a place to show who I am, what I'm building, and what I'm learning — without overstating my experience or understating my ambition.",
   "myRole": "I designed and built this site myself, making decisions about stack, content structure, design tokens, accessibility, and SEO.",
   "whatIBuilt": [
@@ -28,6 +46,7 @@
     "Accessibility foundations: skip links, focus traps, reduced-motion.",
     "The importance of honest personal branding over impressive-sounding copy."
   ],
+  "nextBackendStep": "Move the contact form behind a small hosted API (server actions or an Express/Postgres service) so submissions are dynamic rather than static — a good place to apply the backend hosting I am studying.",
   "liveUrl": "https://kavatana.me",
   "githubUrl": "https://github.com/kavatana/kavatana"
 }

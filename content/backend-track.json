@@ -1,0 +1,33 @@
+{
+  "title": "Backend Deployment Direction",
+  "status": "Current study & build track",
+  "intro": "I'm moving from frontend-only demos toward complete deployment systems: static frontends, API backends, hosted databases, environment variables, auth, storage, monitoring, and safe deployment workflows. My next study target is to deploy a backend API on Azure or AWS and connect it to a static frontend.",
+  "tracks": [
+    {
+      "id": "frontend",
+      "area": "Static frontend deployment",
+      "detail": "Vercel / Azure Static Web Apps / AWS Amplify or S3 + CloudFront"
+    },
+    {
+      "id": "backend",
+      "area": "Backend API deployment",
+      "detail": "Azure App Service / Container Apps, or AWS App Runner / ECS / Lambda"
+    },
+    {
+      "id": "database",
+      "area": "Database",
+      "detail": "Postgres via Neon, Supabase, Azure Database for PostgreSQL, or AWS RDS"
+    },
+    {
+      "id": "storage",
+      "area": "Storage",
+      "detail": "Cloudflare R2, Azure Blob Storage, or AWS S3"
+    },
+    {
+      "id": "ops",
+      "area": "Operational basics",
+      "detail": "Env vars, migrations, logs, health checks, rollback, and secret handling"
+    }
+  ],
+  "proof": "Backend-adjacent proof I already have across these projects: Cloudflare Pages Functions, Express + Prisma APIs, Postgres, Neon, Supabase with row-level security, server actions, atomic transactions, and server-side scoring."
+}

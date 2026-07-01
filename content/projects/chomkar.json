@@ -1,0 +1,85 @@
+{
+  "id": "chomkar",
+  "title": "Chomkar.com",
+  "tagline": "Agritech platform focused on market access for Cambodian farmers",
+  "status": "in-progress",
+  "statusLabel": "Top 2 Hackathon Project",
+  "featured": true,
+  "featuredOrder": 0,
+  "year": 2026,
+  "role": "Co-founder · Product Builder · Full-stack Engineer",
+  "stack": [
+    "Cloudflare Pages",
+    "Pages Functions",
+    "Cloudflare Workers",
+    "Vanilla JS PWA",
+    "Anthropic API",
+    "ElevenLabs (Khmer voice)",
+    "Product strategy",
+    "Agritech"
+  ],
+  "cardSummary": "Smallholder farmers in Cambodia lose value not from a lack of listings but from weak coordination — buyer demand, pre-harvest visibility, and trust rarely line up in time. Chomkar.com is a Khmer-first, offline-capable market-access product that models that full loop, with a live Cloudflare edge backend powering a claim-safe AI lesson helper and Khmer voice-to-text. It is my strongest current proof: a real Cambodia problem carried from framing to a deployed build, with strict honesty about what the software actually promises.",
+  "proofPoints": [
+    "Top 2 at Turing Hackathon Cycle 10 (theme: Market Access for Farmers).",
+    "Live edge backend: Cloudflare Pages Functions (/api/ask, /api/transcribe, /api/health) with API keys held server-side, never on the device.",
+    "Two-layer claim-safety firewall: a Khmer/English keyword guard blocks price/sale/certification topics before any AI call, then a lesson-scoped prompt escalates anything off-lesson to a human."
+  ],
+  "deploymentLine": "Live at chomkar.com — Cloudflare Pages + edge Functions (AI helper, Khmer voice). Commerce state still demo/in-memory as the product matures.",
+  "deployment": {
+    "frontend": "Static Khmer-first site + dependency-free hash-router PWA with an offline service worker",
+    "backend": "Cloudflare Pages Functions (/api/ask, /api/transcribe, /api/health) + a standalone Khmer-voice Worker",
+    "database": "None in the deployed app yet (commerce state uses in-memory / localStorage demo data)",
+    "hosting": "Cloudflare Pages, custom domain chomkar.com; AI routed through a Cloudflare AI Gateway",
+    "status": "deployed"
+  },
+  "backendProof": [
+    "Cloudflare Pages Functions serving POST /api/ask, POST /api/transcribe, and GET /api/health.",
+    "Server-side secret handling: Anthropic and ElevenLabs keys live only in the Pages environment; a missing key degrades gracefully instead of failing.",
+    "Per-isolate token-bucket rate limiting on the AI endpoint, with upstream failures coerced to a fixed Khmer escalation so a raw error never reaches a farmer.",
+    "A standalone Khmer-voice Worker doing manual multipart byte-assembly for the speech upload, routed through a Cloudflare AI Gateway to satisfy egress rules.",
+    "A whitelist deploy script with leak-guards that abort if any private file reaches the staging directory."
+  ],
+  "architectureNote": "The deployed system is deliberately DB-free at the edge: a static Khmer-first site plus a dependency-free hash-router PWA (farmer, operator, buyer, and verify views) backed only by Cloudflare Pages Functions, so the whole app stays offline-capable and cheap to run. The one live AI surface — a lesson helper on Claude Haiku with an optional ElevenLabs voice-to-text — is walled off from commerce by a two-layer guard, and commercial state is driven by an explicit multi-step spine where confirmed availability is never conflated with a sale. Voice was split into its own Worker after a multipart upload crashed the Pages runtime, and the service worker uses network-first-with-cache-reload so deploys are never hidden behind a stale edge cache.",
+  "whatThisProves": "I can carry a real product end to end — problem framing, an edge backend, third-party AI integration, and offline UX — while reasoning carefully about failure modes, secret handling, and honest product claims instead of overstating what the system does.",
+  "problem": "Smallholder farmers often struggle to connect supply with buyer demand at the right time. The problem is not only posting crops online; it is coordination, demand visibility, trust, and clearer pre-harvest information.",
+  "context": "Chomkar.com demonstrates the evolution from KasekorX, an AI voice-to-marketplace idea for farmers, into an agritech project focused on market access. It won Top 2 at Turing Hackathon Cycle 10 under the theme Market Access for Farmers.",
+  "constraints": [
+    "Built under hackathon pressure with a startup-style judging format",
+    "Needed to explain a Cambodia-relevant agriculture problem clearly",
+    "Had to connect product flow, business model, pitch, and demo into one story",
+    "Still an active student-built product, so public claims must stay honest"
+  ],
+  "myRole": "I co-founded and helped shape the project direction, contributed as a full-stack engineer, worked on product strategy and user flow, supported buyer and farmer flow design, helped prepare the pitch deck and demo flow, and worked on positioning the project for hackathon judging and startup validation.",
+  "solution": "The product focuses on connecting farmer supply with buyer demand through better coordination, clearer crop information, pre-harvest demand visibility, and a trust-focused supply flow.",
+  "callout": "Chomkar.com is my strongest current proof project because it combines a real Cambodia-relevant problem, product thinking, team collaboration, full-stack building, and startup presentation.",
+  "tradeoffs": [
+    "Focused the pitch around market access instead of trying to solve every agriculture problem at once.",
+    "Kept the product explanation practical so farmers, buyers, and judges could understand the flow.",
+    "Treated the hackathon result as validation, not as proof that the product is finished."
+  ],
+  "whatIBuilt": [
+    "A market-access product direction for farmer supply and buyer demand.",
+    "Farmer and buyer flow planning.",
+    "Full-stack product contributions during the build.",
+    "Pitch deck support, demo flow preparation, and business model explanation.",
+    "Project positioning from KasekorX AI voice-to-marketplace into Chomkar.com."
+  ],
+  "whatILearned": [
+    "How to frame a local agriculture problem as a product problem.",
+    "How to connect user flow, technology, business model, and pitch narrative.",
+    "How hackathon pressure forces simple product decisions.",
+    "How team collaboration changes the way a product grows.",
+    "Why agritech trust, coordination, and timing matter as much as the interface."
+  ],
+  "results": [
+    "Top 2 — Turing Hackathon Cycle 10.",
+    "Theme: Market Access for Farmers.",
+    "Project evolution: KasekorX AI voice-to-marketplace → Chomkar.com."
+  ],
+  "nextBackendStep": "Add a durable persistence and auth layer behind the edge Functions — a hosted Postgres plus real cooperative and buyer accounts — as I move toward the hosted-backend cloud work I am actively studying.",
+  "nextSteps": [
+    "Keep improving the farmer and buyer flows.",
+    "Add stronger public proof with screenshots, photos, and event documentation.",
+    "Continue validating the product direction beyond the hackathon."
+  ]
+}
