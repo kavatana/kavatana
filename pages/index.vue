@@ -2,7 +2,7 @@
   <AppContainer>
     <HeroSection />
     <CurrentFocus />
-    <FlagshipProjectCard />
+    <FlagshipProjectCard v-if="flagshipProject" :project="flagshipProject" />
     <WhatImLearning />
     <BuildDirections />
     <CtaBlock
@@ -15,8 +15,11 @@
 
 <script setup lang="ts">
 import { usePortfolioConfig } from '~/composables/usePortfolioConfig'
+import { useProjects } from '~/composables/useProjects'
 
 const config = usePortfolioConfig()
+const projects = useProjects()
+const flagshipProject = projects.find(project => project.id === 'chomkar') || projects[0]
 
 useHead({
   title: 'Ka Vatana — Software Engineering Student & Builder from Cambodia',
@@ -53,7 +56,7 @@ useHead({
         'name': 'Ka Vatana',
         'url': 'https://kavatana.me',
         'jobTitle': 'Software Engineering Student',
-        'description': 'Year 1 Software Engineering student from Cambodia learning full-stack development and product building.',
+        'description': 'Year 1 Software Engineering student from Cambodia, product builder, co-founder of Chomkar.com, and founder of Chnai Lab.',
         'sameAs': [
           'https://github.com/kavatana',
           'https://www.linkedin.com/in/ka-vatana-99b85440a/'

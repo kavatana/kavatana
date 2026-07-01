@@ -12,6 +12,7 @@
         <NuxtLink to="/projects" class="nav-link" active-class="active" @click="close">Projects</NuxtLink>
         <NuxtLink to="/#now" class="nav-link" active-class="active" @click="close">Now</NuxtLink>
         <NuxtLink to="/about" class="nav-link" active-class="active" @click="close">About</NuxtLink>
+        <NuxtLink to="/journey" class="nav-link" active-class="active" @click="close">Journey</NuxtLink>
         <NuxtLink to="/contact" class="nav-link" active-class="active" @click="close">Contact</NuxtLink>
         <div class="nav-divider"></div>
         <button class="nav-link theme-link" @click="toggleTheme">

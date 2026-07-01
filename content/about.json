@@ -1,19 +1,19 @@
 {
   "bio": [
-    "I'm Ka Vatana — a Year 1 Software Engineering student from Cambodia. I learn by building things, and I'm currently figuring out full-stack web development, product thinking, and how to use AI tools responsibly while I study.",
-    "My approach is straightforward: pick a real problem, try to build something useful for it, and reflect on what I'm learning along the way. Right now that means working on BayonHub — a classifieds marketplace experiment designed for Khmer-speaking users. It's an active learning project, not a polished product, but building it has taught me more about architecture, user flows, and tradeoffs than any tutorial could.",
-    "I work with AI tools (Claude, ChatGPT, Cursor-style workflows) to help me research, plan, code, and review — but I'm learning to verify, understand, and take responsibility for every result. AI helps me move faster; understanding what I'm building keeps it from becoming a liability.",
-    "I'm connected with Angkor Byte, a Cambodia × Japan company environment where I'm learning how engineering teams think about products, processes, and international collaboration. It's given me context I wouldn't get from studying alone.",
-    "I'm not trying to look like a senior developer. I'm trying to become a serious one — one honest commit at a time."
+    "I'm Ka Vatana, a Year 1 Software Engineering student from Cambodia. My path started with mathematics, STEM activities, public speaking, volunteering, and digital marketing before moving deeper into software engineering and product building.",
+    "Right now my strongest proof project is Chomkar.com, an agritech platform focused on market access for farmers. It demonstrates my project evolution from KasekorX, an AI voice-to-marketplace idea for farmers, into Chomkar.com and won Top 2 at Turing Hackathon Cycle 10 under the theme Market Access for Farmers.",
+    "I study Software Engineering at BELTEI International University, study Year 1 English at IFL, build Chnai Lab as a student-led digital project team, and keep improving this portfolio as the public home for my projects and learning journey.",
+    "My 2026 track also includes a July 2026 - October 2026 web system and digital project support contract with Angkor Byte, where I am learning professional workflow, communication, implementation support, and Cambodia-Japan technology collaboration.",
+    "I want the public version of my identity to stay honest: I am not presenting myself as a senior developer. I am a student builder learning seriously through real projects, real community experience, and steady practice."
   ],
-  "role": "Year 1 Software Engineering Student · Cambodia",
+  "role": "Year 1 Software Engineering Student · Product Builder · Cambodia",
   "aiNote": "I use AI tools to help research, plan, code, and review — while learning to understand and verify the result myself.",
   "currentFocus": [
-    "Full-stack fundamentals: HTML, CSS, TypeScript, Vue/Nuxt",
-    "Backend basics: APIs, databases, auth, deployment",
-    "GitHub hygiene and security awareness",
-    "AI-assisted development workflows",
-    "Product thinking for Cambodia-first problems",
-    "Learning to read and understand code, not just generate it"
+    "Chomkar.com: market access for farmers and agritech product validation",
+    "Chnai Lab: student-led team building, digital products, and automation",
+    "BELTEI International University: software engineering fundamentals",
+    "IFL: Year 1 English for academic, technical, and professional communication",
+    "Angkor Byte: July 2026 - October 2026 web system and digital project support",
+    "kavatana.me: a professional but honest archive of my growth"
   ]
 }

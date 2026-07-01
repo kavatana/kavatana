@@ -1,27 +1,27 @@
 [
   {
-    "id": "frontend",
-    "title": "Frontend Development",
-    "description": "Building responsive, accessible interfaces with modern web technologies.",
-    "items": ["Vue 3 & Nuxt 4", "TypeScript", "Vanilla CSS & design systems", "Responsive / mobile-first UI"]
+    "id": "software-engineering",
+    "title": "Software Engineering",
+    "description": "Learning practical full-stack development through school, projects, and shipping real interfaces.",
+    "items": ["Full-stack development learning", "Web application development", "Vue / Nuxt learning", "TypeScript learning", "Backend fundamentals", "Database fundamentals", "Git and GitHub", "Debugging", "AI-assisted coding workflows"]
   },
   {
-    "id": "backend",
-    "title": "Backend & APIs",
-    "description": "Learning to build server-side systems, databases, and APIs that connect to real user flows.",
-    "items": ["Node.js & NestJS (learning)", "PostgreSQL & Redis (learning)", "REST API design", "Docker & deployment basics"]
+    "id": "product-startup",
+    "title": "Product & Startup",
+    "description": "Turning local problems into product flows, demos, and startup-style explanations.",
+    "items": ["Product problem framing", "User-flow design", "Hackathon demo planning", "Pitch preparation", "Business model explanation", "Market access problem analysis", "Agritech product thinking", "Team building through Chnai Lab"]
   },
   {
-    "id": "product",
-    "title": "Product & Architecture",
-    "description": "Thinking about user problems first, then choosing the architecture that solves them simply.",
-    "items": ["User flow design", "System design basics", "Full-stack product building", "Cambodia-first product thinking"]
+    "id": "marketing-communication",
+    "title": "Marketing & Communication",
+    "description": "Using earlier digital marketing and public communication experience to support product work.",
+    "items": ["Digital marketing", "Social media management", "Content planning", "Audience communication", "Khmer/English communication support", "Public speaking foundation", "Presentation preparation"]
   },
   {
-    "id": "ai",
-    "title": "AI-Assisted Development",
-    "description": "Learning to use AI tools as a workflow accelerator — not a replacement for understanding.",
-    "items": ["Claude & ChatGPT workflows", "AI-assisted code review", "Prompt engineering basics", "Verifying AI output critically"],
-    "learningNote": "Actively learning — I use these tools carefully and verify the results."
+    "id": "leadership-community",
+    "title": "Leadership & Community",
+    "description": "A foundation built from volunteering, teaching, workshops, and student-led team building.",
+    "items": ["Volunteering", "English teaching", "School event volunteering", "Youth workshops", "Event support", "Community involvement", "Team coordination", "Self-leadership"],
+    "learningNote": "These are growth areas built through real activities, not senior-level claims."
   }
 ]

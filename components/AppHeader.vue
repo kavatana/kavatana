@@ -7,6 +7,7 @@
         <NuxtLink to="/projects" class="nav-link" active-class="active">Projects</NuxtLink>
         <NuxtLink to="/#now" class="nav-link" active-class="active">Now</NuxtLink>
         <NuxtLink to="/about" class="nav-link" active-class="active">About</NuxtLink>
+        <NuxtLink to="/journey" class="nav-link" active-class="active">Journey</NuxtLink>
         <NuxtLink to="/contact" class="nav-link" active-class="active">Contact</NuxtLink>
         <button class="theme-toggle" @click="toggleTheme" aria-label="Toggle theme">
           <svg v-if="theme === 'dark'" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

@@ -1,0 +1,597 @@
+{
+  "intro": {
+    "eyebrow": "Full Journey Archive",
+    "title": "From high-school mathematics and community work to software products.",
+    "summary": "This page keeps the detailed record of Ka Vatana's education, experience, activities, awards, and growth timeline. The About page stays short; this archive keeps the names, dates, and event details organized."
+  },
+  "snapshot": [
+    {
+      "label": "Current identity",
+      "value": "Year 1 Software Engineering Student · Product Builder · Co-founder of Chomkar.com · Founder of Chnai Lab"
+    },
+    {
+      "label": "Current studies",
+      "value": "Software Engineering at BELTEI International University and Year 1 English at IFL"
+    },
+    {
+      "label": "Strongest current proof",
+      "value": "Chomkar.com — Top 2 at Turing Hackathon Cycle 10 under Market Access for Farmers"
+    },
+    {
+      "label": "Public portfolio",
+      "value": "kavatana.me — a professional archive of projects, learning, and identity"
+    }
+  ],
+  "education": [
+    {
+      "institution": "BELTEI International University",
+      "role": "Year 1 Software Engineering Student",
+      "period": "February 2026 - Present",
+      "details": [
+        "Studying software engineering fundamentals.",
+        "Learning full-stack development, programming, databases, web systems, and AI-assisted workflows.",
+        "Building real projects outside class to improve practical development ability.",
+        "Current focus: full-stack development, product thinking, startup projects, and AI-assisted software building."
+      ]
+    },
+    {
+      "institution": "Institute of Foreign Languages — IFL",
+      "role": "Year 1 English Student",
+      "period": "January 2026 - Present",
+      "details": [
+        "Studying Year 1 English to improve academic, technical, and professional communication.",
+        "Uses English for documentation, project explanation, company communication, and technical learning."
+      ]
+    },
+    {
+      "institution": "BELTEI International School",
+      "role": "High School Graduate",
+      "period": "High school",
+      "details": [
+        "Strong background in mathematics, STEM activities, public speaking, competitions, and community involvement.",
+        "Recognized as 2nd place ranking student in the Outstanding Mathematics Student Competition, Phnom Penh, April 2022."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "organization": "Angkor Byte",
+      "role": "Web System / Digital Project Support Contractor",
+      "period": "July 2026 - October 2026",
+      "details": [
+        "Scheduled 3-month contract period: July 2026 - October 2026.",
+        "Scope includes web system development and digital project tasks.",
+        "Scope includes website design, development, testing, bug fixing, and implementation support.",
+        "Scope includes digital marketing, content creation, operation, localization, and community-related work when needed.",
+        "Professional learning focus: company workflow, task reporting, communication, project discipline, and Cambodia × Japan technology collaboration."
+      ]
+    },
+    {
+      "organization": "Chomkar.com",
+      "role": "Co-founder · Product Builder · Full-stack Engineer",
+      "period": "2026 - Present",
+      "details": [
+        "Achievement: Top 2 — Turing Hackathon Cycle 10.",
+        "Theme: Market Access for Farmers.",
+        "Project evolution: KasekorX AI voice-to-marketplace idea for farmers → Chomkar.com.",
+        "Co-founded and helped shape the project direction.",
+        "Worked on product strategy, user flow, and market-access problem framing.",
+        "Contributed as a full-stack engineer to build and improve the digital product.",
+        "Helped define buyer and farmer flows.",
+        "Supported pitch deck preparation, demo flow, and business model explanation.",
+        "Worked on positioning the project for hackathon judging and startup validation."
+      ]
+    },
+    {
+      "organization": "Chnai Lab",
+      "role": "Founder / Team Builder",
+      "period": "June 2026 - Present",
+      "details": [
+        "Founded and developed the early direction of Chnai Lab.",
+        "Gather and coordinate team members.",
+        "Lead early product planning and project direction.",
+        "Explore digital projects, AI-assisted workflows, web systems, and startup prototypes.",
+        "Use Chnai Lab as a practical environment to learn leadership, team building, execution, and product development."
+      ]
+    },
+    {
+      "organization": "Ka Vatana Portfolio",
+      "role": "Personal Portfolio Website",
+      "period": "May 2026 - Present",
+      "details": [
+        "Website: kavatana.me.",
+        "Built a personal portfolio website to present identity, projects, learning journey, and professional direction.",
+        "Focused on honest junior developer branding, project-based learning, and professional presentation.",
+        "Designed the portfolio to show growth as a software engineering student, not to overclaim senior-level experience.",
+        "Used it as a public home for projects, experience, and learning direction."
+      ]
+    },
+    {
+      "organization": "F2S The Studies Community",
+      "role": "Digital Marketing Intern",
+      "period": "August 2023 - October 2025",
+      "details": [
+        "Supported digital marketing activities for an education/community-related platform.",
+        "Helped with content, page activity, and audience communication.",
+        "Built early experience in digital media, content strategy, and online engagement.",
+        "Developed communication and marketing skills before transitioning deeper into software engineering."
+      ]
+    },
+    {
+      "organization": "Bajaj RE",
+      "role": "Marketing Advertiser & Social Media Manager — Freelance",
+      "period": "February 2024 - February 2025",
+      "details": [
+        "Supported social media marketing and advertising.",
+        "Helped manage digital content and page activity.",
+        "Built practical experience in marketing, audience engagement, and business communication.",
+        "Worked with digital media and content direction in a real business context."
+      ]
+    },
+    {
+      "organization": "Advanced Centre for Empowerment — ACE NGO",
+      "role": "English Teaching / Community Volunteer",
+      "period": "August 2023 - October 2024",
+      "details": [
+        "Taught English at Advanced Centre for Empowerment (ACE NGO).",
+        "Participated in community teaching and cleaning activities with Advanced Centre for Empowerment.",
+        "Joined the ACE NGO workshop on self-leadership, family leadership, and entrepreneurship.",
+        "Joined the Sihanoukville study / learning trip with ACE NGO.",
+        "Built early communication, teaching, leadership, and responsibility skills."
+      ]
+    },
+    {
+      "organization": "ACE Graduation Event",
+      "role": "School Event Volunteer",
+      "period": "November 2023 and March 2024",
+      "details": [
+        "Volunteered at the ACE Graduation Event in November 2023.",
+        "Volunteered again at the ACE Graduation Event in March 2024.",
+        "Kept separate from Advanced Centre for Empowerment (ACE NGO); this was a school ACE event, not the NGO teaching role."
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "group": "Academic & STEM Projects",
+      "items": [
+        {
+          "title": "2nd STEM Fairs of BELTEI International University",
+          "period": "June 2023",
+          "details": [
+            "Actively participated in the creative work exhibitions of the 2nd STEM Fairs of BELTEI International University."
+          ]
+        },
+        {
+          "title": "Development of STEM Industries with BELTEI IU",
+          "period": "August 2023",
+          "details": [
+            "Participated in the Development of STEM Industries with BELTEI International University."
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Leadership & Community Involvement",
+      "items": [
+        {
+          "title": "Advanced Centre for Empowerment (ACE NGO) Community Teaching and Cleaning Activity",
+          "period": "August 2023",
+          "details": [
+            "Participated in teaching and cleaning the community with Advanced Centre for Empowerment (ACE NGO)."
+          ]
+        },
+        {
+          "title": "Advanced Centre for Empowerment (ACE NGO) Workshop — Self-Leadership, Family Leadership & Entrepreneurship",
+          "period": "September 2023",
+          "details": [
+            "Trained about self-leadership, family leadership, and entrepreneurship at the ACE NGO workshop."
+          ]
+        },
+        {
+          "title": "Lybunchhay Video Creating Challenges",
+          "period": "September 2023",
+          "details": [
+            "Participated in video creation challenges and gained early digital media experience."
+          ]
+        },
+        {
+          "title": "“We Train, We Gain” Workshop by UNYAP",
+          "period": "October 2023",
+          "details": [
+            "Participated in the “We Train, We Gain” workshop by UNYAP."
+          ]
+        },
+        {
+          "title": "“In My Opportunity, My Future” Workshop by AmCam Exchange",
+          "period": "October 2023",
+          "details": [
+            "Participated in the “In My Opportunity, My Future” workshop by AmCam Exchange."
+          ]
+        },
+        {
+          "title": "ACE Graduation Event Volunteer — School Event",
+          "period": "November 2023",
+          "details": [
+            "Volunteered at the ACE Graduation Event; separate from Advanced Centre for Empowerment (ACE NGO)."
+          ]
+        },
+        {
+          "title": "YRDP Climate Change Information Training",
+          "period": "March 2024",
+          "details": [
+            "Trained with YRDP on “The Importance of Getting Climate Change Information.”"
+          ]
+        },
+        {
+          "title": "ACE Graduation Event Volunteer — School Event",
+          "period": "March 2024",
+          "details": [
+            "Volunteered at the ACE Graduation Event; separate from Advanced Centre for Empowerment (ACE NGO)."
+          ]
+        },
+        {
+          "title": "Porridge for Hope Program",
+          "period": "April 2024",
+          "details": [
+            "Volunteered in the “Porridge for Hope” program with Advanced Center for Employment and Rotaract Club of Phnom Penh."
+          ]
+        }
+      ]
+    }
+  ],
+  "training": [
+    {
+      "title": "Organizer for PUC WUL 2024",
+      "period": "November 2023 - January 2024",
+      "details": [
+        "Helped organize PUC WUL 2024.",
+        "Built event organization, coordination, and teamwork experience."
+      ]
+    },
+    {
+      "title": "Workshop on Children’s Growth",
+      "period": "December 2023",
+      "details": [
+        "Attended workshop on physical growth.",
+        "Attended workshop on intelligent growth.",
+        "Attended workshop on emotional growth.",
+        "Workshop title: “Strategies to Support Children’s Growth: Physical, Intelligent, and Emotional.”"
+      ]
+    },
+    {
+      "title": "Study / Learning Trip to Sihanoukville with Advanced Centre for Empowerment (ACE NGO)",
+      "period": "December 2023",
+      "details": [
+        "Joined a study and learning trip to Sihanoukville with Advanced Centre for Empowerment (ACE NGO)."
+      ]
+    },
+    {
+      "title": "LELE Environment Bonn Phum 2024",
+      "period": "February 2024 - April 2024",
+      "details": [
+        "Participated in LELE Environment Bonn Phum 2024."
+      ]
+    },
+    {
+      "title": "Protocol International Youth Fellowship World Camp",
+      "period": "February 2024 - April 2024",
+      "details": [
+        "Joined Protocol International Youth Fellowship World Camp."
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Outstanding Mathematics Student Competition — Phnom Penh",
+      "period": "April 2022",
+      "result": "2nd Place Ranking Student"
+    },
+    {
+      "title": "Asia International Mathematical Olympiad",
+      "period": "May 2022",
+      "result": "Bronze Medal — Trial Round"
+    },
+    {
+      "title": "Outstanding Students Mathematics Contest — Siem Reap",
+      "period": "June 2022",
+      "result": "Finalist"
+    },
+    {
+      "title": "Study Tour for Outstanding Students — Siem Reap",
+      "period": "June 2022",
+      "result": "Selected / Participated"
+    },
+    {
+      "title": "American Mathematics Olympiad",
+      "period": "November 2022",
+      "result": "Silver Medal"
+    },
+    {
+      "title": "Kangaroo Mathematics",
+      "period": "April 2023",
+      "result": "Bronze Medal"
+    },
+    {
+      "title": "Mathematics PCH",
+      "period": "April 2023",
+      "result": "Merit Medal"
+    },
+    {
+      "title": "Public Speaking & Mathematics Writing Competition — BELTEI IS",
+      "period": "April 2023",
+      "result": "Participant / Competition Recognition"
+    },
+    {
+      "title": "Singapore & Asian Schools Math Olympiad",
+      "period": "June 2023",
+      "result": "Bronze Medal"
+    },
+    {
+      "title": "Thailand International Mathematical Olympiad",
+      "period": "August 2023",
+      "result": "Bronze Medal"
+    },
+    {
+      "title": "Southeast Asian Mathematical Olympiad",
+      "period": "November 2023",
+      "result": "Bronze Medal"
+    },
+    {
+      "title": "Angkor Mathematics Competition",
+      "period": "November 2023",
+      "result": "Participant"
+    },
+    {
+      "title": "Turing Hackathon Cycle 10",
+      "period": "2026",
+      "result": "Top 2 — Market Access for Farmers; Project: Chomkar.com"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2022",
+      "months": [
+        {
+          "month": "April 2022",
+          "items": [
+            "2nd Place Ranking Student — Outstanding Mathematics Student Competition, Phnom Penh."
+          ]
+        },
+        {
+          "month": "May 2022",
+          "items": [
+            "Bronze Medal — Asia International Mathematical Olympiad, Trial Round."
+          ]
+        },
+        {
+          "month": "June 2022",
+          "items": [
+            "Finalist — Outstanding Students Mathematics Contest, Siem Reap.",
+            "Selected for Study Tour for Outstanding Students, Siem Reap."
+          ]
+        },
+        {
+          "month": "November 2022",
+          "items": [
+            "Silver Medal — American Mathematics Olympiad."
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2023",
+      "months": [
+        {
+          "month": "April 2023",
+          "items": [
+            "Bronze Medal — Kangaroo Mathematics.",
+            "Merit Medal — Mathematics PCH.",
+            "Joined Public Speaking & Mathematics Writing Competition at BELTEI IS."
+          ]
+        },
+        {
+          "month": "June 2023",
+          "items": [
+            "Bronze Medal — Singapore & Asian Schools Math Olympiad.",
+            "Participated in creative work exhibitions at the 2nd STEM Fairs of BELTEI International University."
+          ]
+        },
+        {
+          "month": "August 2023",
+          "items": [
+            "Bronze Medal — Thailand International Mathematical Olympiad.",
+            "Participated in the Development of STEM Industries with BELTEI IU.",
+            "Started English teaching at Advanced Centre for Empowerment (ACE NGO).",
+            "Participated in teaching and cleaning the community with Advanced Centre for Empowerment (ACE NGO).",
+            "Started Digital Marketing Internship at F2S The Studies Community."
+          ]
+        },
+        {
+          "month": "September 2023",
+          "items": [
+            "Trained in Self-Leadership, Family Leadership, and Entrepreneurship at the Advanced Centre for Empowerment (ACE NGO) workshop.",
+            "Participated in Lybunchhay video creating challenges."
+          ]
+        },
+        {
+          "month": "October 2023",
+          "items": [
+            "Joined “We Train, We Gain” workshop by UNYAP.",
+            "Joined “In My Opportunity, My Future” workshop by AmCam Exchange."
+          ]
+        },
+        {
+          "month": "November 2023",
+          "items": [
+            "Bronze Medal — Southeast Asian Mathematical Olympiad.",
+            "Participant — Angkor Mathematics Competition.",
+            "Volunteered at the ACE Graduation Event, a school event separate from Advanced Centre for Empowerment (ACE NGO).",
+            "Started organizer role for PUC WUL 2024."
+          ]
+        },
+        {
+          "month": "December 2023",
+          "items": [
+            "Attended workshop on children’s physical, intelligent, and emotional growth.",
+            "Joined study / learning trip to Sihanoukville with Advanced Centre for Empowerment (ACE NGO)."
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2024",
+      "months": [
+        {
+          "month": "January 2024",
+          "items": [
+            "Completed organizer role for PUC WUL 2024."
+          ]
+        },
+        {
+          "month": "February 2024",
+          "items": [
+            "Started freelance work as Marketing Advertiser & Social Media Manager at Bajaj RE.",
+            "Joined LELE Environment Bonn Phum 2024.",
+            "Joined Protocol International Youth Fellowship World Camp."
+          ]
+        },
+        {
+          "month": "March 2024",
+          "items": [
+            "Trained with YRDP on “The Importance of Getting Climate Change Information.”",
+            "Volunteered at the ACE Graduation Event, a school event separate from Advanced Centre for Empowerment (ACE NGO)."
+          ]
+        },
+        {
+          "month": "April 2024",
+          "items": [
+            "Volunteered in the “Porridge for Hope” program with Advanced Center for Employment and Rotaract Club of Phnom Penh.",
+            "Completed LELE Environment Bonn Phum 2024 participation.",
+            "Completed Protocol International Youth Fellowship World Camp participation."
+          ]
+        },
+        {
+          "month": "October 2024",
+          "items": [
+            "Completed English teaching role at Advanced Centre for Empowerment (ACE NGO)."
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2025",
+      "months": [
+        {
+          "month": "February 2025",
+          "items": [
+            "Completed freelance Marketing Advertiser & Social Media Manager role at Bajaj RE."
+          ]
+        },
+        {
+          "month": "October 2025",
+          "items": [
+            "Completed Digital Marketing Internship at F2S The Studies Community."
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2026",
+      "months": [
+        {
+          "month": "January 2026",
+          "items": [
+            "Started Year 1 English study at Institute of Foreign Languages."
+          ]
+        },
+        {
+          "month": "February 2026",
+          "items": [
+            "Started Software Engineering studies at BELTEI International University."
+          ]
+        },
+        {
+          "month": "May 2026",
+          "items": [
+            "Started building Ka Vatana Portfolio website."
+          ]
+        },
+        {
+          "month": "June 2026",
+          "items": [
+            "Started building Chnai Lab as a student-led digital project team."
+          ]
+        },
+        {
+          "month": "2026",
+          "items": [
+            "Chomkar.com demonstrates the evolution from KasekorX, an AI voice-to-marketplace idea for farmers.",
+            "Served as co-founder, product builder, and full-stack engineer for Chomkar.com.",
+            "Won Top 2 at Turing Hackathon Cycle 10 under the theme “Market Access for Farmers.”"
+          ]
+        },
+        {
+          "month": "July 2026 - October 2026",
+          "items": [
+            "Scheduled 3-month contract with Angkor Byte as Web System / Digital Project Support Contractor."
+          ]
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Software Engineering",
+      "items": [
+        "Full-stack development learning",
+        "Web application development",
+        "Vue / Nuxt learning",
+        "TypeScript learning",
+        "Backend fundamentals",
+        "Database fundamentals",
+        "Git and GitHub",
+        "Debugging",
+        "AI-assisted coding workflows"
+      ]
+    },
+    {
+      "category": "Product & Startup",
+      "items": [
+        "Product problem framing",
+        "User-flow design",
+        "Hackathon demo planning",
+        "Pitch preparation",
+        "Business model explanation",
+        "Market access problem analysis",
+        "Agritech product thinking",
+        "Team building through Chnai Lab"
+      ]
+    },
+    {
+      "category": "Marketing & Communication",
+      "items": [
+        "Digital marketing",
+        "Social media management",
+        "Content planning",
+        "Audience communication",
+        "Khmer/English communication support",
+        "Public speaking foundation",
+        "Presentation preparation"
+      ]
+    },
+    {
+      "category": "Leadership & Community",
+      "items": [
+        "Volunteering",
+        "English teaching",
+        "School event volunteering",
+        "Youth workshops",
+        "Event support",
+        "Community involvement",
+        "Team coordination",
+        "Self-leadership"
+      ]
+    }
+  ]
+}

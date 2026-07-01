@@ -1,4 +1,5 @@
 import type { Project } from '~/types/content'
+import chomkar from '~/content/projects/chomkar.json'
 import bayonhub from '~/content/projects/bayonhub.json'
 import kavatanaPortfolio from '~/content/projects/kavatana-portfolio.json'
 import cyberArena from '~/content/projects/cyber-arena-team-os.json'
@@ -8,6 +9,7 @@ import studioOs from '~/content/projects/studio-os.json'
 
 export const useProjects = (): Project[] => {
   const projects = [
+    chomkar as Project,
     bayonhub as Project,
     phsaros as Project,
     svaengYul as Project,

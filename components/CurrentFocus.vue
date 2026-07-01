@@ -19,34 +19,34 @@
 <script setup lang="ts">
 const focusItems = [
   {
-    id: 'portfolio',
+    id: 'chomkar',
     icon: '✦',
-    title: 'Cleaning up my GitHub and portfolio',
-    description: 'Making my public presence honest, organized, and professional.'
+    title: 'Building Chomkar.com',
+    description: 'Co-founder and full-stack contributor on an agritech platform for farmer market access.'
   },
   {
-    id: 'fullstack',
+    id: 'chnai-lab',
     icon: '⬡',
-    title: 'Learning full-stack fundamentals',
-    description: 'Vue, Nuxt, TypeScript, NestJS, PostgreSQL — building while studying.'
+    title: 'Growing Chnai Lab',
+    description: 'Building a student-led digital project team for products, automation, and practical execution.'
   },
   {
-    id: 'bayonhub',
+    id: 'studies',
     icon: '◈',
-    title: 'Building BayonHub carefully',
-    description: 'Treating it as a real product experiment — architecture first, polish later.'
-  },
-  {
-    id: 'ai',
-    icon: '⌘',
-    title: 'Learning AI-assisted development',
-    description: 'Using Claude and other tools thoughtfully, verifying everything I generate.'
+    title: 'Studying software and English',
+    description: 'Software Engineering at BELTEI International University and Year 1 English at IFL.'
   },
   {
     id: 'angkor-byte',
+    icon: '⌘',
+    title: 'Preparing for Angkor Byte work',
+    description: 'July 2026 - October 2026 web system and digital project support contract.'
+  },
+  {
+    id: 'portfolio',
     icon: '◉',
-    title: 'Learning inside Angkor Byte',
-    description: 'Understanding how engineering teams think about products and international work.'
+    title: 'Organizing my public identity',
+    description: 'Turning high-school activities, awards, projects, and photos into a clean portfolio archive.'
   }
 ]
 </script>

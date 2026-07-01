@@ -2,7 +2,7 @@
   <AppContainer>
     <div class="page-header animate-fade-up">
       <h1 class="page-title">About</h1>
-      <p class="page-subtitle">Background, approach, and experience.</p>
+      <p class="page-subtitle">Current identity, studies, projects, and professional direction.</p>
     </div>
     
     <AboutBio class="animate-fade-up delay-100" />
@@ -11,9 +11,9 @@
     
     <CtaBlock 
       class="animate-fade-up delay-400"
-      question="Open to the right opportunity"
-      link-label="Let's talk &rarr;"
-      link-href="/contact"
+      question="Want the full high-school to present timeline?"
+      link-label="Read the full journey &rarr;"
+      link-href="/journey"
     />
   </AppContainer>
 </template>
@@ -22,14 +22,14 @@
 useHead({
   title: 'About · Ka Vatana',
   meta: [
-    { name: 'description', content: 'Background, approach, and experience.' },
+    { name: 'description', content: 'Ka Vatana background, studies, current projects, experience, and learning direction.' },
     { property: 'og:title', content: 'About · Ka Vatana' },
-    { property: 'og:description', content: 'Background, approach, and experience.' },
+    { property: 'og:description', content: 'Ka Vatana background, studies, current projects, experience, and learning direction.' },
     { property: 'og:url', content: 'https://kavatana.me/about' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'About · Ka Vatana' },
-    { name: 'twitter:description', content: 'Background, approach, and experience.' }
+    { name: 'twitter:description', content: 'Ka Vatana background, studies, current projects, experience, and learning direction.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://kavatana.me/about' }

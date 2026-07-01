@@ -4,10 +4,11 @@
     <ol class="timeline-list">
       <li v-for="entry in timeline" :key="entry.id" class="timeline-item">
         <div class="timeline-year">
-          {{ entry.startYear }}{{ entry.endYear ? '–' + entry.endYear : '' }}
+          {{ entry.period || `${entry.startYear}${entry.endYear ? '–' + entry.endYear : ''}` }}
         </div>
         <div class="timeline-content">
           <h3 class="role-title">{{ entry.title }}</h3>
+          <p class="role-org" v-if="entry.organization">{{ entry.organization }}</p>
           <p class="role-desc">{{ entry.description }}</p>
         </div>
       </li>
@@ -78,6 +79,13 @@ const timeline = useTimeline()
   color: var(--color-text-primary);
   font-size: var(--text-lg);
   font-weight: 500;
+  margin: 0 0 6px 0;
+}
+
+.role-org {
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  font-weight: 600;
   margin: 0 0 var(--space-xs) 0;
 }
 

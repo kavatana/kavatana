@@ -1,8 +1,8 @@
 [
-  { "id": "marketing", "label": "Marketing Websites" },
+  { "id": "agritech", "label": "Agritech Products" },
+  { "id": "market-access", "label": "Market Access Systems" },
   { "id": "full-stack", "label": "Full-Stack Web Apps" },
-  { "id": "admin", "label": "Admin Dashboards" },
-  { "id": "saas", "label": "SaaS MVPs" },
-  { "id": "chatbot", "label": "AI Chatbot Products" },
-  { "id": "agents", "label": "AI Agent Tools" }
+  { "id": "student-teams", "label": "Student-Led Product Teams" },
+  { "id": "automation", "label": "Automation Workflows" },
+  { "id": "ai-assisted", "label": "AI-Assisted Software Building" }
 ]

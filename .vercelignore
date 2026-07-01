@@ -1,0 +1,10 @@
+node_modules/
+.nuxt/
+.output/
+dist/
+venv/
+scripts/
+public/images/projects/bayonhub/refresh/
+review/
+.DS_Store
+*.bak

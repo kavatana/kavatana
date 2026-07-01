@@ -8,22 +8,23 @@
       </div>
       
       <div class="hero-text-content">
-        <div class="identity-badge animate-fade-up delay-100">🇰🇭 Year 1 Software Engineering Student</div>
+        <div class="identity-badge animate-fade-up delay-100">{{ config.role }}</div>
         <h1 class="hero-name animate-fade-up delay-200">Ka Vatana</h1>
-        <p class="hero-headline animate-fade-up delay-300">Building real software while learning how to build better software.</p>
+        <p class="hero-headline animate-fade-up delay-300">{{ config.tagline }}</p>
+        <p class="hero-summary animate-fade-up delay-300">{{ config.subtitle }}</p>
         
         <div class="tech-chips animate-fade-up delay-400">
           <span class="chip">Nuxt</span>
           <span class="chip">Vue</span>
           <span class="chip">TypeScript</span>
-          <span class="chip">Node.js</span>
-          <span class="chip">PostgreSQL</span>
-          <span class="chip">AI Tools</span>
+          <span class="chip">Product</span>
+          <span class="chip">Agritech</span>
+          <span class="chip">AI-assisted workflows</span>
         </div>
 
         <div class="hero-actions animate-fade-up delay-500">
           <NuxtLink to="/projects" class="btn-primary">View projects</NuxtLink>
-          <NuxtLink to="/contact" class="btn-secondary">Contact me &rarr;</NuxtLink>
+          <NuxtLink to="/journey" class="btn-secondary">Read journey &rarr;</NuxtLink>
         </div>
       </div>
     </div>
@@ -31,6 +32,9 @@
 </template>
 
 <script setup lang="ts">
+import { usePortfolioConfig } from '~/composables/usePortfolioConfig'
+
+const config = usePortfolioConfig()
 </script>
 
 <style scoped>
@@ -128,6 +132,14 @@
   line-height: 1.4;
   margin: 0;
   max-width: 500px;
+}
+
+.hero-summary {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 640px;
 }
 
 .tech-chips {

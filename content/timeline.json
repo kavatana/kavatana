@@ -1,26 +1,98 @@
 [
   {
-    "id": "education",
-    "type": "education",
-    "title": "Software Engineering — Year 1",
-    "organization": "University (Cambodia)",
-    "startYear": 2025,
-    "description": "Studying Software Engineering fundamentals: programming, data structures, systems thinking, and engineering principles."
+    "id": "chomkar",
+    "type": "project",
+    "title": "Co-founder, Product Builder & Full-stack Engineer — Chomkar.com",
+    "organization": "Chomkar.com",
+    "startYear": 2026,
+    "period": "2026 - Present",
+    "description": "Building an agritech platform focused on market access for farmers. The project demonstrates the evolution from KasekorX, an AI voice-to-marketplace idea for farmers, into Chomkar.com and won Top 2 at Turing Hackathon Cycle 10 under the theme Market Access for Farmers."
   },
   {
     "id": "angkor-byte",
     "type": "environment",
-    "title": "Learning Environment — Angkor Byte",
+    "title": "Web System / Digital Project Support Contractor",
     "organization": "Angkor Byte",
-    "startYear": 2025,
-    "description": "Joined an Angkor Byte company environment to learn product thinking, AI-assisted engineering workflows, and how international teams collaborate and ship software."
+    "startYear": 2026,
+    "endYear": 2026,
+    "period": "July 2026 - October 2026",
+    "description": "A 3-month contract supporting website design, development, testing, bug fixing, implementation, digital marketing, localization, and professional project workflow."
   },
   {
-    "id": "bayonhub",
+    "id": "chnai-lab",
     "type": "project",
-    "title": "Solo Builder — BayonHub",
-    "organization": "BayonHub (Learning Project)",
+    "title": "Founder / Team Builder — Chnai Lab",
+    "organization": "Chnai Lab",
+    "startYear": 2026,
+    "period": "June 2026 - Present",
+    "description": "Building a student-led digital project team for practical products, automation, AI-assisted workflows, leadership practice, and team execution."
+  },
+  {
+    "id": "beltei-iu",
+    "type": "education",
+    "title": "Software Engineering — Year 1",
+    "organization": "BELTEI International University",
+    "startYear": 2026,
+    "period": "February 2026 - Present",
+    "description": "Studying software engineering fundamentals while building real projects outside class to improve practical development ability."
+  },
+  {
+    "id": "ifl",
+    "type": "education",
+    "title": "English — Year 1",
+    "organization": "Institute of Foreign Languages — IFL",
+    "startYear": 2026,
+    "period": "January 2026 - Present",
+    "description": "Studying Year 1 English to improve academic, technical, and professional communication for documentation, project explanation, and company communication."
+  },
+  {
+    "id": "f2s",
+    "type": "role",
+    "title": "Digital Marketing Intern",
+    "organization": "F2S The Studies Community",
+    "startYear": 2023,
+    "endYear": 2025,
+    "period": "August 2023 - October 2025",
+    "description": "Supported content, page activity, audience communication, digital media, content strategy, and online engagement before moving deeper into software engineering."
+  },
+  {
+    "id": "bajaj-re",
+    "type": "role",
+    "title": "Marketing Advertiser & Social Media Manager — Freelance",
+    "organization": "Bajaj RE",
     "startYear": 2024,
-    "description": "Building a Khmer-first classifieds marketplace from scratch as an active learning project — practicing full-stack architecture, product flow design, and Cambodia-first product thinking."
+    "endYear": 2025,
+    "period": "February 2024 - February 2025",
+    "description": "Supported social media marketing, advertising, page activity, digital content, audience engagement, and business communication."
+  },
+  {
+    "id": "ace",
+    "type": "role",
+    "title": "English Teaching / Community Volunteer",
+    "organization": "Advanced Centre for Empowerment — ACE NGO",
+    "startYear": 2023,
+    "endYear": 2024,
+    "period": "August 2023 - October 2024",
+    "description": "Taught English, joined community teaching and cleaning activities, joined ACE NGO leadership development activities, and built early communication and responsibility skills."
+  },
+  {
+    "id": "ace-graduation-event",
+    "type": "role",
+    "title": "ACE Graduation Event Volunteer",
+    "organization": "ACE Graduation Event",
+    "startYear": 2023,
+    "endYear": 2024,
+    "period": "November 2023 and March 2024",
+    "description": "Volunteered at ACE Graduation school events in November 2023 and March 2024. This is separate from Advanced Centre for Empowerment (ACE NGO)."
+  },
+  {
+    "id": "mathematics-achievements",
+    "type": "milestone",
+    "title": "Mathematics, STEM & Public Speaking Foundation",
+    "organization": "BELTEI International School",
+    "startYear": 2022,
+    "endYear": 2023,
+    "period": "2022 - 2023",
+    "description": "Built a high-school foundation through mathematics competitions, STEM activities, public speaking, creative exhibitions, and community involvement."
   }
 ]

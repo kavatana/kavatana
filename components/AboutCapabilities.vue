@@ -2,14 +2,17 @@
   <div class="about-capabilities">
     <h2 class="card-heading">What I bring</h2>
     <ul class="capabilities-list">
-      <li><span class="dash">&mdash;</span> Backend Development</li>
-      <li><span class="dash">&mdash;</span> Full-Stack Web Apps</li>
-      <li><span class="dash">&mdash;</span> DevOps & Deployment</li>
-      <li><span class="dash">&mdash;</span> Product Architecture</li>
-      <li><span class="dash">&mdash;</span> AI-Powered Products</li>
+      <li v-for="item in focusItems" :key="item"><span class="dash">&mdash;</span> {{ item }}</li>
     </ul>
   </div>
 </template>
+
+<script setup lang="ts">
+import { useAbout } from '~/composables/useAbout'
+
+const about = useAbout()
+const focusItems = about.currentFocus || []
+</script>
 
 <style scoped>
 .about-capabilities {
