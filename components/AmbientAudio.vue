@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const isPlaying = ref(false)
 const audioRef = ref<HTMLAudioElement | null>(null)

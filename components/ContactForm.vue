@@ -104,7 +104,7 @@ const submitForm = async () => {
     if ($trackEvent) {
       $trackEvent('contact_form_success')
     }
-  } catch (err: any) {
+  } catch {
     status.value = 'error'
     errorMessage.value = 'An error occurred. Please try emailing directly.'
   } finally {
