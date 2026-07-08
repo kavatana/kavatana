@@ -17,6 +17,16 @@ as engineering leverage rather than as a substitute for judgment.
 - Keeping future-startup source code private while publishing honest public
   proof of work
 
+## Public Proof of Work
+
+- **Portfolio case studies:** [kavatana.me](https://kavatana.me) documents the
+  product surfaces, screenshots, tradeoffs, and build direction behind my work.
+- **Studio OS demo:** [kavatana-studio-os.vercel.app](https://kavatana-studio-os.vercel.app)
+  is a privacy-safe, local-first personal operating system built with Next.js,
+  React, TypeScript, Tailwind, and offline browser state.
+- **CHNAI LAB profile:** [github.com/chnai-lab](https://github.com/chnai-lab)
+  presents the student-run product studio behind the broader portfolio.
+
 ## Startup Portfolio
 
 Most source repositories are private because these are intended startup assets,
@@ -37,6 +47,7 @@ Read more:
 
 - [Startup portfolio map](docs/STARTUP_PORTFOLIO.md)
 - [AI-native engineering workflow](docs/AI_NATIVE_WORKFLOW.md)
+- [GitHub account cleanup record](docs/GITHUB_ACCOUNT_CLEANUP.md)
 
 ## Engineering Stack
 

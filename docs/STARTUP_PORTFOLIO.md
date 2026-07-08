@@ -17,6 +17,19 @@ understand the direction.
 - Use AI agents to speed up product engineering while keeping human review,
   tests, and claim discipline in the loop.
 
+## Public Proof Surfaces
+
+The source for active startup products stays private. The public layer is
+designed to show execution quality without exposing product strategy, source
+code, credentials, or user data.
+
+| Surface | What It Proves | Public Link |
+| --- | --- | --- |
+| **Portfolio website** | Case studies, screenshots, product reasoning, and visual polish. | [kavatana.me](https://kavatana.me) |
+| **Studio OS demo** | Local-first product engineering, privacy-safe demo design, strict TypeScript, and production build discipline. | [kavatana-studio-os.vercel.app](https://kavatana-studio-os.vercel.app) |
+| **GitHub profile** | Repository hygiene, private-source boundary, docs, and AI-native workflow. | [github.com/kavatana](https://github.com/kavatana) |
+| **CHNAI LAB profile** | Student-run studio positioning and team operating model. | [github.com/chnai-lab](https://github.com/chnai-lab) |
+
 ## Product Lines
 
 | Product | Category | User | Core Workflow |
@@ -38,6 +51,7 @@ Public:
 - Case studies
 - Screenshots and demos when safe
 - Learning notes and engineering process
+- Verification notes: type checks, builds, audits, and manual smoke tests
 
 Private:
 
@@ -46,6 +60,13 @@ Private:
 - Proprietary product strategy
 - User data, partner data, and unreleased operating plans
 - Security-sensitive implementation details
+
+## Personal Systems as Proof
+
+Studio OS is not one of the seven startup tracks. It is a personal command
+center and life operating system that proves I can build a serious private tool,
+ship a public demo safely, and explain the engineering tradeoffs behind it. The
+public demo is intentionally privacy-safe; the source repository remains private.
 
 ## What This Portfolio Is Meant To Prove
 

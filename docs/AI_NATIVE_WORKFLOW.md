@@ -27,6 +27,16 @@ not blind automation.
   product summaries
 - Honest claims about what is shipped versus what is planned
 
+## Current Verification Loop
+
+- Run dependency audits before publishing or showcasing a repo.
+- Keep Dependabot enabled for maintained JavaScript/TypeScript projects.
+- Use strict type checks and production builds as the minimum proof for web apps.
+- Keep private startup source private, then publish safe public summaries,
+  screenshots, demos, and case studies.
+- Record cleanup decisions so future collaborators can understand what is public,
+  what is private, and why.
+
 ## How AI Helps
 
 - Faster codebase navigation
