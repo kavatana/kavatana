@@ -58,6 +58,11 @@
       </section>
       
       <ProjectResults :results="project.results" v-if="project.results && project.results.length > 0" />
+
+      <section class="repo-note-section" v-if="project.repoNote">
+        <h2 class="section-title">Verification Note</h2>
+        <p class="repo-note-text">{{ project.repoNote }}</p>
+      </section>
       
       <section class="prose-section" v-if="project.nextSteps && project.nextSteps.length">
         <h2 class="section-title">Next Steps</h2>
@@ -222,6 +227,21 @@ useHead({
   color: var(--color-text-primary);
   font-size: var(--text-lg);
   font-style: italic;
+  margin: 0;
+}
+
+.repo-note-section {
+  padding: var(--space-xl) 0;
+}
+
+.repo-note-text {
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  background-color: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-lg);
   margin: 0;
 }
 

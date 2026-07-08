@@ -4,7 +4,7 @@
       <span class="section-label">Learning log</span>
       <h2 class="section-title">What I'm learning</h2>
       <p class="section-desc">
-        I'm a Year 1 student. This is an honest list of what I'm actively studying and building across.
+        I am still early in school, but the learning loop is practical: build, verify, document, and improve.
       </p>
     </div>
     <div class="learning-grid">

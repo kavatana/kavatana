@@ -3,7 +3,7 @@
     <div class="work-header">
       <span class="section-label">Selected Work</span>
       <h2 id="work-title" class="section-title">Projects</h2>
-      <p class="section-desc">Products I designed and built end to end — each one live and explorable.</p>
+      <p class="section-desc">Products I designed and built end to end, with demos where safe and case studies where source stays private.</p>
     </div>
 
     <div class="work-grid">

@@ -1,7 +1,7 @@
 <template>
   <section class="build-directions">
     <h2 class="directions-title">What I'm building toward</h2>
-    <p class="directions-subtitle">The portfolio starts with BayonHub. This is where it goes next.</p>
+    <p class="directions-subtitle">The work is organized around Cambodia-first products, student ownership, and AI-native engineering discipline.</p>
     <div class="chips-container">
       <div v-for="direction in directions" :key="direction.id" class="direction-chip">
         {{ direction.label }}

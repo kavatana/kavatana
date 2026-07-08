@@ -8,17 +8,17 @@
       </div>
       
       <div class="hero-text-content">
-        <div class="identity-badge animate-fade-up delay-100">🇰🇭 Year 1 Software Engineering Student</div>
+        <div class="identity-badge animate-fade-up delay-100">KH Software Engineering Student · Founder-Engineer</div>
         <h1 class="hero-name animate-fade-up delay-200">Ka Vatana</h1>
-        <p class="hero-headline animate-fade-up delay-300">Building real software while learning how to build better software.</p>
+        <p class="hero-headline animate-fade-up delay-300">Building AI-native, Cambodia-first software products with private source and public proof.</p>
         
         <div class="tech-chips animate-fade-up delay-400">
           <span class="chip">Nuxt</span>
           <span class="chip">Vue</span>
           <span class="chip">TypeScript</span>
-          <span class="chip">Node.js</span>
+          <span class="chip">Next.js</span>
           <span class="chip">PostgreSQL</span>
-          <span class="chip">AI Tools</span>
+          <span class="chip">AI-Native Workflow</span>
         </div>
 
         <div class="hero-actions animate-fade-up delay-500">

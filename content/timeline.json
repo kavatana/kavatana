@@ -16,11 +16,27 @@
     "description": "Joined an Angkor Byte company environment to learn product thinking, AI-assisted engineering workflows, and how international teams collaborate and ship software."
   },
   {
+    "id": "chnai-lab",
+    "type": "milestone",
+    "title": "Student-Run Product Studio — CHNAI LAB",
+    "organization": "CHNAI LAB",
+    "startYear": 2026,
+    "description": "Building a student-run product studio around real ownership, real products, and operating discipline instead of throwaway class projects."
+  },
+  {
+    "id": "startup-portfolio",
+    "type": "project",
+    "title": "Private Startup Portfolio",
+    "organization": "BayonHub, Svaeng Yul, Chomkar, Sat Digital, Vantrex, PHSAROS",
+    "startYear": 2026,
+    "description": "Developing a set of Cambodia-first product tracks while keeping source private and publishing safe public proof through demos, screenshots, and case studies."
+  },
+  {
     "id": "bayonhub",
     "type": "project",
     "title": "Solo Builder — BayonHub",
-    "organization": "BayonHub (Learning Project)",
+    "organization": "BayonHub",
     "startYear": 2024,
-    "description": "Building a Khmer-first classifieds marketplace from scratch as an active learning project — practicing full-stack architecture, product flow design, and Cambodia-first product thinking."
+    "description": "Started building a Cambodia-first marketplace idea from scratch, then reframed it into student opportunity infrastructure as the portfolio became more focused."
   }
 ]

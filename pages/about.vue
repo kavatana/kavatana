@@ -2,7 +2,7 @@
   <AppContainer>
     <div class="page-header animate-fade-up">
       <h1 class="page-title">About</h1>
-      <p class="page-subtitle">Background, approach, and experience.</p>
+      <p class="page-subtitle">Background, product direction, and how I work.</p>
     </div>
     
     <AboutBio class="animate-fade-up delay-100" />
@@ -22,14 +22,14 @@
 useHead({
   title: 'About · Ka Vatana',
   meta: [
-    { name: 'description', content: 'Background, approach, and experience.' },
+    { name: 'description', content: 'Ka Vatana is a Cambodia-based Software Engineering student and founder-engineer building AI-native product systems.' },
     { property: 'og:title', content: 'About · Ka Vatana' },
-    { property: 'og:description', content: 'Background, approach, and experience.' },
+    { property: 'og:description', content: 'Background, product direction, and AI-native engineering workflow.' },
     { property: 'og:url', content: 'https://kavatana.me/about' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'About · Ka Vatana' },
-    { name: 'twitter:description', content: 'Background, approach, and experience.' }
+    { name: 'twitter:description', content: 'Background, product direction, and AI-native engineering workflow.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://kavatana.me/about' }

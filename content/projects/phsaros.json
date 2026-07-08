@@ -60,6 +60,7 @@
     "Lightning-fast ~88-101 kB first-load JS across operations routes",
     "Production build passes strict lint and type-check"
   ],
+  "repoNote": "Source repository is private because PHSAROS is an active startup asset. Public proof is provided through the live demo, screenshots, case study, and validation notes: dependency audit, test suite, and production build have been checked.",
   "screenshots": [
     {
       "src": "/images/projects/phsaros/01-dashboard-desktop.png",

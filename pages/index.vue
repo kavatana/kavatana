@@ -19,25 +19,25 @@ import { usePortfolioConfig } from '~/composables/usePortfolioConfig'
 const config = usePortfolioConfig()
 
 useHead({
-  title: 'Ka Vatana — Software Engineering Student & Builder from Cambodia',
+  title: 'Ka Vatana — AI-Native Founder-Engineer from Cambodia',
   meta: [
     {
       name: 'description',
-      content: config?.description || 'Ka Vatana is a Year 1 Software Engineering student from Cambodia learning full-stack development, AI-assisted workflows, and product building through practical web projects.'
+      content: config?.description || 'Ka Vatana is a Software Engineering student from Cambodia building AI-native, Cambodia-first software products with public demos and private startup source.'
     },
-    { property: 'og:title', content: 'Ka Vatana — Software Engineering Student & Builder from Cambodia' },
+    { property: 'og:title', content: 'Ka Vatana — AI-Native Founder-Engineer from Cambodia' },
     {
       property: 'og:description',
-      content: config?.description || 'Year 1 Software Engineering student from Cambodia learning full-stack development, AI workflows, and product building.'
+      content: config?.description || 'Software Engineering student from Cambodia building AI-native product systems and public proof of work.'
     },
     { property: 'og:image', content: config?.ogImage || '/images/og-default.png' },
     { property: 'og:url', content: 'https://kavatana.me' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Ka Vatana — Software Engineering Student & Builder from Cambodia' },
+    { name: 'twitter:title', content: 'Ka Vatana — AI-Native Founder-Engineer from Cambodia' },
     {
       name: 'twitter:description',
-      content: config?.description || 'Year 1 Software Engineering student from Cambodia.'
+      content: config?.description || 'Software Engineering student from Cambodia building AI-native product systems.'
     },
     { name: 'twitter:image', content: config?.ogImage || '/images/og-default.png' }
   ],
@@ -52,8 +52,8 @@ useHead({
         '@type': 'Person',
         'name': 'Ka Vatana',
         'url': 'https://kavatana.me',
-        'jobTitle': 'Software Engineering Student',
-        'description': 'Year 1 Software Engineering student from Cambodia learning full-stack development and product building.',
+        'jobTitle': 'Software Engineering Student and Founder-Engineer',
+        'description': 'Software Engineering student from Cambodia building AI-native, Cambodia-first software products.',
         'sameAs': [
           'https://github.com/kavatana',
           'https://www.linkedin.com/in/ka-vatana-99b85440a/'

@@ -21,32 +21,32 @@ const focusItems = [
   {
     id: 'portfolio',
     icon: '✦',
-    title: 'Cleaning up my GitHub and portfolio',
-    description: 'Making my public presence honest, organized, and professional.'
+    title: 'Building a private startup portfolio',
+    description: 'Protecting source code while publishing safe demos, screenshots, and case studies.'
   },
   {
     id: 'fullstack',
     icon: '⬡',
-    title: 'Learning full-stack fundamentals',
-    description: 'Vue, Nuxt, TypeScript, NestJS, PostgreSQL — building while studying.'
+    title: 'Sharpening full-stack fundamentals',
+    description: 'TypeScript, Vue/Nuxt, React/Next, APIs, databases, auth, and deployment.'
   },
   {
-    id: 'bayonhub',
+    id: 'chnai-lab',
     icon: '◈',
-    title: 'Building BayonHub carefully',
-    description: 'Treating it as a real product experiment — architecture first, polish later.'
+    title: 'Growing CHNAI LAB',
+    description: 'A student-run product studio focused on real ownership and operating discipline.'
   },
   {
     id: 'ai',
     icon: '⌘',
-    title: 'Learning AI-assisted development',
-    description: 'Using Claude and other tools thoughtfully, verifying everything I generate.'
+    title: 'Practicing AI-native development',
+    description: 'Using agents for speed, then verifying with audits, type checks, builds, and review.'
   },
   {
-    id: 'angkor-byte',
+    id: 'studio-os',
     icon: '◉',
-    title: 'Learning inside Angkor Byte',
-    description: 'Understanding how engineering teams think about products and international work.'
+    title: 'Shipping personal systems',
+    description: 'Studio OS proves local-first product thinking with a privacy-safe public demo.'
   }
 ]
 </script>

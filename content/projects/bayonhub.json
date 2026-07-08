@@ -1,7 +1,7 @@
 {
   "id": "bayonhub",
   "title": "BayonHub",
-  "tagline": "Khmer-first Cambodian classifieds marketplace",
+  "tagline": "Cambodia-first tech student opportunity hub",
   "status": "in-progress",
   "statusLabel": "Interactive Demo",
   "featured": true,
@@ -20,9 +20,7 @@
   ],
   "coverImage": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-desktop.png",
   "coverImageLight": "/images/projects/bayonhub/screenshots/bayonhub-light-home-desktop.png",
-  "coverImageAlt": "BayonHub platform preview",
-  "liveUrl": "https://bayonhub-app.vercel.app",
-  "githubUrl": "https://github.com/kavatana/bayonhub",
+  "coverImageAlt": "BayonHub earlier marketplace prototype preview",
   "screenshots": [
     {
       "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-desktop.png",
@@ -67,41 +65,40 @@
       "caption": "Monetization and upgrade surface."
     }
   ],
-  "problem": "Cambodia has no widely trusted, Khmer-friendly digital classifieds platform. I wanted to explore what one might look like.",
-  "context": "BayonHub was built to feel like a real local commerce product instead of a static landing page. The frontend is a Vite PWA, fully bilingual (Khmer and English), with marketplace browsing, posting, and seller paths — plus Kasekor, a voice-first vertical aimed at farmers. The whole thing runs offline against a localStorage fallback, so the public demo works end-to-end with no backend, no account, and no keys.",
+  "problem": "Cambodian students in AI engineering, data science, cybersecurity, software engineering, and related tech majors need a focused place to find internships, freelance work, jobs, and portfolio-building opportunities.",
+  "context": "BayonHub began as a Khmer-first classifieds marketplace prototype. That prototype proved I could build search, posting, trust, bilingual UI, and offline demo flows. The product has now pivoted into a tech-student opportunity hub, reusing the lessons from the marketplace build while replacing the domain model around students, employers, opportunities, applications, and student profiles.",
   "constraints": [
     "Solo student project — no team or funding",
     "Learning full-stack architecture while building",
-    "Designing for Khmer-language users and mobile-first behavior",
-    "Navigating the marketplace cold-start problem as a concept"
+    "Designing for Cambodian tech students and employers",
+    "Keeping old marketplace proof visible without pretending it is the current product direction"
   ],
   "myRole": "I built everything myself — frontend, backend, basic DevOps, and product decisions — as a learning exercise. Every part of it taught me something I didn't know before starting.",
-  "solution": "Built a foundational buyer-to-seller flow — search, listings, account management, and seller trust signals — and an offline-first architecture where every API call has a localStorage fallback, so the app stays fully usable on a spotty connection or with no backend at all. Kasekor sits alongside it as a distinct, discoverable vertical for farmers.",
-  "callout": "Offline-first by design: every data call falls back to localStorage, so the demo runs end-to-end with zero backend — exactly what Cambodia's network conditions need.",
+  "solution": "The current private repo is being reshaped around the opportunity-hub workflow: student and employer auth, student profiles, company records, opportunity records, applications, and admin-curated opportunities before employer self-serve posting. The older marketplace screenshots remain here as engineering proof from the pre-pivot prototype.",
+  "callout": "BayonHub is a real product pivot, not a rename. The public case study keeps the old prototype proof visible while the private repo moves toward the student opportunity platform.",
   "tradeoffs": [
-    "Prioritized working flows over visual polish.",
-    "Phased the build to learn one layer at a time instead of doing everything at once.",
-    "Made offline-first non-negotiable, accepting a heavier client over a backend dependency for the demo."
+    "Kept the BayonHub brand while replacing the old classifieds domain model.",
+    "Started with admin-curated opportunities before employer self-serve posting so real students can apply sooner.",
+    "Kept the public source private because the pivot is a startup asset, while documenting the architecture and proof publicly."
   ],
   "whatIBuilt": [
-    "A buyer-to-seller listing flow with search and categories.",
-    "Basic account management and seller profile concept.",
-    "A simple trust indicator experiment (phone verification idea).",
-    "A tiered listing model as a monetization concept to explore.",
-    "Kasekor: a voice-first listing vertical for farmers, with fair-price hints and trust signals."
+    "A pre-pivot bilingual marketplace prototype with browsing, posting, search, account surfaces, and seller trust signals.",
+    "Offline/localStorage fallback patterns so public demos can run without API keys.",
+    "A pivot plan and private implementation direction for students, employers, opportunities, applications, and admin curation.",
+    "A product narrative that preserves honest proof from the old prototype while making the current opportunity-hub direction clear."
   ],
   "whatILearned": [
-    "How to structure a React + Express full-stack project from scratch.",
-    "Database schema design for a marketplace (users, listings, categories).",
-    "How to think about trust in two-sided marketplace products.",
+    "How to structure a React + Express product from scratch.",
+    "Why domain pivots require schema, copy, routes, and screenshots to move together.",
+    "How to think about trust in two-sided platforms.",
     "Why phased, connected flows matter more than isolated flashy features.",
-    "How Docker and Vercel work together for deployment.",
+    "How to preserve public proof while protecting startup source code.",
     "How much harder building a real product is than following a tutorial."
   ],
-  "repoNote": "Validated with frontend/backend lint, production builds, Chromium smoke tests, high/critical dependency audits, and a 13-check pre-deploy script.",
+  "repoNote": "Source repository is private because BayonHub is an active startup asset. Public proof is provided through screenshots, case study notes, and validation history. The current product direction is the tech-student opportunity hub; older marketplace screenshots are retained only as proof from the pre-pivot prototype.",
   "nextSteps": [
-    "Connect the live Express + Postgres backend behind the offline-first frontend.",
-    "Wire real SMS verification and ABA KHQR payments for launch.",
-    "Take Kasekor's voice capture from demo fallback to live AI extraction."
+    "Finish the student experience loop: profile, browse opportunities, detail page, apply flow, and admin application visibility.",
+    "Add employer self-serve posting after the student loop can be tested with real users.",
+    "Replace the public case-study screenshots with opportunity-hub screenshots once the new surface is demo-ready."
   ]
 }

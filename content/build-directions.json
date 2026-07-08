@@ -1,8 +1,8 @@
 [
-  { "id": "marketing", "label": "Marketing Websites" },
-  { "id": "full-stack", "label": "Full-Stack Web Apps" },
-  { "id": "admin", "label": "Admin Dashboards" },
-  { "id": "saas", "label": "SaaS MVPs" },
-  { "id": "chatbot", "label": "AI Chatbot Products" },
-  { "id": "agents", "label": "AI Agent Tools" }
+  { "id": "student-opportunities", "label": "Student Opportunity Infrastructure" },
+  { "id": "khmer-learning", "label": "Khmer Tech Education" },
+  { "id": "agritech", "label": "Agriculture Market Access" },
+  { "id": "sme-os", "label": "SME Operating Systems" },
+  { "id": "cyber-services", "label": "Community Cybersecurity" },
+  { "id": "ai-native", "label": "AI-Native Product Engineering" }
 ]
