@@ -7,6 +7,7 @@ Updated cleanup record on 2026-07-08 using authenticated GitHub CLI access.
 - Private personal repos: 7
 - Public CHNAI LAB org repos: 1
 - Private CHNAI LAB org repos: 2
+- Archived CHNAI LAB org repos: 1
 - Public name: `Ka Vatana`
 - Profile website: `https://kavatana.me`
 - Profile bio: `Founder-engineer building Khmer-first products, marketplaces, learning tools, and practical AI systems.`
@@ -20,6 +21,8 @@ Updated cleanup record on 2026-07-08 using authenticated GitHub CLI access.
   vulnerability alerts, automated security fixes, and delete-branch-on-merge.
 - `kavatana/kavatana-life-os` is private source with a public demo at
   `https://kavatana-studio-os.vercel.app`.
+- `chnai-lab/demo-repository` was archived because it was a private GitHub demo
+  repo, not an active product surface.
 - No repositories were deleted.
 - No licenses were added. This remains a deliberate product/legal decision.
 - GitHub reports account two-factor authentication is currently disabled.
@@ -58,7 +61,7 @@ release, open-source reuse, or investor/customer diligence.
 | `kavatana/phsaros` | Private | SME operating system for shops and restaurants. |
 | `chnai-lab/.github` | Public | CHNAI LAB organization profile. |
 | `chnai-lab/website` | Private | CHNAI LAB website source. |
-| `chnai-lab/demo-repository` | Private | GitHub demo repository; safe to archive if it is not used. |
+| `chnai-lab/demo-repository` | Private, archived | GitHub demo repository kept for history but removed from active maintenance. |
 
 ## Repository Hygiene
 
@@ -88,6 +91,5 @@ Manual-only remaining items:
 1. Enable two-factor authentication.
 2. Confirm the public email and social links you want shown on the GitHub
    profile.
-3. Decide whether `chnai-lab/demo-repository` should be archived.
-4. Decide whether each repo should stay unlicensed or receive an explicit
+3. Decide whether each repo should stay unlicensed or receive an explicit
    license.
