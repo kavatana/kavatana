@@ -1,5 +1,7 @@
 # Ka Vatana
 
+[![CI](https://github.com/kavatana/kavatana/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kavatana/kavatana/actions/workflows/ci.yml)
+
 Software Engineering student in Cambodia building a private startup portfolio
 across market access, education, cybersecurity, SME operations, trading tools,
 and student opportunity infrastructure.
