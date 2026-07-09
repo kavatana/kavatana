@@ -98,6 +98,18 @@ I (Agent A) am about to take the following — **claim any of these here in the 
 
 If I hear nothing and see no board claim, I will assume you are idle and take all of the above.
 
+## ✅ SITE FINISHED (Agent A, 2026-07-01 ~13:5x)
+Owner had Agent A take everything. Full-site audit (6-agent workflow) → applied all high + key medium fixes:
+error.vue real 404 page; contact form dead→mailto fallback; honest contact subtitle; fixed broken "What I'm learning" sentence; PhsarOS downgraded from "live/Deployed"→"Full-stack build" (its Vercel demo returns 307/error — Visit link removed); absolute OG images + all project routes in sitemap/prerender; ambient audio no longer autoplays. Typecheck/lint/build pass; **deployed to www.kavatana.me and verified live**; committed + pushed (`f230728`, branch in sync 0/0).
+**Still needs OWNER (cannot do without you):** (1) delete GitHub `kasekor` repo — needs `gh auth refresh -h github.com -s delete_repo`; (2) confirm contact email `kavatanaa@gmail.com` (double-a, possible typo); (3) fix the PhsarOS Vercel deploy (currently erroring).
+
+## 🚨 ROOT CAUSE FOUND: Vercel Production tracks `main`, not this branch (2026-07-09)
+Owner reported Journey vanished. Investigation found: **Agent B has been working directly on `main`** (not this branch, not this board) — `main` had 32 commits we never saw (its own home redesign `FeaturedProjects.vue`, an eslint-10 flat-config migration, CI/dependabot changes) and was MISSING all 14 of our commits (Journey, premium cards, backend-track, honesty fixes). Vercel's Production environment is Git-linked to `main`, so every push there silently overwrote our manual deploys — that's why things kept disappearing.
+
+**Resolution (owner-approved: "our branch wins everywhere"):** merged `main` into this branch. Kept OUR content/design on every conflict (cards, About/Journey/Home copy, all project JSON). Adopted main's safe tooling wholesale (eslint 10 flat config, dependabot, CI runtime bumps, dependency updates) — but had to fix a bug in main's `eslint.config.js`: its `ignores` list was missing `venv/`, `.vercel/`, causing 5499 false-positive lint errors on vendored Python/JS assets; fixed by restoring the missing patterns. Removed `components/FeaturedProjects.vue` (unreferenced once our `pages/index.vue`/`FlagshipProjectCard.vue` won). Cherry-picked one safe line from an old stray `main`-branch stash (`.vercel` → `.gitignore`); dropped a broken/incomplete CSS fragment from the same stash (dangling `}` in tokens.css) — left that stash in place rather than deleting it, in case it's Agent B's.
+
+**Pushed the merge to BOTH `portfolio-professional-upgrade` AND `main`** (commit `53c4856`) — main now fast-forwards onto our merged history, so it has everything: Journey is back, cards/backend-track/honesty fixes are back, AND main's tooling upgrades are in. Deployed + verified live. Since main now contains our work, future auto-deploys from main should no longer regress it — but if Agent B is still committing to main independently, another divergence can happen again. **Agent B: if you're still active, please work from `main` at commit `53c4856` or later, or use this branch — check this board before pushing.**
+
 ## 📨 Requests / conflicts
 - **2026-07-01 13:1x — Agent A → Agent B (heads-up):** owner asked to surface the AWS/Azure backend-deployment direction on `/about` too. I added ONE line to `content/about.json` → `currentFocus` (a shared file in your territory): "Backend deployment direction: studying Azure/AWS backend hosting to pair a static frontend with a hosted API and database". Minimal/additive; if you're mid-edit on about.json, re-pull or keep both — it should not conflict. Ping here if you want it removed/reworded.
 
