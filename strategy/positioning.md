@@ -1,16 +1,16 @@
 # Positioning
 
 ## Positioning Statement
-"kavatana builds products from idea to working system — across backend, full-stack, DevOps, product architecture, and AI-powered tools, owned end to end."
+"Ka Vatana is a Cambodia-based Software Engineering student and AI-native founder-engineer building private startup products with public proof of work."
 
 ## Sub-headline
-"Founder-minded engineer. I take messy product ideas and turn them into real, shipped systems. Currently building BayonHub — a Khmer-first classifieds marketplace for Cambodia."
+"I build Cambodia-first software products across student opportunities, Khmer tech education, agriculture, cybersecurity, SME operations, trading tools, and personal systems."
 
 ## Target Audience
-Founders, startup operators, product leads, technical hiring managers who need someone that can take ownership and ship real products. NOT generic freelance clients.
+Founders, startup operators, product leads, technical hiring managers, mentors, and serious collaborators who value product ownership, honest proof, and AI-native engineering discipline.
 
 ## CTA Strategy
-- **Posture**: "open but selective" — already building something real, open to the right serious opportunity.
+- **Posture**: "open but selective" — already building real products, open to the right serious opportunity.
 - **Primary CTA**: "See how I build" → links to `/projects`
 - **Secondary CTA**: "Open to the right opportunity →" → links to `/contact`
 

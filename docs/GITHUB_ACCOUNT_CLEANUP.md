@@ -1,30 +1,31 @@
 # GitHub Account Cleanup Record
 
-Applied cleanup on 2026-06-17 using authenticated GitHub CLI access.
+Updated cleanup record on 2026-07-08 using authenticated GitHub CLI access.
 
 - Account: `kavatana`
-- Public repos: 4
+- Public personal repos: 1
+- Private personal repos: 7
+- Public CHNAI LAB org repos: 1
+- Private CHNAI LAB org repos: 2
+- Archived CHNAI LAB org repos: 1
 - Public name: `Ka Vatana`
 - Profile website: `https://kavatana.me`
 - Profile bio: `Founder-engineer building Khmer-first products, marketplaces, learning tools, and practical AI systems.`
-- Profile company: `BayonHub`
+- Profile company: `CHNAI LAB`
 - Profile location: `Cambodia`
 - Hireable flag: enabled
-- Every public repo has a README.
-- Every public repo now has a description and topics.
-- Wikis and classic Projects are disabled on public repos because they were not
-  being used as part of the public profile surface.
-- Dependabot security updates are enabled on all public repos.
-- Secret scanning and push protection are enabled where GitHub exposes them.
-- The `kavatana/kavatana` dependency alerts were fixed by upgrading the
-  portfolio dependency tree and pushing commit `9ca95d9`.
-- Superseded Dependabot PRs `#1` through `#4` on `kavatana/kavatana` were
-  closed and their Dependabot branches were deleted.
-- No repositories were deleted, archived, or made private.
+- Future-startup source repositories are private by default.
+- Public proof is concentrated in `kavatana/kavatana`, `kavatana.me`, the Studio
+  OS demo, and the CHNAI LAB organization profile.
+- Startup repos have descriptions, topics, Dependabot config where applicable,
+  vulnerability alerts, automated security fixes, and delete-branch-on-merge.
+- `kavatana/kavatana-life-os` is private source with a public demo at
+  `https://kavatana-studio-os.vercel.app`.
+- `chnai-lab/demo-repository` was archived because it was a private GitHub demo
+  repo, not an active product surface.
+- No repositories were deleted.
 - No licenses were added. This remains a deliberate product/legal decision.
 - GitHub reports account two-factor authentication is currently disabled.
-- The GitHub plugin install was approved in Codex, but no callable GitHub MCP
-  tools were exposed in this session.
 - `gh` CLI is installed locally and authenticated as `kavatana`.
 
 ## Profile Settings
@@ -33,7 +34,7 @@ Applied cleanup on 2026-06-17 using authenticated GitHub CLI access.
 | --- | --- |
 | Name | `Ka Vatana` |
 | Bio | `Founder-engineer building Khmer-first products, marketplaces, learning tools, and practical AI systems.` |
-| Company | `BayonHub` |
+| Company | `CHNAI LAB` |
 | Location | `Cambodia` |
 | Website | `https://kavatana.me` |
 | Social link | `https://www.linkedin.com/in/ka-vatana-99b85440a/` |
@@ -41,22 +42,26 @@ Applied cleanup on 2026-06-17 using authenticated GitHub CLI access.
 Recommended profile showcase repositories:
 
 1. `kavatana/kavatana`
-2. `kavatana/bayonhub`
-3. `kavatana/svaeng-yul`
-4. `kavatana/cyber-arena-team-os`
+2. `chnai-lab/.github`
 
-GitHub's GraphQL API reports these repos in `itemShowcase`. The older
-`pinnedItems` list is empty, and no clean repository pin mutation is exposed by
-the current API surface.
+Keep startup product repos private until a specific repo is ready for public
+release, open-source reuse, or investor/customer diligence.
 
 ## Repository Metadata
 
-| Repo | Description | Topics |
+| Repo | Visibility | Purpose |
 | --- | --- | --- |
-| `kavatana` | `Personal portfolio and GitHub profile for Ka Vatana.` | `portfolio`, `nuxt`, `vue`, `typescript`, `vercel` |
-| `bayonhub` | `Khmer-first classifieds marketplace for Cambodia.` | `cambodia`, `khmer`, `marketplace`, `classifieds`, `nuxt`, `nestjs` |
-| `svaeng-yul` | `Education-focused product workspace.` | `education`, `learning`, `typescript`, `web-app` |
-| `cyber-arena-team-os` | `Python workspace for structured security learning and team operations.` | `cybersecurity`, `training`, `python`, `education` |
+| `kavatana/kavatana` | Public | GitHub profile, portfolio source, case-study site, and public proof-of-work index. |
+| `kavatana/kavatana-life-os` | Private | Studio OS source for the public privacy-safe demo. |
+| `kavatana/bayonhub` | Private | Tech student opportunity platform. |
+| `kavatana/svaeng-yul` | Private | Khmer self-study platform for technical students. |
+| `kavatana/chomkar` | Private | B2B agriculture coordination platform. |
+| `kavatana/sat-digital` | Private | Cyber service platform. |
+| `kavatana/vantrex` | Private | Trading signal, bot model, and indicator tooling platform. |
+| `kavatana/phsaros` | Private | SME operating system for shops and restaurants. |
+| `chnai-lab/.github` | Public | CHNAI LAB organization profile. |
+| `chnai-lab/website` | Private | CHNAI LAB website source. |
+| `chnai-lab/demo-repository` | Private, archived | GitHub demo repository kept for history but removed from active maintenance. |
 
 ## Repository Hygiene
 
@@ -69,21 +74,22 @@ the current API surface.
 - Keep one public profile story: founder-engineer, Khmer-first products,
   practical systems, and shipped work.
 - Enable two-factor authentication manually from GitHub account settings.
+- Keep demos privacy-safe by construction. Do not publish source, data, or
+  deployment details for startup products until there is a deliberate release
+  decision.
 
 ## Automation Path
 
 Current automation path:
 
-1. GitHub MCP tools are still not exposed to Codex in this session.
-2. GitHub CLI is installed and authenticated.
-3. Account metadata and repository settings can be managed with `gh api`.
+1. GitHub CLI is installed and authenticated.
+2. Account metadata and repository settings can be managed with `gh api`.
+3. Repository content is managed with local git worktrees and normal commits.
 
 Manual-only remaining items:
 
 1. Enable two-factor authentication.
 2. Confirm the public email and social links you want shown on the GitHub
    profile.
-3. Decide whether any repo should be private or archived after reviewing its
-   contents.
-4. Decide whether each repo should stay unlicensed or receive an explicit
+3. Decide whether each repo should stay unlicensed or receive an explicit
    license.

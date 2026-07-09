@@ -1,29 +1,27 @@
 # BayonHub Case Study Outline
 
-**Problem:** Cambodia has no credible modern classifieds platform. Existing options are fragmented, low-trust, not designed for Khmer-speaking users.
+**Current problem:** Cambodian tech students need a focused place to find internships, freelance work, jobs, and portfolio-building opportunities. Employers need a clearer path to discover students in AI engineering, data science, cybersecurity, software engineering, and related fields.
 
-**Constraints:** solo execution, no team, no funding, Khmer-language market with unique trust dynamics, marketplace cold-start problem, mobile-first Cambodian user behavior
+**Historical context:** BayonHub started as a Khmer-first classifieds marketplace prototype. That build proved search, posting, trust, bilingual UI, offline fallback, and marketplace flow execution. The current product is a full pivot into a tech-student opportunities hub.
 
-**Role:** Founder & Product Engineer — owned everything from product architecture to frontend, backend, DevOps, UX decisions, and monetization structure
+**Constraints:** solo execution, no team, no funding, Cambodian student/employer context, marketplace cold-start problem, mobile-first user behavior, private startup source
 
-**Stack:** Nuxt 3, TypeScript, NestJS, PostgreSQL, Redis, Tailwind CSS, Docker, Cloudflare, Vercel
+**Role:** Founder-engineer — owns product direction, frontend, backend, architecture, docs, and public proof boundary
 
-**Approach:** phased build discipline — built connected product foundations first (search, listing flows, account/profile, trust, messaging) before any surface polish
+**Stack:** React, Vite, TypeScript, Express, Prisma, PostgreSQL, Redis, Tailwind CSS, Docker, Cloudflare/Vercel direction
 
-**What is live today:**
-- browse/search listings
-- listing detail pages
-- post/draft/publish listings
-- manage listings
-- account/profile/settings
-- saved listings
-- buyer-seller messaging
-- seller trust features (phone verification, seller verification, response-rate, last-seen)
-- free vs Plus monetization tiers, upgrade flows
-- SEO-canonical listing URLs, OG/Twitter metadata, sitemap
+**Approach:** phased build discipline. Use the old marketplace prototype as proof, then replace the domain model around student/employer auth, student profiles, companies, opportunities, applications, and admin curation.
 
-**Tradeoffs:** chose believable system coherence over flashy isolated features; chose phased foundations over pretending to have a finished product early
+**Current Phase 1 loop:**
+- Admin curates companies and real opportunities
+- Students build profile
+- Students browse/filter opportunities
+- Students open opportunity detail
+- Students apply with resume/profile snapshot
+- Admin sees submitted applications
 
-**Results:** full buyer-to-seller flow live, trust system with verification features, Plus monetization structure, SEO-canonical architecture, 10+ major product areas built and connected
+**Tradeoffs:** keep old screenshots only as historical engineering proof; do not present the old classifieds surface as current product direction. Keep source private until the opportunity-hub surface is ready for public release.
 
-**What's next:** continued hardening, listing quality systems, discovery improvements, re-engagement features
+**Results:** public case study explains the pivot; private repo carries the product work; GitHub metadata now reflects the opportunity-hub direction.
+
+**What's next:** replace old case-study screenshots with opportunity-hub screenshots after the student loop is demo-ready.

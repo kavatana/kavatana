@@ -100,7 +100,7 @@
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import type { Project } from '~/types/content'
 
-const props = defineProps<{
+defineProps<{
   project: Project
 }>()
 

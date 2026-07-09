@@ -1,11 +1,11 @@
 # About Draft
 
-I take messy product ideas and turn them into real, shipped systems. As a product engineer, my work spans frontend, backend, DevOps, and system architecture. I don't just write code; I own the product lifecycle from conception to production stability. 
+I take messy product ideas and turn them into real, testable systems. As a student founder-engineer, my work spans frontend, backend, product architecture, repository hygiene, and AI-native development workflows. I do not present every product as finished; I show what is shipped, what is private, and what still needs validation.
 
-Over the course of my career, I've focused on building tools and systems that solve genuine problems. My approach is grounded in the belief that software should be robust, maintainable, and designed with the end user in mind. I favor practical, phased foundations over isolated, flashy features, ensuring that what I build can actually scale and evolve.
+My approach is grounded in practical proof: build the smallest useful surface, document tradeoffs, keep source private when the work is a startup asset, and publish safe public demos, screenshots, and case studies. I favor phased foundations over isolated, flashy features, so future collaborators can understand how the product can evolve.
 
-My methodology incorporates AI-augmented workflows as a force multiplier, allowing me to execute complex builds efficiently while maintaining high standards for code quality and system architecture. I'm not an AI enthusiast treating tools as toys, but an engineer using automation to accelerate shipping real products.
+My methodology incorporates AI-augmented workflows as a force multiplier. I use agents for research, implementation help, review, and cleanup, then verify with audits, type checks, builds, smoke tests, and direct code reading.
 
-Currently, I'm building BayonHub, a Khmer-first classifieds marketplace for Cambodia. As the solo founder and engineer, I've owned every aspect of the build—from the Nuxt 3 and NestJS architecture to DevOps and product strategy. The platform tackles unique market constraints, including trust dynamics and mobile-first behaviors, prioritizing functional integrity and connected user flows over superficial polish.
+Currently, I am building a private startup portfolio: BayonHub for tech student opportunities, Svaeng Yul for Khmer tech self-study, Chomkar for agriculture market access, Sat Digital for community cybersecurity, Vantrex for trading tooling, PHSAROS for SME operations, and CHNAI LAB as the student-run product studio behind the work. Studio OS is my personal systems proof: a privacy-safe, local-first demo that shows how I build for myself without exposing private data.
 
-When I engage with an opportunity, it's to solve hard problems and deliver working systems.
+When I engage with an opportunity, it is to solve real problems, learn fast, and deliver working systems with honest claims.
