@@ -24,10 +24,14 @@ as engineering leverage rather than as a substitute for judgment.
 - **Portfolio case studies:** [kavatana.me](https://kavatana.me) documents the
   product surfaces, screenshots, tradeoffs, and build direction behind my work.
 - **Studio OS demo:** [kavatana-studio-os.vercel.app](https://kavatana-studio-os.vercel.app)
-  is a privacy-safe, local-first personal operating system built with Next.js,
-  React, TypeScript, Tailwind, and offline browser state.
+  is the neutral public mode of a private AI-native command center. The public
+  build keeps state local and disables live connectors; the private operator
+  adds bounded workspace context and a read-only GitHub organization queue.
 - **CHNAI LAB profile:** [github.com/chnai-lab](https://github.com/chnai-lab)
   presents the student-run product studio behind the broader portfolio.
+- **Collaboration system:** CHNAI LAB repositories use canonical agent guides,
+  contribution and security boundaries, team ownership, and CI so human and AI
+  collaborators enter through the same reviewable workflow.
 
 ## Startup Portfolio
 
@@ -50,11 +54,13 @@ Read more:
 - [Startup portfolio map](docs/STARTUP_PORTFOLIO.md)
 - [AI-native engineering workflow](docs/AI_NATIVE_WORKFLOW.md)
 - [GitHub account cleanup record](docs/GITHUB_ACCOUNT_CLEANUP.md)
+- [Repository agent contract](AGENTS.md)
 
 ## Engineering Stack
 
-TypeScript, JavaScript, Vue, Nuxt, React, Next.js, Node.js, Python, Supabase,
-PostgreSQL, Cloudflare, Vercel, GitHub, and AI-assisted development workflows.
+TypeScript, JavaScript, Vue, Nuxt, React, Next.js, Node.js, Python, GitHub
+GraphQL, Supabase, PostgreSQL, Cloudflare, Vercel, GitHub Actions, and
+AI-assisted development workflows.
 
 ## How I Work
 
@@ -66,6 +72,9 @@ PostgreSQL, Cloudflare, Vercel, GitHub, and AI-assisted development workflows.
 - **AI-native, not AI-blind:** use agents for speed, review, research, and
   implementation support, then verify outputs with tests, code review, and
   manual judgment.
+- **Bounded authority:** give agents the minimum context and permissions needed,
+  and keep consequential product, security, deployment, and financial actions
+  under human control.
 - **Readable systems:** prefer clean architecture notes, small commits, and
   decisions that a future teammate can understand.
 

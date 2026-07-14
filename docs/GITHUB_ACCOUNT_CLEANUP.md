@@ -1,95 +1,100 @@
 # GitHub Account Cleanup Record
 
-Updated cleanup record on 2026-07-08 using authenticated GitHub CLI access.
+Verified on 2026-07-14 using authenticated GitHub API and CLI reads.
+
+## Current State
 
 - Account: `kavatana`
-- Public personal repos: 1
-- Private personal repos: 7
-- Public CHNAI LAB org repos: 1
-- Private CHNAI LAB org repos: 2
-- Archived CHNAI LAB org repos: 1
+- Public personal repositories: 1
+- Private personal repositories: 1
+- Public CHNAI LAB repositories: 1
+- Private CHNAI LAB repositories: 8, including one archived GitHub demo
+- Organization members: 3
+- Personal account two-factor authentication: enabled
+- Organization-wide two-factor enforcement: not enabled; all current members
+  individually have two-factor authentication enabled
 - Public name: `Ka Vatana`
 - Profile website: `https://kavatana.me`
 - Profile bio: `Founder-engineer building Khmer-first products, marketplaces, learning tools, and practical AI systems.`
 - Profile company: `CHNAI LAB`
 - Profile location: `Cambodia`
 - Hireable flag: enabled
-- Future-startup source repositories are private by default.
-- Public proof is concentrated in `kavatana/kavatana`, `kavatana.me`, the Studio
-  OS demo, and the CHNAI LAB organization profile.
-- Startup repos have descriptions, topics, Dependabot config where applicable,
-  vulnerability alerts, automated security fixes, and delete-branch-on-merge.
-- `kavatana/kavatana-life-os` is private source with a public demo at
-  `https://kavatana-studio-os.vercel.app`.
-- `chnai-lab/demo-repository` was archived because it was a private GitHub demo
-  repo, not an active product surface.
-- No repositories were deleted.
-- No licenses were added. This remains a deliberate product/legal decision.
-- GitHub reports account two-factor authentication is currently disabled.
-- `gh` CLI is installed locally and authenticated as `kavatana`.
 
-## Profile Settings
+Future-startup source is private by default. Public proof is concentrated in
+`kavatana/kavatana`, `kavatana.me`, the Studio OS demo, and the CHNAI LAB
+organization profile.
 
-| Field | Recommended value |
-| --- | --- |
-| Name | `Ka Vatana` |
-| Bio | `Founder-engineer building Khmer-first products, marketplaces, learning tools, and practical AI systems.` |
-| Company | `CHNAI LAB` |
-| Location | `Cambodia` |
-| Website | `https://kavatana.me` |
-| Social link | `https://www.linkedin.com/in/ka-vatana-99b85440a/` |
+## Repository Model
 
-Recommended profile showcase repositories:
-
-1. `kavatana/kavatana`
-2. `chnai-lab/.github`
-
-Keep startup product repos private until a specific repo is ready for public
-release, open-source reuse, or investor/customer diligence.
-
-## Repository Metadata
-
-| Repo | Visibility | Purpose |
+| Repository | Visibility | Purpose |
 | --- | --- | --- |
-| `kavatana/kavatana` | Public | GitHub profile, portfolio source, case-study site, and public proof-of-work index. |
-| `kavatana/kavatana-life-os` | Private | Studio OS source for the public privacy-safe demo. |
-| `kavatana/bayonhub` | Private | Tech student opportunity platform. |
-| `kavatana/svaeng-yul` | Private | Khmer self-study platform for technical students. |
-| `kavatana/chomkar` | Private | B2B agriculture coordination platform. |
-| `kavatana/sat-digital` | Private | Cyber service platform. |
-| `kavatana/vantrex` | Private | Trading signal, bot model, and indicator tooling platform. |
-| `kavatana/phsaros` | Private | SME operating system for shops and restaurants. |
-| `chnai-lab/.github` | Public | CHNAI LAB organization profile. |
+| `kavatana/kavatana` | Public | GitHub profile, portfolio source, case studies, and public proof index. |
+| `kavatana/kavatana-life-os` | Private | Studio OS private operator source and public-demo build. |
+| `chnai-lab/.github` | Public | Organization profile, member onboarding, and shared AI-agent workflow. |
+| `chnai-lab/bayonhub` | Private | Tech student opportunity platform. |
+| `chnai-lab/svaeng-yul` | Private | Khmer self-study platform for technical students. |
+| `chnai-lab/chomkar` | Private | B2B agriculture coordination platform. |
+| `chnai-lab/sat-digital` | Private | Cyber service platform. |
+| `chnai-lab/vantrex` | Private | Trading signal, bot model, and indicator tooling platform. |
+| `chnai-lab/phsaros` | Private | SME operating system for shops and restaurants. |
 | `chnai-lab/website` | Private | CHNAI LAB website source. |
-| `chnai-lab/demo-repository` | Private, archived | GitHub demo repository kept for history but removed from active maintenance. |
+| `chnai-lab/demo-repository` | Private, archived | GitHub demonstration repository retained only for history. |
 
-## Repository Hygiene
+The seven startup tracks live under CHNAI LAB, while Studio OS remains a
+personal private repository because it contains owner-specific operating
+context.
 
-- Keep a clear README in every public repo before showcasing it.
-- Add a license only when you truly want public reuse. For business products,
-  no license or an `All rights reserved` notice may be more appropriate than MIT.
-- Add branch protection on important `main` branches once CI exists.
-- Prefer archiving or making unfinished repos private over deleting them, but do
-  this only after reviewing the repo's purpose.
-- Keep one public profile story: founder-engineer, Khmer-first products,
-  practical systems, and shipped work.
-- Enable two-factor authentication manually from GitHub account settings.
-- Keep demos privacy-safe by construction. Do not publish source, data, or
-  deployment details for startup products until there is a deliberate release
-  decision.
+## Collaboration Controls
 
-## Automation Path
+- The organization has three accepted members: `kavatana`,
+  `chamroeunhongleng`, and `solaly`.
+- Product write access is granted through least-privilege teams instead of
+  unmanaged direct collaborator grants.
+- Organization base repository permission is `none`; members receive access
+  only through an assigned product team.
+- Repository creation is restricted to organization owners so product assets
+  enter through the agreed naming, privacy, ownership, and CI setup.
+- Each active product repository has a root `AGENTS.md`, model-specific entry
+  points, contribution and security guidance, CI, and deterministic repository
+  checks.
+- `CODEOWNERS` names the responsible product team where team collaboration is
+  active.
+- Changes use focused branches and pull requests; checks must pass before merge.
+- `main` is protected on `kavatana/kavatana`, `kavatana/kavatana-life-os`, and
+  `chnai-lab/.github`: pull requests and the `verify` check are required, history
+  stays linear, review threads must be resolved, and force pushes and deletion
+  are blocked.
+- Repositories use squash-only merges and delete merged branches automatically.
+- Vulnerability alerts and automated security fixes are enabled on every active
+  personal and organization repository.
+- Secret scanning and push protection are enabled on the two public proof
+  repositories: `kavatana/kavatana` and `chnai-lab/.github`.
+- GitHub Free does not provide protected branches for the organization's private
+  repositories; their guides and CI establish the workflow, but server-side
+  enforcement requires a future organization plan upgrade.
+- High-impact external writes, deployments, security actions, financial actions,
+  and trading actions remain human decisions.
 
-Current automation path:
+## Visibility Decisions
 
-1. GitHub CLI is installed and authenticated.
-2. Account metadata and repository settings can be managed with `gh api`.
-3. Repository content is managed with local git worktrees and normal commits.
+- Keep future-startup implementation and strategy private until there is a
+  deliberate open-source, customer, investor, or hiring-review decision.
+- Publish architecture evidence, screenshots, demos, validation results, and
+  honest tradeoffs without publishing secrets or private product context.
+- Keep `.github` public so organization identity and collaboration standards are
+  visible without exposing product source.
+- Keep Studio OS source private; its public build uses neutral data and disables
+  live connectors.
+- Do not add a permissive license to startup source by default. Licensing is a
+  product and legal decision, not a repository-cleanup checkbox.
 
-Manual-only remaining items:
+## Remaining Manual Decisions
 
-1. Enable two-factor authentication.
-2. Confirm the public email and social links you want shown on the GitHub
-   profile.
-3. Decide whether each repo should stay unlicensed or receive an explicit
-   license.
+1. Enable organization-wide two-factor enforcement in GitHub's organization
+   authentication settings when every future invitee is prepared for the policy.
+2. Decide which repositories, if any, should eventually receive a public
+   license or source release.
+3. Review and merge private product pull requests after human product and data
+   boundary review.
+
+No repositories were deleted during cleanup.

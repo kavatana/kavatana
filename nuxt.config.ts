@@ -1,6 +1,7 @@
 import { fileURLToPath } from 'node:url'
 
 export default defineNuxtConfig({
+  compatibilityDate: '2026-07-14',
   alias: {
     '~': fileURLToPath(new URL('./', import.meta.url)),
     '@content': fileURLToPath(new URL('./content', import.meta.url)),
