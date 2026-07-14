@@ -65,6 +65,10 @@ context.
   stays linear, review threads must be resolved, and force pushes and deletion
   are blocked.
 - Repositories use squash-only merges and delete merged branches automatically.
+- Vulnerability alerts and automated security fixes are enabled on every active
+  personal and organization repository.
+- Secret scanning and push protection are enabled on the two public proof
+  repositories: `kavatana/kavatana` and `chnai-lab/.github`.
 - GitHub Free does not provide protected branches for the organization's private
   repositories; their guides and CI establish the workflow, but server-side
   enforcement requires a future organization plan upgrade.
