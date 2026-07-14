@@ -22,25 +22,25 @@ const projects = useProjects()
 const flagshipProject = projects.find(project => project.id === 'chomkar') || projects[0]
 
 useHead({
-  title: 'Ka Vatana — Software Engineering Student & Builder from Cambodia',
+  title: 'Ka Vatana — Software Engineering Student & Founder-Engineer',
   meta: [
     {
       name: 'description',
-      content: config?.description || 'Ka Vatana is a Year 1 Software Engineering student from Cambodia learning full-stack development, AI-assisted workflows, and product building through practical web projects.'
+      content: config?.description || 'Ka Vatana is a Cambodian software engineering student and founder-engineer building private startup products with AI-native workflows.'
     },
-    { property: 'og:title', content: 'Ka Vatana — Software Engineering Student & Builder from Cambodia' },
+    { property: 'og:title', content: 'Ka Vatana — Software Engineering Student & Founder-Engineer' },
     {
       property: 'og:description',
-      content: config?.description || 'Year 1 Software Engineering student from Cambodia learning full-stack development, AI workflows, and product building.'
+      content: config?.description || 'Cambodian software engineering student building startup products with AI-native workflows.'
     },
     { property: 'og:image', content: 'https://kavatana.me' + (config?.ogImage || '/images/og-default.png') },
     { property: 'og:url', content: 'https://kavatana.me' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Ka Vatana — Software Engineering Student & Builder from Cambodia' },
+    { name: 'twitter:title', content: 'Ka Vatana — Software Engineering Student & Founder-Engineer' },
     {
       name: 'twitter:description',
-      content: config?.description || 'Year 1 Software Engineering student from Cambodia.'
+      content: config?.description || 'Cambodian software engineering student and founder-engineer.'
     },
     { name: 'twitter:image', content: 'https://kavatana.me' + (config?.ogImage || '/images/og-default.png') }
   ],
@@ -56,7 +56,7 @@ useHead({
         'name': 'Ka Vatana',
         'url': 'https://kavatana.me',
         'jobTitle': 'Software Engineering Student',
-        'description': 'Year 1 Software Engineering student from Cambodia, product builder, co-founder of Chomkar.com, and founder of Chnai Lab.',
+        'description': 'Cambodian software engineering student and founder-engineer building private startup products, public proof of work, and AI-native engineering systems.',
         'sameAs': [
           'https://github.com/kavatana',
           'https://www.linkedin.com/in/ka-vatana-99b85440a/'
