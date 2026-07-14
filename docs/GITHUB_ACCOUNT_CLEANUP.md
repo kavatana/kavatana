@@ -60,6 +60,14 @@ context.
 - `CODEOWNERS` names the responsible product team where team collaboration is
   active.
 - Changes use focused branches and pull requests; checks must pass before merge.
+- `main` is protected on `kavatana/kavatana`, `kavatana/kavatana-life-os`, and
+  `chnai-lab/.github`: pull requests and the `verify` check are required, history
+  stays linear, review threads must be resolved, and force pushes and deletion
+  are blocked.
+- Repositories use squash-only merges and delete merged branches automatically.
+- GitHub Free does not provide protected branches for the organization's private
+  repositories; their guides and CI establish the workflow, but server-side
+  enforcement requires a future organization plan upgrade.
 - High-impact external writes, deployments, security actions, financial actions,
   and trading actions remain human decisions.
 
