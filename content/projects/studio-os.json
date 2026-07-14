@@ -1,99 +1,108 @@
 {
   "id": "studio-os",
   "title": "Studio OS",
-  "tagline": "A personal life operating system designed as a warm 'digital room'",
+  "tagline": "A two-mode AI-native command center for personal focus and product operations",
   "status": "in-progress",
-  "statusLabel": "Interactive Demo",
+  "statusLabel": "Public Demo + Private Operator",
   "featured": true,
   "featuredOrder": 4,
   "year": 2026,
-  "role": "Solo design & engineering",
+  "role": "Solo product design & engineering",
   "stack": [
     "Next.js 16",
     "React 19",
     "TypeScript",
     "Tailwind CSS 4",
     "Base UI",
-    "HTML5 Audio",
+    "Node.js",
+    "GitHub GraphQL",
     "localStorage"
   ],
-  "cardSummary": "Most productivity tools feel like a cold admin panel, and shipping a personal life dashboard publicly usually means either leaking your own data or maintaining a second codebase. Studio OS answers both with a deliberately backendless, local-first 'digital room': all state lives in localStorage behind defensive normalisers and SSR guards, and a single build flag tree-shakes my real data out and swaps in a neutral demo persona, so the public build ships zero private information by construction.",
+  "cardSummary": "Studio OS is a personal command center built around two explicit operating modes. The public Vercel demo keeps neutral state in localStorage, uses synthetic connector data, and disables live GitHub access in code. The private operator adds bounded workspace retrieval and a read-only GitHub organization queue, then turns evidence into guarded mission candidates that still require human judgment.",
   "proofPoints": [
-    "Local-first state engine: SSR-guarded load/save, safe JSON parsing, and per-key normalisers so corrupt or hand-edited localStorage can never crash a render.",
-    "Privacy-by-build: an inlined demo build flag statically folds out my real identity and content and replaces it with a neutral persona; the demo build also strips source maps.",
-    "Genuinely offline: zero network calls in the app, a time-aware home that picks the right zone per hour, and a reduced-motion path — deployed live on Vercel (server-rendered, no data backend)."
+    "Bounded workspace retrieval inspects registered roots, shallow docs and manifests, package scripts, and Git state while excluding secret-like and generated paths.",
+    "A read-only GitHub GraphQL adapter turns pull requests awaiting review, unassigned issues, and stale branches into an evidence-backed team queue.",
+    "Public demo mode blocks the live connector before token resolution, removes source maps, and scans build output for declared private markers and credential shapes.",
+    "Local-first state uses SSR guards, safe JSON parsing, namespaced keys, and per-feature normalisers so malformed browser data degrades safely."
   ],
-  "deploymentLine": "Server-rendered Next.js 16 on Vercel, localStorage-only persistence — intentionally no backend, database, or API.",
+  "deploymentLine": "Public demo on Vercel with neutral local state and synthetic connectors; private operator capabilities stay in owner-controlled source and require server-side access.",
   "deployment": {
-    "frontend": "Next.js 16 (App Router) + React 19, server-rendered on Vercel via the demo build",
-    "backend": "None — intentional no-backend, local-first architecture; zero server code or network calls in the app",
-    "database": "None — all state persisted to browser localStorage",
-    "hosting": "Vercel (demo build)",
+    "frontend": "Next.js 16 App Router + React 19; public demo on Vercel",
+    "backend": "Next.js server routes for bounded workspace context, read-only GitHub organization evidence, and guarded mission briefs",
+    "database": "No hosted database; browser state remains in namespaced localStorage",
+    "hosting": "Vercel for the public demo; owner-controlled environment for private operator mode",
     "status": "deployed"
   },
-  "backendProof": [],
-  "architectureNote": "Studio OS is deliberately backendless: there is no account, server business logic, or network request anywhere in the app, and every piece of user state is written to browser localStorage under namespaced keys. The persistence layer is built defensively around that decision — SSR guards return a cloned default on the server, malformed JSON is swallowed safely, and each feature page supplies its own normaliser so unexpected or tampered data degrades to safe defaults instead of crashing. Public shipping is handled at build time rather than runtime: an inlined demo build flag lets the bundler statically fold the branch, tree-shaking my real identity and content out of the deployed build and substituting a neutral persona, with source maps stripped on top. It deploys on Vercel's server runtime but makes no data-backend calls, so cross-device sync is the conscious trade-off, not a missing feature.",
-  "whatThisProves": "I can make and defend a real architectural decision — choosing local-first over a backend for privacy and offline speed — and implement it rigorously with SSR-safe, fault-tolerant state handling and a build-time privacy guarantee, not just wire up a CRUD app.",
-  "coverImage": "/images/projects/studio-os/dark/room-desktop.png",
-  "coverImageAlt": "Studio OS home — a dark, warm 'digital room' dashboard",
-  "liveUrl": "https://kavatana-studio-os.vercel.app",
-  "problem": "Most productivity tools feel like an admin dashboard — cold, demanding, and easy to abandon. I wanted a personal system that felt like coming home: somewhere to see the day's focus, protect what matters first, and keep small promises without guilt.",
-  "context": "Studio OS is a personal life-operating-system I designed and built for myself, then redesigned around a 'digital room' metaphor — zones for today's focus, study, building, a calm corner, and a long-term horizon. It is fully offline: all state lives in localStorage, a calm ambient track plays through a simple HTML5 audio layer, and there is no backend or account. The public demo runs on a neutral demo persona so the concept can be explored without any of my private data.",
-  "constraints": [
-    "Had to work fully offline with no backend, account, or API keys",
-    "Should feel warm and personal, not like a SaaS admin panel",
-    "Must stay genuinely useful day-to-day, not just look nice",
-    "The public demo must contain none of my real personal data"
+  "backendProof": [
+    "Server-only workspace readers use registered roots, shallow inspection, timeouts, and explicit exclusions for secrets, dependencies, caches, and generated output.",
+    "The GitHub adapter uses a read-only GraphQL query, a five-minute cache, and labeled synthetic fallback data when credentials or external responses are unavailable.",
+    "Public demo mode returns before GitHub token resolution, so a mistakenly present token cannot activate the live connector in that build.",
+    "Mission candidates carry context, proof targets, risk gates, and explicit human-only actions instead of executing consequential work automatically."
   ],
-  "myRole": "I designed the concept, the visual language, and built the whole thing — the room layout, the time-aware sessions, the local-first state engine, and a build-flagged demo-content layer that keeps my real data private.",
-  "solution": "A single-page 'digital room' built on local-first state with defensive localStorage normalisers and SSR guards. The UI is time-aware (it suggests the right zone for the current hour), respects reduced-motion, and plays a calm ambient focus track through an HTML5 audio element (one bundled file plus optional user-added links). A demo build flag swaps in a neutral demo persona so the deployed version exposes the design without exposing me.",
-  "callout": "The public demo is privacy-safe by construction: a build flag tree-shakes my real content out entirely and swaps in a neutral demo persona, while my private version stays local-only.",
+  "architectureNote": "Studio OS has two deliberate modes rather than one backendless architecture. In the public demo, a neutral persona and namespaced localStorage provide the interactive experience while live connectors are disabled and synthetic data is labeled. In the private operator, Next.js server routes retrieve bounded evidence from registered local workspaces and a read-only GitHub organization adapter. Those signals feed a workspace brain that can prioritize attention and prepare mission candidates, but merges, deployments, database changes, security actions, trading actions, and other consequential operations remain human decisions. Missing paths, credentials, or external responses degrade to explicit fallback states rather than invented live data.",
+  "whatThisProves": "I can design an AI-native system around context boundaries, evidence quality, privacy modes, degraded behavior, and human authority - not just add an AI prompt to a dashboard.",
+  "coverImage": "/images/projects/studio-os/dark/room-desktop.png",
+  "coverImageAlt": "Studio OS home showing a warm digital-room command center",
+  "liveUrl": "https://kavatana-studio-os.vercel.app",
+  "problem": "Personal and product work is spread across daily notes, project repositories, GitHub queues, and changing priorities. A useful operating system must bring that context together without giving an agent unlimited filesystem access, leaking private state into a public demo, or silently taking consequential actions.",
+  "context": "I first built Studio OS as a warm digital room for daily focus, study, building, reset, and long-term direction. It is evolving into a private operator for my product studio while preserving a neutral public demo. The visual model remains calm and local-first; the private mode adds bounded server-side evidence instead of replacing the experience with a generic admin dashboard.",
+  "constraints": [
+    "The public demo must stay neutral, credential-free, and unable to activate live GitHub access",
+    "Private workspace readers must remain allowlisted, bounded, shallow, and read-only by default",
+    "Missing connectors must be labeled as demo or degraded rather than presented as live data",
+    "External writes and high-impact actions must remain behind explicit human approval"
+  ],
+  "myRole": "I designed the product model, visual system, local-first state layer, private context adapters, GitHub organization queue, agent safety boundaries, and deterministic verification workflow.",
+  "solution": "A warm digital-room interface backed by defensive browser persistence and a small set of server-only context adapters. The private operator retrieves only the workspace and organization evidence needed for attention planning, while the public demo uses neutral content and synthetic connector results. A repository verifier, dependency audit, lint, strict typecheck, production build, source-map removal, and output privacy scan run as one check.",
+  "callout": "The strongest feature is the boundary: agents can retrieve and prepare evidence, but they cannot silently turn context into high-impact action.",
   "tradeoffs": [
-    "Chose local-first (localStorage) over a backend — instant, private, and offline, at the cost of cross-device sync.",
-    "Kept the audio layer simple — one bundled ambient track through an HTML5 audio element, plus optional user-added links — instead of a heavier synthesis engine.",
-    "Built a demo-content layer gated by a build flag rather than maintaining two codebases."
+    "Kept personal state in localStorage for immediate, private daily use, accepting no built-in cross-device synchronization.",
+    "Used bounded filesystem and Git adapters instead of indexing every file, trading completeness for privacy, speed, and explainability.",
+    "Used a read-only GitHub connector and synthetic fallbacks before adding any write capability.",
+    "Maintained one codebase with explicit public/private modes, which requires deterministic checks to prevent the modes from drifting."
   ],
   "whatIBuilt": [
-    "A 'digital room' dashboard with distinct zones for focus, study, building, reset, and a long-term horizon.",
-    "A time-aware home that suggests the right activity for the current part of the day.",
-    "A local-first state layer with defensive JSON normalisers and safe parsing so bad data never crashes the app.",
-    "A calm ambient-audio layer: a bundled focus track played through an HTML5 audio element, plus a defensively-normalised list of user-added music links.",
-    "A build-flagged demo-content layer plus a 'reset to demo data' control for visitors."
+    "A digital-room dashboard with zones for focus, study, building, reset, archives, and long-term direction.",
+    "A defensive local-first state layer with safe parsing, SSR guards, namespaced keys, and normalised defaults.",
+    "Bounded server-side workspace readers for registered project metadata, documentation, package scripts, and Git state.",
+    "A read-only GitHub organization queue for pull requests awaiting review, unassigned issues, and stale branches.",
+    "A workspace brain that converts evidence into prioritized attention signals and guarded mission candidates.",
+    "A public-demo hard guard plus repository, credential-shape, source-map, and build-output privacy checks."
   ],
   "whatILearned": [
-    "How to build a genuinely offline, local-first app with resilient state handling.",
-    "Using a build flag and tree-shaking to ship a privacy-safe public build from a private codebase.",
-    "Wiring a simple, resilient audio layer with an HTML5 audio element and safe handling of user-supplied media links.",
-    "Designing for warmth and emotion in a tool — accessibility, reduced-motion, and tone all matter.",
-    "That the hardest part of a personal tool is making it calm enough that you actually keep using it."
+    "AI-native architecture starts with authority and context boundaries, not model selection.",
+    "Fallback data must be labeled honestly or it becomes a product correctness problem.",
+    "Build-time privacy claims need an explicit marker set and output evidence, not assumptions about tree-shaking.",
+    "Read-only retrieval and human gates are useful product features when a system touches private work.",
+    "A calm interface can still expose serious engineering evidence without becoming a dense operations dashboard."
   ],
   "results": [
-    "Fully offline and credential-free; lint, strict type-check, and production build all pass clean.",
-    "The deployed demo build contains zero private personal data (verified by build-output scan).",
-    "Every route renders fast with a small client bundle."
+    "Current private branch passes dependency audit with zero vulnerabilities, ESLint, strict TypeScript, and a 28-route Next.js demo build.",
+    "The declared-marker privacy scan passed across 703 text build artifacts after JavaScript source maps were removed.",
+    "The public-demo guard, repository invariants, and credential-shape scan run locally and in GitHub Actions."
   ],
-  "nextBackendStep": "Not applicable as a gap — the no-backend design is intentional. A natural future direction would be optional end-to-end-encrypted sync behind a hosted API if cross-device support is ever needed — also where I could apply the backend and cloud hosting I am actively learning.",
+  "nextBackendStep": "Add authentication and authorization before any hosted private-operator deployment, then test connector failure modes with redacted fixtures. Keep live GitHub access disabled in the public demo and add write capabilities only when each action has an explicit approval and audit design.",
   "screenshots": [
     {
       "src": "/images/projects/studio-os/dark/room-desktop.png",
       "alt": "Studio OS home room",
-      "caption": "The home 'room' — warm dark theme, zones, and the day's focus."
+      "caption": "The home room - a calm visual layer for focus, study, building, and recovery."
     },
     {
       "src": "/images/projects/studio-os/dark/today-mobile.png",
       "alt": "Today view on mobile",
-      "caption": "The daily focus view on a phone — small, honest proof for the day."
+      "caption": "The daily focus view on a phone - small, honest proof for the day."
     },
     {
       "src": "/images/projects/studio-os/dark/reset-desktop.png",
       "alt": "Reset corner",
-      "caption": "A calm reset corner — a short sequence to refocus when the day gets messy."
+      "caption": "A calm reset corner - a short sequence to refocus when the day gets messy."
     },
     {
       "src": "/images/projects/studio-os/dark/horizon-desktop.png",
       "alt": "Horizon view",
-      "caption": "The long-term horizon — the 'why' behind the daily work."
+      "caption": "The long-term horizon - the reason behind the daily work."
     }
   ],
-  "repoNote": "Validated with ESLint, strict TypeScript, and two clean builds (normal + demo); the demo build output was scanned to confirm zero private data ships."
+  "repoNote": "Private source. Current verification covers repository invariants, dependency audit, lint, strict typecheck, a production demo build, source-map removal, and an explicit-marker output scan."
 }
