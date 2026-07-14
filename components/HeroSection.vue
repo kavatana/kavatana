@@ -14,12 +14,12 @@
         <p class="hero-summary animate-fade-up delay-300">{{ config.subtitle }}</p>
         
         <div class="tech-chips animate-fade-up delay-400">
-          <span class="chip">Nuxt</span>
-          <span class="chip">Vue</span>
           <span class="chip">TypeScript</span>
-          <span class="chip">Product</span>
-          <span class="chip">Agritech</span>
-          <span class="chip">AI-assisted workflows</span>
+          <span class="chip">Next.js</span>
+          <span class="chip">Nuxt</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Product engineering</span>
+          <span class="chip">AI-native workflows</span>
         </div>
 
         <div class="hero-actions animate-fade-up delay-500">

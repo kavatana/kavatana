@@ -1,133 +1,95 @@
 {
   "id": "bayonhub",
   "title": "BayonHub",
-  "tagline": "Khmer-first Cambodian classifieds marketplace",
+  "tagline": "Cambodia-first opportunity platform for tech students",
   "status": "in-progress",
-  "statusLabel": "Interactive Demo",
+  "statusLabel": "Private Phase 0",
   "featured": true,
   "featuredOrder": 1,
   "year": 2026,
-  "role": "Solo builder & learner",
+  "role": "Founder-engineer",
   "stack": [
     "React 19",
-    "Vite 6",
-    "Tailwind CSS",
-    "Zustand",
+    "Vite",
+    "TypeScript",
     "Express 5",
     "Prisma",
-    "PostgreSQL 16",
+    "PostgreSQL",
     "Redis",
     "Cloudflare R2"
   ],
-  "cardSummary": "Cambodia has no widely trusted, Khmer-first digital classifieds platform, and the ones that exist assume a stable connection many users do not have. BayonHub is a bilingual (Khmer/English) marketplace built offline-first: the public Vite PWA runs end-to-end with no backend, no account, and no keys because every API call falls back to localStorage. It proves the harder half of full-stack — a resilient client that degrades gracefully — while a full Express + Postgres + Prisma backend sits in the same repo, designed and ready to connect.",
+  "cardSummary": "Cambodian students in AI, data science, cybersecurity, software engineering, and related fields need one focused path to internships, freelance work, jobs, and portfolio-building opportunities. BayonHub is being rebuilt around that path. The merged Phase 0 establishes the student, employer, and admin trust boundaries; opportunity discovery and applications remain under review rather than being presented as shipped.",
   "proofPoints": [
-    "Offline-first by contract: with no API URL set, every data call falls back to a versioned localStorage schema, so the demo works on a spotty connection or no backend at all.",
-    "Atomic promotion payment in one Prisma transaction: marking a payment PAID, creating the promotion, and flipping the listing to promoted commit together — a listing can never be promoted without a paid record.",
-    "Production-grade Express 5 API in-repo: helmet CSP/HSTS, a strict CORS allowlist, CSRF cookies, per-route rate limiters, and a /health check that pings Postgres, Redis, and R2 before returning ok."
+    "Role-aware STUDENT, EMPLOYER, and ADMIN accounts, with student profiles and company records created transactionally during registration.",
+    "Opportunity, saved-opportunity, and application models designed around historical application snapshots so submitted evidence survives later record changes.",
+    "A documented offline boundary: synthetic read-only previews may degrade gracefully, while consequential writes must fail clearly when no employer can receive them."
   ],
-  "deploymentLine": "Frontend demo on Vercel (localStorage fallback); Express + Postgres 16 + Redis + Cloudflare R2 backend present in-repo, not yet connected.",
+  "deploymentLine": "Private product build. Phase 0 is merged and verified; the student opportunity and application experience is still a reviewed draft, and no production launch is claimed.",
   "deployment": {
-    "frontend": "Vite PWA (React 19) on Vercel, running in localStorage-fallback mode",
-    "backend": "Express 5 + Prisma API in the repo (bayonhub-api); not yet deployed or connected",
-    "database": "PostgreSQL 16 via Prisma (docker-compose for local dev); no hosted production DB yet",
-    "hosting": "Frontend on Vercel; backend deploy documented in DEPLOY.md but not live",
-    "status": "demo"
+    "frontend": "React 19 + Vite bilingual product shell",
+    "backend": "Express 5 + TypeScript API with role-aware auth and admin controls",
+    "database": "PostgreSQL via Prisma, with Redis and R2 planned for the hosted stack",
+    "hosting": "Static preview direction only; production services are not launched",
+    "status": "planned"
   },
   "backendProof": [
-    "A full marketplace Prisma schema: ~25 Postgres models (User, Listing, Payment, ListingPromotion, Conversation, Message, KYCApplication, MerchantProfile, Review, and more) with enums, a tsvector search column, and composite indexes tuned for status/category/province feeds.",
-    "Multiple real prisma.$transaction blocks across payments, listings, auth, and admin — including view-count increment paired with a view-log insert, and user registration wrapped in an interactive transaction.",
-    "An Express 5 server wiring 15 route modules with helmet security headers, a strict CORS allowlist, CSRF middleware, request-id logging, and rate limiting.",
-    "A deep /health check that pings Postgres (SELECT 1), Redis, and Cloudflare R2 and returns a degraded 503 unless all three report ok.",
-    "Cloudflare R2 media storage via the AWS S3 SDK with presigned uploads, plus Redis for OTP, rate-limit state, and view de-duplication.",
-    "A DEPLOY.md production runbook and a pre-deploy-check.sh running lint, production builds, chunk-size limits, secret scanning, and env checks across frontend and backend."
+    "Email/password authentication with role-specific registration and account surfaces.",
+    "Transactional creation of student and employer domain records during sign-up.",
+    "Application snapshots preserve the submitted student and opportunity context instead of depending on mutable live records.",
+    "Admin access includes email-delivered 2FA, IP allowlisting, rate limiting, CSRF protection, secure cookies, and structured request logging.",
+    "Repository verification covers both workspaces, dependency audits, focused browser tests, lint, and production builds."
   ],
-  "architectureNote": "The repo is a two-app monorepo: bayonhub-app (Vite/React 19 PWA with Zustand stores and an Axios client) and bayonhub-api (Express 5 + Prisma + Postgres 16 + Redis + R2). The core decision is an offline-first contract enforced in the Axios client — when the API URL is empty or the network fails, every call transparently falls back to a namespaced localStorage schema, so the frontend has no hard dependency on the backend. The backend mirrors that same data model in Prisma and layers on security (helmet, CORS allowlist, CSRF, JWT with rotating refresh tokens, rate limiting) and integrity via multi-write transactions, so the two halves are designed to line up cleanly once connected.",
-  "whatThisProves": "I can design and reason about a full-stack system end-to-end — a resilient offline-first client and a security-conscious, transaction-safe Express/Prisma/Postgres backend with a real deploy runbook — not just wire up a single-layer tutorial.",
-  "coverImage": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-desktop.png",
-  "coverImageLight": "/images/projects/bayonhub/screenshots/bayonhub-light-home-desktop.png",
-  "coverImageAlt": "BayonHub platform preview",
-  "liveUrl": "https://bayonhub-app.vercel.app",
-  "githubUrl": "https://github.com/kavatana/bayonhub",
+  "architectureNote": "BayonHub keeps the React client and Express API as separate workspaces with an explicit product boundary between preview behavior and real writes. Phase 0 replaced the old classifieds domain with student, employer, company, opportunity, saved-opportunity, and application concepts. The key integrity decision is that an application stores historical snapshots, while the key trust decision is that an offline demo can never pretend a consequential application was delivered.",
+  "whatThisProves": "I can execute a product pivot without pretending the previous prototype is the current product, rebuild the domain model around real user roles, and define data-integrity and offline boundaries before expanding the feature surface.",
+  "coverImage": "/images/projects/bayonhub/refresh/home-desktop.png",
+  "coverImageAlt": "BayonHub Phase 0 opportunity-platform home page",
   "screenshots": [
     {
-      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-desktop.png",
-      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-home-desktop.png",
-      "alt": "Home Desktop View",
-      "caption": "Strongest hero and proof-section shot."
-    },
-    {
-      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-home-mobile.png",
-      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-home-mobile.png",
-      "alt": "Home Mobile View",
-      "caption": "Shows the mobile-first marketplace layout."
-    },
-    {
-      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-search-desktop.png",
-      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-search-desktop.png",
-      "alt": "Search Desktop",
-      "caption": "Buyer discovery, filters, and listing cards."
-    },
-    {
-      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-category-vehicles-desktop.png",
-      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-category-vehicles-desktop.png",
-      "alt": "Vehicles Category",
-      "caption": "Category browsing with premium seeded vehicles."
-    },
-    {
-      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-listing-mobile.png",
-      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-listing-mobile.png",
-      "alt": "Listing Detail",
-      "caption": "Seller trust, listing details, safety/contact surface."
-    },
-    {
-      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-post-mobile.png",
-      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-post-mobile.png",
-      "alt": "Post Listing Flow",
-      "caption": "Seller posting flow on a phone-sized viewport."
-    },
-    {
-      "src": "/images/projects/bayonhub/screenshots/bayonhub-dark-pricing-desktop.png",
-      "srcLight": "/images/projects/bayonhub/screenshots/bayonhub-light-pricing-desktop.png",
-      "alt": "Pricing Desktop",
-      "caption": "Monetization and upgrade surface."
+      "src": "/images/projects/bayonhub/refresh/home-desktop.png",
+      "alt": "BayonHub desktop home page for Cambodian tech-student opportunities",
+      "caption": "Current Phase 0 direction: separate entry paths for students and employers, shown with synthetic public content."
     }
   ],
-  "problem": "Cambodia has no widely trusted, Khmer-friendly digital classifieds platform. I wanted to explore what one might look like.",
-  "context": "BayonHub was built to feel like a real local commerce product instead of a static landing page. The frontend is a Vite PWA, fully bilingual (Khmer and English), with marketplace browsing, posting, and seller paths — plus Kasekor, a voice-first vertical aimed at farmers. The whole thing runs offline against a localStorage fallback, so the public demo works end-to-end with no backend, no account, and no keys.",
+  "problem": "Cambodian tech students often discover internships, freelance work, jobs, and portfolio opportunities through fragmented social posts and personal networks. Employers also lack a focused path to early-career talent across AI, data, cybersecurity, and software engineering.",
+  "context": "BayonHub began as a Khmer-first classifieds prototype. In 2026 I made a full product pivot into a tech-student opportunities hub and retired the old marketplace story from the active portfolio. The private repository now documents the migration boundary and keeps unfinished opportunity workflows behind review gates.",
   "constraints": [
-    "Solo student project — no team or funding",
-    "Learning full-stack architecture while building",
-    "Designing for Khmer-language users and mobile-first behavior",
-    "Navigating the marketplace cold-start problem as a concept"
+    "The active startup source and unreleased product strategy must remain private.",
+    "Khmer and English are first-class interface languages, with native-speaker review required for learner-facing Khmer copy.",
+    "An offline or static preview must never report a successful application when no backend can deliver it.",
+    "Employer and opportunity verification cannot be claimed without an auditable human process."
   ],
-  "myRole": "I built everything myself — frontend, backend, basic DevOps, and product decisions — as a learning exercise. Every part of it taught me something I didn't know before starting.",
-  "solution": "Built a foundational buyer-to-seller flow — search, listings, account management, and seller trust signals — and an offline-first architecture where every API call has a localStorage fallback, so the app stays fully usable on a spotty connection or with no backend at all. Kasekor sits alongside it as a distinct, discoverable vertical for farmers.",
-  "callout": "Offline-first by design: every data call falls back to localStorage, so the demo runs end-to-end with zero backend — exactly what Cambodia's network conditions need.",
+  "myRole": "I own the product direction, domain redesign, frontend and backend implementation, repository workflow, verification strategy, and the public/private evidence boundary.",
+  "solution": "Build the product in reviewable phases: establish role-aware identity and durable application data first, add opportunity discovery and application APIs second, then ship the student-facing workflow only after focused tests and human verification.",
+  "callout": "The portfolio now shows the current opportunity-platform build, not screenshots or claims from the retired classifieds prototype.",
   "tradeoffs": [
-    "Prioritized working flows over visual polish.",
-    "Phased the build to learn one layer at a time instead of doing everything at once.",
-    "Made offline-first non-negotiable, accepting a heavier client over a backend dependency for the demo."
+    "Kept the old prototype in Git history as learning evidence but removed it from the current product story.",
+    "Chose a staged launch over exposing a broad but unverified marketplace surface.",
+    "Allowed synthetic read-only preview data while making real application writes backend-dependent.",
+    "Kept repositories private while publishing enough architecture evidence for recruiters and collaborators to evaluate the work."
   ],
   "whatIBuilt": [
-    "A buyer-to-seller listing flow with search and categories.",
-    "Basic account management and seller profile concept.",
-    "A simple trust indicator experiment (phone verification idea).",
-    "A tiered listing model as a monetization concept to explore.",
-    "Kasekor: a voice-first listing vertical for farmers, with fair-price hints and trust signals."
+    "A bilingual opportunity-platform shell with separate student and employer entry paths.",
+    "Role-aware authentication and onboarding foundations for students, employers, and admins.",
+    "Student profile, company, opportunity, saved-opportunity, and application data foundations.",
+    "Administrative security controls and a documented production launch boundary.",
+    "An AI-agent workflow that records verification, migration risk, human gates, and rollback in every pull request."
   ],
   "whatILearned": [
-    "How to structure a React + Express full-stack project from scratch.",
-    "Database schema design for a marketplace (users, listings, categories).",
-    "How to think about trust in two-sided marketplace products.",
-    "Why phased, connected flows matter more than isolated flashy features.",
-    "How Docker and Vercel work together for deployment.",
-    "How much harder building a real product is than following a tutorial."
+    "A real pivot requires replacing the public story and domain model, not only changing the headline.",
+    "Historical snapshots are important when an application must remain understandable after related records change.",
+    "Offline resilience is useful only when the interface stays honest about which actions were actually delivered.",
+    "Security controls and claim discipline should be designed before production traffic, not added after launch."
   ],
-  "repoNote": "Validated with frontend/backend lint, production builds, Chromium smoke tests, high/critical dependency audits, and a 13-check pre-deploy script.",
-  "nextBackendStep": "Connect the existing Express + Postgres + Prisma API behind the offline-first frontend and deploy the backend (with Redis and R2) to a hosted platform such as AWS, Azure, or Railway, then point the frontend at the live API URL.",
+  "results": [
+    "The Phase 0 pivot was merged through a reviewed pull request with green repository, frontend, backend, audit, and browser checks.",
+    "The public portfolio now matches the active product direction and no longer links to obsolete public repositories or demos.",
+    "Phase 1 remains a green draft until the student UI, focused coverage, and human product checks are complete."
+  ],
+  "repoNote": "Verified on the merged Phase 0 baseline with zero known dependency vulnerabilities, workspace lint/build checks, and focused Chromium/WebKit product tests.",
+  "nextBackendStep": "Complete and review the opportunity and application API foundation, then connect it to a student-facing UI against approved PostgreSQL, Redis, R2, and email services.",
   "nextSteps": [
-    "Connect the live Express + Postgres backend behind the offline-first frontend.",
-    "Wire real SMS verification and ABA KHQR payments for launch.",
-    "Take Kasekor's voice capture from demo fallback to live AI extraction."
+    "Finish the student opportunity browsing, saving, and application interface.",
+    "Run native-speaker review for Khmer product copy.",
+    "Verify student and employer flows against an approved staging environment before any launch claim."
   ]
 }

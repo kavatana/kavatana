@@ -1,114 +1,106 @@
 {
   "id": "svaeng-yul",
-  "title": "Svaeng-Yul",
-  "tagline": "AI-assisted QCM practice platform for Cambodian healthcare students",
+  "title": "Svaeng Yul",
+  "tagline": "Khmer-narrated tech learning for Cambodian students",
   "status": "in-progress",
-  "statusLabel": "Interactive Demo",
+  "statusLabel": "Private Launch Candidate",
   "featured": true,
   "featuredOrder": 3,
   "year": 2026,
-  "role": "Solo full-stack design & engineering",
+  "role": "Product builder and full-stack engineer",
   "stack": [
     "Next.js 16",
     "React 19",
     "TypeScript",
     "Tailwind CSS 4",
-    "Supabase (Auth / Postgres / RLS)",
-    "Anthropic API",
-    "Zod",
-    "Vercel"
+    "Supabase Auth",
+    "PostgreSQL",
+    "Bunny Stream",
+    "Anthropic API"
   ],
-  "cardSummary": "Cambodian nursing and medical students drill QCM questions from photocopied banks with no feedback loop and no way to see where they are weak. Svaeng-Yul is a mobile-first practice platform built around one honest loop — Practice, Feedback, Weak Area, Retry, Mastery — that grades every quiz on the server, keeps the answer key off the client entirely, and treats AI as an optional, guardrailed helper rather than a source of truth. It proves I can reason about a real backend: server-authoritative scoring, a dual-mode data layer, Postgres with row-level security, and AI features that fail safe.",
+  "cardSummary": "Many Cambodian students can find technical material in English but still lack a structured self-study path explained in Khmer. Svaeng Yul is a video-learning platform for AI engineering, data science, cybersecurity, and software engineering. It supports a credential-free demo and a real Supabase/Bunny deployment path through one codebase, while the launch candidate remains private until real infrastructure, Khmer content, legal review, and human checks are complete.",
   "proofPoints": [
-    "Server-authoritative scoring: the client-facing question type carries no correct answer, and a single server function decides correctness against stored questions.",
-    "One data-repository interface with two implementations (in-memory demo + Supabase live), selected at runtime, so the UI is identical whether or not credentials are configured.",
-    "AI hints pass through a reveal-detection check and fall back to a canned clue if they leak the answer; dispute analysis is advisory-only with an admin-final decision."
+    "One typed data layer serves both a seeded in-memory demo and a Supabase-backed live mode, so the learner UI does not fork between environments.",
+    "Tracks, courses, lessons, progress, profiles, and an admin publishing workflow form one complete learning-content model.",
+    "The lesson assistant is grounded in the current transcript, rate-limited per user, optional by configuration, and never treated as the source of truth."
   ],
-  "deploymentLine": "Next.js 16 on Vercel (live demo, in-memory data); optional Supabase backend with Auth, Postgres, and RLS behind one repository interface.",
+  "deploymentLine": "Private launch candidate. The credential-free demo is verified locally; Supabase, Bunny Stream, Khmer production content, legal review, and staging evidence are still required before a public launch.",
   "deployment": {
-    "frontend": "Next.js 16 (App Router) + React 19 + Tailwind 4 on Vercel",
-    "backend": "Next.js server actions and API routes; optional Supabase (Auth + Postgres) in live mode",
-    "database": "In-memory seed store in demo mode; Supabase Postgres with RLS in live mode",
-    "hosting": "Vercel",
-    "status": "demo"
+    "frontend": "Next.js 16 App Router + React 19, designed mobile-first",
+    "backend": "Next.js server actions and API routes with optional Supabase and Anthropic integrations",
+    "database": "Seeded in-memory demo or Supabase Postgres with row-level security",
+    "hosting": "Planned Vercel + Supabase + Bunny Stream production stack",
+    "status": "planned"
   },
   "backendProof": [
-    "Server-side quiz scoring in a single gradeQuiz() source of truth, invoked by the submit API route and both repository implementations.",
-    "A dual-mode data layer that routes every call to either the in-memory or Supabase repository behind one typed interface, based on whether Supabase is configured.",
-    "Row-level security enabling RLS on 16 tables and deliberately omitting any student UPDATE policy on questions, so students can never alter a correct answer or explanation.",
-    "A Postgres schema across 5 ordered migrations (profiles, questions, quiz sessions/answers, hint requests, answer reports, badges, and user-authored QCM sets).",
-    "Server-side auth guards protecting API routes and admin pages; the Supabase service-role key is read only server-side and never shipped to the client.",
-    "An AI safety layer that rejects any hint naming or quoting an option and substitutes a safe fallback; both hint and dispute flows degrade to canned output when no API key is set."
+    "A shared repository contract switches between deterministic demo data and Supabase without changing page components.",
+    "Server-side auth guards protect admin routes and role-specific actions.",
+    "Published-state checks cover tracks, courses, and lessons so draft content cannot be exposed through a direct public URL.",
+    "Row-level security limits student progress access and reserves content writes for admins.",
+    "Bunny Stream integration keeps upload credentials server-side and prepares signed lesson embeds instead of public hotlinks.",
+    "The launch branch passes repository checks, dependency audit, lint, strict type checking, 20 unit tests, and a production build."
   ],
-  "architectureNote": "The app is organized around a single data-repository interface with two interchangeable implementations — an in-memory store seeded with subjects, questions, badges, and demo accounts for zero-setup demo mode, and a Supabase-backed store for live mode — chosen at runtime from environment variables, so no UI code changes between modes. Trust boundaries are explicit: quizzes are scored only on the server, the correct answer is never included in the payload sent to the client, and a shared grading function keeps demo and live scoring identical. AI is deliberately kept advisory and optional — hints run through a reveal-detection safety check with a canned fallback, and dispute verdicts only suggest an action a human admin must confirm — while Postgres RLS enforces that students can read published content but never edit answer keys or other students' data.",
-  "whatThisProves": "I can reason about backend trust boundaries — server-authoritative scoring, RLS, and fail-safe AI guardrails — and structure an app so a credential-free demo and a real Postgres backend share one code path.",
-  "coverImage": "/images/projects/svaeng-yul/dark/home-desktop.png",
-  "coverImageAlt": "Svaeng-Yul student dashboard in its midnight study-clinic theme",
-  "liveUrl": "https://svaeng-yul-demo.vercel.app",
-  "githubUrl": "https://github.com/kavatana/svaeng-yul",
-  "problem": "Cambodian nursing and medical students practice with photocopied question banks that have no feedback loop. I wanted to build a calm, mobile-first place to practice QCM questions, see exactly where you are weak, and come back tomorrow — grounded in the local curriculum, not a generic quiz app.",
-  "context": "Svaeng-Yul is a question-bank practice platform built around one honest loop: Practice → Feedback → Weak Area → Retry → Mastery. It runs in a zero-setup demo mode (in-memory seed data, no account or keys needed) and, when configured, in a live mode backed by Supabase with row-level security. AI is optional everywhere — without an API key it falls back to safe, hand-written hints.",
-  "constraints": [
-    "Must work end-to-end with zero credentials so anyone can try it",
-    "Quiz answers can never be trusted from the client — scoring has to be server-side",
-    "AI hints must never leak the correct answer",
-    "Built for Khmer-language students on phones, late at night"
-  ],
-  "myRole": "I designed and built the whole thing — the data layer, the quiz engine, the gamification, the admin tools, and the AI safety wrappers — and curated the seed question bank with source notes.",
-  "solution": "A dual-mode architecture: one data-repository interface with an in-memory implementation for the demo and a Supabase implementation for live use, so the UI never changes. Quizzes are graded on the server, AI hints are filtered so they can't reveal the answer, and student-reported disputes get an AI advisory verdict that an admin always has the final say on.",
-  "callout": "The whole app runs with no login and no API keys — demo mode seeds a full study experience in memory, so a visitor can take a real quiz, climb the leaderboard, and read dispute reports without any setup.",
-  "tradeoffs": [
-    "Kept AI strictly advisory — it suggests, a human decides — instead of letting it edit content.",
-    "Started with a hand-curated, source-checked question bank over scraping a large noisy one.",
-    "Chose a single repository interface over two codebases so demo and live behaviour stay identical."
-  ],
-  "whatIBuilt": [
-    "A quiz engine with Practice, Timed, Weak-Area, and Challenge modes and server-side scoring.",
-    "AI hint generation with a safety layer that blocks any hint revealing the answer, plus a safe fallback when no key is present.",
-    "A student dispute-report flow with an AI advisory verdict and admin-final decision.",
-    "Gamification: XP, levels, streaks, and achievement badges tied to real study behaviour.",
-    "An admin suite: question-bank management, CSV import/export, user analytics, and report review.",
-    "Personalised recommendations that point each student at their lowest-accuracy subject."
-  ],
-  "whatILearned": [
-    "How to design one data-layer interface that serves both an offline demo and a real Postgres backend.",
-    "Why quiz grading must be server-authoritative and how to keep the answer key off the client.",
-    "How to put guardrails around an AI feature so it stays helpful without enabling cheating.",
-    "Designing row-level security so students can never edit answer keys or other students' data.",
-    "How to be honest about sources — flagging which seeded questions still need instructor verification."
-  ],
-  "results": [
-    "Runs fully credential-free in demo mode; lint, strict type-check, and production build all pass clean.",
-    "AI features degrade gracefully to safe canned content when no key is configured.",
-    "A seeded bank spanning multiple subjects with difficulty and cognitive-level distribution."
-  ],
-  "nextBackendStep": "Stand up a live Supabase project against the existing migrations and seed script, then run the app in live mode end-to-end (real Auth, Postgres, and RLS) as the next step toward a fully hosted backend.",
+  "architectureNote": "Svaeng Yul is organized around one repository interface with two implementations: an in-memory store for a zero-setup demo and Supabase for live Auth and Postgres. Public learning pages enforce published ancestry before rendering content, while admin actions require an admin session. Video delivery is abstracted behind Bunny Stream helpers, and the AI assistant receives only the current lesson context with a per-user usage limit. This keeps optional services from blocking the core learning experience.",
+  "whatThisProves": "I can design a product that is easy to demonstrate without credentials but still has a credible path to real identity, durable progress, protected video, content publishing, and bounded AI assistance.",
+  "coverImage": "/images/projects/svaeng-yul/current/home-desktop.png",
+  "coverImageAlt": "Svaeng Yul home page for Khmer-narrated technology courses",
   "screenshots": [
     {
-      "src": "/images/projects/svaeng-yul/dark/home-desktop.png",
-      "alt": "Student dashboard",
-      "caption": "The student dashboard: streak, level, XP, today's weak-subject focus, and the daily challenge."
+      "src": "/images/projects/svaeng-yul/current/home-desktop.png",
+      "alt": "Svaeng Yul desktop home page",
+      "caption": "Current product direction: four focused technology tracks with Khmer-narrated lessons."
     },
     {
-      "src": "/images/projects/svaeng-yul/dark/home-mobile.png",
-      "alt": "Student dashboard on mobile",
-      "caption": "Mobile-first — the way students actually study, late at night on a phone."
+      "src": "/images/projects/svaeng-yul/current/home-mobile.png",
+      "alt": "Svaeng Yul mobile home page",
+      "caption": "The same learning entry point at a phone-sized viewport."
     },
     {
-      "src": "/images/projects/svaeng-yul/dark/subjects-desktop.png",
-      "alt": "Subject browser",
-      "caption": "Browsing subjects, with weak-area targeting front and centre."
-    },
-    {
-      "src": "/images/projects/svaeng-yul/dark/leaderboard-desktop.png",
-      "alt": "Leaderboard",
-      "caption": "The all-time leaderboard — XP, levels, and ranks across students."
-    },
-    {
-      "src": "/images/projects/svaeng-yul/dark/admin-desktop.png",
-      "alt": "Admin overview",
-      "caption": "Admin overview: question-bank stats, pending dispute reports, and weak-subject analytics."
+      "src": "/images/projects/svaeng-yul/current/tracks-desktop.png",
+      "alt": "Svaeng Yul technology track catalog",
+      "caption": "The published catalog for AI engineering, data science, cybersecurity, and software engineering."
     }
   ],
-  "repoNote": "Validated with ESLint (zero errors), strict TypeScript, and a clean production build; verified the credential-free demo path end-to-end against a running server."
+  "problem": "Cambodian students entering AI, data, cybersecurity, and software engineering need more structured technical learning that explains difficult concepts in Khmer without lowering the technical standard.",
+  "context": "Svaeng Yul was previously explored as a medical question-bank product. I replaced that direction with a Khmer-narrated technology learning platform, then rebuilt the public portfolio so the old healthcare story is no longer presented as current work.",
+  "constraints": [
+    "Lesson narration must be Khmer-first while the interface remains clear for technical study.",
+    "The product must remain useful when Supabase, Bunny Stream, or the AI provider is not configured.",
+    "Draft lessons and unpublished parent records must not be reachable from public routes.",
+    "A production launch requires real Khmer content, native-speaker review, approved policies, and evidence from live services."
+  ],
+  "myRole": "I shaped the current product direction and built the learning model, learner experience, demo/live data boundary, admin publishing tools, video integration, AI assistant boundary, tests, and launch checklist.",
+  "solution": "Use a Tracks to Courses to Lessons structure with progress tracking, a focused lesson player, and an optional transcript-grounded assistant. Keep the demo deterministic and credential-free, while treating Supabase, video delivery, policies, and real Khmer curriculum as explicit launch gates rather than hidden assumptions.",
+  "callout": "The active case study now documents Khmer tech education, not the retired medical quiz concept.",
+  "tradeoffs": [
+    "Maintained one data contract for demo and live modes instead of separate demo-only page logic.",
+    "Kept AI optional and lesson-scoped instead of making the learning flow dependent on generated answers.",
+    "Used a private launch candidate rather than presenting placeholder videos or untranslated content as production-ready.",
+    "Required human review for Khmer content, legal pages, migrations, and real-service behavior."
+  ],
+  "whatIBuilt": [
+    "A public track and course catalog for four technology disciplines.",
+    "A lesson player with curriculum navigation, progress tracking, and an optional transcript-grounded Q&A panel.",
+    "Student authentication, profiles, and persistent progress for live mode.",
+    "Admin tools for tracks, courses, lessons, publishing state, users, and video uploads.",
+    "A controlled launch plan covering database migrations, video delivery, abuse controls, analytics, policies, and production evidence."
+  ],
+  "whatILearned": [
+    "A demo/live architecture is strongest when both implementations share the same typed product contract.",
+    "Content visibility must be checked across the whole parent chain, not only on the lesson being requested.",
+    "An AI tutor needs grounding, cost limits, failure behavior, and a clear boundary around what it can claim.",
+    "A technically green build is not a launch until real services, real content, policy review, and human workflows are verified."
+  ],
+  "results": [
+    "The current launch candidate passes repository validation, a zero-vulnerability dependency audit, lint, strict type checking, 20 unit tests, and a 20-route production build.",
+    "Desktop and mobile evidence now shows the actual technology-learning product rather than the retired medical prototype.",
+    "The pull request remains a deliberate draft until the staging and human launch gates are complete."
+  ],
+  "repoNote": "Verified locally on the current launch-candidate branch with synthetic data only; no production credentials or student data were used.",
+  "nextBackendStep": "Apply the reviewed Supabase migrations to an approved staging project, connect Bunny Stream, and verify auth, progress, publishing, video, and AI limits end to end.",
+  "nextSteps": [
+    "Publish one complete Khmer-narrated learning track with native-speaker review.",
+    "Run the full learner and admin workflow against real staging services.",
+    "Complete policy review, analytics and error-reporting checks, and production evidence before launch."
+  ]
 }

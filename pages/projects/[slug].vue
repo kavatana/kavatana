@@ -1,143 +1,134 @@
 <template>
   <AppContainer>
-    <div v-if="project.id === 'bayonhub'">
-      <div class="back-link-wrapper bayonhub-back">
-        <NuxtLink to="/projects" class="back-link">&larr; Back to Projects</NuxtLink>
+    <ProjectHero :project="project" />
+
+    <section class="prose-section proves-section" v-if="project.whatThisProves || project.callout">
+      <h2 class="section-title">What this proves</h2>
+      <p class="prose-lead">{{ project.whatThisProves || project.callout }}</p>
+    </section>
+
+    <section class="prose-section">
+      <h2 class="section-title">Problem</h2>
+      <p class="prose-text">{{ project.problem }}</p>
+    </section>
+
+    <section class="prose-section" v-if="project.myRole">
+      <h2 class="section-title">My role</h2>
+      <p class="prose-text">{{ project.myRole }}</p>
+    </section>
+
+    <section class="prose-section" v-if="project.whatIBuilt && project.whatIBuilt.length">
+      <h2 class="section-title">What I built</h2>
+      <ul class="dash-list">
+        <li v-for="item in project.whatIBuilt" :key="item"><span class="dash">&mdash;</span> {{ item }}</li>
+      </ul>
+    </section>
+
+    <section class="prose-section" v-if="project.architectureNote || project.solution">
+      <h2 class="section-title">Architecture</h2>
+      <p class="prose-text" v-if="project.architectureNote">{{ project.architectureNote }}</p>
+      <p class="prose-text prose-text-muted" v-if="project.solution">{{ project.solution }}</p>
+    </section>
+
+    <section
+      class="prose-section"
+      v-if="project.deployment || project.deploymentLine || (project.backendProof && project.backendProof.length)"
+    >
+      <h2 class="section-title">Backend / deployment</h2>
+
+      <div class="deploy-panel">
+        <dl class="deploy-grid" v-if="project.deployment">
+          <div class="deploy-row" v-if="project.deployment.status">
+            <dt class="deploy-key">Status</dt>
+            <dd class="deploy-val">
+              <span class="deploy-dot" :class="`deploy-${project.deployment.status}`" aria-hidden="true"></span>
+              {{ statusLabels[project.deployment.status] || project.deployment.status }}
+            </dd>
+          </div>
+          <div class="deploy-row" v-if="project.deployment.frontend">
+            <dt class="deploy-key">Frontend</dt>
+            <dd class="deploy-val">{{ project.deployment.frontend }}</dd>
+          </div>
+          <div class="deploy-row" v-if="project.deployment.backend">
+            <dt class="deploy-key">Backend</dt>
+            <dd class="deploy-val">{{ project.deployment.backend }}</dd>
+          </div>
+          <div class="deploy-row" v-if="project.deployment.database">
+            <dt class="deploy-key">Database</dt>
+            <dd class="deploy-val">{{ project.deployment.database }}</dd>
+          </div>
+          <div class="deploy-row" v-if="project.deployment.hosting">
+            <dt class="deploy-key">Hosting</dt>
+            <dd class="deploy-val">{{ project.deployment.hosting }}</dd>
+          </div>
+        </dl>
+        <p class="deploy-line" v-if="project.deploymentLine">{{ project.deploymentLine }}</p>
       </div>
-      <BayonHubCaseStudy :project="project" />
+
+      <div class="backend-proof" v-if="project.backendProof && project.backendProof.length">
+        <h3 class="subhead">Backend-adjacent proof</h3>
+        <ul class="dash-list">
+          <li v-for="item in project.backendProof" :key="item"><span class="dash">&mdash;</span> {{ item }}</li>
+        </ul>
+      </div>
+    </section>
+
+    <ProjectStack :stack="project.stack" v-if="project.stack && project.stack.length > 0" />
+
+    <section class="prose-section" v-if="project.constraints && project.constraints.length">
+      <h2 class="section-title">Constraints</h2>
+      <ul class="dash-list">
+        <li v-for="constraint in project.constraints" :key="constraint"><span class="dash">&mdash;</span> {{ constraint }}</li>
+      </ul>
+    </section>
+
+    <section class="prose-section" v-if="project.tradeoffs && project.tradeoffs.length">
+      <h2 class="section-title">Tradeoffs</h2>
+      <ul class="dash-list">
+        <li v-for="tradeoff in project.tradeoffs" :key="tradeoff"><span class="dash">&mdash;</span> {{ tradeoff }}</li>
+      </ul>
+    </section>
+
+    <ProjectResults :results="project.results" v-if="project.results && project.results.length > 0" />
+
+    <section class="prose-section" v-if="project.whatILearned && project.whatILearned.length">
+      <h2 class="section-title">What I learned</h2>
+      <ul class="dash-list">
+        <li v-for="item in project.whatILearned" :key="item"><span class="dash">&mdash;</span> {{ item }}</li>
+      </ul>
+    </section>
+
+    <section class="prose-section" v-if="project.nextBackendStep">
+      <h2 class="section-title">Next backend step</h2>
+      <p class="prose-text">{{ project.nextBackendStep }}</p>
+    </section>
+
+    <section class="prose-section" v-if="project.nextSteps && project.nextSteps.length">
+      <h2 class="section-title">Next steps</h2>
+      <ul class="dash-list">
+        <li v-for="step in project.nextSteps" :key="step"><span class="dash">&mdash;</span> {{ step }}</li>
+      </ul>
+    </section>
+
+    <div class="repo-note" v-if="project.repoNote">
+      <span class="repo-icon" aria-hidden="true">&#10003;</span>
+      <span>{{ project.repoNote }}</span>
     </div>
 
-    <div v-else>
-      <ProjectHero :project="project" />
+    <ProjectScreenshots
+      :screenshots="project.screenshots"
+      title="Visual archive"
+      v-if="project.screenshots && project.screenshots.length > 0"
+    />
 
-      <section class="prose-section proves-section" v-if="project.whatThisProves || project.callout">
-        <h2 class="section-title">What this proves</h2>
-        <p class="prose-lead">{{ project.whatThisProves || project.callout }}</p>
-      </section>
+    <CtaBlock
+      question="Working on something similar?"
+      link-label="Let's talk &rarr;"
+      link-href="/contact"
+    />
 
-      <section class="prose-section">
-        <h2 class="section-title">Problem</h2>
-        <p class="prose-text">{{ project.problem }}</p>
-      </section>
-
-      <section class="prose-section" v-if="project.myRole">
-        <h2 class="section-title">My role</h2>
-        <p class="prose-text">{{ project.myRole }}</p>
-      </section>
-
-      <section class="prose-section" v-if="project.whatIBuilt && project.whatIBuilt.length">
-        <h2 class="section-title">What I built</h2>
-        <ul class="dash-list">
-          <li v-for="item in project.whatIBuilt" :key="item"><span class="dash">&mdash;</span> {{ item }}</li>
-        </ul>
-      </section>
-
-      <section class="prose-section" v-if="project.architectureNote || project.solution">
-        <h2 class="section-title">Architecture</h2>
-        <p class="prose-text" v-if="project.architectureNote">{{ project.architectureNote }}</p>
-        <p class="prose-text prose-text-muted" v-if="project.solution">{{ project.solution }}</p>
-      </section>
-
-      <section
-        class="prose-section"
-        v-if="project.deployment || project.deploymentLine || (project.backendProof && project.backendProof.length)"
-      >
-        <h2 class="section-title">Backend / deployment</h2>
-
-        <div class="deploy-panel">
-          <dl class="deploy-grid" v-if="project.deployment">
-            <div class="deploy-row" v-if="project.deployment.status">
-              <dt class="deploy-key">Status</dt>
-              <dd class="deploy-val">
-                <span class="deploy-dot" :class="`deploy-${project.deployment.status}`" aria-hidden="true"></span>
-                {{ statusLabels[project.deployment.status] || project.deployment.status }}
-              </dd>
-            </div>
-            <div class="deploy-row" v-if="project.deployment.frontend">
-              <dt class="deploy-key">Frontend</dt>
-              <dd class="deploy-val">{{ project.deployment.frontend }}</dd>
-            </div>
-            <div class="deploy-row" v-if="project.deployment.backend">
-              <dt class="deploy-key">Backend</dt>
-              <dd class="deploy-val">{{ project.deployment.backend }}</dd>
-            </div>
-            <div class="deploy-row" v-if="project.deployment.database">
-              <dt class="deploy-key">Database</dt>
-              <dd class="deploy-val">{{ project.deployment.database }}</dd>
-            </div>
-            <div class="deploy-row" v-if="project.deployment.hosting">
-              <dt class="deploy-key">Hosting</dt>
-              <dd class="deploy-val">{{ project.deployment.hosting }}</dd>
-            </div>
-          </dl>
-          <p class="deploy-line" v-if="project.deploymentLine">{{ project.deploymentLine }}</p>
-        </div>
-
-        <div class="backend-proof" v-if="project.backendProof && project.backendProof.length">
-          <h3 class="subhead">Backend-adjacent proof</h3>
-          <ul class="dash-list">
-            <li v-for="item in project.backendProof" :key="item"><span class="dash">&mdash;</span> {{ item }}</li>
-          </ul>
-        </div>
-      </section>
-
-      <ProjectStack :stack="project.stack" v-if="project.stack && project.stack.length > 0" />
-
-      <section class="prose-section" v-if="project.constraints && project.constraints.length">
-        <h2 class="section-title">Constraints</h2>
-        <ul class="dash-list">
-          <li v-for="constraint in project.constraints" :key="constraint"><span class="dash">&mdash;</span> {{ constraint }}</li>
-        </ul>
-      </section>
-
-      <section class="prose-section" v-if="project.tradeoffs && project.tradeoffs.length">
-        <h2 class="section-title">Tradeoffs</h2>
-        <ul class="dash-list">
-          <li v-for="tradeoff in project.tradeoffs" :key="tradeoff"><span class="dash">&mdash;</span> {{ tradeoff }}</li>
-        </ul>
-      </section>
-
-      <ProjectResults :results="project.results" v-if="project.results && project.results.length > 0" />
-
-      <section class="prose-section" v-if="project.whatILearned && project.whatILearned.length">
-        <h2 class="section-title">What I learned</h2>
-        <ul class="dash-list">
-          <li v-for="item in project.whatILearned" :key="item"><span class="dash">&mdash;</span> {{ item }}</li>
-        </ul>
-      </section>
-
-      <section class="prose-section" v-if="project.nextBackendStep">
-        <h2 class="section-title">Next backend step</h2>
-        <p class="prose-text">{{ project.nextBackendStep }}</p>
-      </section>
-
-      <section class="prose-section" v-if="project.nextSteps && project.nextSteps.length">
-        <h2 class="section-title">Next steps</h2>
-        <ul class="dash-list">
-          <li v-for="step in project.nextSteps" :key="step"><span class="dash">&mdash;</span> {{ step }}</li>
-        </ul>
-      </section>
-
-      <div class="repo-note" v-if="project.repoNote">
-        <span class="repo-icon" aria-hidden="true">&#10003;</span>
-        <span>{{ project.repoNote }}</span>
-      </div>
-
-      <ProjectScreenshots
-        :screenshots="project.screenshots"
-        title="Visual archive"
-        v-if="project.screenshots && project.screenshots.length > 0"
-      />
-
-      <CtaBlock
-        question="Working on something similar?"
-        link-label="Let's talk &rarr;"
-        link-href="/contact"
-      />
-
-      <div class="back-link-wrapper">
-        <NuxtLink to="/projects" class="back-link">&larr; Back to Projects</NuxtLink>
-      </div>
+    <div class="back-link-wrapper">
+      <NuxtLink to="/projects" class="back-link">&larr; Back to Projects</NuxtLink>
     </div>
   </AppContainer>
 </template>
@@ -390,8 +381,4 @@ useHead({
   color: var(--color-text-primary);
 }
 
-.bayonhub-back {
-  padding: var(--space-xl) 0 0 0;
-  justify-content: flex-start;
-}
 </style>

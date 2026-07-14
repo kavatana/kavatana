@@ -9,17 +9,16 @@ Verified on 2026-07-14 using authenticated GitHub API and CLI reads.
 - Private personal repositories: 1
 - Public CHNAI LAB repositories: 1
 - Private CHNAI LAB repositories: 8, including one archived GitHub demo
-- Organization members: 3
+- Organization members: 3 accepted, 1 pending (`rei3117`)
 - Personal account two-factor authentication: enabled
 - Organization-wide two-factor enforcement: not enabled; all current members
   individually have two-factor authentication enabled
 - Public name: `Ka Vatana`
 - Profile website: `https://kavatana.me`
-- Profile bio: `Founder-engineer building Khmer-first products, marketplaces, learning tools, and practical AI systems.`
+- Profile bio: `Founder-engineer building Cambodia-first products, learning systems, and practical AI workflows.`
 - Profile company: `CHNAI LAB`
 - Profile location: `Cambodia`
 - Hireable flag: enabled
-
 Future-startup source is private by default. Public proof is concentrated in
 `kavatana/kavatana`, `kavatana.me`, the Studio OS demo, and the CHNAI LAB
 organization profile.
@@ -48,6 +47,8 @@ context.
 
 - The organization has three accepted members: `kavatana`,
   `chamroeunhongleng`, and `solaly`.
+- `rei3117` has a pending regular-member invitation and no product-team access
+  until the invitation is accepted and a least-privilege role is assigned.
 - Product write access is granted through least-privilege teams instead of
   unmanaged direct collaborator grants.
 - Organization base repository permission is `none`; members receive access
@@ -91,7 +92,8 @@ context.
 ## Remaining Manual Decisions
 
 1. Enable organization-wide two-factor enforcement in GitHub's organization
-   authentication settings when every future invitee is prepared for the policy.
+   authentication settings after pending and future invitees are prepared for
+   the policy.
 2. Decide which repositories, if any, should eventually receive a public
    license or source release.
 3. Review and merge private product pull requests after human product and data
