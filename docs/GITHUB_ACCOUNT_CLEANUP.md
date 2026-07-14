@@ -50,6 +50,10 @@ context.
   `chamroeunhongleng`, and `solaly`.
 - Product write access is granted through least-privilege teams instead of
   unmanaged direct collaborator grants.
+- Organization base repository permission is `none`; members receive access
+  only through an assigned product team.
+- Repository creation is restricted to organization owners so product assets
+  enter through the agreed naming, privacy, ownership, and CI setup.
 - Each active product repository has a root `AGENTS.md`, model-specific entry
   points, contribution and security guidance, CI, and deterministic repository
   checks.
