@@ -1,0 +1,68 @@
+[
+  {
+    "id": "bayonhub",
+    "name": "BayonHub",
+    "category": "Student opportunity infrastructure",
+    "summary": "A focused path for Cambodian tech students to discover internships, freelance work, jobs, and portfolio-building opportunities.",
+    "status": "building",
+    "statusLabel": "Private product build",
+    "href": "/projects/bayonhub",
+    "linkLabel": "Case study"
+  },
+  {
+    "id": "svaeng-yul",
+    "name": "Svaeng Yul",
+    "category": "Khmer tech education",
+    "summary": "Khmer video self-study for AI engineering, data science, cybersecurity, software engineering, and related fields.",
+    "status": "building",
+    "statusLabel": "Private launch candidate",
+    "href": "/projects/svaeng-yul",
+    "linkLabel": "Case study"
+  },
+  {
+    "id": "chomkar",
+    "name": "Chomkar",
+    "category": "Agricultural market access",
+    "summary": "B2B pre-harvest coordination for buyers, farmers, and cooperatives, with demand, price, and availability claims kept human-reviewed.",
+    "status": "building",
+    "statusLabel": "Deployed product build",
+    "href": "/projects/chomkar",
+    "linkLabel": "Case study"
+  },
+  {
+    "id": "sat-digital",
+    "name": "Sat Digital",
+    "category": "Community cybersecurity",
+    "summary": "Cyber guard tooling for Telegram communities, groups, and websites, developed behind a private security boundary.",
+    "status": "building",
+    "statusLabel": "Private security prototype"
+  },
+  {
+    "id": "vantrex",
+    "name": "Vantrex",
+    "category": "Trading decision support",
+    "summary": "A service concept for Forex and crypto signals, bot models, and indicator workflows without promised returns or performance claims.",
+    "status": "incubating",
+    "statusLabel": "Incubating concept"
+  },
+  {
+    "id": "phsaros",
+    "name": "PHSAROS",
+    "category": "SME operations",
+    "summary": "An operating system for restaurants, coffee shops, marts, staff, inventory, finance, and daily business workflows.",
+    "status": "building",
+    "statusLabel": "Private full-stack build",
+    "href": "/projects/phsaros",
+    "linkLabel": "Case study"
+  },
+  {
+    "id": "chnai-lab",
+    "name": "CHNAI LAB",
+    "category": "Student-run product studio",
+    "summary": "A Cambodian student team building owned products with real responsibility, operating discipline, and an AI-native collaboration standard.",
+    "status": "operating",
+    "statusLabel": "Operating studio",
+    "href": "https://github.com/chnai-lab",
+    "linkLabel": "Org profile"
+  }
+]
