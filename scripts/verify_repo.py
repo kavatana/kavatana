@@ -18,6 +18,7 @@ REQUIRED_FILES = [
     "package.json",
     "docs/AI_NATIVE_WORKFLOW.md",
     "docs/GITHUB_ACCOUNT_CLEANUP.md",
+    "content/startup-portfolio.json",
     "content/projects/studio-os.json",
 ]
 REQUIRED_GUIDE_TERMS = [
@@ -41,6 +42,16 @@ SECRET_PATTERNS = [
     re.compile(r"github_pat_[A-Za-z0-9_]{20,}"),
     re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
 ]
+REQUIRED_STARTUP_TRACKS = {
+    "bayonhub",
+    "svaeng-yul",
+    "chomkar",
+    "sat-digital",
+    "vantrex",
+    "phsaros",
+    "chnai-lab",
+}
+ALLOWED_STARTUP_STATUSES = {"building", "incubating", "operating"}
 
 
 def read(relative_path: str) -> str:
@@ -66,6 +77,38 @@ def verify_package_scripts() -> None:
     for name in ["check:repo", "typecheck", "lint", "generate", "verify"]:
         if not scripts.get(name):
             raise SystemExit(f"package.json is missing script: {name}")
+
+
+def verify_startup_portfolio() -> None:
+    tracks = json.loads(read("content/startup-portfolio.json"))
+    if not isinstance(tracks, list):
+        raise SystemExit("content/startup-portfolio.json must contain a list")
+
+    ids = [track.get("id") for track in tracks if isinstance(track, dict)]
+    if len(ids) != len(tracks) or len(ids) != len(set(ids)):
+        raise SystemExit("Startup portfolio track IDs must be present and unique")
+
+    actual = set(ids)
+    if actual != REQUIRED_STARTUP_TRACKS:
+        missing = sorted(REQUIRED_STARTUP_TRACKS - actual)
+        unexpected = sorted(actual - REQUIRED_STARTUP_TRACKS)
+        raise SystemExit(
+            f"Startup portfolio mismatch; missing={missing}, unexpected={unexpected}"
+        )
+
+    for track in tracks:
+        for field in ["name", "category", "summary", "status", "statusLabel"]:
+            if not isinstance(track.get(field), str) or not track[field].strip():
+                raise SystemExit(f"Startup track {track['id']} is missing {field}")
+        if track["status"] not in ALLOWED_STARTUP_STATUSES:
+            raise SystemExit(
+                f"Startup track {track['id']} has unsupported status: {track['status']}"
+            )
+        href = track.get("href")
+        if isinstance(href, str) and href.startswith("/projects/"):
+            project_id = href.removeprefix("/projects/")
+            if not (ROOT / "content" / "projects" / f"{project_id}.json").is_file():
+                raise SystemExit(f"Startup track {track['id']} links to a missing case study")
 
 
 def verify_claims() -> None:
@@ -107,6 +150,7 @@ def main() -> None:
 
     verify_content_json()
     verify_package_scripts()
+    verify_startup_portfolio()
     verify_claims()
     verify_no_credential_shapes()
 

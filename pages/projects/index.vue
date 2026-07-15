@@ -2,7 +2,7 @@
   <AppContainer>
     <div class="page-header animate-fade-up">
       <h1 class="page-title">Projects</h1>
-      <p class="page-subtitle">What I've built, what I'm working on, and how I think about building.</p>
+      <p class="page-subtitle">Selected case studies plus an honest map of the private startup portfolio.</p>
     </div>
     <div class="projects-list">
       <FlagshipProjectCard
@@ -14,9 +14,11 @@
       />
     </div>
 
-    <BackendTrack class="animate-fade-up" :style="{ animationDelay: `${(projects.length + 1) * 100}ms` }" />
+    <StartupPortfolio class="animate-fade-up" :style="{ animationDelay: `${(projects.length + 1) * 100}ms` }" />
 
-    <div class="divider-section animate-fade-up" :style="{ animationDelay: `${(projects.length + 2) * 100}ms` }">
+    <BackendTrack class="animate-fade-up" :style="{ animationDelay: `${(projects.length + 2) * 100}ms` }" />
+
+    <div class="divider-section animate-fade-up" :style="{ animationDelay: `${(projects.length + 3) * 100}ms` }">
       <div class="divider-line"></div>
       <p class="divider-label">More projects ship here as they're built.</p>
     </div>
@@ -39,14 +41,14 @@ const projects = useProjects()
 useHead({
   title: 'Projects · kavatana',
   meta: [
-    { name: 'description', content: 'Selected projects and case studies.' },
+    { name: 'description', content: 'Selected case studies and an honest status map for seven Cambodia-first startup tracks.' },
     { property: 'og:title', content: 'Projects · kavatana' },
-    { property: 'og:description', content: 'Selected projects and case studies.' },
+    { property: 'og:description', content: 'Selected case studies and an honest status map for seven Cambodia-first startup tracks.' },
     { property: 'og:url', content: 'https://kavatana.me/projects' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'Projects · kavatana' },
-    { name: 'twitter:description', content: 'Selected projects and case studies.' }
+    { name: 'twitter:description', content: 'Selected case studies and an honest status map for seven Cambodia-first startup tracks.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://kavatana.me/projects' }

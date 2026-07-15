@@ -47,6 +47,17 @@ export interface ProjectDeployment {
   status?: 'deployed' | 'demo' | 'planned' | 'local-only'
 }
 
+export interface StartupTrack {
+  id: string
+  name: string
+  category: string
+  summary: string
+  status: 'building' | 'incubating' | 'operating'
+  statusLabel: string
+  href?: string
+  linkLabel?: string
+}
+
 export interface Screenshot {
   src: string
   srcLight?: string
