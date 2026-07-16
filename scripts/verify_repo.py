@@ -18,6 +18,7 @@ REQUIRED_FILES = [
     "package.json",
     "docs/AI_NATIVE_WORKFLOW.md",
     "docs/GITHUB_ACCOUNT_CLEANUP.md",
+    "docs/OPEN_SOURCE.md",
     "content/startup-portfolio.json",
     "content/projects/studio-os.json",
 ]
@@ -132,7 +133,14 @@ def verify_claims() -> None:
         raise SystemExit(f"Studio OS contains stale blanket claim(s): {', '.join(stale)}")
 
     readme = read("README.md").casefold()
-    for term in ["bounded workspace", "read-only github", "collaboration system"]:
+    for term in [
+        "bounded workspace",
+        "read-only github",
+        "collaboration system",
+        "open-source proof",
+        "ai-native-team-starter",
+        "v1.0.0",
+    ]:
         if term not in readme:
             raise SystemExit(f"README.md is missing public evidence term: {term}")
 
