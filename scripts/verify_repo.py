@@ -52,6 +52,10 @@ REQUIRED_STARTUP_TRACKS = {
     "chnai-lab",
 }
 ALLOWED_STARTUP_STATUSES = {"building", "incubating", "operating"}
+PINNED_ACTIONS = {
+    "actions/checkout": "9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+    "actions/setup-node": "820762786026740c76f36085b0efc47a31fe5020",
+}
 
 
 def read(relative_path: str) -> str:
@@ -136,6 +140,27 @@ def verify_no_credential_shapes() -> None:
                 raise SystemExit(f"Potential credential in {path.relative_to(ROOT)}")
 
 
+def verify_ci_hardening() -> None:
+    workflow = read(".github/workflows/ci.yml")
+    if not re.search(r"(?m)^permissions:\s*\n\s+contents:\s+read\s*$", workflow):
+        raise SystemExit("CI must declare least-privilege contents: read permissions")
+
+    action_uses = re.findall(r"(?m)^\s*uses:\s*([^\s#]+)", workflow)
+    if not action_uses:
+        raise SystemExit("CI workflow does not use any actions")
+    for action_use in action_uses:
+        action, separator, revision = action_use.partition("@")
+        if not separator or not re.fullmatch(r"[a-f0-9]{40}", revision):
+            raise SystemExit(f"CI action is not pinned to an immutable commit: {action_use}")
+        expected = PINNED_ACTIONS.get(action)
+        if expected and revision != expected:
+            raise SystemExit(f"CI action pin changed without verifier review: {action_use}")
+
+    dependabot = read(".github/dependabot.yml")
+    if 'package-ecosystem: "github-actions"' not in dependabot:
+        raise SystemExit("Dependabot must monitor the github-actions ecosystem")
+
+
 def main() -> None:
     for path in REQUIRED_FILES:
         read(path)
@@ -153,6 +178,7 @@ def main() -> None:
     verify_startup_portfolio()
     verify_claims()
     verify_no_credential_shapes()
+    verify_ci_hardening()
 
 
 if __name__ == "__main__":
