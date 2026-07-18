@@ -10,8 +10,15 @@ REQUIRED_FILES = [
     "CLAUDE.md",
     "CONTRIBUTING.md",
     "SECURITY.md",
+    "CODE_OF_CONDUCT.md",
+    "SUPPORT.md",
     ".github/CODEOWNERS",
     ".github/copilot-instructions.md",
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/bug.yml",
+    ".github/ISSUE_TEMPLATE/claim-correction.yml",
+    ".github/ISSUE_TEMPLATE/improvement.yml",
     ".github/workflows/ci.yml",
     ".github/dependabot.yml",
     ".gitignore",
@@ -67,6 +74,25 @@ PINNED_ACTIONS = {
     "actions/checkout": "9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
     "actions/setup-node": "820762786026740c76f36085b0efc47a31fe5020",
 }
+REQUIRED_COMMUNITY_TERMS = {
+    ".github/PULL_REQUEST_TEMPLATE.md": [
+        "Public claims",
+        "AI involvement",
+        "Privacy and security",
+        "Risk and rollback",
+        "Human review",
+    ],
+    "CODE_OF_CONDUCT.md": [
+        "Expected Behavior",
+        "Reporting and Enforcement",
+        "honest authorship",
+    ],
+    "SUPPORT.md": [
+        "Public Claim Corrections",
+        "private vulnerability reporting",
+        "Support Boundary",
+    ],
+}
 
 
 def read(relative_path: str) -> str:
@@ -89,7 +115,14 @@ def verify_content_json() -> None:
 
 def verify_package_scripts() -> None:
     scripts = json.loads(read("package.json")).get("scripts", {})
-    for name in ["check:repo", "typecheck", "lint", "generate", "verify"]:
+    for name in [
+        "check:repo",
+        "check:community",
+        "typecheck",
+        "lint",
+        "generate",
+        "verify",
+    ]:
         if not scripts.get(name):
             raise SystemExit(f"package.json is missing script: {name}")
 
@@ -143,6 +176,29 @@ def verify_claims() -> None:
     ]:
         if term not in readme:
             raise SystemExit(f"README.md is missing public evidence term: {term}")
+
+
+def verify_community_routes() -> None:
+    config = read(".github/ISSUE_TEMPLATE/config.yml")
+    if "blank_issues_enabled: false" not in config:
+        raise SystemExit("Blank issues must remain disabled")
+    if "/security/advisories/new" not in config:
+        raise SystemExit("Issue routing must preserve private vulnerability reporting")
+
+    for path in [
+        ".github/ISSUE_TEMPLATE/bug.yml",
+        ".github/ISSUE_TEMPLATE/claim-correction.yml",
+        ".github/ISSUE_TEMPLATE/improvement.yml",
+    ]:
+        form = read(path)
+        if "validations:" not in form or "required: true" not in form:
+            raise SystemExit(f"Issue form is missing required fields: {path}")
+
+    for path, terms in REQUIRED_COMMUNITY_TERMS.items():
+        content = read(path).casefold()
+        missing = [term for term in terms if term.casefold() not in content]
+        if missing:
+            raise SystemExit(f"{path} is missing community term(s): {', '.join(missing)}")
 
 
 def verify_no_credential_shapes() -> None:
@@ -227,6 +283,7 @@ def main() -> None:
     verify_package_scripts()
     verify_startup_portfolio()
     verify_claims()
+    verify_community_routes()
     verify_no_credential_shapes()
     verify_public_media()
     verify_ci_hardening()
