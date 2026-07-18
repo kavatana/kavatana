@@ -75,6 +75,11 @@ can adopt the workflow without receiving private product knowledge.
 
 - Vulnerability alerts and automated security fixes are enabled across the
   active repository estate where GitHub supports them.
+- Future private and internal repositories inherit the enforced
+  `CHNAI LAB Free Baseline`: dependency graph, Dependabot alerts, and automatic
+  security updates are enabled without activating paid Advanced Security.
+- Future public repositories inherit GitHub's recommended public security
+  configuration, including code and secret scanning where GitHub provides them.
 - Secret scanning and push protection are enabled on public proof repositories.
 - CI workflows use least-privilege permissions and immutable third-party action
   revisions where the repository standard has been adopted.
@@ -106,5 +111,9 @@ can adopt the workflow without receiving private product knowledge.
    only the selected team and create one ready starter issue.
 4. Delete `chnai-lab/demo-repository` after the owner authorizes a GitHub token
    with the `delete_repo` scope. It contains no unique product material.
-5. Upgrade the organization plan when enforced reviews and protected branches
+5. In organization **Settings > Member privileges**, disable member repository
+   deletion or transfer, repository visibility changes, and outside-collaborator
+   invitations. GitHub exposes these owner controls in the web settings but not
+   as writable fields in the organization REST endpoint.
+6. Upgrade the organization plan when enforced reviews and protected branches
    on private product repositories become operationally necessary.
