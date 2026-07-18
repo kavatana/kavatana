@@ -30,6 +30,8 @@ as engineering leverage rather than as a substitute for judgment.
   is the neutral public mode of a private AI-native command center. The public
   build keeps state local and disables live connectors; the private operator
   adds bounded workspace context and a read-only GitHub organization queue.
+  The [human-agent control-plane case study](docs/STUDIO_OS_ARCHITECTURE.md)
+  documents its authority, context, privacy, and verification boundaries.
 - **CHNAI LAB profile:** [github.com/chnai-lab](https://github.com/chnai-lab)
   presents the student-run product studio behind the broader portfolio.
 - **Collaboration system:** CHNAI LAB repositories use canonical agent guides,
@@ -68,6 +70,7 @@ architecture level.
 Read more:
 
 - [Startup portfolio map](docs/STARTUP_PORTFOLIO.md)
+- [Studio OS human-agent control plane](docs/STUDIO_OS_ARCHITECTURE.md)
 - [Open-source engineering proof](docs/OPEN_SOURCE.md)
 - [AI-native engineering workflow](docs/AI_NATIVE_WORKFLOW.md)
 - [GitHub account cleanup record](docs/GITHUB_ACCOUNT_CLEANUP.md)

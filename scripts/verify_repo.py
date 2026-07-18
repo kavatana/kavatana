@@ -26,6 +26,7 @@ REQUIRED_FILES = [
     "docs/AI_NATIVE_WORKFLOW.md",
     "docs/GITHUB_ACCOUNT_CLEANUP.md",
     "docs/OPEN_SOURCE.md",
+    "docs/STUDIO_OS_ARCHITECTURE.md",
     "content/startup-portfolio.json",
     "content/projects/studio-os.json",
 ]
@@ -44,6 +45,8 @@ STALE_STUDIO_OS_CLAIMS = [
     "tree-shaking my real identity",
     "no server business logic",
     "intentionally no backend, database, or api",
+    "28-route next.js demo build",
+    "703 text build artifacts",
 ]
 SECRET_PATTERNS = [
     re.compile(r"(?:ghp|gho)_[A-Za-z0-9]{20,}"),
@@ -93,6 +96,18 @@ REQUIRED_COMMUNITY_TERMS = {
         "Support Boundary",
     ],
 }
+REQUIRED_STUDIO_OS_ARCHITECTURE_TERMS = [
+    "human authority",
+    "agent workshop",
+    "public demo boundary",
+    "private operator",
+    "PRIVATE_OPERATOR_ONLY",
+    "six private workspace routes",
+    "29 pages generated",
+    "746 text build artifacts",
+    "not autonomous",
+    "authentication and authorization",
+]
 
 
 def read(relative_path: str) -> str:
@@ -173,9 +188,36 @@ def verify_claims() -> None:
         "open-source proof",
         "ai-native-team-starter",
         "v1.0.0",
+        "human-agent control-plane case study",
     ]:
         if term not in readme:
             raise SystemExit(f"README.md is missing public evidence term: {term}")
+
+
+def verify_studio_os_architecture() -> None:
+    architecture = read("docs/STUDIO_OS_ARCHITECTURE.md")
+    normalized = architecture.casefold()
+    missing = [
+        term
+        for term in REQUIRED_STUDIO_OS_ARCHITECTURE_TERMS
+        if term.casefold() not in normalized
+    ]
+    if missing:
+        raise SystemExit(
+            f"Studio OS architecture note is missing required term(s): {', '.join(missing)}"
+        )
+    if "```mermaid" not in architecture:
+        raise SystemExit("Studio OS architecture note must preserve its Mermaid control-plane map")
+    for private_marker in ["/Users/", "~/Vibe-Coding", "~/Trading BOT", "~/CYBER"]:
+        if private_marker in architecture:
+            raise SystemExit(
+                f"Studio OS architecture note exposes a private path marker: {private_marker}"
+            )
+
+    studio_os = read("content/projects/studio-os.json").casefold()
+    for evidence in ["29-page next.js demo build", "746 text build artifacts"]:
+        if evidence not in studio_os:
+            raise SystemExit(f"Studio OS case study is missing current evidence: {evidence}")
 
 
 def verify_community_routes() -> None:
@@ -283,6 +325,7 @@ def main() -> None:
     verify_package_scripts()
     verify_startup_portfolio()
     verify_claims()
+    verify_studio_os_architecture()
     verify_community_routes()
     verify_no_credential_shapes()
     verify_public_media()
