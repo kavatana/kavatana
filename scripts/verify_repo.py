@@ -42,6 +42,16 @@ SECRET_PATTERNS = [
     re.compile(r"github_pat_[A-Za-z0-9_]{20,}"),
     re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
 ]
+MEDIA_SUFFIXES = {".avif", ".gif", ".jpeg", ".jpg", ".mp3", ".png", ".webp"}
+SOURCE_TEXT_SUFFIXES = {".css", ".js", ".json", ".md", ".mjs", ".ts", ".vue"}
+FORBIDDEN_STALE_PATHS = {
+    "generate_components.js",
+    "remove_bg.py",
+    "remove_bg_v2.py",
+    "review/final-visual-polish",
+    "scripts/capture-phsaros.mjs",
+    "unrealmicikcz12-mystic-realm-of-minecraft-235545.mp3",
+}
 REQUIRED_STARTUP_TRACKS = {
     "bayonhub",
     "svaeng-yul",
@@ -140,6 +150,38 @@ def verify_no_credential_shapes() -> None:
                 raise SystemExit(f"Potential credential in {path.relative_to(ROOT)}")
 
 
+def verify_public_media() -> None:
+    for relative_path in FORBIDDEN_STALE_PATHS:
+        if (ROOT / relative_path).exists():
+            raise SystemExit(f"Stale generated path must not be committed: {relative_path}")
+
+    references: set[str] = set()
+    for path in ROOT.rglob("*"):
+        if not path.is_file() or path.suffix.lower() not in SOURCE_TEXT_SUFFIXES:
+            continue
+        if any(part in {".git", ".nuxt", ".output", "node_modules", "public"} for part in path.parts):
+            continue
+        content = path.read_text(encoding="utf-8", errors="ignore")
+        references.update(
+            re.findall(
+                r"/(?:audio|images)/[A-Za-z0-9._/-]+\.(?:avif|gif|jpe?g|mp3|png|webp)",
+                content,
+            )
+        )
+
+    public_media = {
+        f"/{path.relative_to(ROOT / 'public').as_posix()}"
+        for path in (ROOT / "public").rglob("*")
+        if path.is_file() and path.suffix.lower() in MEDIA_SUFFIXES
+    }
+    missing = sorted(references - public_media)
+    orphaned = sorted(public_media - references)
+    if missing:
+        raise SystemExit(f"Referenced public media is missing: {', '.join(missing)}")
+    if orphaned:
+        raise SystemExit(f"Unreferenced public media must be removed: {', '.join(orphaned)}")
+
+
 def verify_ci_hardening() -> None:
     workflow = read(".github/workflows/ci.yml")
     if not re.search(r"(?m)^permissions:\s*\n\s+contents:\s+read\s*$", workflow):
@@ -178,6 +220,7 @@ def main() -> None:
     verify_startup_portfolio()
     verify_claims()
     verify_no_credential_shapes()
+    verify_public_media()
     verify_ci_hardening()
 
 

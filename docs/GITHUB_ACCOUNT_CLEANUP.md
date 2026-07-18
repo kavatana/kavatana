@@ -1,102 +1,110 @@
-# GitHub Account Cleanup Record
+# GitHub Estate And Visibility Contract
 
-Verified on 2026-07-14 using authenticated GitHub API and CLI reads.
+Last audited on 2026-07-18 with authenticated GitHub API and CLI reads. This is
+the public operating record for what belongs on the account, what stays private,
+and which controls are technical rather than aspirational.
 
 ## Current State
 
-- Account: `kavatana`
-- Public personal repositories: 1
-- Private personal repositories: 1
-- Public CHNAI LAB repositories: 1
-- Private CHNAI LAB repositories: 8, including one archived GitHub demo
-- Organization members: 3 accepted, 1 pending (`rei3117`)
-- Personal account two-factor authentication: enabled
-- Organization-wide two-factor enforcement: not enabled; all current members
-  individually have two-factor authentication enabled
-- Public name: `Ka Vatana`
-- Profile website: `https://kavatana.me`
-- Profile bio: `Founder-engineer building Cambodia-first products, learning systems, and practical AI workflows.`
-- Profile company: `CHNAI LAB`
-- Profile location: `Cambodia`
-- Hireable flag: enabled
-Future-startup source is private by default. Public proof is concentrated in
-`kavatana/kavatana`, `kavatana.me`, the Studio OS demo, and the CHNAI LAB
-organization profile.
+- Personal repositories: two public proof repositories and one private operator
+  repository.
+- CHNAI LAB repositories: one public organization profile, seven active private
+  repositories, and one archived GitHub-generated demo pending deletion.
+- Organization membership: six accepted members and no pending invitations.
+- Organization role boundary: one owner; every other account is a member.
+- Organization base repository permission: `none`.
+- Organization-wide two-factor enforcement: not enabled. Three accepted members
+  still need to enable 2FA before receiving or retaining product access.
+- Public identity: `Ka Vatana`, `CHNAI LAB`, Cambodia, and
+  `https://kavatana.me`.
+
+Future-startup source is private by default. Public proof is concentrated in the
+profile and portfolio, the reusable workflow template, the neutral Studio OS
+demo, and the CHNAI LAB organization profile.
 
 ## Repository Model
 
 | Repository | Visibility | Purpose |
 | --- | --- | --- |
 | `kavatana/kavatana` | Public | GitHub profile, portfolio source, case studies, and public proof index. |
-| `kavatana/kavatana-life-os` | Private | Studio OS private operator source and public-demo build. |
-| `chnai-lab/.github` | Public | Organization profile, member onboarding, and shared AI-agent workflow. |
-| `chnai-lab/bayonhub` | Private | Tech student opportunity platform. |
+| `kavatana/ai-native-team-starter` | Public, MIT | Vendor-neutral template for traceable AI-assisted development. |
+| `kavatana/kavatana-life-os` | Private | Owner-specific Command Center source and neutral public-demo build. |
+| `chnai-lab/.github` | Public | Organization profile, governance, onboarding, and inherited agent workflow. |
+| `chnai-lab/bayonhub` | Private | Tech-student opportunity platform. |
 | `chnai-lab/svaeng-yul` | Private | Khmer self-study platform for technical students. |
 | `chnai-lab/chomkar` | Private | B2B agriculture coordination platform. |
-| `chnai-lab/sat-digital` | Private | Cyber service platform. |
-| `chnai-lab/vantrex` | Private | Trading signal, bot model, and indicator tooling platform. |
+| `chnai-lab/sat-digital` | Private | Community cybersecurity service platform. |
+| `chnai-lab/vantrex` | Private | Trading-signal, bot-model, and indicator tooling platform. |
 | `chnai-lab/phsaros` | Private | SME operating system for shops and restaurants. |
 | `chnai-lab/website` | Private | CHNAI LAB website source. |
-| `chnai-lab/demo-repository` | Private, archived | GitHub demonstration repository retained only for history. |
+| `chnai-lab/demo-repository` | Private, archived | GitHub welcome sample; verified as non-product material and queued for deletion. |
 
-The seven startup tracks live under CHNAI LAB, while Studio OS remains a
+The startup portfolio lives under CHNAI LAB. The Command Center remains a
 personal private repository because it contains owner-specific operating
-context.
+context. The reusable starter is deliberately separate from both so other teams
+can adopt the workflow without receiving private product knowledge.
 
 ## Collaboration Controls
 
-- The organization has three accepted members: `kavatana`,
-  `chamroeunhongleng`, and `solaly`.
-- `rei3117` has a pending regular-member invitation and no product-team access
-  until the invitation is accepted and a least-privilege role is assigned.
-- Product write access is granted through least-privilege teams instead of
-  unmanaged direct collaborator grants.
-- Organization base repository permission is `none`; members receive access
-  only through an assigned product team.
-- Repository creation is restricted to organization owners so product assets
-  enter through the agreed naming, privacy, ownership, and CI setup.
-- Each active product repository has a root `AGENTS.md`, model-specific entry
-  points, contribution and security guidance, CI, and deterministic repository
-  checks.
-- `CODEOWNERS` names the responsible product team where team collaboration is
-  active.
-- Changes use focused branches and pull requests; checks must pass before merge.
-- `main` is protected on `kavatana/kavatana`, `kavatana/kavatana-life-os`, and
-  `chnai-lab/.github`: pull requests and the `verify` check are required, history
-  stays linear, review threads must be resolved, and force pushes and deletion
-  are blocked.
+- Product write access is granted through one dedicated team per repository,
+  never through organization-wide base access.
+- Members choose a product and enable 2FA before team assignment. Accounts with
+  no active product assignment retain organization membership but cannot read
+  private startup source.
+- Team permission is `write`; only the founder account holds organization-owner
+  or repository-admin authority.
+- Repository creation is restricted to the organization owner so new assets
+  enter through the naming, privacy, ownership, and CI standard.
+- Each active product repository has a root agent guide, contribution and
+  security boundaries, CI, and deterministic verification.
+- Changes start from issues, use focused branches, open as draft pull requests,
+  record AI involvement separately from human judgment, and require evidence
+  before merge.
+- `main` on `kavatana/kavatana`, `kavatana/kavatana-life-os`, and
+  `chnai-lab/.github` requires a pull request and the `verify` check, enforces
+  linear history, dismisses stale reviews, resolves review threads, and blocks
+  force pushes and branch deletion.
 - Repositories use squash-only merges and delete merged branches automatically.
-- Vulnerability alerts and automated security fixes are enabled on every active
-  personal and organization repository.
-- Secret scanning and push protection are enabled on the two public proof
-  repositories: `kavatana/kavatana` and `chnai-lab/.github`.
-- GitHub Free does not provide protected branches for the organization's private
-  repositories; their guides and CI establish the workflow, but server-side
-  enforcement requires a future organization plan upgrade.
-- High-impact external writes, deployments, security actions, financial actions,
-  and trading actions remain human decisions.
+- GitHub Free does not enforce branch protection on the organization's private
+  repositories. Their local policy and CI are active; server-side enforcement
+  requires a plan upgrade.
+- Deployment, credentials, production data, billing, security response,
+  financial signals, and trading remain explicit human approval gates.
+
+## Security Controls
+
+- Vulnerability alerts and automated security fixes are enabled across the
+  active repository estate where GitHub supports them.
+- Secret scanning and push protection are enabled on public proof repositories.
+- CI workflows use least-privilege permissions and immutable third-party action
+  revisions where the repository standard has been adopted.
+- Startup repositories do not receive a public license by default. A license is
+  a deliberate product and legal decision.
+- Secrets, customer data, private strategy, recovery codes, and production
+  infrastructure details never belong in public proof or Git history.
 
 ## Visibility Decisions
 
-- Keep future-startup implementation and strategy private until there is a
-  deliberate open-source, customer, investor, or hiring-review decision.
-- Publish architecture evidence, screenshots, demos, validation results, and
-  honest tradeoffs without publishing secrets or private product context.
-- Keep `.github` public so organization identity and collaboration standards are
-  visible without exposing product source.
-- Keep Studio OS source private; its public build uses neutral data and disables
-  live connectors.
-- Do not add a permissive license to startup source by default. Licensing is a
-  product and legal decision, not a repository-cleanup checkbox.
+- Keep future-startup implementation and strategy private until an explicit
+  open-source, customer, investor, hiring-review, or acquisition decision.
+- Publish architecture evidence, selected screenshots, verification results,
+  and honest tradeoffs without publishing source, secrets, or unsupported
+  claims.
+- Keep `.github` public so collaboration quality is independently inspectable.
+- Keep the Command Center source private; its public mode uses neutral data and
+  bounded connectors.
+- Keep only deploy-consumed or clearly documented evidence assets in the public
+  portfolio. Generated review captures, abandoned prototype media, and one-off
+  local scripts are not product proof.
 
-## Remaining Manual Decisions
+## Open Human Actions
 
-1. Enable organization-wide two-factor enforcement in GitHub's organization
-   authentication settings after pending and future invitees are prepared for
-   the policy.
-2. Decide which repositories, if any, should eventually receive a public
-   license or source release.
-3. Review and merge private product pull requests after human product and data
-   boundary review.
-
-No repositories were deleted during cleanup.
+1. Review and merge the green hardening pull requests; no agent self-merges.
+2. Have `rei3117`, `maobunleang`, and `houtrothanakvichai-sudo` enable GitHub
+   2FA before product-team assignment.
+3. Collect each unassigned member's first and second product choice, then grant
+   only the selected team and create one ready starter issue.
+4. Delete `chnai-lab/demo-repository` after the owner authorizes a GitHub token
+   with the `delete_repo` scope. It contains no unique product material.
+5. Upgrade the organization plan when enforced reviews and protected branches
+   on private product repositories become operationally necessary.

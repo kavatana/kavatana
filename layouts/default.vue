@@ -10,7 +10,6 @@
     </main>
     
     <AppFooter />
-    <AmbientAudio />
   </div>
 </template>
 
