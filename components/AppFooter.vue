@@ -55,6 +55,11 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--target-min-size);
+  min-height: var(--target-min-size);
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--color-text-primary);
@@ -69,6 +74,11 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--target-min-size);
+  min-height: var(--target-min-size);
   color: var(--color-text-secondary);
   text-decoration: none;
   font-size: var(--text-sm);
@@ -89,6 +99,11 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-right a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--target-min-size);
+  min-height: var(--target-min-size);
   color: var(--color-text-secondary);
   transition: color var(--transition-fast);
 }

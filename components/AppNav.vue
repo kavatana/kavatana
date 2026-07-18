@@ -168,7 +168,12 @@ onUnmounted(() => {
   border: none;
   color: var(--color-text-primary);
   cursor: pointer;
-  padding: var(--space-xs);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--target-min-size);
+  min-height: var(--target-min-size);
+  padding: 0;
 }
 
 .mobile-nav {
@@ -178,6 +183,9 @@ onUnmounted(() => {
 }
 
 .nav-link {
+  display: flex;
+  align-items: center;
+  min-height: var(--target-min-size);
   color: var(--color-text-secondary);
   text-decoration: none;
   font-size: var(--text-lg);

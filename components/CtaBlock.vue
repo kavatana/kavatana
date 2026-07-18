@@ -39,6 +39,11 @@ const trackClick = () => {
 }
 
 .cta-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--target-min-size);
+  min-height: var(--target-min-size);
   color: var(--color-accent);
   font-size: var(--text-2xl);
   font-weight: bold;

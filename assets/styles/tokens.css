@@ -40,6 +40,8 @@
   --space-2xl: 4rem;
   --space-3xl: 6rem;
 
+  --target-min-size: 2.75rem;
+
   --radius: 12px;
   --radius-sm: 6px;
   --radius-none: 0px;
