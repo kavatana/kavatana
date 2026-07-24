@@ -23,6 +23,7 @@ REQUIRED_FILES = [
     ".github/dependabot.yml",
     ".gitignore",
     "package.json",
+    "tests/test_verify_repo.py",
     "docs/AI_NATIVE_WORKFLOW.md",
     "docs/GITHUB_ACCOUNT_CLEANUP.md",
     "docs/OPEN_SOURCE.md",
@@ -142,6 +143,7 @@ def verify_package_scripts() -> None:
     for name in [
         "check:repo",
         "check:community",
+        "test:repo",
         "typecheck",
         "lint",
         "generate",

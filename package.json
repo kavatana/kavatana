@@ -5,6 +5,7 @@
   "scripts": {
     "check:repo": "python3 scripts/verify_repo.py",
     "check:community": "prettier --check .github/ISSUE_TEMPLATE .github/PULL_REQUEST_TEMPLATE.md CODE_OF_CONDUCT.md SUPPORT.md CONTRIBUTING.md",
+    "test:repo": "python3 -m unittest discover -s tests -v",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -12,7 +13,7 @@
     "postinstall": "nuxt prepare",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",
-    "verify": "npm run check:repo && npm run check:community && npm audit --audit-level=moderate && npm run typecheck && npm run lint && npm run generate"
+    "verify": "npm run check:repo && npm run test:repo && npm run check:community && npm audit --audit-level=moderate && npm run typecheck && npm run lint && npm run generate"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

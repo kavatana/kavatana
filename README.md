@@ -51,6 +51,21 @@ pinned GitHub Actions verification.
 Read the [open-source engineering case study](docs/OPEN_SOURCE.md) for the
 problem, design decisions, safety boundary, and verification evidence.
 
+## Runnable Verification
+
+This profile is also a public Nuxt application, not only a narrative README.
+Its repository policy, claim boundaries, content schema, media references,
+credential patterns, and pinned CI dependencies are checked by a
+[zero-dependency Python verifier](scripts/verify_repo.py) with
+[regression tests](tests/test_verify_repo.py).
+
+```bash
+npm ci
+npm run verify
+```
+
+The same command runs in GitHub Actions and produces the static portfolio build.
+
 ## Startup Portfolio
 
 Most source repositories are private because these are intended startup assets,
