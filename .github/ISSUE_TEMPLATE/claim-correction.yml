@@ -1,0 +1,50 @@
+name: Public claim correction
+description: Flag a stale, unclear, or unsupported statement in the public portfolio
+title: 'docs: correct '
+labels: ['documentation']
+body:
+  - type: markdown
+    attributes:
+      value: This route protects evidence quality. Share only public-safe evidence; establish a private contact channel before sending sensitive context.
+  - type: input
+    id: location
+    attributes:
+      label: Claim location
+      description: Provide the public URL or repository file path containing the statement.
+    validations:
+      required: true
+  - type: textarea
+    id: current_claim
+    attributes:
+      label: Current public claim
+      description: Quote only the minimum text needed to identify the statement.
+    validations:
+      required: true
+  - type: textarea
+    id: concern
+    attributes:
+      label: What is inaccurate or unclear?
+      description: Explain whether the claim is stale, unsupported, ambiguous, or missing a status label.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Public-safe evidence
+      description: Link to public evidence or explain what owner verification is needed. Do not paste private source or data.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+      description: Propose specific replacement wording or a safer status label.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Evidence boundary
+      options:
+        - label: This report contains no credentials, personal data, private product context, or unpublished evidence.
+          required: true

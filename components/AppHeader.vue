@@ -78,12 +78,15 @@ const emit = defineEmits(['open-nav'])
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min-size);
   font-family: var(--font-sans);
   font-size: var(--text-base);
   color: var(--color-text-primary);
   text-decoration: none;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .desktop-nav {
@@ -102,6 +105,11 @@ const emit = defineEmits(['open-nav'])
 }
 
 .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--target-min-size);
+  min-height: var(--target-min-size);
   color: var(--color-text-secondary);
   text-decoration: none;
   font-size: var(--text-sm);
@@ -124,7 +132,12 @@ const emit = defineEmits(['open-nav'])
   border: none;
   color: var(--color-text-primary);
   cursor: pointer;
-  padding: var(--space-xs);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--target-min-size);
+  min-height: var(--target-min-size);
+  padding: 0;
 }
 
 .theme-toggle {
@@ -132,7 +145,9 @@ const emit = defineEmits(['open-nav'])
   border: none;
   color: var(--color-text-secondary);
   cursor: pointer;
-  padding: var(--space-xs);
+  min-width: var(--target-min-size);
+  min-height: var(--target-min-size);
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;

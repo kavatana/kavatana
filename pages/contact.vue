@@ -105,9 +105,13 @@ useHead({
 }
 
 .email-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min-size);
   color: var(--color-accent);
   text-decoration: none;
   font-weight: 500;
+  vertical-align: middle;
 }
 
 .social-links {
@@ -116,6 +120,11 @@ useHead({
 }
 
 .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--target-min-size);
+  min-height: var(--target-min-size);
   color: var(--color-text-secondary);
   transition: color var(--transition-fast);
 }

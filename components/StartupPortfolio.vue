@@ -187,6 +187,11 @@ const tracks = useStartupPortfolio()
 .track-link {
   position: relative;
   z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--target-min-size);
+  min-height: var(--target-min-size);
   color: var(--color-accent);
   font-weight: 650;
   text-decoration: none;

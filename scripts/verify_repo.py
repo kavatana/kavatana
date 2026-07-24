@@ -10,14 +10,23 @@ REQUIRED_FILES = [
     "CLAUDE.md",
     "CONTRIBUTING.md",
     "SECURITY.md",
+    "CODE_OF_CONDUCT.md",
+    "SUPPORT.md",
     ".github/CODEOWNERS",
     ".github/copilot-instructions.md",
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/bug.yml",
+    ".github/ISSUE_TEMPLATE/claim-correction.yml",
+    ".github/ISSUE_TEMPLATE/improvement.yml",
     ".github/workflows/ci.yml",
     ".github/dependabot.yml",
     ".gitignore",
     "package.json",
     "docs/AI_NATIVE_WORKFLOW.md",
     "docs/GITHUB_ACCOUNT_CLEANUP.md",
+    "docs/OPEN_SOURCE.md",
+    "docs/STUDIO_OS_ARCHITECTURE.md",
     "content/startup-portfolio.json",
     "content/projects/studio-os.json",
 ]
@@ -36,12 +45,33 @@ STALE_STUDIO_OS_CLAIMS = [
     "tree-shaking my real identity",
     "no server business logic",
     "intentionally no backend, database, or api",
+    "28-route next.js demo build",
+    "703 text build artifacts",
 ]
 SECRET_PATTERNS = [
     re.compile(r"(?:ghp|gho)_[A-Za-z0-9]{20,}"),
     re.compile(r"github_pat_[A-Za-z0-9_]{20,}"),
     re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
 ]
+MEDIA_SUFFIXES = {".avif", ".gif", ".jpeg", ".jpg", ".mp3", ".png", ".webp"}
+SOURCE_TEXT_SUFFIXES = {".css", ".js", ".json", ".md", ".mjs", ".ts", ".vue"}
+GENERATED_SCAN_PARTS = {
+    ".git",
+    ".nuxt",
+    ".output",
+    ".venv",
+    "__pycache__",
+    "node_modules",
+    "venv",
+}
+FORBIDDEN_STALE_PATHS = {
+    "generate_components.js",
+    "remove_bg.py",
+    "remove_bg_v2.py",
+    "review/final-visual-polish",
+    "scripts/capture-phsaros.mjs",
+    "unrealmicikcz12-mystic-realm-of-minecraft-235545.mp3",
+}
 REQUIRED_STARTUP_TRACKS = {
     "bayonhub",
     "svaeng-yul",
@@ -52,6 +82,41 @@ REQUIRED_STARTUP_TRACKS = {
     "chnai-lab",
 }
 ALLOWED_STARTUP_STATUSES = {"building", "incubating", "operating"}
+PINNED_ACTIONS = {
+    "actions/checkout": "9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+    "actions/setup-node": "820762786026740c76f36085b0efc47a31fe5020",
+}
+REQUIRED_COMMUNITY_TERMS = {
+    ".github/PULL_REQUEST_TEMPLATE.md": [
+        "Public claims",
+        "AI involvement",
+        "Privacy and security",
+        "Risk and rollback",
+        "Human review",
+    ],
+    "CODE_OF_CONDUCT.md": [
+        "Expected Behavior",
+        "Reporting and Enforcement",
+        "honest authorship",
+    ],
+    "SUPPORT.md": [
+        "Public Claim Corrections",
+        "private vulnerability reporting",
+        "Support Boundary",
+    ],
+}
+REQUIRED_STUDIO_OS_ARCHITECTURE_TERMS = [
+    "human authority",
+    "agent workshop",
+    "public demo boundary",
+    "private operator",
+    "PRIVATE_OPERATOR_ONLY",
+    "six private workspace routes",
+    "28 static pages generated",
+    "722 text build artifacts",
+    "not autonomous",
+    "authentication and authorization",
+]
 
 
 def read(relative_path: str) -> str:
@@ -74,7 +139,14 @@ def verify_content_json() -> None:
 
 def verify_package_scripts() -> None:
     scripts = json.loads(read("package.json")).get("scripts", {})
-    for name in ["check:repo", "typecheck", "lint", "generate", "verify"]:
+    for name in [
+        "check:repo",
+        "check:community",
+        "typecheck",
+        "lint",
+        "generate",
+        "verify",
+    ]:
         if not scripts.get(name):
             raise SystemExit(f"package.json is missing script: {name}")
 
@@ -118,9 +190,69 @@ def verify_claims() -> None:
         raise SystemExit(f"Studio OS contains stale blanket claim(s): {', '.join(stale)}")
 
     readme = read("README.md").casefold()
-    for term in ["bounded workspace", "read-only github", "collaboration system"]:
+    for term in [
+        "bounded workspace",
+        "read-only github",
+        "collaboration system",
+        "open-source proof",
+        "ai-native-team-starter",
+        "v1.0.0",
+        "human-agent control-plane case study",
+    ]:
         if term not in readme:
             raise SystemExit(f"README.md is missing public evidence term: {term}")
+
+
+def verify_studio_os_architecture() -> None:
+    architecture = read("docs/STUDIO_OS_ARCHITECTURE.md")
+    normalized = architecture.casefold()
+    missing = [
+        term
+        for term in REQUIRED_STUDIO_OS_ARCHITECTURE_TERMS
+        if term.casefold() not in normalized
+    ]
+    if missing:
+        raise SystemExit(
+            f"Studio OS architecture note is missing required term(s): {', '.join(missing)}"
+        )
+    if "```mermaid" not in architecture:
+        raise SystemExit("Studio OS architecture note must preserve its Mermaid control-plane map")
+    for private_marker in ["/Users/", "~/Vibe-Coding", "~/Trading BOT", "~/CYBER"]:
+        if private_marker in architecture:
+            raise SystemExit(
+                f"Studio OS architecture note exposes a private path marker: {private_marker}"
+            )
+
+    studio_os = read("content/projects/studio-os.json").casefold()
+    for evidence in [
+        "next.js demo build that generates 28 static pages",
+        "722 text build artifacts",
+    ]:
+        if evidence not in studio_os:
+            raise SystemExit(f"Studio OS case study is missing current evidence: {evidence}")
+
+
+def verify_community_routes() -> None:
+    config = read(".github/ISSUE_TEMPLATE/config.yml")
+    if "blank_issues_enabled: false" not in config:
+        raise SystemExit("Blank issues must remain disabled")
+    if "/security/advisories/new" not in config:
+        raise SystemExit("Issue routing must preserve private vulnerability reporting")
+
+    for path in [
+        ".github/ISSUE_TEMPLATE/bug.yml",
+        ".github/ISSUE_TEMPLATE/claim-correction.yml",
+        ".github/ISSUE_TEMPLATE/improvement.yml",
+    ]:
+        form = read(path)
+        if "validations:" not in form or "required: true" not in form:
+            raise SystemExit(f"Issue form is missing required fields: {path}")
+
+    for path, terms in REQUIRED_COMMUNITY_TERMS.items():
+        content = read(path).casefold()
+        missing = [term for term in terms if term.casefold() not in content]
+        if missing:
+            raise SystemExit(f"{path} is missing community term(s): {', '.join(missing)}")
 
 
 def verify_no_credential_shapes() -> None:
@@ -128,12 +260,65 @@ def verify_no_credential_shapes() -> None:
     for path in ROOT.rglob("*"):
         if not path.is_file() or path.suffix.lower() not in extensions:
             continue
-        if any(part in {".git", ".nuxt", ".output", "node_modules"} for part in path.parts):
+        if any(part in GENERATED_SCAN_PARTS for part in path.parts):
             continue
         content = path.read_text(encoding="utf-8", errors="ignore")
         for pattern in SECRET_PATTERNS:
             if pattern.search(content):
                 raise SystemExit(f"Potential credential in {path.relative_to(ROOT)}")
+
+
+def verify_public_media() -> None:
+    for relative_path in FORBIDDEN_STALE_PATHS:
+        if (ROOT / relative_path).exists():
+            raise SystemExit(f"Stale generated path must not be committed: {relative_path}")
+
+    references: set[str] = set()
+    for path in ROOT.rglob("*"):
+        if not path.is_file() or path.suffix.lower() not in SOURCE_TEXT_SUFFIXES:
+            continue
+        if any(part in GENERATED_SCAN_PARTS | {"public"} for part in path.parts):
+            continue
+        content = path.read_text(encoding="utf-8", errors="ignore")
+        references.update(
+            re.findall(
+                r"/(?:audio|images)/[A-Za-z0-9._/-]+\.(?:avif|gif|jpe?g|mp3|png|webp)",
+                content,
+            )
+        )
+
+    public_media = {
+        f"/{path.relative_to(ROOT / 'public').as_posix()}"
+        for path in (ROOT / "public").rglob("*")
+        if path.is_file() and path.suffix.lower() in MEDIA_SUFFIXES
+    }
+    missing = sorted(references - public_media)
+    orphaned = sorted(public_media - references)
+    if missing:
+        raise SystemExit(f"Referenced public media is missing: {', '.join(missing)}")
+    if orphaned:
+        raise SystemExit(f"Unreferenced public media must be removed: {', '.join(orphaned)}")
+
+
+def verify_ci_hardening() -> None:
+    workflow = read(".github/workflows/ci.yml")
+    if not re.search(r"(?m)^permissions:\s*\n\s+contents:\s+read\s*$", workflow):
+        raise SystemExit("CI must declare least-privilege contents: read permissions")
+
+    action_uses = re.findall(r"(?m)^\s*uses:\s*([^\s#]+)", workflow)
+    if not action_uses:
+        raise SystemExit("CI workflow does not use any actions")
+    for action_use in action_uses:
+        action, separator, revision = action_use.partition("@")
+        if not separator or not re.fullmatch(r"[a-f0-9]{40}", revision):
+            raise SystemExit(f"CI action is not pinned to an immutable commit: {action_use}")
+        expected = PINNED_ACTIONS.get(action)
+        if expected and revision != expected:
+            raise SystemExit(f"CI action pin changed without verifier review: {action_use}")
+
+    dependabot = read(".github/dependabot.yml")
+    if 'package-ecosystem: "github-actions"' not in dependabot:
+        raise SystemExit("Dependabot must monitor the github-actions ecosystem")
 
 
 def main() -> None:
@@ -152,7 +337,11 @@ def main() -> None:
     verify_package_scripts()
     verify_startup_portfolio()
     verify_claims()
+    verify_studio_os_architecture()
+    verify_community_routes()
     verify_no_credential_shapes()
+    verify_public_media()
+    verify_ci_hardening()
 
 
 if __name__ == "__main__":

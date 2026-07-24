@@ -4,7 +4,8 @@
 
 Software Engineering student in Cambodia building a private startup portfolio
 across market access, education, cybersecurity, SME operations, trading tools,
-and student opportunity infrastructure.
+and student opportunity infrastructure, alongside public AI-native developer
+tooling.
 
 I am early in my career, but I am deliberately training like a product engineer:
 ship working systems, document tradeoffs, protect user trust, and use AI agents
@@ -16,6 +17,8 @@ as engineering leverage rather than as a substitute for judgment.
 - Turning local market problems into small, testable software systems
 - Practicing AI-native engineering: specs, agent reviews, test loops, and clear
   implementation logs
+- Publishing reusable open-source workflow tools when they can help other
+  student and early-stage teams
 - Keeping future-startup source code private while publishing honest public
   proof of work
 
@@ -27,11 +30,26 @@ as engineering leverage rather than as a substitute for judgment.
   is the neutral public mode of a private AI-native command center. The public
   build keeps state local and disables live connectors; the private operator
   adds bounded workspace context and a read-only GitHub organization queue.
+  The [human-agent control-plane case study](docs/STUDIO_OS_ARCHITECTURE.md)
+  documents its authority, context, privacy, and verification boundaries.
 - **CHNAI LAB profile:** [github.com/chnai-lab](https://github.com/chnai-lab)
   presents the student-run product studio behind the broader portfolio.
 - **Collaboration system:** CHNAI LAB repositories use canonical agent guides,
   contribution and security boundaries, team ownership, and CI so human and AI
   collaborators enter through the same reviewable workflow.
+
+## Open-Source Proof
+
+[`ai-native-team-starter`](https://github.com/kavatana/ai-native-team-starter)
+is a vendor-neutral GitHub template for teams using coding agents without giving
+up human ownership, security boundaries, or verification discipline. The public
+[`v1.0.0` release](https://github.com/kavatana/ai-native-team-starter/releases/tag/v1.0.0)
+includes agent instructions, issue and pull request forms, onboarding and
+security guidance, a zero-dependency readiness scanner, regression tests, and
+pinned GitHub Actions verification.
+
+Read the [open-source engineering case study](docs/OPEN_SOURCE.md) for the
+problem, design decisions, safety boundary, and verification evidence.
 
 ## Startup Portfolio
 
@@ -52,6 +70,8 @@ architecture level.
 Read more:
 
 - [Startup portfolio map](docs/STARTUP_PORTFOLIO.md)
+- [Studio OS human-agent control plane](docs/STUDIO_OS_ARCHITECTURE.md)
+- [Open-source engineering proof](docs/OPEN_SOURCE.md)
 - [AI-native engineering workflow](docs/AI_NATIVE_WORKFLOW.md)
 - [GitHub account cleanup record](docs/GITHUB_ACCOUNT_CLEANUP.md)
 - [Repository agent contract](AGENTS.md)
