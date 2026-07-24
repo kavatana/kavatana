@@ -7,6 +7,9 @@
   position: absolute;
   top: -100px;
   left: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min-size);
   background-color: var(--color-accent);
   color: var(--color-bg);
   padding: var(--space-xs) var(--space-sm);

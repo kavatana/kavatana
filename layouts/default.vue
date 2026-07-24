@@ -10,7 +10,7 @@
     </main>
     
     <AppFooter />
-    <AmbientAudio />
+    <PortfolioConcierge />
   </div>
 </template>
 

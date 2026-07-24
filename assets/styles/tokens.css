@@ -10,6 +10,15 @@
   --color-accent-hover: hsl(28, 80%, 62%);
   --color-error: hsl(0, 72%, 51%);
   --color-success: hsl(142, 71%, 45%);
+  --color-assistant-solid: hsl(172, 66%, 28%);
+  --color-assistant-solid-hover: hsl(172, 66%, 34%);
+  --color-assistant-solid-border: hsl(172, 66%, 42%);
+  --color-assistant-on-solid: hsl(168, 76%, 94%);
+  --color-assistant-soft: hsl(172, 48%, 18%);
+  --color-assistant-soft-border: hsl(172, 42%, 31%);
+  --color-assistant-soft-text: hsl(171, 75%, 72%);
+  --color-assistant-link: hsl(172, 68%, 61%);
+  --color-assistant-link-hover: hsl(172, 74%, 72%);
   
   --shadow-card: inset 0 0 0 1px var(--color-border);
   --shadow-featured: inset 0 0 0 1px var(--color-border), 0 0 20px hsla(28, 80%, 52%, 0.15);
@@ -40,6 +49,8 @@
   --space-2xl: 4rem;
   --space-3xl: 6rem;
 
+  --target-min-size: 2.75rem;
+
   --radius: 12px;
   --radius-sm: 6px;
   --radius-none: 0px;
@@ -60,6 +71,15 @@
   --color-accent-hover: hsl(28, 80%, 42%);
   --color-error: hsl(0, 72%, 51%);
   --color-success: hsl(142, 71%, 40%);
+  --color-assistant-solid: hsl(173, 80%, 26%);
+  --color-assistant-solid-hover: hsl(173, 80%, 22%);
+  --color-assistant-solid-border: hsl(173, 76%, 32%);
+  --color-assistant-on-solid: hsl(0, 0%, 100%);
+  --color-assistant-soft: hsl(170, 55%, 94%);
+  --color-assistant-soft-border: hsl(171, 36%, 80%);
+  --color-assistant-soft-text: hsl(173, 80%, 24%);
+  --color-assistant-link: hsl(173, 80%, 26%);
+  --color-assistant-link-hover: hsl(173, 80%, 20%);
   
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05), inset 0 0 0 1px var(--color-border);
   --shadow-featured: 0 12px 30px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--color-border);

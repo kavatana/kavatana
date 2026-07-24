@@ -1,0 +1,372 @@
+{
+  "version": "1.0.0",
+  "name": "Portfolio concierge",
+  "greeting": "I can guide you through Ka's strongest work, engineering evidence, startup portfolio, and collaboration path.",
+  "boundary": "Published evidence only · read-only",
+  "fallback": "I could not verify a precise answer from the public portfolio. Try asking about a project, Ka's engineering workflow, his background, or collaboration.",
+  "starters": [
+    {
+      "label": "Start with the strongest proof",
+      "query": "What should I review first?"
+    },
+    {
+      "label": "Explore the seven products",
+      "query": "What products is Ka building?"
+    },
+    {
+      "label": "Understand the AI workflow",
+      "query": "How does Ka work with AI agents?"
+    },
+    {
+      "label": "Discuss an opportunity",
+      "query": "How can I collaborate with Ka?"
+    }
+  ],
+  "topics": [
+    {
+      "id": "strongest-proof",
+      "title": "Where to start",
+      "priority": 10,
+      "keywords": [
+        "start",
+        "first",
+        "best",
+        "strongest",
+        "top",
+        "review",
+        "impressive",
+        "proof"
+      ],
+      "phrases": [
+        "what should i review first",
+        "where should i start",
+        "show me the best work",
+        "strongest project"
+      ],
+      "answer": "Start with Chomkar for product delivery under real constraints, Studio OS for human-agent systems and privacy boundaries, and the AI-Native Team Starter for public code, tests, and reusable engineering governance. Together they show product judgment, implementation, and a workflow other people can inspect.",
+      "links": [
+        {
+          "label": "Review Chomkar",
+          "href": "/projects/chomkar"
+        },
+        {
+          "label": "Review Studio OS",
+          "href": "/projects/studio-os"
+        },
+        {
+          "label": "Inspect the public starter",
+          "href": "https://github.com/kavatana/ai-native-team-starter"
+        }
+      ],
+      "followUps": [
+        "What evidence is independently runnable?",
+        "How does Studio OS protect private work?"
+      ]
+    },
+    {
+      "id": "identity",
+      "title": "About Ka Vatana",
+      "priority": 8,
+      "keywords": [
+        "ka",
+        "vatana",
+        "who",
+        "identity",
+        "background",
+        "founder",
+        "developer",
+        "student"
+      ],
+      "entities": [
+        "ka",
+        "ka vatana",
+        "vatana"
+      ],
+      "phrases": [
+        "who is ka",
+        "tell me about ka",
+        "introduce ka vatana"
+      ],
+      "answer": "Ka Vatana is a Cambodian Year 1 Software Engineering student and founder-engineer. He builds Cambodia-first products, leads CHNAI LAB, and uses public case studies and runnable checks to document what is shipped, simulated, private, and still being validated.",
+      "links": [
+        {
+          "label": "About Ka",
+          "href": "/about"
+        },
+        {
+          "label": "Full journey",
+          "href": "/journey"
+        }
+      ],
+      "followUps": [
+        "What is Ka building now?",
+        "What is Ka studying?"
+      ]
+    },
+    {
+      "id": "ai-native-workflow",
+      "title": "AI-native engineering",
+      "priority": 9,
+      "keywords": [
+        "ai",
+        "agent",
+        "agents",
+        "workflow",
+        "automation",
+        "codex",
+        "claude",
+        "governance",
+        "verification",
+        "human"
+      ],
+      "phrases": [
+        "how does ka use ai",
+        "how does ka work with ai agents",
+        "ai native workflow",
+        "human agent"
+      ],
+      "answer": "Ka uses agents for research, implementation, review, and repetitive verification, while humans retain product intent, access decisions, factual judgment, and merge authority. The workflow records scope, evidence, AI involvement, risk, rollback, and human verification in the repository instead of treating generated output as trusted by default.",
+      "links": [
+        {
+          "label": "AI-native workflow",
+          "href": "https://github.com/kavatana/kavatana/blob/main/docs/AI_NATIVE_WORKFLOW.md"
+        },
+        {
+          "label": "Runnable team starter",
+          "href": "https://github.com/kavatana/ai-native-team-starter"
+        }
+      ],
+      "followUps": [
+        "What can agents never do automatically?",
+        "Show me runnable verification"
+      ]
+    },
+    {
+      "id": "runnable-evidence",
+      "title": "Runnable engineering evidence",
+      "priority": 9,
+      "keywords": [
+        "code",
+        "test",
+        "tests",
+        "ci",
+        "runnable",
+        "verify",
+        "verification",
+        "evidence",
+        "github",
+        "open source",
+        "technical"
+      ],
+      "phrases": [
+        "independently runnable",
+        "show me the code",
+        "show me tests",
+        "technical proof",
+        "public proof"
+      ],
+      "answer": "The clearest public code proof is the AI-Native Team Starter: a reusable template with a zero-dependency readiness scanner, regression tests, immutable GitHub Actions pins, and a public release. This portfolio is also a Nuxt application whose repository policy, claims, media references, credential patterns, types, lint, dependencies, tests, and static build run through one verification command.",
+      "links": [
+        {
+          "label": "Open the starter repository",
+          "href": "https://github.com/kavatana/ai-native-team-starter"
+        },
+        {
+          "label": "Inspect portfolio verification",
+          "href": "https://github.com/kavatana/kavatana#runnable-verification"
+        }
+      ],
+      "followUps": [
+        "What does the verifier reject?",
+        "What is still private?"
+      ]
+    },
+    {
+      "id": "startup-portfolio",
+      "title": "Seven startup tracks",
+      "priority": 8,
+      "keywords": [
+        "startup",
+        "startups",
+        "products",
+        "portfolio",
+        "seven",
+        "chnai",
+        "lab",
+        "building"
+      ],
+      "phrases": [
+        "seven startups",
+        "all projects",
+        "what products is ka building",
+        "startup portfolio"
+      ],
+      "answer": "The seven tracks are BayonHub for student opportunities, Svaeng Yul for Khmer tech learning, Chomkar for agricultural market access, Sat Digital for community cybersecurity, Vantrex for trading tools, PHSAROS for SME operations, and CHNAI LAB as the student-run product studio coordinating the work. Product source remains private while approved case studies and status claims stay public.",
+      "links": [
+        {
+          "label": "Open the product map",
+          "href": "/projects"
+        },
+        {
+          "label": "Visit CHNAI LAB",
+          "href": "https://github.com/chnai-lab"
+        }
+      ],
+      "followUps": [
+        "Tell me about Chomkar",
+        "Why are the startup repositories private?"
+      ]
+    },
+    {
+      "id": "public-private-boundary",
+      "title": "Public and private boundary",
+      "priority": 7,
+      "keywords": [
+        "private",
+        "public",
+        "secret",
+        "security",
+        "privacy",
+        "repository",
+        "source",
+        "access",
+        "boundary"
+      ],
+      "phrases": [
+        "why are projects private",
+        "what is still private",
+        "protect private work",
+        "agent access"
+      ],
+      "answer": "Future-startup source, credentials, user data, private strategy, and the Studio OS operator remain private. Public surfaces expose only approved case studies, synthetic or redacted evidence, reusable tooling, and claims that can be checked without granting visitors or public agents access to Ka's private digital workspace.",
+      "links": [
+        {
+          "label": "Read the account boundary",
+          "href": "https://github.com/kavatana/kavatana/blob/main/docs/GITHUB_ACCOUNT_CLEANUP.md"
+        },
+        {
+          "label": "Review Studio OS boundaries",
+          "href": "/projects/studio-os"
+        }
+      ],
+      "followUps": [
+        "How does the public concierge stay isolated?",
+        "What can agents never do automatically?"
+      ]
+    },
+    {
+      "id": "education",
+      "title": "Education and learning",
+      "priority": 6,
+      "keywords": [
+        "education",
+        "study",
+        "studying",
+        "school",
+        "university",
+        "beltei",
+        "ifl",
+        "year",
+        "english",
+        "software engineering"
+      ],
+      "phrases": [
+        "what is ka studying",
+        "educational background",
+        "which university"
+      ],
+      "answer": "Ka is a Year 1 Software Engineering student at BELTEI International University and a Year 1 English student at IFL. His public journey also records earlier mathematics competitions, STEM activities, volunteering, teaching, marketing work, and product-building experience.",
+      "links": [
+        {
+          "label": "View the journey",
+          "href": "/journey"
+        },
+        {
+          "label": "Read the short profile",
+          "href": "/about"
+        }
+      ],
+      "followUps": [
+        "What has Ka built outside class?",
+        "What awards has Ka received?"
+      ]
+    },
+    {
+      "id": "collaboration",
+      "title": "Collaboration and opportunities",
+      "priority": 8,
+      "keywords": [
+        "hire",
+        "hiring",
+        "internship",
+        "collaborate",
+        "collaboration",
+        "opportunity",
+        "contact",
+        "work",
+        "team",
+        "email"
+      ],
+      "phrases": [
+        "how can i collaborate",
+        "can i hire ka",
+        "open to work",
+        "discuss an opportunity",
+        "contact ka"
+      ],
+      "answer": "Ka is open to internships, collaborations, and serious learning opportunities involving product work, front-end or full-stack development, AI-native workflows, and Cambodia-relevant technology. The direct path is the contact page or LinkedIn; include the problem, expected outcome, timeline, and how you want to work together.",
+      "links": [
+        {
+          "label": "Contact Ka",
+          "href": "/contact"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/in/ka-vatana-99b85440a/"
+        }
+      ],
+      "followUps": [
+        "What kind of work fits Ka best?",
+        "Show me Ka's strongest proof"
+      ]
+    },
+    {
+      "id": "authority-boundary",
+      "title": "Human authority",
+      "priority": 8,
+      "keywords": [
+        "authority",
+        "automatic",
+        "autonomous",
+        "approval",
+        "merge",
+        "deploy",
+        "payment",
+        "financial",
+        "trading",
+        "destructive"
+      ],
+      "phrases": [
+        "what can agents never do",
+        "human approval",
+        "agent authority",
+        "automatic actions"
+      ],
+      "answer": "Agents may retrieve bounded context, prepare work, run allowlisted checks, and produce evidence. Merges, deployments, access changes, external messages, destructive operations, security response, payments, financial decisions, and trading actions remain human-controlled unless a future capability is separately authenticated, scoped, confirmed, and audited.",
+      "links": [
+        {
+          "label": "Studio OS architecture",
+          "href": "https://github.com/kavatana/kavatana/blob/main/docs/STUDIO_OS_ARCHITECTURE.md"
+        },
+        {
+          "label": "AI workflow",
+          "href": "https://github.com/kavatana/kavatana/blob/main/docs/AI_NATIVE_WORKFLOW.md"
+        }
+      ],
+      "followUps": [
+        "How is public access isolated?",
+        "How are agent actions tracked?"
+      ]
+    }
+  ]
+}

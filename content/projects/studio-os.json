@@ -18,10 +18,11 @@
     "GitHub GraphQL",
     "localStorage"
   ],
-  "cardSummary": "Studio OS is a personal command center built around two explicit operating modes. The public Vercel demo keeps neutral state in localStorage, uses synthetic connector data, and disables live GitHub access in code. The private operator adds bounded workspace retrieval and a read-only GitHub organization queue, then turns evidence into guarded mission candidates that still require human judgment.",
+  "cardSummary": "Studio OS is a personal command center built around two explicit operating modes and separate human and agent lanes. The public Vercel demo keeps neutral state in localStorage, uses synthetic connector data, and disables private workspace capabilities. The private operator adds bounded workspace retrieval and a read-only GitHub organization queue, then routes evidence through Inbox, Ready, Agent, Review, Blocked, and Done without transferring final authority from the human owner.",
   "proofPoints": [
     "Bounded workspace retrieval inspects registered roots, shallow docs and manifests, package scripts, and Git state while excluding secret-like and generated paths.",
     "A read-only GitHub GraphQL adapter turns pull requests awaiting review, unassigned issues, and stale branches into an evidence-backed team queue.",
+    "A shared Command Center separates human capture, agent preparation, review, blocked work, and accepted proof with R0-R3 routing signals.",
     "Public demo mode blocks the live connector before token resolution, removes source maps, and scans build output for declared private markers and credential shapes.",
     "Local-first state uses SSR guards, safe JSON parsing, namespaced keys, and per-feature normalisers so malformed browser data degrades safely."
   ],
@@ -36,10 +37,11 @@
   "backendProof": [
     "Server-only workspace readers use registered roots, shallow inspection, timeouts, and explicit exclusions for secrets, dependencies, caches, and generated output.",
     "The GitHub adapter uses a read-only GraphQL query, a five-minute cache, and labeled synthetic fallback data when credentials or external responses are unavailable.",
-    "Public demo mode returns before GitHub token resolution, so a mistakenly present token cannot activate the live connector in that build.",
+    "Public demo mode returns before GitHub token resolution, and each of six private workspace routes returns PRIVATE_OPERATOR_ONLY before parsing input or invoking operator logic.",
+    "The public Command Center skips private workspace-map retrieval and disables delegation and safe-check execution at the UI boundary.",
     "Mission candidates carry context, proof targets, risk gates, and explicit human-only actions instead of executing consequential work automatically."
   ],
-  "architectureNote": "Studio OS has two deliberate modes rather than one backendless architecture. In the public demo, a neutral persona and namespaced localStorage provide the interactive experience while live connectors are disabled and synthetic data is labeled. In the private operator, Next.js server routes retrieve bounded evidence from registered local workspaces and a read-only GitHub organization adapter. Those signals feed a workspace brain that can prioritize attention and prepare mission candidates, but merges, deployments, database changes, security actions, trading actions, and other consequential operations remain human decisions. Missing paths, credentials, or external responses degrade to explicit fallback states rather than invented live data.",
+  "architectureNote": "Studio OS has two deliberate modes rather than one backendless architecture. In the public demo, a neutral persona and namespaced localStorage provide the interactive experience while live connectors are disabled, private workspace routes fail closed, and synthetic data is labeled. In the private operator, Next.js server routes retrieve bounded evidence from registered local workspaces and a read-only GitHub organization adapter. A shared Command Center routes that evidence through human and agent lanes with explicit review, blocked, and accepted states. Merges, deployments, database changes, security actions, trading actions, and other consequential operations remain human decisions. Missing paths, credentials, or external responses degrade to explicit fallback states rather than invented live data.",
   "whatThisProves": "I can design an AI-native system around context boundaries, evidence quality, privacy modes, degraded behavior, and human authority - not just add an AI prompt to a dashboard.",
   "coverImage": "/images/projects/studio-os/dark/room-desktop.png",
   "coverImageAlt": "Studio OS home showing a warm digital-room command center",
@@ -67,6 +69,7 @@
     "Bounded server-side workspace readers for registered project metadata, documentation, package scripts, and Git state.",
     "A read-only GitHub organization queue for pull requests awaiting review, unassigned issues, and stale branches.",
     "A workspace brain that converts evidence into prioritized attention signals and guarded mission candidates.",
+    "A shared Command Center with human and agent creation modes, evidence-backed lanes, risk signals, review outcomes, and portable handoffs.",
     "A public-demo hard guard plus repository, credential-shape, source-map, and build-output privacy checks."
   ],
   "whatILearned": [
@@ -77,9 +80,10 @@
     "A calm interface can still expose serious engineering evidence without becoming a dense operations dashboard."
   ],
   "results": [
-    "Current private branch passes dependency audit with zero vulnerabilities, ESLint, strict TypeScript, and a 28-route Next.js demo build.",
-    "The declared-marker privacy scan passed across 703 text build artifacts after JavaScript source maps were removed.",
-    "The public-demo guard, repository invariants, and credential-shape scan run locally and in GitHub Actions."
+    "The current private operator verification passes dependency audit with zero vulnerabilities, ESLint, strict TypeScript, and a Next.js demo build that generates 28 static pages.",
+    "The declared-marker privacy scan passed across 722 text build artifacts after JavaScript source maps were removed.",
+    "Runtime boundary checks passed for six guarded private workspace routes: every route returned HTTP 403, PRIVATE_OPERATOR_ONLY, and private, no-store in public demo mode.",
+    "A 390x844 production-demo audit returned HTTP 200 with no root overflow, no effective target below 44px, and no console, page, request, or error-response failures."
   ],
   "nextBackendStep": "Add authentication and authorization before any hosted private-operator deployment, then test connector failure modes with redacted fixtures. Keep live GitHub access disabled in the public demo and add write capabilities only when each action has an explicit approval and audit design.",
   "screenshots": [

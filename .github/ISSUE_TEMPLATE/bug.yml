@@ -1,0 +1,60 @@
+name: Portfolio bug
+description: Report reproducible incorrect behavior in the website or repository
+title: 'bug: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, personal data, private repository content, or vulnerability details. Use the private Security route for suspected vulnerabilities.
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Affected surface
+      options:
+        - Portfolio website
+        - Public case study or documentation
+        - Repository workflow or automation
+        - Other public surface
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Public URL or file path
+      description: Link to the affected page or name the repository path.
+      placeholder: https://kavatana.me/projects/example
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Current behavior
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should happen instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Provide the smallest public-safe sequence that reproduces the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Environment and redacted evidence
+      description: Include browser, device, logs, or screenshots only after removing sensitive information.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public-data confirmation
+      options:
+        - label: I removed credentials, personal data, private source, and vulnerability details from this report.
+          required: true

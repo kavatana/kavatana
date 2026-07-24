@@ -72,7 +72,7 @@ defineProps<{
 .meta-chip {
   background-color: var(--color-surface-1);
   border: 1px solid var(--color-border);
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius-sm);
   font-size: var(--text-sm);
@@ -94,6 +94,10 @@ defineProps<{
 }
 
 .btn-live {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--target-min-size);
   background-color: transparent;
   border: 1px solid var(--color-accent);
   color: var(--color-accent);
@@ -111,6 +115,11 @@ defineProps<{
 }
 
 .btn-repo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--target-min-size);
+  min-height: var(--target-min-size);
   color: var(--color-text-secondary);
   transition: color var(--transition-fast);
 }

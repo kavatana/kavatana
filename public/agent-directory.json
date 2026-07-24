@@ -1,0 +1,65 @@
+{
+  "version": "0.1.0",
+  "name": "Ka Vatana public agent directory",
+  "status": "foundation",
+  "protocol": "custom-directory",
+  "protocolNotice": "This is not an A2A Agent Card and exposes no remote agent endpoint.",
+  "concierge": {
+    "name": "Portfolio concierge",
+    "status": "live-local",
+    "entry": "https://kavatana.me/",
+    "authority": [
+      "answer from approved public content",
+      "cite public evidence",
+      "route visitors"
+    ],
+    "forbidden": [
+      "private context access",
+      "remote tool execution",
+      "external writes",
+      "impersonation"
+    ]
+  },
+  "districts": [
+    {
+      "id": "bayonhub",
+      "name": "BayonHub",
+      "agentStatus": "planned"
+    },
+    {
+      "id": "svaeng-yul",
+      "name": "Svaeng Yul",
+      "agentStatus": "planned"
+    },
+    {
+      "id": "chomkar",
+      "name": "Chomkar",
+      "agentStatus": "planned"
+    },
+    {
+      "id": "sat-digital",
+      "name": "Sat Digital",
+      "agentStatus": "planned"
+    },
+    {
+      "id": "vantrex",
+      "name": "Vantrex",
+      "agentStatus": "planned"
+    },
+    {
+      "id": "phsaros",
+      "name": "PHSAROS",
+      "agentStatus": "planned"
+    },
+    {
+      "id": "chnai-lab",
+      "name": "CHNAI LAB",
+      "agentStatus": "planned"
+    }
+  ],
+  "privateOperator": {
+    "name": "Studio OS operator",
+    "publiclyReachable": false
+  },
+  "contact": "https://kavatana.me/contact"
+}

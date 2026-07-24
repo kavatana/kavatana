@@ -82,6 +82,9 @@ defineProps<{
 
 /* Whole card is clickable via an overlay on the title link */
 .card-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min-size);
   text-decoration: none;
   color: inherit;
 }

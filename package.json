@@ -4,6 +4,9 @@
   "type": "module",
   "scripts": {
     "check:repo": "python3 scripts/verify_repo.py",
+    "check:community": "prettier --check .github/ISSUE_TEMPLATE .github/PULL_REQUEST_TEMPLATE.md CODE_OF_CONDUCT.md SUPPORT.md CONTRIBUTING.md",
+    "test:repo": "python3 -m unittest discover -s tests -v",
+    "test:concierge": "node --test tests/concierge-core.test.mjs",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -11,7 +14,7 @@
     "postinstall": "nuxt prepare",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",
-    "verify": "npm run check:repo && npm audit --audit-level=moderate && npm run typecheck && npm run lint && npm run generate"
+    "verify": "npm run check:repo && npm run test:repo && npm run test:concierge && npm run check:community && npm audit --audit-level=moderate && npm run typecheck && npm run lint && npm run generate"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -25,10 +28,12 @@
     "typescript": "^5.4.5",
     "vue": "^3.5.39",
     "vue-eslint-parser": "^10.4.1",
-    "vue-router": "^5.1.0",
     "vue-tsc": "^3.3.7"
   },
   "overrides": {
     "esbuild": "0.28.1"
+  },
+  "dependencies": {
+    "@lucide/vue": "^1.26.0"
   }
 }
