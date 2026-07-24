@@ -1,0 +1,109 @@
+{
+  "version": "0.1.0",
+  "status": "foundation",
+  "name": "Ka Vatana agent city",
+  "purpose": "A shared discovery, knowledge, handoff, and authority contract for public visitors, product-specific agents, and the private Studio OS operator.",
+  "principles": [
+    "One public source of truth per claim",
+    "Every answer links back to approved evidence",
+    "Public agents receive public context only",
+    "Each product agent owns one bounded domain",
+    "External writes require explicit identity, scope, confirmation, and audit",
+    "The human owner retains consequential authority"
+  ],
+  "layers": [
+    {
+      "id": "portfolio-concierge",
+      "name": "Portfolio concierge",
+      "status": "live-local",
+      "audience": "Public visitors",
+      "authority": "Read-only answers and navigation from committed public content",
+      "dataBoundary": "Public portfolio content only"
+    },
+    {
+      "id": "product-specialists",
+      "name": "Product specialist agents",
+      "status": "planned",
+      "audience": "Product visitors and authenticated users",
+      "authority": "Product-specific support first; authenticated tasks only after separate review",
+      "dataBoundary": "One product domain per agent"
+    },
+    {
+      "id": "studio-operator",
+      "name": "Studio OS private operator",
+      "status": "private",
+      "audience": "Ka Vatana and explicitly authorized teammates",
+      "authority": "Bounded retrieval, preparation, verification, and human-gated execution",
+      "dataBoundary": "Owner-controlled private context; never exposed through the public concierge"
+    }
+  ],
+  "districts": [
+    {
+      "id": "bayonhub",
+      "name": "BayonHub",
+      "domain": "Student opportunities",
+      "agentStatus": "planned",
+      "publicEntry": "/projects"
+    },
+    {
+      "id": "svaeng-yul",
+      "name": "Svaeng Yul",
+      "domain": "Khmer technology learning",
+      "agentStatus": "planned",
+      "publicEntry": "/projects/svaeng-yul"
+    },
+    {
+      "id": "chomkar",
+      "name": "Chomkar",
+      "domain": "Agricultural market access",
+      "agentStatus": "planned",
+      "publicEntry": "/projects/chomkar"
+    },
+    {
+      "id": "sat-digital",
+      "name": "Sat Digital",
+      "domain": "Community cybersecurity",
+      "agentStatus": "planned",
+      "publicEntry": "/projects"
+    },
+    {
+      "id": "vantrex",
+      "name": "Vantrex",
+      "domain": "Trading software",
+      "agentStatus": "planned",
+      "publicEntry": "/projects"
+    },
+    {
+      "id": "phsaros",
+      "name": "PHSAROS",
+      "domain": "SME operations",
+      "agentStatus": "planned",
+      "publicEntry": "/projects/phsaros"
+    },
+    {
+      "id": "chnai-lab",
+      "name": "CHNAI LAB",
+      "domain": "Student-run product studio",
+      "agentStatus": "planned",
+      "publicEntry": "https://github.com/chnai-lab"
+    }
+  ],
+  "taskStates": [
+    "discovered",
+    "answered",
+    "input-required",
+    "auth-required",
+    "human-review",
+    "completed",
+    "rejected",
+    "failed"
+  ],
+  "humanGates": [
+    "Identity and access changes",
+    "External messages and publication",
+    "Repository merge and deployment",
+    "Destructive or irreversible operations",
+    "Security and incident response",
+    "Payments, financial decisions, and trading actions"
+  ]
+}

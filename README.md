@@ -32,6 +32,10 @@ as engineering leverage rather than as a substitute for judgment.
   adds bounded workspace context and a read-only GitHub organization queue.
   The [human-agent control-plane case study](docs/STUDIO_OS_ARCHITECTURE.md)
   documents its authority, context, privacy, and verification boundaries.
+- **Portfolio concierge:** the site-wide guide answers and routes from committed
+  public evidence in the visitor's browser. It cites approved sources, keeps
+  session context in the current tab, makes no model or private-tool call, and
+  follows the [city-wide concierge contract](docs/AI_CONCIERGE_ARCHITECTURE.md).
 - **CHNAI LAB profile:** [github.com/chnai-lab](https://github.com/chnai-lab)
   presents the student-run product studio behind the broader portfolio.
 - **Collaboration system:** CHNAI LAB repositories use canonical agent guides,
@@ -55,7 +59,7 @@ problem, design decisions, safety boundary, and verification evidence.
 
 This profile is also a public Nuxt application, not only a narrative README.
 Its repository policy, claim boundaries, content schema, media references,
-credential patterns, and pinned CI dependencies are checked by a
+concierge behavior, credential patterns, and pinned CI dependencies are checked by a
 [zero-dependency Python verifier](scripts/verify_repo.py) with
 [regression tests](tests/test_verify_repo.py).
 
@@ -86,6 +90,7 @@ Read more:
 
 - [Startup portfolio map](docs/STARTUP_PORTFOLIO.md)
 - [Studio OS human-agent control plane](docs/STUDIO_OS_ARCHITECTURE.md)
+- [AI concierge and product-agent city](docs/AI_CONCIERGE_ARCHITECTURE.md)
 - [Open-source engineering proof](docs/OPEN_SOURCE.md)
 - [AI-native engineering workflow](docs/AI_NATIVE_WORKFLOW.md)
 - [GitHub account cleanup record](docs/GITHUB_ACCOUNT_CLEANUP.md)

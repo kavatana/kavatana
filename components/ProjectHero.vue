@@ -72,7 +72,7 @@ defineProps<{
 .meta-chip {
   background-color: var(--color-surface-1);
   border: 1px solid var(--color-border);
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius-sm);
   font-size: var(--text-sm);

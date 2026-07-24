@@ -16,6 +16,8 @@ results, deployment status, or features that are only planned.
 ## Source Map
 
 - `content/projects/*.json`: project claims, architecture, results, and media.
+- `content/concierge.json`: public concierge answers, intents, and citations.
+- `content/agent-city.json`: public, product-agent, and private-operator boundary.
 - `content/config.json`: public profile and contact metadata.
 - `pages/` and `components/`: Nuxt portfolio UI.
 - `docs/`: public engineering workflow and account decisions.
@@ -43,6 +45,10 @@ results, deployment status, or features that are only planned.
   explicit product and legal decision.
 - Do not describe synthetic/demo data as live data.
 - Do not make blanket privacy claims based only on bundler behavior.
+- Do not connect the public concierge to private memory, repositories,
+  connectors, credentials, or operator tools.
+- Do not publish an A2A Agent Card or claim remote-agent compatibility before a
+  conforming authenticated service exists.
 - Do not overwrite, reset, stash, stage, or commit dirty work outside the task.
 - Keep consequential GitHub, deployment, security, financial, and trading
   actions under explicit human control.

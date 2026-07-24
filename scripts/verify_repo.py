@@ -23,6 +23,16 @@ REQUIRED_FILES = [
     ".github/dependabot.yml",
     ".gitignore",
     "package.json",
+    "components/PortfolioConcierge.vue",
+    "composables/useConcierge.ts",
+    "content/agent-city.json",
+    "content/concierge.json",
+    "docs/AI_CONCIERGE_ARCHITECTURE.md",
+    "lib/concierge-core.d.mts",
+    "lib/concierge-core.mjs",
+    "public/agent-directory.json",
+    "public/llms.txt",
+    "tests/concierge-core.test.mjs",
     "tests/test_verify_repo.py",
     "docs/AI_NATIVE_WORKFLOW.md",
     "docs/GITHUB_ACCOUNT_CLEANUP.md",
@@ -143,6 +153,7 @@ def verify_package_scripts() -> None:
     for name in [
         "check:repo",
         "check:community",
+        "test:concierge",
         "test:repo",
         "typecheck",
         "lint",
@@ -200,6 +211,8 @@ def verify_claims() -> None:
         "ai-native-team-starter",
         "v1.0.0",
         "human-agent control-plane case study",
+        "portfolio concierge",
+        "visitor's browser",
     ]:
         if term not in readme:
             raise SystemExit(f"README.md is missing public evidence term: {term}")
@@ -232,6 +245,107 @@ def verify_studio_os_architecture() -> None:
     ]:
         if evidence not in studio_os:
             raise SystemExit(f"Studio OS case study is missing current evidence: {evidence}")
+
+
+def verify_concierge() -> None:
+    concierge = json.loads(read("content/concierge.json"))
+    if concierge.get("version") != "1.0.0":
+        raise SystemExit("Concierge content must declare version 1.0.0")
+
+    starters = concierge.get("starters")
+    topics = concierge.get("topics")
+    if not isinstance(starters, list) or len(starters) < 4:
+        raise SystemExit("Concierge must provide at least four starter questions")
+    if not isinstance(topics, list) or len(topics) < 8:
+        raise SystemExit("Concierge must provide at least eight grounded topics")
+
+    topic_ids = [topic.get("id") for topic in topics if isinstance(topic, dict)]
+    if len(topic_ids) != len(topics) or len(topic_ids) != len(set(topic_ids)):
+        raise SystemExit("Concierge topic IDs must be present and unique")
+
+    for topic in topics:
+        for field in ["title", "answer"]:
+            if not isinstance(topic.get(field), str) or not topic[field].strip():
+                raise SystemExit(f"Concierge topic {topic.get('id')} is missing {field}")
+        if not isinstance(topic.get("keywords"), list) or not topic["keywords"]:
+            raise SystemExit(f"Concierge topic {topic['id']} needs keywords")
+        links = topic.get("links")
+        if not isinstance(links, list) or not links:
+            raise SystemExit(f"Concierge topic {topic['id']} needs evidence links")
+        for link in links:
+            href = link.get("href") if isinstance(link, dict) else None
+            if not isinstance(href, str) or not (
+                href.startswith("/") or href.startswith("https://")
+            ):
+                raise SystemExit(
+                    f"Concierge topic {topic['id']} has an unsafe evidence link"
+                )
+
+    expected_districts = REQUIRED_STARTUP_TRACKS
+    city = json.loads(read("content/agent-city.json"))
+    districts = city.get("districts")
+    if not isinstance(districts, list):
+        raise SystemExit("Agent city must declare its districts")
+    district_ids = {
+        district.get("id") for district in districts if isinstance(district, dict)
+    }
+    if district_ids != expected_districts:
+        raise SystemExit("Agent city districts must match the seven startup tracks")
+    if city.get("status") != "foundation":
+        raise SystemExit("Agent city must remain labeled as a foundation")
+
+    public_directory = json.loads(read("public/agent-directory.json"))
+    if public_directory.get("protocol") != "custom-directory":
+        raise SystemExit("Public agent directory must not claim A2A compliance")
+    public_districts = public_directory.get("districts")
+    public_district_ids = {
+        district.get("id")
+        for district in public_districts
+        if isinstance(district, dict)
+    } if isinstance(public_districts, list) else set()
+    if public_district_ids != expected_districts:
+        raise SystemExit("Public agent directory must expose all seven districts")
+    if public_directory.get("privateOperator", {}).get("publiclyReachable") is not False:
+        raise SystemExit("Public agent directory must keep Studio OS unreachable")
+
+    component = read("components/PortfolioConcierge.vue")
+    for required in [
+        "@lucide/vue",
+        'aria-modal="true"',
+        'maxlength="500"',
+        "sessionStorage",
+        "content.boundary",
+    ]:
+        if required.casefold() not in component.casefold():
+            raise SystemExit(f"Concierge component is missing boundary: {required}")
+    for forbidden in ["v-html", "$fetch", "fetch("]:
+        if forbidden in component:
+            raise SystemExit(f"Concierge component must remain local-only: {forbidden}")
+
+    architecture = read("docs/AI_CONCIERGE_ARCHITECTURE.md")
+    normalized_architecture = " ".join(architecture.casefold().split())
+    for required in [
+        "current portfolio node",
+        "authority model",
+        "future gateway contract",
+        "not an a2a",
+        "prompt-injection",
+        "```mermaid",
+    ]:
+        if required.casefold() not in normalized_architecture:
+            raise SystemExit(
+                f"Concierge architecture is missing required boundary: {required}"
+            )
+
+    llms = " ".join(read("public/llms.txt").casefold().split())
+    for required in [
+        "claim boundary",
+        "does not impersonate",
+        "ai-native-team-starter",
+        "agent-directory.json",
+    ]:
+        if required not in llms:
+            raise SystemExit(f"llms.txt is missing public guidance: {required}")
 
 
 def verify_community_routes() -> None:
@@ -340,6 +454,7 @@ def main() -> None:
     verify_startup_portfolio()
     verify_claims()
     verify_studio_os_architecture()
+    verify_concierge()
     verify_community_routes()
     verify_no_credential_shapes()
     verify_public_media()

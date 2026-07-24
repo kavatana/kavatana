@@ -10,6 +10,7 @@
     </main>
     
     <AppFooter />
+    <PortfolioConcierge />
   </div>
 </template>
 

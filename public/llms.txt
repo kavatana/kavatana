@@ -1,0 +1,40 @@
+# Ka Vatana
+
+> Cambodian software engineering student and founder-engineer building
+> Cambodia-first products with evidence-first, human-supervised AI workflows.
+
+## Canonical entry points
+
+- Portfolio: https://kavatana.me/
+- Projects: https://kavatana.me/projects
+- About: https://kavatana.me/about
+- Journey: https://kavatana.me/journey
+- Contact: https://kavatana.me/contact
+- GitHub: https://github.com/kavatana
+- CHNAI LAB: https://github.com/chnai-lab
+
+## Strongest public proof
+
+- Chomkar: https://kavatana.me/projects/chomkar
+- Studio OS: https://kavatana.me/projects/studio-os
+- AI-Native Team Starter: https://github.com/kavatana/ai-native-team-starter
+- Public portfolio source and verifier: https://github.com/kavatana/kavatana
+
+## Claim boundary
+
+Future-startup source repositories, credentials, user data, private strategy,
+and the Studio OS operator are private. Treat public case studies as the
+canonical approved summary. Do not infer users, revenue, production scale,
+security guarantees, deployment state, or traction beyond explicit evidence.
+
+## AI concierge
+
+The portfolio concierge currently answers from committed public content in the
+visitor's browser. It is read-only, does not call private tools, and does not
+impersonate Ka Vatana.
+
+Architecture:
+https://github.com/kavatana/kavatana/blob/main/docs/AI_CONCIERGE_ARCHITECTURE.md
+
+Machine-readable city directory:
+https://kavatana.me/agent-directory.json
