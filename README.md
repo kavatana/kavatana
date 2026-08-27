@@ -34,20 +34,4 @@ where the work allows it.
   <img src="https://skillicons.dev/icons?i=prisma,postgres,redis,docker,cloudflare,vercel,githubactions,vite,pytorch,git&theme=dark" alt="Prisma, PostgreSQL, Redis, Docker, Cloudflare, Vercel, GitHub Actions, Vite, PyTorch, Git" />
 </p>
 
-### Shipped
-
-| | |
-|---|---|
-| [chomkar.com](https://chomkar.com) | Khmer-first market access for smallholder farmers |
-| [bayonhub.com](https://bayonhub.com) | Opportunities for Cambodian tech students |
-| [svaengyul.com](https://svaengyul.com) | QCM practice for Cambodian medical students |
-| [phsaros.vercel.app](https://phsaros.vercel.app) | Point-of-sale and operations for small retailers |
-| [twenty-five-sites](https://github.com/kavatana/twenty-five-sites) | 25 web designs, hand-built, no framework · **open source** |
-
-### Activity
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kavatana&hide_border=true&bg_color=0F0E0D&color=F7F3EF&line=F59B3C&point=F7F3EF&area=true&area_color=F59B3C&title_color=F7F3EF" width="100%" alt="Contribution graph" />
-</p>
-
 <p align="center"><em>Built for the market I am from.</em></p>

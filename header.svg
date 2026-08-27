@@ -67,17 +67,5 @@
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="1.0s" fill="freeze"/>
     </text>
 
-    <!-- Status chip: the dot breathes rather than blinks, which reads as alive
-         without demanding attention. -->
-    <g opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="1.3s" fill="freeze"/>
-      <rect x="782" y="52" width="156" height="30" rx="15" fill="#F59B3C" fill-opacity="0.1" stroke="#F59B3C" stroke-opacity="0.34"/>
-      <circle cx="801" cy="67" r="3.6" fill="#F59B3C">
-        <animate attributeName="opacity" values="1;0.35;1" dur="2.6s" repeatCount="indefinite"/>
-      </circle>
-      <text x="814" y="72" fill="#F0B472" font-size="12.5" font-weight="600" letter-spacing="0.9">
-        OPEN TO WORK
-      </text>
-    </g>
   </g>
 </svg>
