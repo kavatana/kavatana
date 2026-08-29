@@ -7,7 +7,7 @@
 -->
 
 <p align="center">
-  <img src="./header.svg" alt="Ka Vatana — founder-engineer, Cambodia" width="100%" />
+  <img src="./header.svg" alt="Ka Vatana — software engineering student, Cambodia" width="100%" />
 </p>
 
 <p align="center">
@@ -20,9 +20,9 @@
 
 ### About
 
-Founder-engineer in **Phnom Penh**, building products for Cambodia — a market most
-software is not designed for. Software Engineering student, shipping in the open
-where the work allows it.
+Software Engineering student in **Cambodia**, early in career and deliberately
+training like a product engineer: ship working systems, document the tradeoffs,
+protect user trust, build with AI agents.
 
 > Evidence over claims. If a thing is live, it is linked. If it is not, it says so.
 
@@ -31,7 +31,7 @@ where the work allows it.
 <p align="center">
   <img src="https://skillicons.dev/icons?i=ts,js,python,react,nextjs,vue,nuxtjs,tailwind,nodejs,nestjs&theme=dark" alt="TypeScript, JavaScript, Python, React, Next.js, Vue, Nuxt, Tailwind, Node.js, NestJS" />
   <br />
-  <img src="https://skillicons.dev/icons?i=prisma,postgres,redis,docker,cloudflare,vercel,githubactions,vite,pytorch,git&theme=dark" alt="Prisma, PostgreSQL, Redis, Docker, Cloudflare, Vercel, GitHub Actions, Vite, PyTorch, Git" />
+  <img src="https://skillicons.dev/icons?i=prisma,postgres,docker,cloudflare,vercel,githubactions,vite,pytorch,git&theme=dark" alt="Prisma, PostgreSQL, Docker, Cloudflare, Vercel, GitHub Actions, Vite, PyTorch, Git" />
 </p>
 
-<p align="center"><em>Built for the market I am from.</em></p>
+<p align="center"><em>Building for the market I am from.</em></p>

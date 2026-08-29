@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 220" width="1000" height="220" role="img" aria-label="Ka Vatana — founder-engineer, Cambodia">
-  <title>Ka Vatana — founder-engineer, Cambodia</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 220" width="1000" height="220" role="img" aria-label="Ka Vatana — software engineering student, Cambodia">
+  <title>Ka Vatana — software engineering student, Cambodia</title>
 
   <defs>
     <!-- Palette lifted from the portfolio's own design/tokens.md so the profile
@@ -58,12 +58,12 @@
     </rect>
 
     <text x="64" y="140" fill="#B9B2AA" font-size="18" font-weight="500" letter-spacing="0.2">
-      Founder-engineer · Cambodia
+      Software engineering student · Cambodia
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="0.7s" fill="freeze"/>
     </text>
 
     <text x="64" y="172" fill="#7E7770" font-size="14.5" font-weight="400">
-      Products for a market that is usually built for last.
+      Training like a product engineer, in the open.
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="1.0s" fill="freeze"/>
     </text>
 
