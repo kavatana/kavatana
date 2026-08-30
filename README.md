@@ -20,11 +20,10 @@
 
 ### About
 
-Software Engineering student in **Cambodia**, early in career and deliberately
-training like a product engineer: ship working systems, document the tradeoffs,
-protect user trust, build with AI agents.
+Software Engineering student in Cambodia. Learning full-stack and AI-assisted development by building and shipping real products.
 
-> Evidence over claims. If a thing is live, it is linked. If it is not, it says so.
+> Ship working systems, document the tradeoffs,
+protect user trust, build with AI agents.
 
 ### Stack
 
