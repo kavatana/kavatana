@@ -133,6 +133,15 @@ Only what a shipped or in-review project on kavatana.me actually uses.
 Most product source lives in private repositories under [CHNAI LAB](https://github.com/chnai-lab) and my own account, so the public graph shows the rhythm, not the volume.
 
 <p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=kavatana&show_icons=true&hide_border=true&bg_color=0F0E0D&title_color=F59B3C&icon_color=F59B3C&text_color=B9B2AA&ring_color=F59B3C&border_radius=14&hide_title=false&include_all_commits=true&count_private=true" alt="GitHub statistics for kavatana" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kavatana&layout=compact&hide_border=true&bg_color=0F0E0D&title_color=F59B3C&text_color=B9B2AA&border_radius=14&langs_count=8" alt="Most used languages in public repositories" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=kavatana&hide_border=true&background=0F0E0D&stroke=2A2622&ring=F59B3C&fire=F59B3C&currStreakNum=F7F3EF&sideNums=F7F3EF&currStreakLabel=F59B3C&sideLabels=B9B2AA&dates=6F675F&border_radius=14" alt="Contribution streak" />
+</p>
+
+<p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=kavatana&theme=github-compact&bg_color=0F0E0D&color=B9B2AA&line=F59B3C&point=F7F3EF&area=true&hide_border=true&radius=14" alt="Contribution activity over the last month" width="100%" />
 </p>
 
