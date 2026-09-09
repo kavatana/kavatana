@@ -22,7 +22,13 @@
   <a href="https://www.linkedin.com/in/ka-vatana-99b85440a/"><img src="https://img.shields.io/badge/LinkedIn-17130F?style=for-the-badge&logo=linkedin&logoColor=F2903A" alt="LinkedIn" /></a>
 </p>
 
-<br />
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=17&duration=2800&pause=1000&color=F2903A&center=true&vCenter=true&width=680&lines=Founder%2C+CHNAI+LAB+%C2%B7+Phnom+Penh;Product+and+full-stack+engineer;Evidence+before+status" alt="Founder, CHNAI LAB, Phnom Penh. Product and full-stack engineer. Evidence before status." />
+</p>
+
+<p align="center">
+  <a href="https://www.kavatana.me"><img src="https://raw.githubusercontent.com/kavatana/kavatana/main/brain.svg" alt="Vatana Brain: products and proof, the studio, skills, agents and current focus, each on its own inclined orbit around one core. Live and interactive on kavatana.me." width="100%" /></a>
+</p>
 
 <table>
 <tr>
