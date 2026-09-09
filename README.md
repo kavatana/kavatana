@@ -1,157 +1,68 @@
 <!--
-  Profile README for @kavatana.
-  This file, header.svg, and brain.svg must live in a repo named exactly
-  kavatana/kavatana, and that repo must be PUBLIC — GitHub renders the profile
-  README only from a public repo whose name matches the username. The relative
-  SVG paths animate because GitHub serves the raw files.
+  Profile README for @kavatana. Lives in kavatana/kavatana, which must stay
+  public — GitHub renders a profile README only from a public repository whose
+  name matches the username.
 
-  Every status line below is copied from the evidence labels the portfolio and
-  the CHNAI LAB org profile already publish. Change it there first, then here.
+  This page is deliberately short. It says who I am, how to reach me, and what
+  I build with. The work itself — every product, its status, and what each one
+  can prove — lives on kavatana.me, and is not repeated here.
 -->
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kavatana/kavatana/main/banner-dark.webp">
-    <img src="https://raw.githubusercontent.com/kavatana/kavatana/main/banner-light.webp" alt="Ka Vatana — founder of CHNAI LAB, Phnom Penh. I build the products, then say what they prove." width="100%" />
+    <img src="https://raw.githubusercontent.com/kavatana/kavatana/main/banner-light.webp" alt="Ka Vatana — founder of CHNAI LAB, product and full-stack engineer in Phnom Penh." width="100%" />
   </picture>
 </p>
 
 <p align="center">
-  <a href="https://www.kavatana.me"><img src="https://img.shields.io/badge/Portfolio-0F0E0D?style=for-the-badge&logo=nuxt&logoColor=F59B3C" alt="Portfolio" /></a>
-  <a href="https://github.com/chnai-lab"><img src="https://img.shields.io/badge/CHNAI%20LAB-0F0E0D?style=for-the-badge&logo=github&logoColor=F59B3C" alt="CHNAI LAB on GitHub" /></a>
-  <a href="https://www.linkedin.com/in/ka-vatana-99b85440a/"><img src="https://img.shields.io/badge/LinkedIn-0F0E0D?style=for-the-badge&logo=linkedin&logoColor=F59B3C" alt="LinkedIn" /></a>
-  <a href="mailto:kavatanaa@gmail.com"><img src="https://img.shields.io/badge/Email-0F0E0D?style=for-the-badge&logo=gmail&logoColor=F59B3C" alt="Email" /></a>
+  <a href="https://www.kavatana.me"><img src="https://img.shields.io/badge/Portfolio-17130F?style=for-the-badge&logo=nuxt&logoColor=F2903A" alt="Portfolio" /></a>
+  <a href="https://www.kavatana.me/cv"><img src="https://img.shields.io/badge/CV-17130F?style=for-the-badge&logo=readdotcv&logoColor=F2903A" alt="CV" /></a>
+  <a href="https://github.com/chnai-lab"><img src="https://img.shields.io/badge/CHNAI%20LAB-17130F?style=for-the-badge&logo=github&logoColor=F2903A" alt="CHNAI LAB" /></a>
+  <a href="https://www.linkedin.com/in/ka-vatana-99b85440a/"><img src="https://img.shields.io/badge/LinkedIn-17130F?style=for-the-badge&logo=linkedin&logoColor=F2903A" alt="LinkedIn" /></a>
 </p>
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=2600&pause=900&color=F59B3C&center=true&vCenter=true&width=720&lines=Student+engineer+%C2%B7+Product+builder;Cambodia-first+products%2C+built+in+the+open;Seven+product+tracks%2C+one+student+studio;Evidence+before+status" alt="Student engineer · Product builder. Cambodia-first products, built in the open. Seven product tracks, one student studio. Evidence before status." />
-</p>
-
-## At a glance
-
-<div align="center">
-
-| Product tracks | Client work | Studio | Studying |
-|:---:|:---:|:---:|:---:|
-| **07** | **01** | **CHNAI LAB** | **Year 1** |
-| Chomkar · PHSAROS · BayonHub · Svaeng Yul<br/>Sat Digital · Vantrex · LMS for Education | LEAP Everlasting Blooms<br/>live storefront | founded and owned<br/>student-run, Cambodian | Software Engineering<br/>BELTEI International University |
-
-</div>
-
-<p align="center">
-  <a href="https://www.kavatana.me"><img src="./brain.svg" alt="Vatana Brain: products, the studio, skills, agents, and current focus orbiting one center. Live on kavatana.me." width="100%" /></a>
-</p>
-
-## About
-
-Year 1 Software Engineering student in Cambodia, training like a product engineer in the open. I build Cambodia-first products with AI-native workflows, then say plainly what is shipped, what is simulated, and what is still being validated.
-
-> Ship working systems, document the tradeoffs,
-> protect user trust, build with AI agents.
-
-## Now
-
-- **Chomkar.com** — co-founder; B2B pre-harvest coordination for buyers, farmers, and co-ops. Live pre-pilot.
-- **CHNAI LAB** — the student-run product studio I founded and own: seven product tracks, owned products first, client builds second.
-- **Studio OS** — my private operator brain: a workspace ledger, a cached map of everything I run, and a session hook that opens every AI agent session already knowing my projects and how I work. The public map lives on [kavatana.me](https://www.kavatana.me).
-- **Studies** — Software Engineering at BELTEI International University; Year 1 English at IFL.
-- **Angkor Byte** — web system and digital project support, learning professional workflow and Cambodia-Japan collaboration.
-
-## What I run
-
-Status lines are the evidence boundary as it exists now, not a claim of traction or readiness.
-
-| Track | Direction | Where it stands |
-| --- | --- | --- |
-| [**Chomkar**](https://www.kavatana.me/projects/chomkar) | Agricultural market access | Live pre-pilot; demand, price, and availability claims stay human-reviewed |
-| [**PHSAROS**](https://www.kavatana.me/projects/phsaros) | SME operations: POS, inventory, customers, expenses | Live core; operator validation owed, ownership attribution under written review |
-| [**Svaeng Yul**](https://www.kavatana.me/projects/svaeng-yul) | Healthcare QCM practice for medical and nursing students | Private preview; instructor review and mobile validation open |
-| [**BayonHub**](https://www.kavatana.me/projects/bayonhub) | Opportunity infrastructure for Cambodian tech students | Full MVP branch under review, unmerged and undeployed |
-| **Sat Digital** | Community moderation for Telegram groups and sites | Rules deployed as a webhook; no pilot, users, revenue, or protection outcome |
-| [**Vantrex**](https://www.kavatana.me/projects/vantrex) | Trading decision support | Pre-launch: no customers, payments in test mode, no published track record |
-| [**LMS for Education**](https://www.kavatana.me/projects/lms-for-education) | Course delivery and assessment | Public demo on synthetic data; no institution runs on it |
-| [**LEAP Everlasting Blooms**](https://www.kavatana.me/projects/leap-everlasting-blooms) | Client storefront, Phnom Penh | Live and handed over; the brand and products are the client's |
-| [**Studio OS**](https://www.kavatana.me/projects/studio-os) | Personal operating brain, two modes | Public demo live; private operator local |
-| [**kavatana.me**](https://www.kavatana.me) | Public proof of work | Live; every claim checked against its repository |
-| [**Twenty-five sites**](https://github.com/kavatana/twenty-five-sites) | Design lab: 25 self-contained sites, no framework, no build | Public |
-
-## How I work
+<br />
 
 <table>
 <tr>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 
-**Evidence before status**
+### About
 
-Deployed, local, simulated, degraded, and planned work are named as such. A demo is not a launch.
+Product and full-stack engineer in Phnom Penh, and the founder of **CHNAI LAB**, a student-run product studio.
 
-</td>
-<td width="33%" valign="top">
-
-**People stay accountable**
-
-A person owns product judgment, verification, review, and the decision to ship.
+I build for the market I am from, and I label every piece of it by what it can prove today.
 
 </td>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 
-**AI stays bounded**
+### Now
 
-Agents get scoped context, never secrets, and their work stays reviewable.
+- Running **CHNAI LAB** — owned products first, client builds second
+- **Year 1 Software Engineering**, BELTEI International University
+- Web systems and digital project support, **Angkor Byte**
 
 </td>
 </tr>
 </table>
 
-## Stack
+### Stack
 
-Only what a shipped or in-review project on kavatana.me actually uses.
+<p>
+  <img src="https://skillicons.dev/icons?i=ts,js,vue,nuxtjs,react,nextjs,tailwind,vite,nodejs,nestjs&theme=dark&perline=10" alt="TypeScript, JavaScript, Vue, Nuxt, React, Next.js, Tailwind, Vite, Node.js, NestJS" />
+</p>
+<p>
+  <img src="https://skillicons.dev/icons?i=python,postgres,prisma,docker,cloudflare,vercel,githubactions,git,pytorch,figma&theme=dark&perline=10" alt="Python, PostgreSQL, Prisma, Docker, Cloudflare, Vercel, GitHub Actions, Git, PyTorch, Figma" />
+</p>
 
-<table>
-<tr>
-<td align="center" width="33%">
-
-**Frontend & product**
-
-<img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,vue,nuxtjs,tailwind,vite&theme=dark&perline=4" alt="TypeScript, JavaScript, React, Next.js, Vue, Nuxt, Tailwind, Vite" />
-
-</td>
-<td align="center" width="33%">
-
-**Backend & data**
-
-<img src="https://skillicons.dev/icons?i=nodejs,nestjs,prisma,postgres,python&theme=dark&perline=3" alt="Node.js, NestJS, Prisma, PostgreSQL, Python" />
-
-</td>
-<td align="center" width="33%">
-
-**Cloud, delivery & AI**
-
-<img src="https://skillicons.dev/icons?i=vercel,cloudflare,docker,githubactions,git,pytorch&theme=dark&perline=3" alt="Vercel, Cloudflare, Docker, GitHub Actions, Git, PyTorch" />
-
-</td>
-</tr>
-</table>
-
-## Activity
-
-Most product source lives in private repositories under [CHNAI LAB](https://github.com/chnai-lab) and my own account, so the public graph shows the rhythm, not the volume.
+<br />
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=kavatana&show_icons=true&hide_border=true&bg_color=0F0E0D&title_color=F59B3C&icon_color=F59B3C&text_color=B9B2AA&ring_color=F59B3C&border_radius=14&hide_title=false&include_all_commits=true&count_private=true" alt="GitHub statistics for kavatana" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kavatana&layout=compact&hide_border=true&bg_color=0F0E0D&title_color=F59B3C&text_color=B9B2AA&border_radius=14&langs_count=8" alt="Most used languages in public repositories" />
+  <img height="150" src="https://github-readme-stats.vercel.app/api?username=kavatana&show_icons=true&hide_border=true&bg_color=0F0E0D&title_color=F2903A&icon_color=F2903A&text_color=B9B2AA&ring_color=F2903A&border_radius=14&include_all_commits=true&count_private=true" alt="GitHub statistics" />
+  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kavatana&layout=compact&hide_border=true&bg_color=0F0E0D&title_color=F2903A&text_color=B9B2AA&border_radius=14&langs_count=6" alt="Most used languages" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=kavatana&hide_border=true&background=0F0E0D&stroke=2A2622&ring=F59B3C&fire=F59B3C&currStreakNum=F7F3EF&sideNums=F7F3EF&currStreakLabel=F59B3C&sideLabels=B9B2AA&dates=6F675F&border_radius=14" alt="Contribution streak" />
+  <a href="https://www.kavatana.me/projects"><strong>The products, their status, and what each one proves &rarr; kavatana.me</strong></a>
 </p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kavatana&theme=github-compact&bg_color=0F0E0D&color=B9B2AA&line=F59B3C&point=F7F3EF&area=true&hide_border=true&radius=14" alt="Contribution activity over the last month" width="100%" />
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kavatana/kavatana/output/github-snake-dark.svg" alt="A snake eating the contribution graph, regenerated daily" width="100%" />
-</p>
-
-<p align="center"><em>Building for the market I am from.</em></p>
