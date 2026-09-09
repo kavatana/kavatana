@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 46" width="700" height="46" role="img" aria-label="Founder, CHNAI LAB, Phnom Penh. Product and full-stack engineer. Evidence before status.">
+  <title>Ka Vatana</title>
+  <desc>Three true lines in rotation: founder of CHNAI LAB in Phnom Penh, product and full-stack engineer, and evidence before status.</desc>
+
+  <!--
+    A rotator, not a typewriter. A typewriter is only correct between
+    keystrokes, so every screenshot, thumbnail and first glance catches it
+    mid-word and reads as a bug. Each line here fades in whole, holds, and
+    fades out; every frame shows a complete sentence.
+  -->
+
+  <style>
+    .l {
+      font: 600 17px/1 ui-monospace, "JetBrains Mono", SFMono-Regular, Menlo, monospace;
+      letter-spacing: .04em;
+      fill: #F2903A;
+      opacity: 0;
+      animation: turn 10.5s infinite;
+    }
+    .l2 { animation-delay: 3.5s; }
+    .l3 { animation-delay: 7s; }
+    @keyframes turn {
+      0%     { opacity: 0; transform: translateY(5px); }
+      4%     { opacity: 1; transform: translateY(0); }
+      29%    { opacity: 1; transform: translateY(0); }
+      33.3%  { opacity: 0; transform: translateY(-5px); }
+      100%   { opacity: 0; transform: translateY(-5px); }
+    }
+    .dot { fill: #F2903A; animation: blink 2.4s steps(2, start) infinite; }
+    @keyframes blink { to { opacity: .25 } }
+    @media (prefers-reduced-motion: reduce) {
+      .l  { animation: none; opacity: 1; }
+      .l2, .l3 { opacity: 0; }
+      .dot { animation: none; }
+    }
+  </style>
+
+  <g text-anchor="middle" transform="translate(350 28)">
+    <text class="l l1">Founder, CHNAI LAB · Phnom Penh</text>
+    <text class="l l2">Product and full-stack engineer</text>
+    <text class="l l3">Evidence before status</text>
+  </g>
+  <circle class="dot" cx="350" cy="41" r="2.2"/>
+</svg>
