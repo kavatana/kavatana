@@ -10,7 +10,10 @@
 -->
 
 <p align="center">
-  <img src="./header.svg" alt="Ka Vatana — software engineering student, Cambodia" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kavatana/kavatana/main/banner-dark.webp">
+    <img src="https://raw.githubusercontent.com/kavatana/kavatana/main/banner-light.webp" alt="Ka Vatana — founder of CHNAI LAB, Phnom Penh. I build the products, then say what they prove." width="100%" />
+  </picture>
 </p>
 
 <p align="center">
@@ -21,17 +24,17 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=2600&pause=900&color=F59B3C&center=true&vCenter=true&width=720&lines=Student+engineer+%C2%B7+Product+builder;Cambodia-first+products%2C+built+in+the+open;Six+product+tracks%2C+one+student+studio;Evidence+before+status" alt="Student engineer · Product builder. Cambodia-first products, built in the open. Six product tracks, one student studio. Evidence before status." />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=2600&pause=900&color=F59B3C&center=true&vCenter=true&width=720&lines=Student+engineer+%C2%B7+Product+builder;Cambodia-first+products%2C+built+in+the+open;Seven+product+tracks%2C+one+student+studio;Evidence+before+status" alt="Student engineer · Product builder. Cambodia-first products, built in the open. Seven product tracks, one student studio. Evidence before status." />
 </p>
 
 ## At a glance
 
 <div align="center">
 
-| 🌱 Product tracks | 🏛️ Studio | 🧠 On the map | 🎓 Studying |
+| Product tracks | Client work | Studio | Studying |
 |:---:|:---:|:---:|:---:|
-| **06** | **01** | **22 things** | **Year 1** |
-| Chomkar · PHSAROS · Svaeng Yul<br/>BayonHub · Sat Digital · Vantrex | CHNAI LAB<br/>student-run, Cambodian | products, studio, skills,<br/>agents, current focus | Software Engineering<br/>BELTEI International University |
+| **07** | **01** | **CHNAI LAB** | **Year 1** |
+| Chomkar · PHSAROS · BayonHub · Svaeng Yul<br/>Sat Digital · Vantrex · LMS for Education | LEAP Everlasting Blooms<br/>live storefront | founded and owned<br/>student-run, Cambodian | Software Engineering<br/>BELTEI International University |
 
 </div>
 
@@ -49,7 +52,7 @@ Year 1 Software Engineering student in Cambodia, training like a product enginee
 ## Now
 
 - **Chomkar.com** — co-founder; B2B pre-harvest coordination for buyers, farmers, and co-ops. Live pre-pilot.
-- **CHNAI LAB** — the student-run product studio I lead: six product tracks, owned products first, bounded client work second.
+- **CHNAI LAB** — the student-run product studio I founded and own: seven product tracks, owned products first, client builds second.
 - **Studio OS** — my private operator brain: a workspace ledger, a cached map of everything I run, and a session hook that opens every AI agent session already knowing my projects and how I work. The public map lives on [kavatana.me](https://www.kavatana.me).
 - **Studies** — Software Engineering at BELTEI International University; Year 1 English at IFL.
 - **Angkor Byte** — web system and digital project support, learning professional workflow and Cambodia-Japan collaboration.
@@ -64,8 +67,10 @@ Status lines are the evidence boundary as it exists now, not a claim of traction
 | [**PHSAROS**](https://www.kavatana.me/projects/phsaros) | SME operations: POS, inventory, customers, expenses | Live core; operator validation owed, ownership attribution under written review |
 | [**Svaeng Yul**](https://www.kavatana.me/projects/svaeng-yul) | Healthcare QCM practice for medical and nursing students | Private preview; instructor review and mobile validation open |
 | [**BayonHub**](https://www.kavatana.me/projects/bayonhub) | Opportunity infrastructure for Cambodian tech students | Full MVP branch under review, unmerged and undeployed |
-| **Sat Digital** | Community cybersecurity for Telegram groups and sites | Working local prototype on synthetic fixtures only |
-| **Vantrex** | Trading decision support | Pre-launch; ownership and legal review open |
+| **Sat Digital** | Community moderation for Telegram groups and sites | Rules deployed as a webhook; no pilot, users, revenue, or protection outcome |
+| [**Vantrex**](https://www.kavatana.me/projects/vantrex) | Trading decision support | Pre-launch: no customers, payments in test mode, no published track record |
+| [**LMS for Education**](https://www.kavatana.me/projects/lms-for-education) | Course delivery and assessment | Public demo on synthetic data; no institution runs on it |
+| [**LEAP Everlasting Blooms**](https://www.kavatana.me/projects/leap-everlasting-blooms) | Client storefront, Phnom Penh | Live and handed over; the brand and products are the client's |
 | [**Studio OS**](https://www.kavatana.me/projects/studio-os) | Personal operating brain, two modes | Public demo live; private operator local |
 | [**kavatana.me**](https://www.kavatana.me) | Public proof of work | Live; every claim checked against its repository |
 | [**Twenty-five sites**](https://github.com/kavatana/twenty-five-sites) | Design lab: 25 self-contained sites, no framework, no build | Public |
