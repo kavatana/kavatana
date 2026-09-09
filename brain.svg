@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width="1000" height="380" role="img" aria-label="Vatana Brain: products, the studio, skills, agents and current focus orbiting one core">
+  <title>Vatana Brain</title>
+  <desc>An animated map of what Ka Vatana runs: product tracks and proof, one student studio, skill areas, agent layers, and current focus, each on its own inclined orbit around a black-hole core. The live, interactive version is on kavatana.me.</desc>
+
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8A54B" stop-opacity="0.20"/>
+      <stop offset="46%" stop-color="#E8A54B" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#E8A54B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="horizon" cx="50%" cy="50%" r="50%">
+      <stop offset="66%" stop-color="#E8A54B" stop-opacity="0"/>
+      <stop offset="83%" stop-color="#FFCB7E" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FFF1D6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="discA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E8A54B" stop-opacity="0"/>
+      <stop offset="28%" stop-color="#FFE6BC" stop-opacity="0.85"/>
+      <stop offset="52%" stop-color="#FFF6E4" stop-opacity="1"/>
+      <stop offset="76%" stop-color="#FFE6BC" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#E8A54B" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="discB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C77A2A" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#F2B268" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#C77A2A" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.2"/>
+    </filter>
+    <filter id="softer" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#F7F3EF" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+
+    <!-- Each ring is an inclined ellipse, and every node rides its own copy of
+         it. Rotating a whole group turns the map like a dartboard; moving each
+         node along a path lets near and far nodes pass each other, which is
+         what makes a flat drawing read as depth. -->
+    <path id="oProducts" d="M132,0 A132,44 0 1,1 -132,0 A132,44 0 1,1 132,0"/>
+    <path id="oStudio"   d="M168,0 A168,57 0 1,1 -168,0 A168,57 0 1,1 168,0"/>
+    <path id="oSkills"   d="M203,0 A203,69 0 1,1 -203,0 A203,69 0 1,1 203,0"/>
+    <path id="oAgents"   d="M238,0 A238,82 0 1,1 -238,0 A238,82 0 1,1 238,0"/>
+    <path id="oNow"      d="M272,0 A272,95 0 1,1 -272,0 A272,95 0 1,1 272,0"/>
+  </defs>
+
+  <rect width="1000" height="380" rx="14" fill="#0F0E0D"/>
+  <rect width="1000" height="380" rx="14" fill="url(#grid)"/>
+
+  <!-- starfield, breathing at different rates -->
+  <g fill="#D8CFC4">
+    <circle cx="62" cy="48" r="1" opacity=".55"><animate attributeName="opacity" values=".55;.15;.55" dur="6s" repeatCount="indefinite"/></circle>
+    <circle cx="130" cy="300" r=".8" opacity=".4"><animate attributeName="opacity" values=".4;.1;.4" dur="8s" begin="-2s" repeatCount="indefinite"/></circle>
+    <circle cx="212" cy="76" r="1.1" opacity=".5"><animate attributeName="opacity" values=".5;.18;.5" dur="7s" begin="-4s" repeatCount="indefinite"/></circle>
+    <circle cx="352" cy="30" r=".9" opacity=".45"><animate attributeName="opacity" values=".45;.12;.45" dur="9s" begin="-1s" repeatCount="indefinite"/></circle>
+    <circle cx="640" cy="40" r="1" opacity=".5"><animate attributeName="opacity" values=".5;.16;.5" dur="6.5s" begin="-3s" repeatCount="indefinite"/></circle>
+    <circle cx="742" cy="330" r=".8" opacity=".4"><animate attributeName="opacity" values=".4;.1;.4" dur="7.5s" begin="-5s" repeatCount="indefinite"/></circle>
+    <circle cx="866" cy="44" r="1.1" opacity=".5"><animate attributeName="opacity" values=".5;.14;.5" dur="8.5s" begin="-2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="944" cy="268" r=".9" opacity=".45"><animate attributeName="opacity" values=".45;.12;.45" dur="6.8s" begin="-6s" repeatCount="indefinite"/></circle>
+    <circle cx="470" cy="352" r=".8" opacity=".35"/><circle cx="560" cy="20" r=".7" opacity=".35"/>
+    <circle cx="182" cy="196" r=".6" opacity=".3"/><circle cx="912" cy="150" r=".6" opacity=".3"/>
+    <circle cx="300" cy="336" r=".7" opacity=".3"/><circle cx="806" cy="96" r=".7" opacity=".35"/>
+  </g>
+
+  <g transform="translate(520 186)">
+    <circle r="180" fill="url(#halo)"/>
+
+    <!-- the rings, each at its own inclination -->
+    <g fill="none" stroke-width="1">
+      <g transform="rotate(-16)"><use href="#oProducts" stroke="#1E9DBC" stroke-opacity=".22"/></g>
+      <g transform="rotate(9)"><use href="#oStudio" stroke="#E8A54B" stroke-opacity=".20" stroke-dasharray="2 6"/></g>
+      <g transform="rotate(-27)"><use href="#oSkills" stroke="#C650B8" stroke-opacity=".16"/></g>
+      <g transform="rotate(19)"><use href="#oAgents" stroke="#5FB3A0" stroke-opacity=".14" stroke-dasharray="2 6"/></g>
+      <g transform="rotate(-6)"><use href="#oNow" stroke="#8E97AB" stroke-opacity=".12"/></g>
+    </g>
+
+    <!-- accretion: two discs at different tilts, the near one brighter -->
+    <g transform="rotate(-14)">
+      <ellipse rx="126" ry="29" fill="none" stroke="url(#discA)" stroke-width="13" opacity=".5" filter="url(#soft)"/>
+      <ellipse rx="126" ry="29" fill="none" stroke="url(#discA)" stroke-width="2.6" opacity=".95"/>
+      <g fill="#FFF6E4">
+        <circle r="1.7"><animateMotion dur="7s" repeatCount="indefinite" path="M126,0 A126,29 0 1,1 -126,0 A126,29 0 1,1 126,0"/></circle>
+        <circle r="1.2" opacity=".8"><animateMotion dur="9s" begin="-3s" repeatCount="indefinite" path="M110,0 A110,25 0 1,1 -110,0 A110,25 0 1,1 110,0"/></circle>
+        <circle r="1.4" opacity=".7"><animateMotion dur="11s" begin="-6s" repeatCount="indefinite" path="M140,0 A140,33 0 1,1 -140,0 A140,33 0 1,1 140,0"/></circle>
+        <circle r="1" opacity=".6"><animateMotion dur="8s" begin="-2s" repeatCount="indefinite" path="M96,0 A96,22 0 1,1 -96,0 A96,22 0 1,1 96,0"/></circle>
+      </g>
+    </g>
+    <g transform="rotate(24)" opacity=".5">
+      <ellipse rx="152" ry="20" fill="none" stroke="url(#discB)" stroke-width="7" filter="url(#soft)"/>
+      <ellipse rx="152" ry="20" fill="none" stroke="url(#discB)" stroke-width="1.4"/>
+    </g>
+
+    <!-- the core, breathing -->
+    <circle r="52" fill="url(#horizon)" filter="url(#soft)">
+      <animate attributeName="r" values="52;55;52" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="36" fill="#000"/>
+    <circle r="36.5" fill="none" stroke="#E8A54B" stroke-opacity=".85" stroke-width="1"/>
+    <circle r="44" fill="none" stroke="#E8A54B" stroke-opacity=".22" stroke-width="1">
+      <animate attributeName="r" values="40;66;40" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".3;0;.3" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <text y="70" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="10" letter-spacing="2.6" fill="#B9B2AA">KA VATANA</text>
+
+    <!-- products and proof · 8 · each with a trailing ghost -->
+    <g transform="rotate(-16)">
+      <g fill="#1E9DBC">
+        <circle r="5"><animateMotion dur="34s" repeatCount="indefinite"><mpath href="#oProducts"/></animateMotion></circle>
+        <circle r="2.4" opacity=".35"><animateMotion dur="34s" begin="-.5s" repeatCount="indefinite"><mpath href="#oProducts"/></animateMotion></circle>
+        <circle r="3.6"><animateMotion dur="34s" begin="-4.2s" repeatCount="indefinite"><mpath href="#oProducts"/></animateMotion></circle>
+        <circle r="4.2"><animateMotion dur="34s" begin="-8.5s" repeatCount="indefinite"><mpath href="#oProducts"/></animateMotion></circle>
+        <circle r="2" opacity=".3"><animateMotion dur="34s" begin="-9s" repeatCount="indefinite"><mpath href="#oProducts"/></animateMotion></circle>
+        <circle r="3.2"><animateMotion dur="34s" begin="-12.8s" repeatCount="indefinite"><mpath href="#oProducts"/></animateMotion></circle>
+        <circle r="4.6"><animateMotion dur="34s" begin="-17s" repeatCount="indefinite"><mpath href="#oProducts"/></animateMotion></circle>
+        <circle r="3"><animateMotion dur="34s" begin="-21.2s" repeatCount="indefinite"><mpath href="#oProducts"/></animateMotion></circle>
+        <circle r="3.8"><animateMotion dur="34s" begin="-25.5s" repeatCount="indefinite"><mpath href="#oProducts"/></animateMotion></circle>
+        <circle r="3.4"><animateMotion dur="34s" begin="-29.7s" repeatCount="indefinite"><mpath href="#oProducts"/></animateMotion></circle>
+      </g>
+    </g>
+
+    <!-- the studio · 1 · the hub, ringed, and slower -->
+    <g transform="rotate(9)">
+      <g>
+        <circle r="14" fill="#E8A54B" opacity=".18" filter="url(#softer)"><animateMotion dur="58s" repeatCount="indefinite"><mpath href="#oStudio"/></animateMotion></circle>
+        <circle r="7" fill="#E8A54B"><animateMotion dur="58s" repeatCount="indefinite"><mpath href="#oStudio"/></animateMotion></circle>
+        <circle r="11" fill="none" stroke="#E8A54B" stroke-opacity=".7" stroke-width="1"><animateMotion dur="58s" repeatCount="indefinite"><mpath href="#oStudio"/></animateMotion></circle>
+      </g>
+    </g>
+
+    <!-- skills · 5 -->
+    <g transform="rotate(-27)">
+      <g fill="#C650B8">
+        <circle r="3.4"><animateMotion dur="72s" repeatCount="indefinite"><mpath href="#oSkills"/></animateMotion></circle>
+        <circle r="3"><animateMotion dur="72s" begin="-14.4s" repeatCount="indefinite"><mpath href="#oSkills"/></animateMotion></circle>
+        <circle r="3.6"><animateMotion dur="72s" begin="-28.8s" repeatCount="indefinite"><mpath href="#oSkills"/></animateMotion></circle>
+        <circle r="2.8"><animateMotion dur="72s" begin="-43.2s" repeatCount="indefinite"><mpath href="#oSkills"/></animateMotion></circle>
+        <circle r="3.2"><animateMotion dur="72s" begin="-57.6s" repeatCount="indefinite"><mpath href="#oSkills"/></animateMotion></circle>
+      </g>
+    </g>
+
+    <!-- agents · 3 -->
+    <g transform="rotate(19)">
+      <g fill="#5FB3A0">
+        <circle r="3.6"><animateMotion dur="90s" repeatCount="indefinite"><mpath href="#oAgents"/></animateMotion></circle>
+        <circle r="3"><animateMotion dur="90s" begin="-30s" repeatCount="indefinite"><mpath href="#oAgents"/></animateMotion></circle>
+        <circle r="3.2"><animateMotion dur="90s" begin="-60s" repeatCount="indefinite"><mpath href="#oAgents"/></animateMotion></circle>
+      </g>
+    </g>
+
+    <!-- now · 5 · the slowest ring -->
+    <g transform="rotate(-6)">
+      <g fill="#8E97AB">
+        <circle r="2.8"><animateMotion dur="118s" repeatCount="indefinite"><mpath href="#oNow"/></animateMotion></circle>
+        <circle r="2.4"><animateMotion dur="118s" begin="-23.6s" repeatCount="indefinite"><mpath href="#oNow"/></animateMotion></circle>
+        <circle r="3"><animateMotion dur="118s" begin="-47.2s" repeatCount="indefinite"><mpath href="#oNow"/></animateMotion></circle>
+        <circle r="2.5"><animateMotion dur="118s" begin="-70.8s" repeatCount="indefinite"><mpath href="#oNow"/></animateMotion></circle>
+        <circle r="2.7"><animateMotion dur="118s" begin="-94.4s" repeatCount="indefinite"><mpath href="#oNow"/></animateMotion></circle>
+      </g>
+    </g>
+  </g>
+
+  <!-- legend, left -->
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" fill="#B9B2AA">
+    <text x="52" y="66" font-size="11" letter-spacing="2.2" fill="#7E7770" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace">VATANA BRAIN</text>
+    <text x="52" y="94" font-size="20" font-weight="700" fill="#F7F3EF" letter-spacing="-0.4">Everything I run, in one map.</text>
+    <g transform="translate(52 130)">
+      <circle cx="4" cy="-4" r="4" fill="#1E9DBC"/><text x="16" y="0">Products &amp; proof</text><text x="196" y="0" text-anchor="end" fill="#7E7770" font-family="ui-monospace, Menlo, monospace" font-size="11">8</text>
+      <circle cx="4" cy="20" r="4" fill="#E8A54B"/><text x="16" y="24">Studio</text><text x="196" y="24" text-anchor="end" fill="#7E7770" font-family="ui-monospace, Menlo, monospace" font-size="11">1</text>
+      <circle cx="4" cy="44" r="4" fill="#C650B8"/><text x="16" y="48">Skills</text><text x="196" y="48" text-anchor="end" fill="#7E7770" font-family="ui-monospace, Menlo, monospace" font-size="11">5</text>
+      <circle cx="4" cy="68" r="4" fill="#5FB3A0"/><text x="16" y="72">Agents</text><text x="196" y="72" text-anchor="end" fill="#7E7770" font-family="ui-monospace, Menlo, monospace" font-size="11">3</text>
+      <circle cx="4" cy="92" r="4" fill="#8E97AB"/><text x="16" y="96">Now</text><text x="196" y="96" text-anchor="end" fill="#7E7770" font-family="ui-monospace, Menlo, monospace" font-size="11">5</text>
+    </g>
+    <text x="52" y="300" font-size="11" fill="#7E7770">Live and interactive on kavatana.me</text>
+  </g>
+
+  <!-- the three rules, right -->
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" fill="#B9B2AA" font-size="12.5">
+    <text x="948" y="66" text-anchor="end" font-size="11" letter-spacing="2.2" fill="#7E7770" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace">HOW I WORK</text>
+    <text x="948" y="102" text-anchor="end" fill="#F7F3EF" font-weight="600">Evidence before status</text>
+    <text x="948" y="122" text-anchor="end">Live, local, simulated, planned: named as such.</text>
+    <text x="948" y="156" text-anchor="end" fill="#F7F3EF" font-weight="600">People stay accountable</text>
+    <text x="948" y="176" text-anchor="end">A person owns judgment, review, and the ship.</text>
+    <text x="948" y="210" text-anchor="end" fill="#F7F3EF" font-weight="600">AI stays bounded</text>
+    <text x="948" y="230" text-anchor="end">Scoped context, never secrets, always reviewable.</text>
+  </g>
+</svg>
