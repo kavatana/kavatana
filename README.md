@@ -9,10 +9,7 @@
 -->
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kavatana/kavatana/main/banner-dark.webp">
-    <img src="https://raw.githubusercontent.com/kavatana/kavatana/main/banner-light.webp" alt="Ka Vatana — founder of CHNAI LAB, product and full-stack engineer in Phnom Penh." width="100%" />
-  </picture>
+  <img src="https://raw.githubusercontent.com/kavatana/kavatana/main/banner.svg" alt="Ka Vatana — founder of CHNAI LAB, product and full-stack engineer in Phnom Penh. TypeScript, Nuxt, Next.js, Node, Postgres, Python, Cloudflare, AI-native." width="100%" />
 </p>
 
 <p align="center">
@@ -23,44 +20,14 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kavatana/kavatana/main/line.svg" alt="Founder, CHNAI LAB, Phnom Penh. Product and full-stack engineer. Evidence before status." width="700" />
-</p>
-
-<p align="center">
   <a href="https://www.kavatana.me"><img src="https://raw.githubusercontent.com/kavatana/kavatana/main/brain.svg" alt="Vatana Brain: products and proof, the studio, skills, agents and current focus, each on its own inclined orbit around one core. Live and interactive on kavatana.me." width="100%" /></a>
 </p>
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### About
-
-Product and full-stack engineer in Phnom Penh, and the founder of **CHNAI LAB**, a student-run product studio.
-
-I build for the market I am from, and I label every piece of it by what it can prove today.
-
-</td>
-<td width="50%" valign="top">
 
 ### Now
 
 - Running **CHNAI LAB** — owned products first, client builds second
 - **Year 1 Software Engineering**, BELTEI International University
 - Web systems and digital project support, **Angkor Byte**
-
-</td>
-</tr>
-</table>
-
-### Stack
-
-<p>
-  <img src="https://skillicons.dev/icons?i=ts,js,vue,nuxtjs,react,nextjs,tailwind,vite,nodejs,nestjs&theme=dark&perline=10" alt="TypeScript, JavaScript, Vue, Nuxt, React, Next.js, Tailwind, Vite, Node.js, NestJS" />
-</p>
-<p>
-  <img src="https://skillicons.dev/icons?i=python,postgres,prisma,docker,cloudflare,vercel,githubactions,git,pytorch,figma&theme=dark&perline=10" alt="Python, PostgreSQL, Prisma, Docker, Cloudflare, Vercel, GitHub Actions, Git, PyTorch, Figma" />
-</p>
 
 <br />
 

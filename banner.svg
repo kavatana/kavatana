@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-label="Ka Vatana — founder of CHNAI LAB, product and full-stack engineer in Phnom Penh">
+  <title>Ka Vatana</title>
+  <desc>An animated identity banner: a perspective floor drifting under an orbital system, with the mark and name at rest on the left.</desc>
+
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#131110"/><stop offset="1" stop-color="#0B0A09"/>
+    </linearGradient>
+    <radialGradient id="warm" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#F2903A" stop-opacity=".28"/>
+      <stop offset="55%" stop-color="#F2903A" stop-opacity=".06"/>
+      <stop offset="100%" stop-color="#F2903A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#fff" stop-opacity=".05"/>
+      <stop offset="55%" stop-color="#fff" stop-opacity=".05"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fadeFloor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".85"/>
+    </linearGradient>
+    <mask id="floorMask"><rect width="1280" height="400" fill="url(#fadeFloor)"/></mask>
+    <clipPath id="frame"><rect width="1280" height="400" rx="16"/></clipPath>
+
+    <!-- inclined rings: the same trick the Brain uses, because depth comes from
+         nodes crossing in front of and behind, not from a bigger circle -->
+    <path id="r1" d="M120,0 A120,42 0 1,1 -120,0 A120,42 0 1,1 120,0"/>
+    <path id="r2" d="M158,0 A158,56 0 1,1 -158,0 A158,56 0 1,1 158,0"/>
+    <path id="r3" d="M196,0 A196,70 0 1,1 -196,0 A196,70 0 1,1 196,0"/>
+
+    <style>
+      .drift  { animation: drift 14s linear infinite; }
+      @keyframes drift { to { transform: translateY(46px); } }
+      .breathe { animation: breathe 9s ease-in-out infinite; }
+      @keyframes breathe { 0%,100% { opacity:.85 } 50% { opacity:1 } }
+      .float  { animation: float 7s ease-in-out infinite; }
+      @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-5px) } }
+      .shine  { animation: shine 11s ease-in-out infinite; }
+      @keyframes shine { 0% { transform: translateX(-1400px) } 55%,100% { transform: translateX(1400px) } }
+      .twinkle { animation: twinkle 5s ease-in-out infinite; }
+      .t2 { animation-delay: -1.7s } .t3 { animation-delay: -3.1s } .t4 { animation-delay: -4.4s }
+      @keyframes twinkle { 0%,100% { opacity:.5 } 50% { opacity:.12 } }
+      @media (prefers-reduced-motion: reduce) {
+        .drift, .breathe, .float, .shine, .twinkle { animation: none }
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1280" height="400" fill="url(#ground)"/>
+
+    <!-- a floor in perspective, drifting toward the viewer -->
+    <g mask="url(#floorMask)" opacity=".5">
+      <g class="drift" stroke="#F7F3EC" stroke-opacity=".07" stroke-width="1" fill="none">
+        <path d="M-200 200H1480M-200 246H1480M-200 292H1480M-200 338H1480M-200 384H1480M-200 430H1480"/>
+      </g>
+      <g stroke="#F7F3EC" stroke-opacity=".05" stroke-width="1" fill="none">
+        <path d="M640 190L-320 430M640 190L120 430M640 190L420 430M640 190L640 430M640 190L860 430M640 190L1160 430M640 190L1600 430"/>
+      </g>
+    </g>
+
+    <circle cx="1010" cy="200" r="300" fill="url(#warm)" class="breathe"/>
+
+    <!-- the orbital system, right -->
+    <g transform="translate(1010 200)">
+      <g fill="none" stroke-width="1">
+        <g transform="rotate(-18)"><use href="#r1" stroke="#F7F3EC" stroke-opacity=".16"/></g>
+        <g transform="rotate(12)"><use href="#r2" stroke="#F7F3EC" stroke-opacity=".12"/></g>
+        <g transform="rotate(-32)"><use href="#r3" stroke="#F2903A" stroke-opacity=".14" stroke-dasharray="2 7"/></g>
+      </g>
+      <g transform="rotate(-18)" fill="#F2903A">
+        <circle r="7"><animateMotion dur="19s" repeatCount="indefinite"><mpath href="#r1"/></animateMotion></circle>
+        <circle r="3" opacity=".4"><animateMotion dur="19s" begin="-.6s" repeatCount="indefinite"><mpath href="#r1"/></animateMotion></circle>
+        <circle r="4" opacity=".75"><animateMotion dur="19s" begin="-9.5s" repeatCount="indefinite"><mpath href="#r1"/></animateMotion></circle>
+      </g>
+      <g transform="rotate(12)" fill="#B9B2AA">
+        <circle r="5"><animateMotion dur="27s" repeatCount="indefinite"><mpath href="#r2"/></animateMotion></circle>
+        <circle r="3.4"><animateMotion dur="27s" begin="-13.5s" repeatCount="indefinite"><mpath href="#r2"/></animateMotion></circle>
+      </g>
+      <g transform="rotate(-32)" fill="#8E857A">
+        <circle r="3.6"><animateMotion dur="38s" repeatCount="indefinite"><mpath href="#r3"/></animateMotion></circle>
+        <circle r="2.8"><animateMotion dur="38s" begin="-19s" repeatCount="indefinite"><mpath href="#r3"/></animateMotion></circle>
+      </g>
+      <circle r="13" fill="#F2903A" opacity=".9" class="breathe"/>
+      <circle r="24" fill="none" stroke="#F2903A" stroke-opacity=".3" stroke-width="1">
+        <animate attributeName="r" values="18;46;18" dur="6.5s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-opacity" values=".32;0;.32" dur="6.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <g fill="#D8CFC4">
+      <circle class="twinkle" cx="700" cy="70" r="1.1"/>
+      <circle class="twinkle t2" cx="1180" cy="112" r="1"/>
+      <circle class="twinkle t3" cx="880" cy="330" r=".9"/>
+      <circle class="twinkle t4" cx="1230" cy="300" r="1"/>
+    </g>
+
+    <!-- identity, left -->
+    <g class="float">
+      <g transform="translate(60 56)">
+        <rect width="72" height="72" rx="18" fill="#F3EEE5"/>
+        <g fill="none" stroke="#17130F" stroke-width="10" stroke-linecap="round" transform="translate(4 4) scale(0.9922)">
+          <path d="M19 15v34"/><path d="M23.5 32L41 17.5"/><path d="M23.5 32L44 49"/>
+        </g>
+        <circle cx="54.2" cy="21.3" r="10.2" fill="#17130F"/>
+        <rect x="47.2" y="17.6" width="14.2" height="7" rx="3.5" fill="#0B0805"/>
+        <circle cx="51.5" cy="21.1" r="2.2" fill="#F2903A"/>
+        <circle cx="57.7" cy="21.1" r="2.2" fill="#6F675E"/>
+      </g>
+      <text x="152" y="106" font-family="ui-sans-serif, -apple-system, 'SF Pro Display', Inter, Segoe UI, Helvetica, Arial, sans-serif"
+            font-size="42" font-weight="800" letter-spacing="-1.6" fill="#F7F3EC">Ka Vatana</text>
+    </g>
+
+    <text x="60" y="176" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12.5"
+          font-weight="700" letter-spacing="3.4" fill="#F2903A">FOUNDER, CHNAI LAB · PHNOM PENH</text>
+
+    <g font-family="ui-sans-serif, -apple-system, 'SF Pro Text', Inter, Segoe UI, Helvetica, Arial, sans-serif"
+       font-size="17" fill="#A69C92">
+      <text x="60" y="222">Product and full-stack engineer. I build things people in</text>
+      <text x="60" y="248">Cambodia actually use, and I say plainly what each one can prove.</text>
+    </g>
+
+    <path d="M60 284H380" stroke="#F7F3EC" stroke-opacity=".14" stroke-width="1"/>
+
+    <g font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="11" fill="#BDB4AA">
+      <g fill="none" stroke="#F7F3EC" stroke-opacity=".16">
+        <rect x="60" y="304" width="94" height="28" rx="6"/><rect x="162" y="304" width="62" height="28" rx="6"/>
+        <rect x="232" y="304" width="80" height="28" rx="6"/><rect x="320" y="304" width="62" height="28" rx="6"/>
+        <rect x="390" y="304" width="82" height="28" rx="6"/><rect x="480" y="304" width="70" height="28" rx="6"/>
+        <rect x="558" y="304" width="96" height="28" rx="6"/><rect x="662" y="304" width="92" height="28" rx="6"/>
+      </g>
+      <text x="107" y="322" text-anchor="middle">TypeScript</text><text x="193" y="322" text-anchor="middle">Nuxt</text>
+      <text x="272" y="322" text-anchor="middle">Next.js</text><text x="351" y="322" text-anchor="middle">Node</text>
+      <text x="431" y="322" text-anchor="middle">Postgres</text><text x="515" y="322" text-anchor="middle">Python</text>
+      <text x="606" y="322" text-anchor="middle">Cloudflare</text><text x="708" y="322" text-anchor="middle">AI-native</text>
+    </g>
+
+    <text x="60" y="368" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="11.5"
+          letter-spacing="2" fill="#6F675F">KAVATANA.ME · UTC+7</text>
+
+    <!-- one slow highlight passing over the surface -->
+    <rect class="shine" width="420" height="400" fill="url(#sweep)"/>
+  </g>
+</svg>
