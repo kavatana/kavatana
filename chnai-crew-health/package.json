@@ -1,0 +1,17 @@
+{
+  "name": "chnai-crew-health",
+  "version": "0.7.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build-web.mjs",
+    "dev": "node scripts/dev.mjs",
+    "test": "npm run build && node --test tests/unit/*.test.mjs",
+    "test:api": ".venv/bin/python -m pytest api/tests -q",
+    "check": "node scripts/check.mjs",
+    "contracts": ".venv/bin/python scripts/export-contracts.py"
+  }
+}

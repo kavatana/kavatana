@@ -1,0 +1,33 @@
+{
+  "study": "OSD-569",
+  "evidence": "Retained NASA file manifest; public-access flags are not a clinical or copyright certification",
+  "release_review_date": "2026-10-22",
+  "files": [
+    {
+      "category": "Complete Blood Count",
+      "date_created": 1715762212.747,
+      "date_updated": 1715762212.747,
+      "file_name": "LSDS-7_Complete_Blood_Count_CBC.upload_SUBMITTED.csv",
+      "file_size": 26138,
+      "organization": "alsda",
+      "remote_url": "/geode-py/ws/studies/OSD-569/download?source=datamanager&file=LSDS-7_Complete_Blood_Count_CBC.upload_SUBMITTED.csv",
+      "restricted": false,
+      "subcategory": "Tabular Results Files",
+      "subdirectory": "Original Submitted",
+      "visible": true
+    },
+    {
+      "category": "Complete Blood Count",
+      "date_created": 1715762215.553,
+      "date_updated": 1715762215.553,
+      "file_name": "LSDS-7_Complete_Blood_Count_CBC_TRANSFORMED.csv",
+      "file_size": 9317,
+      "organization": "alsda",
+      "remote_url": "/geode-py/ws/studies/OSD-569/download?source=datamanager&file=LSDS-7_Complete_Blood_Count_CBC_TRANSFORMED.csv",
+      "restricted": false,
+      "subcategory": "Tabular Results Files",
+      "subdirectory": "ALSDA Transformed Files",
+      "visible": true
+    }
+  ]
+}

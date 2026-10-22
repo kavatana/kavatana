@@ -1,0 +1,26 @@
+name: Verify local simulation
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: npm ci --ignore-scripts
+      - run: python -m venv .venv
+      - run: .venv/bin/python -m pip install -r api/requirements.lock
+      - run: npm run check
+      - run: npm test
+      - run: npm run test:api
+      - run: npm run contracts
+      - run: git diff --exit-code -- packages/contracts/openapi.json

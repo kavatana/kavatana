@@ -1,0 +1,655 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "CHNAI local simulation API",
+    "description": "Fictional actors and measurements only. X-CHNAI-Actor is a demo selector, not authentication. One local API owns SQLite.",
+    "version": "0.7.0"
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/workspace": {
+      "get": {
+        "summary": "Workspace",
+        "operationId": "workspace_api_workspace_get",
+        "parameters": [
+          {
+            "name": "x-chnai-actor",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "enum": [
+                "crew",
+                "primary",
+                "backup",
+                "ground",
+                "technical"
+              ],
+              "type": "string",
+              "title": "X-Chnai-Actor"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/commands": {
+      "post": {
+        "summary": "Command",
+        "operationId": "command_api_commands_post",
+        "parameters": [
+          {
+            "name": "x-chnai-actor",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "enum": [
+                "crew",
+                "primary",
+                "backup",
+                "ground",
+                "technical"
+              ],
+              "type": "string",
+              "title": "X-Chnai-Actor"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CommandRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Accept": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "assignment.accept",
+            "title": "Name"
+          },
+          "assignmentId": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Assignmentid"
+          },
+          "expectedDependency": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Expecteddependency"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "assignmentId",
+          "expectedDependency"
+        ],
+        "title": "Accept"
+      },
+      "Approve": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "packet.approve",
+            "title": "Name"
+          },
+          "draftId": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Draftid"
+          },
+          "expectedHash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "title": "Expectedhash"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "draftId",
+          "expectedHash"
+        ],
+        "title": "Approve"
+      },
+      "CommandRequest": {
+        "properties": {
+          "expectedVersion": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Expectedversion"
+          },
+          "idempotencyKey": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]{16,100}$",
+            "title": "Idempotencykey"
+          },
+          "command": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Import"
+              },
+              {
+                "$ref": "#/components/schemas/Request"
+              },
+              {
+                "$ref": "#/components/schemas/Offer"
+              },
+              {
+                "$ref": "#/components/schemas/Accept"
+              },
+              {
+                "$ref": "#/components/schemas/Review"
+              },
+              {
+                "$ref": "#/components/schemas/Correct"
+              },
+              {
+                "$ref": "#/components/schemas/Preview"
+              },
+              {
+                "$ref": "#/components/schemas/Approve"
+              },
+              {
+                "$ref": "#/components/schemas/Deliver"
+              },
+              {
+                "$ref": "#/components/schemas/GroundReview"
+              },
+              {
+                "$ref": "#/components/schemas/Complete"
+              },
+              {
+                "$ref": "#/components/schemas/Duty"
+              },
+              {
+                "$ref": "#/components/schemas/Link"
+              },
+              {
+                "$ref": "#/components/schemas/Step"
+              }
+            ],
+            "title": "Command",
+            "discriminator": {
+              "propertyName": "name",
+              "mapping": {
+                "assessment.correct": "#/components/schemas/Correct",
+                "assignment.accept": "#/components/schemas/Accept",
+                "assignment.offer": "#/components/schemas/Offer",
+                "duty.set": "#/components/schemas/Duty",
+                "fixture.import": "#/components/schemas/Import",
+                "followup.complete": "#/components/schemas/Complete",
+                "ground.review": "#/components/schemas/GroundReview",
+                "link.set": "#/components/schemas/Link",
+                "packet.approve": "#/components/schemas/Approve",
+                "packet.deliver": "#/components/schemas/Deliver",
+                "packet.preview": "#/components/schemas/Preview",
+                "review.record": "#/components/schemas/Review",
+                "review.request": "#/components/schemas/Request",
+                "scenario.step": "#/components/schemas/Step"
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "expectedVersion",
+          "idempotencyKey",
+          "command"
+        ],
+        "title": "CommandRequest"
+      },
+      "Complete": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "followup.complete",
+            "title": "Name"
+          },
+          "followupId": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Followupid"
+          },
+          "outcome": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Outcome"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "followupId",
+          "outcome"
+        ],
+        "title": "Complete"
+      },
+      "Correct": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "assessment.correct",
+            "title": "Name"
+          },
+          "value": {
+            "type": "string",
+            "pattern": "^\\d{1,9}(\\.\\d{1,9})?$",
+            "title": "Value"
+          },
+          "unit": {
+            "type": "string",
+            "enum": [
+              "mL/min/kg",
+              "L/min"
+            ],
+            "title": "Unit"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Reason"
+          },
+          "expectedCurrentId": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Expectedcurrentid"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "value",
+          "unit",
+          "reason",
+          "expectedCurrentId"
+        ],
+        "title": "Correct"
+      },
+      "Deliver": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "packet.deliver",
+            "title": "Name"
+          },
+          "packetId": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Packetid"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "packetId"
+        ],
+        "title": "Deliver"
+      },
+      "Duty": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "duty.set",
+            "title": "Name"
+          },
+          "reviewerId": {
+            "type": "string",
+            "enum": [
+              "SIM-A02",
+              "SIM-A06"
+            ],
+            "title": "Reviewerid"
+          },
+          "available": {
+            "type": "boolean",
+            "title": "Available"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "reviewerId",
+          "available"
+        ],
+        "title": "Duty"
+      },
+      "GroundReview": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "ground.review",
+            "title": "Name"
+          },
+          "packetId": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Packetid"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Note"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "packetId",
+          "note"
+        ],
+        "title": "GroundReview"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Import": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "fixture.import",
+            "title": "Name"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "Import"
+      },
+      "Link": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "link.set",
+            "title": "Name"
+          },
+          "link": {
+            "type": "string",
+            "enum": [
+              "earth",
+              "lan",
+              "node",
+              "grant"
+            ],
+            "title": "Link"
+          },
+          "available": {
+            "type": "boolean",
+            "title": "Available"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "link",
+          "available"
+        ],
+        "title": "Link"
+      },
+      "Offer": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "assignment.offer",
+            "title": "Name"
+          },
+          "to": {
+            "type": "string",
+            "enum": [
+              "SIM-A02",
+              "SIM-A06"
+            ],
+            "title": "To"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "to",
+          "reason"
+        ],
+        "title": "Offer"
+      },
+      "Preview": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "packet.preview",
+            "title": "Name"
+          },
+          "question": {
+            "type": "string",
+            "maxLength": 500,
+            "title": "Question",
+            "default": ""
+          },
+          "includeNote": {
+            "type": "boolean",
+            "title": "Includenote",
+            "default": true
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "Preview"
+      },
+      "Request": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "review.request",
+            "title": "Name"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "Request"
+      },
+      "Review": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "review.record",
+            "title": "Name"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Note"
+          },
+          "trigger": {
+            "type": "string",
+            "maxLength": 300,
+            "minLength": 1,
+            "title": "Trigger"
+          },
+          "expectedDependency": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Expecteddependency"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "note",
+          "trigger",
+          "expectedDependency"
+        ],
+        "title": "Review"
+      },
+      "Step": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "const": "scenario.step",
+            "title": "Name"
+          },
+          "seconds": {
+            "type": "integer",
+            "maximum": 300.0,
+            "minimum": 1.0,
+            "title": "Seconds",
+            "default": 15
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "Step"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}
