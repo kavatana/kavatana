@@ -24,7 +24,7 @@ def create_app(db_path=None):
         yield
 
     app = FastAPI(
-        title='CHNAI local simulation API', version='0.7.0', lifespan=lifespan,
+        title='CHNAI local simulation API', version='0.7.1', lifespan=lifespan,
         description='Fictional actors and measurements only. X-CHNAI-Actor is a demo selector, not authentication. One local API owns SQLite.',
         openapi_url='/api/openapi.json', docs_url=None, redoc_url=None,
     )
@@ -58,7 +58,7 @@ def create_app(db_path=None):
 
     @app.get('/api/health')
     def health():
-        return {'status': 'ready', 'mode': 'fictional_local_simulation', 'version': '0.7.0'}
+        return {'status': 'ready', 'mode': 'fictional_local_simulation', 'version': '0.7.1'}
 
     @app.get('/api/workspace')
     def workspace(x_chnai_actor: Annotated[Actor, Header()]):

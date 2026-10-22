@@ -2,7 +2,7 @@
 
 An evidence-led astronaut health workflow: gather a completed assessment, evaluate its source and limits, assign an accountable reviewer, and send an exact approved snapshot when Earth becomes reachable.
 
-**v0.7 implements a durable local assessment-day slice. All operational crew data is fictional.** NASA supplies named references; this independent prototype is not clinically qualified or NASA-endorsed.
+**v0.7.1 implements a durable local assessment-day slice with recoverable client requests. All operational crew data is fictional.** NASA supplies named references; this independent prototype is not clinically qualified or NASA-endorsed.
 
 ## Start on your Mac
 
@@ -12,10 +12,13 @@ Requires Node.js 22+ and Python 3.12. Tested here with Node 24 and Python 3.12; 
 npm ci --ignore-scripts
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -r api/requirements.lock
+npm run doctor
 npm run dev
 ```
 
 Open **http://127.0.0.1:4173/**. The local API and UI share that origin. SQLite is created under `.runtime/` on first start and survives restarts. Dependencies need to be installed once; the local workflow then needs no cloud or model service. Stop with Ctrl+C.
+
+`npm run doctor` checks local setup and writes a machine/runtime report under `.runtime/qualification/`. It installs nothing and makes no network calls. Follow [local acceptance](docs/LOCAL_ACCEPTANCE.md) to record the browser walkthrough on the target Mac; setup checks alone do not qualify the UI.
 
 For a separate test/demo database:
 
@@ -55,6 +58,9 @@ CHNAI_DB=.runtime/demo-02.sqlite3 npm run dev
 - Ground receives only approved snapshots; technical responses contain metadata.
 - Simulated delivery and acknowledgement, independently recorded ground review and onboard completion.
 - Online database backup and restoration; checked migration hashes and foreign keys.
+- Immediate clearing of the previous role's view while loading; stale values are hidden after connection failures.
+- Same-command recovery after response loss and tab reload; unavailable retry storage blocks changes before sending.
+- Onboard-note sharing starts off and remains off through request/form recovery unless explicitly selected.
 
 The local seed begins after the fictional 39/50 assessment has arrived. Follow the [development walkthrough](docs/DEVELOPMENT.md) to complete the episode. The source files and behavior of the older browser mock are documented in [the v0.6 guide](docs/BROWSER_MOCK_V06.md).
 
@@ -67,7 +73,7 @@ npm run test:api
 npm run contracts
 ```
 
-Current result: **74 Node checks + 21 API integration checks pass**. The 12 in-app scenario checks are included in the 74. CI is configured; local success is not a claim that GitHub Actions has run. See [validation](docs/VALIDATION_V07.md) for the browser/runtime limitation and exact scope.
+Current local result: **86 Node checks + 21 API integration checks pass**. The 12 in-app scenario checks are included in the 86; the 12 client-transport checks are a separate subset of those 86. The [GitHub workflow](https://github.com/kavatana/kavatana/actions/workflows/chnai-verify.yml) runs checks for each pushed revision. See [v0.7.1 validation](docs/VALIDATION_V071.md) for the browser/runtime limitation and exact scope.
 
 Back up without copying an incomplete live WAL database:
 

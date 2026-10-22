@@ -9,3 +9,5 @@ if(!existsSync(python)){console.error('Run the Python setup steps in README.md f
 const child=spawn(python,['-m','uvicorn','chnai_api.main:create_app','--factory','--app-dir','api/src','--host',process.env.CHNAI_HOST??'127.0.0.1','--port',process.env.PORT??'4173'],{cwd:root,stdio:'inherit'});
 for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>child.kill(signal));
 child.on('exit',code=>process.exit(code??0));
+
+child.on('error',()=>{console.error('The Python runtime could not start. Run npm run doctor and the README setup steps.');process.exit(1);});

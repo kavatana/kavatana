@@ -4,8 +4,8 @@
 2. Make a feature branch. Domain rules belong in `packages/domain/src`, HTTP/transaction behavior in `api/src/chnai_api`, and interface behavior in `web/src`.
 3. For a schema change, add a new numbered SQL migration. Never edit an already-applied migration; its hash is checked at startup.
 4. For a command change, update Pydantic, the shared service adapter and generated OpenAPI together. Add a test for the changed failure boundary or intended outcome.
-5. Run `npm run check`, `npm test`, `npm run test:api`. The 12 in-app scenario checks are included in the 74 Node checks, not an additional count.
-6. Review the full local assessment path manually and verify original source labeling. Record actual hardware/browser and observed limitations.
+5. Run `npm run doctor`, `npm run check`, `npm test`, `npm run test:api`. The 12 in-app scenario checks and 12 client-transport checks are subsets of the 86 Node checks.
+6. Use `docs/LOCAL_ACCEPTANCE.md` to review the full local assessment path manually and verify original source labeling. Record actual hardware/browser and observed limitations.
 7. Use a different `CHNAI_DB` path for development, QA and a demo. Never promote a real person's data or an edited test database to a production environment.
 
 CI runs the static build, Node checks, SQLite/API integration tests and OpenAPI drift check. It has read-only repository permission and no deployment secrets. No production deployment pipeline or real-data environment is configured.

@@ -3,7 +3,7 @@
   "info": {
     "title": "CHNAI local simulation API",
     "description": "Fictional actors and measurements only. X-CHNAI-Actor is a demo selector, not authentication. One local API owns SQLite.",
-    "version": "0.7.0"
+    "version": "0.7.1"
   },
   "paths": {
     "/api/health": {

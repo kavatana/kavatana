@@ -10,3 +10,5 @@ cd kavatana/chnai-crew-health
 Then follow the root project README for Python setup, testing and local startup. The export contains the source, public research fixtures, documentation and prior mock screenshots. It excludes the Site-specific `.openai/hosting.json`, generated `dist/`, local databases, credentials and virtual environments. Build `dist/` with `npm run build`.
 
 The existing private static Site is a separate deployment target. The GitHub folder does not provision a public API or medical database.
+
+For the v0.7.1 acceptance pass, run `npm run doctor` after dependency setup, then follow `docs/LOCAL_ACCEPTANCE.md`. The new client-transport checks cover lost responses, reload recovery, stale-role clearing and note-sharing choices. Actual Safari interaction and the target Mac remain unverified. Local reports stay under ignored `.runtime/qualification/`; do not commit them or the database.
