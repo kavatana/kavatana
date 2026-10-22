@@ -39,3 +39,8 @@ The database defaults to `.runtime/chnai.sqlite3` and is excluded from git. A ne
 Use `scripts/backup.py` for SQLite online backup. Do not copy just a live `.sqlite3` file while its WAL may contain committed changes. Restore by selecting the checked backup as `CHNAI_DB` after stopping the old process. Backup, foreign-key integrity and reopening in a separate Python process are tested; hardware power-loss and disk corruption are not qualified.
 
 The local files are not encrypted. Demonstration role selectors are not identity authentication. This database must contain fictional operational data only. Research files remain outside these operational tables. Real medical data needs a separately reviewed storage, identity, retention, consent and security design.
+
+
+## Separate research store — v0.8
+
+`api/research_migrations/001_ingestion.sql` defines an independent database with raw-object registry, immutable ingestion jobs/file links, research observations, quality issues and attempt history. The default directory is `.runtime/chnai.research/`. It has no crew subject table or join. See [Research ingestion](RESEARCH_INGESTION.md) for the schema, fingerprint, atomicity limits and bounded queries. The crew backup command does not include this directory.

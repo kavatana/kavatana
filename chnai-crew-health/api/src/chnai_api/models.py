@@ -70,3 +70,7 @@ class CommandRequest(StrictModel):
     expectedVersion: Annotated[int, Field(ge=0)]
     idempotencyKey: Annotated[str, Field(pattern=r'^[a-zA-Z0-9_-]{16,100}$')]
     command: Command
+
+class ResearchImportRequest(StrictModel):
+    datasetId: Literal['OSD-569']
+    snapshotId: Literal['retained-cbc-2026-10-21']

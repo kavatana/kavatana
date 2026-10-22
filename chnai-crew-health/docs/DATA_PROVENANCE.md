@@ -49,3 +49,8 @@ NASA's [OSDR terms, Data Redistribution section](https://science.nasa.gov/refere
 Dataset: NASA Open Science Data Repository, **OSD-569**, *Whole Blood Measurements from the SpaceX Inspiration4 Mission (RNA-seq, epitranscriptome, WGS, clonal hematopoiesis, CBC)*. [Study and contributor/citation record](https://osdr.nasa.gov/bio/repo/data/studies/OSD-569). The exact retained bytes are identified above; the current full study version is not inferred from those checksums. Research data are credited to their contributors through NASA OSDR.
 
 The private hosted demonstration retains its audience. The GitHub export is project source in the user-designated public repository; it excludes private research archives, local databases, virtual environments, credentials and the Site hosting binding.
+
+
+## Durable research registry — 22 October 2026, v0.8
+
+The backend adapter boundary above is now implemented for these two retained CSVs: a source manifest, exact raw-object copies, parser/runtime fingerprint, immutable accepted observations, issues and an ingestion attempt record. The parser is shared with the browser importer, and each cross-file unit issue now includes both CSV record locations. No new source bytes, official dataset version, clinical normalization or crew identity linkage is introduced. The [research architecture](architecture/RESEARCH_INGESTION.md) documents storage/query behavior and the remaining general-adapter and backup limitations.

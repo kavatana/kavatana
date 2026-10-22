@@ -35,3 +35,8 @@ Ground views contain only received packet snapshots and ground review. They do n
 403 rejects role/ownership violations. 409 rejects conflicting revisions, changed retry payloads, stale previews or integrity conflicts. 422 rejects input/context errors. 503 reports local-service/storage unavailability. A client that loses a response must retry the **same body and key**, not create a new intent. After a confirmed 409, refresh, inspect the new state and consciously submit a new command.
 
 There is no NASA device endpoint, public astronaut telemetry subscription, clinical model endpoint or background sync promise. The simulated adapter is identified as such in the retained records and interface.
+
+
+## Research endpoints — v0.8
+
+The operational technical view above still contains metadata only. A separate engineering registry uses `/api/research`, `POST /api/research/imports`, and per-import manifest/observation/issue reads. Its `technical` demo selector permits inspection of retained public research data without access to operational medical fields. See [Research ingestion](RESEARCH_INGESTION.md) for exact routes, fixed import body, query bounds and failure behavior. There is no arbitrary URL/file upload or clinical-namespace promotion endpoint.

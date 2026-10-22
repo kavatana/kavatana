@@ -2,7 +2,7 @@
 
 An evidence-led astronaut health workflow: gather a completed assessment, evaluate its source and limits, assign an accountable reviewer, and send an exact approved snapshot when Earth becomes reachable.
 
-**v0.7.1 implements a durable local assessment-day slice with recoverable client requests. All operational crew data is fictional.** NASA supplies named references; this independent prototype is not clinically qualified or NASA-endorsed.
+**v0.8 adds a durable public-research ingestion registry alongside the local assessment-day workflow. All operational crew data is fictional.** NASA supplies named references and retained research files; this independent prototype is not clinically qualified or NASA-endorsed.
 
 ## Start on your Mac
 
@@ -28,6 +28,8 @@ CHNAI_DB=.runtime/demo-02.sqlite3 npm run dev
 
 `/index.html` opens the existing browser-local mock, scenario lab and separate NASA research importer. Its localStorage state is independent of the API database. The existing hosted Site serves this static browser mode; it does not host Python or SQLite.
 
+For durable research inspection, open **http://127.0.0.1:4173/research-registry.html**. Verify/import the retained OSD-569 files, inspect row provenance and unit-label conflicts, or run `npm run research:import`. The [research walkthrough](docs/RESEARCH_WALKTHROUGH.md) explains the separate database and source-use boundaries. No live NASA download happens during import.
+
 ## One project, explicit ownership
 
 | Folder | Owns |
@@ -35,9 +37,10 @@ CHNAI_DB=.runtime/demo-02.sqlite3 npm run dev
 | `web/src/` | Browser mock and API-connected interface modules |
 | `web/public/` | HTML, styles, mark and retained research CSV assets |
 | `api/src/chnai_api/` | FastAPI endpoints, validated commands, transactions and scoped responses |
-| `api/migrations/` | Versioned executable SQL schema |
+| `api/migrations/` | Versioned executable crew SQL schema |
+| `api/research_migrations/` | Independent research schema; never applied to the crew database |
 | `api/tests/` | Real SQLite/API integration, restart, recovery and failure tests |
-| `packages/domain/src/` | Shared tested comparison, review, assignment, packet and simulation rules |
+| `packages/domain/src/` | Shared tested comparison, review, assignment, packet, simulation and research-parsing functions |
 | `packages/contracts/` | Generated OpenAPI contract |
 | `tests/unit/` | Existing domain, mission, research and scenario checks |
 | `data/catalog/` | Source register and evidence-use boundaries |
@@ -61,6 +64,8 @@ CHNAI_DB=.runtime/demo-02.sqlite3 npm run dev
 - Immediate clearing of the previous role's view while loading; stale values are hidden after connection failures.
 - Same-command recovery after response loss and tab reload; unavailable retry storage blocks changes before sending.
 - Onboard-note sharing starts off and remains off through request/form recovery unless explicitly selected.
+- Research imports retain exact source objects, parser/runtime fingerprints, immutable source rows and quality issues in a separate database.
+- Repeat imports reuse the same verified job; bounded queries page through its observations and quality issues.
 
 The local seed begins after the fictional 39/50 assessment has arrived. Follow the [development walkthrough](docs/DEVELOPMENT.md) to complete the episode. The source files and behavior of the older browser mock are documented in [the v0.6 guide](docs/BROWSER_MOCK_V06.md).
 
@@ -73,7 +78,7 @@ npm run test:api
 npm run contracts
 ```
 
-Current local result: **86 Node checks + 21 API integration checks pass**. The 12 in-app scenario checks are included in the 86; the 12 client-transport checks are a separate subset of those 86. The [GitHub workflow](https://github.com/kavatana/kavatana/actions/workflows/chnai-verify.yml) runs checks for each pushed revision. See [v0.7.1 validation](docs/VALIDATION_V071.md) for the browser/runtime limitation and exact scope.
+Current local result: **86 Node checks + 34 API/storage integration checks pass**. The 12 in-app scenario checks and 12 client-transport checks are subsets of the 86; the 13 research-ingestion checks are a subset of the 34. The [GitHub workflow](https://github.com/kavatana/kavatana/actions/workflows/chnai-verify.yml) runs checks for each pushed revision. See [v0.8 validation](docs/VALIDATION_V08.md) for the browser/runtime limitation and exact scope.
 
 Back up without copying an incomplete live WAL database:
 
@@ -81,7 +86,7 @@ Back up without copying an incomplete live WAL database:
 .venv/bin/python scripts/backup.py .runtime/backups/assessment-day.sqlite3
 ```
 
-A backup destination must be new. To inspect a restored copy, stop the old process and start with `CHNAI_DB` pointing at that copy. A new, empty filename creates a fresh fictional seed instead.
+A backup destination must be new. To inspect a restored copy, stop the old process and start with `CHNAI_DB` pointing at that copy. A new, empty filename creates a fresh fictional seed instead. This command backs up the crew database only; a coordinated research-directory archive/restore workflow is not yet implemented.
 
 ## Architecture decisions and limits
 
@@ -90,6 +95,8 @@ A backup destination must be new. To inspect a restored copy, stop the old proce
 **Demonstration role selection is not authentication.** The API defaults to loopback, accepts only fictional actor keys and applies scoped read/write rules. It is not ready for Internet exposure or real medical records. No encrypted record store, physical device API, actual ground connection, LLM, fine-tuning or production environment is implemented. The UI's explanations are deterministic templates. Neither receipt nor follow-up completion is medical clearance.
 
 The public research importer verifies two retained OSD-569 CSVs in a separate namespace. It does not populate the fictional crew database. The [data provenance record](docs/DATA_PROVENANCE.md) describes checksums, the unit-label conflict, source terms and limits.
+
+The [research ingestion architecture](docs/architecture/RESEARCH_INGESTION.md) defines the separate schema, object retention, manifest fingerprint and bounded API. It supports this small retained snapshot; high-volume device, waveform and imaging adapters remain separate work.
 
 ## Read the evidence
 

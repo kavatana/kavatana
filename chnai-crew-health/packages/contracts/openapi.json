@@ -2,8 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "CHNAI local simulation API",
-    "description": "Fictional actors and measurements only. X-CHNAI-Actor is a demo selector, not authentication. One local API owns SQLite.",
-    "version": "0.7.1"
+    "description": "Fictional crew workflow plus a separate retained public-research registry. X-CHNAI-Actor is a demo selector, not authentication. Crew and research use distinct SQLite databases.",
+    "version": "0.8.0"
   },
   "paths": {
     "/api/health": {
@@ -98,6 +98,347 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/research": {
+      "get": {
+        "summary": "Research Overview",
+        "operationId": "research_overview_api_research_get",
+        "parameters": [
+          {
+            "name": "x-chnai-actor",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "enum": [
+                "crew",
+                "primary",
+                "backup",
+                "ground",
+                "technical"
+              ],
+              "type": "string",
+              "title": "X-Chnai-Actor"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/research/imports": {
+      "post": {
+        "summary": "Research Import",
+        "operationId": "research_import_api_research_imports_post",
+        "parameters": [
+          {
+            "name": "x-chnai-actor",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "enum": [
+                "crew",
+                "primary",
+                "backup",
+                "ground",
+                "technical"
+              ],
+              "type": "string",
+              "title": "X-Chnai-Actor"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResearchImportRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/research/imports/{job_id}": {
+      "get": {
+        "summary": "Research Manifest",
+        "operationId": "research_manifest_api_research_imports__job_id__get",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^RI-[a-f0-9]{64}$",
+              "title": "Job Id"
+            }
+          },
+          {
+            "name": "x-chnai-actor",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "enum": [
+                "crew",
+                "primary",
+                "backup",
+                "ground",
+                "technical"
+              ],
+              "type": "string",
+              "title": "X-Chnai-Actor"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/research/imports/{job_id}/observations": {
+      "get": {
+        "summary": "Research Observations",
+        "operationId": "research_observations_api_research_imports__job_id__observations_get",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^RI-[a-f0-9]{64}$",
+              "title": "Job Id"
+            }
+          },
+          {
+            "name": "subject",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^C[0-9]{3}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Subject"
+            }
+          },
+          {
+            "name": "analyte",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Analyte"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "After"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "x-chnai-actor",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "enum": [
+                "crew",
+                "primary",
+                "backup",
+                "ground",
+                "technical"
+              ],
+              "type": "string",
+              "title": "X-Chnai-Actor"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/research/imports/{job_id}/issues": {
+      "get": {
+        "summary": "Research Issues",
+        "operationId": "research_issues_api_research_imports__job_id__issues_get",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^RI-[a-f0-9]{64}$",
+              "title": "Job Id"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "After"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "x-chnai-actor",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "enum": [
+                "crew",
+                "primary",
+                "backup",
+                "ground",
+                "technical"
+              ],
+              "type": "string",
+              "title": "X-Chnai-Actor"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Successful Response",
@@ -551,6 +892,27 @@
           "name"
         ],
         "title": "Request"
+      },
+      "ResearchImportRequest": {
+        "properties": {
+          "datasetId": {
+            "type": "string",
+            "const": "OSD-569",
+            "title": "Datasetid"
+          },
+          "snapshotId": {
+            "type": "string",
+            "const": "retained-cbc-2026-10-21",
+            "title": "Snapshotid"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "datasetId",
+          "snapshotId"
+        ],
+        "title": "ResearchImportRequest"
       },
       "Review": {
         "properties": {
