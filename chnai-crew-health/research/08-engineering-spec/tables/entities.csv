@@ -1,0 +1,43 @@
+Table,Domain,Record grain,Stage,Constraint / invariant,Design authority
+actor,Identity,One human or service principal,Core,Unique external principal within identity provider; roles do not confer care access.,CHNAI proposal; P01/P02
+mission,Identity,One simulated mission context,Core,Mission type and phase are explicit. Public demo only permits simulation.,CHNAI proposal; P01/P02
+subject_namespace,Identity,One research cohort or simulation namespace,Core,Unique namespace name/type. Cross-namespace joins require separately approved linkage.,CHNAI proposal; P01/P02
+subject,Identity,One pseudonymous subject inside a namespace,Core,"Unique(namespace_id, external_ref); no real names or demographics required for fictional seeds.",CHNAI proposal; P01/P02
+mission_assignment,Identity,One time-bounded crew assignment,Core,End must follow start. A CMO role is not a physician credential.,CHNAI proposal; P01/P02
+policy_release,Policy,One immutable authorization policy release,Core,Only explicitly activated reviewed policy may grant access. Revoke with a new release.,CHNAI proposal; P01/P02
+care_relationship,Policy,One actor-subject-purpose grant,Core,"Recheck at read, mutation and packet release. Deny by default.",CHNAI proposal; P01/P02
+source_asset,Evidence,One acquired immutable source file,Core,"Unique(sha256, source_uri, source_version); matching bytes do not establish licensing.",CHNAI proposal; P01/P02
+evidence_release,Evidence,One versioned reviewed knowledge release,Core,Activation requires reviewer and applicability. Demo-only releases cannot become clinical approvals.,CHNAI proposal; P01/P02
+evidence_section,Evidence,One source section inside a release,Core,"Unique(release_id, source_asset_id, locator). Retain exact source locator and extraction hash.",CHNAI proposal; P01/P02
+quantity_definition,Terminology,One versioned measurable concept,Core,"Unique(code, version). Distinguish VO2 from VO2max and interbeat interval from breathing rate.",CHNAI proposal; P01/P02
+field_mapping,Terminology,One reviewed source-field transformation,Core,"Unique(adapter_version, source_schema, raw_field, raw_unit). Unknown mappings quarantine.",CHNAI proposal; P01/P02
+device_session,Ingestion,One producer session and clock-reset segment,Core,"Unique(device_ref, session_ref, segment). A reboot starts a new segment.",CHNAI proposal; P01/P02
+time_context,Records,One original time expression and optional mapping,Core,"Keep event time, receive time and replay time separate. Never invent UTC for L-/R+ dates.",CHNAI proposal; P01/P02
+ingest_batch,Ingestion,One idempotent import request,Core,"Unique(producer_ref, namespace_id, idempotency_key). Same key/different hash is a conflict.",CHNAI proposal; P01/P02
+ingest_record,Ingestion,One row/packet accounted for in a batch,Core,"Unique(batch_id, source_record_key). Each record has exactly one terminal outcome.",CHNAI proposal; P01/P02
+object_manifest,Storage,One original or derived file/chunk,Core,Register ready only after atomic publication and hash check. No uploaded path traversal.,CHNAI proposal; P01/P02
+observation,Records,One stable observation identity,Core,"Unique(namespace_id, producer_ref, source_record_key). Current pointer update and audit are atomic.",CHNAI proposal; P01/P02
+observation_revision,Records,One immutable revision of one observation,Core,"Unique(observation_id, revision_no). Exactly one value branch; context and subject namespace must agree.",CHNAI proposal; P01/P02
+quality_issue,Records,One explicit defect attached to a revision,Core,A collection defect must not be labeled as physiological deterioration.,CHNAI proposal; P01/P02
+baseline_selection,Evaluation,One reviewed baseline link for a target context,Core,Baseline and current belong to same subject and compatible quantity/method; never nearest-row guessing.,CHNAI proposal; P01/P02
+rule_definition,Evaluation,One immutable versioned comparison rule,Core,Evidence and engineering algorithm stay separate. Unreviewed clinical content cannot activate clinically.,CHNAI proposal; P01/P02
+derivation_run,Evaluation,One evaluation of an exact dependency set,Core,"No stale inputs. Dependency hash includes revisions, baseline, rule, mapping and evidence release.",CHNAI proposal; P01/P02
+derivation_input,Evaluation,One exact input revision used by a derivation,Core,"Unique(run_id, input_role, revision_id); no mutable current pointers in historical derivations.",CHNAI proposal; P01/P02
+finding,Evaluation,One interpretable result or applicability failure,Core,Separate comparison status from care priority. No global health score.,CHNAI proposal; P01/P02
+review_episode,Workflow,One accountable review episode,Core,Unique active deduplication key. Version check on every transition.,CHNAI proposal; P01/P02
+episode_finding,Workflow,One finding linked to an episode,Core,"Unique(episode_id, finding_id); never silently replace historical links.",CHNAI proposal; P01/P02
+action_record,Workflow,One accountable action and disposition,Core,AI cannot authorize or perform a care action. Allowed MVP action is request/record review.,CHNAI proposal; P01/P02
+follow_up,Workflow,One continuing responsibility,Core,Must have a due time OR named trigger and a responsible actor; packet receipt does not close it.,CHNAI proposal; P01/P02
+handoff_draft,Transfer,One editable purpose-limited export draft,Core,Draft preview is not permission to release; exact payload rechecked at release.,CHNAI proposal; P01/P02
+handoff_packet,Transfer,One immutable released packet version,Core,"Release, audit and transfer intent commit together. Superseding a packet does not erase delivery.",CHNAI proposal; P01/P02
+packet_item,Transfer,One exact revision included in a packet,Core,"Unique(packet_id, revision_id); dependency invalidation can locate every affected packet.",CHNAI proposal; P01/P02
+outbox_attempt,Transfer,One durable send attempt for a released packet,Core,"Unique(packet_id, attempt_no). At-least-once with receiver deduplication by packet ID/hash.",CHNAI proposal; P01/P02
+transfer_receipt,Transfer,One authenticated receiver acknowledgement,Core,"Unique(recipient_ref, packet_id, payload_hash). Receipt cannot imply medical review.",CHNAI proposal; P01/P02
+clinical_review,Transfer,One human review of an exact packet,Core,Independent from transport receipt; wrong packet/hash/relationship denied.,CHNAI proposal; P01/P02
+command_receipt,Operations,One durable idempotent mutation result,Core,"Unique(actor_id, scope, idempotency_key). Write receipt and domain mutation in the same transaction.",CHNAI proposal; P01/P02
+job,Operations,One durable bounded background task,Core,"Unique(kind, dependency_hash). Commit only with current lease and current dependencies.",CHNAI proposal; P01/P02
+audit_event,Operations,One append-only decision or mutation record,Core,No delete/update in normal service role. Minimize medical content; hash chain is not tamper-proof storage.,CHNAI proposal; P01/P02
+model_run,AI,One optional bounded explanation attempt,Core,"Structured facts are authoritative. Late, altered or uncited outputs are discarded.",CHNAI proposal; P01/P02
+specimen,Lab extension,One collected laboratory specimen,Extension,Use only for lab observations. Do not fabricate specimen context for exercise or waveform data.,CHNAI proposal; P01/P02
+signal_descriptor,Signal extension,One channel in an object,Extension,"Unique(object_id, channel_index). Preserve calibration and irregular timing.",CHNAI proposal; P01/P02
+context_event,Context extension,One activity or environmental context interval,Extension,Context association requires overlapping time/location; correlation is not causation.,CHNAI proposal; P01/P02

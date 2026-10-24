@@ -1,0 +1,16 @@
+ID,Topic,Working position,Status,Evidence,Consequence,Resolution
+AS01,Mission setting,Long-duration deep-space transit simulation,Proposed,S003; S068,Makes delayed ground support a first-class constraint. No mission or vehicle is claimed.,Select the exact scenario after full challenge release.
+AS02,Primary user,One crew member reviewing their own health,Summary-derived,S001; R011,The main path must finish onboard.,Validate with a health reviewer and representative users.
+AS03,Supporting users,Assigned CMO and authorized ground clinician,Proposed from role evidence,S010; S054; S056,"A CMO is a trained role, not automatically a physician.",Review the proposed access matrix.
+AS04,Build scope,One health-review episode with follow-up and delayed handoff,Proposed,S001; S003,Other health domains retain honest availability states.,Choose the signal or lab trigger before implementation.
+AS05,Evidence population,Public research data kept in separate source cohorts,Observed,S024; S025; R002; R017,No composite real astronaut assembled from unrelated datasets.,Review every future join.
+AS06,Demonstration identity,Explicitly simulated operational crew,Proposed,S024; S008,Public demo has no real private medical record.,Keep simulation labels on screen and in exports.
+AS07,Acquisition in first demo,Versioned file/replay adapter; hardware optional,Proposed,E004; S055,"We have public files and documented SDKs, but no captured flight-device payload.",Real hardware requires a device/firmware/export test.
+AS08,AI role,Grounded explanation and draft handoff with bounded tools,Proposed,S005; S009; R014,Deterministic code owns calculations and workflow permissions.,Run the AI evaluation plan before enabling outputs.
+AS09,Device target,Available development laptop and landscape tablet for tests,Proposed,S020; S021; S035,"Exact mission device, OS, viewport and compute budget remain unconfirmed.",Inventory team hardware; do not label it NASA flight hardware.
+AS10,Capacity envelope,"6 crew, 180 days, 10 one-Hz scalar channels",Planning only,E004; workload model,"Sizing experiment, not a published NASA mission profile.",Benchmark at smaller demo and larger stress sizes.
+AS11,Communication scenarios,"Connected, delayed, unavailable; configurable delay",Proposed from mission evidence,S003; S068; E010,Simulation must distinguish network and clinical review states.,Use 20-minute one-way delay only as a labeled test condition.
+AS12,Clinical authority,Mission-approved procedures and accountable human reviewer,Required dependency,S008; S010; S054,No general treatment advice or autonomous EVA clearance.,Recruit reviewer and define permitted next steps.
+AS13,Challenge baseline,Summary confirmed; full statement and resources pending,Observed,R011; R012,requirements baseline v0.1 is provisional.,Reconcile on 28 October 2026.
+AS14,Submission rules,2025 guide remains historical planning material,Observed,R012; original preparation,2026 limits and local judging claims need final verification.,Reconcile on 13 November 2026.
+AS15,Research method,Purpose-led scoping review with reproducible acquisition,Method,collection_manifest.json,No claim of exhaustive literature coverage or clinical validation.,Expand only when a source can change a requirement or decision.

@@ -1,0 +1,159 @@
+[
+  {
+    "study": "OSD-140",
+    "inventory_rows": 7,
+    "states": {
+      "Downloaded": 1,
+      "Catalog only": 6
+    },
+    "restricted_flags": {
+      "False": 7
+    },
+    "note": "Remote catalog entries, not downloaded files. Per-file source remains 06_Architecture_and_Decisions/files.csv."
+  },
+  {
+    "study": "OSD-53",
+    "inventory_rows": 3,
+    "states": {
+      "Downloaded": 2,
+      "Catalog only": 1
+    },
+    "restricted_flags": {
+      "False": 3
+    },
+    "note": "Remote catalog entries, not downloaded files. Per-file source remains 06_Architecture_and_Decisions/files.csv."
+  },
+  {
+    "study": "OSD-530",
+    "inventory_rows": 8,
+    "states": {
+      "Downloaded": 1,
+      "Catalog only": 7
+    },
+    "restricted_flags": {
+      "False": 8
+    },
+    "note": "Remote catalog entries, not downloaded files. Per-file source remains 06_Architecture_and_Decisions/files.csv."
+  },
+  {
+    "study": "OSD-569",
+    "inventory_rows": 11,
+    "states": {
+      "Downloaded": 3,
+      "Catalog only": 8
+    },
+    "restricted_flags": {
+      "False": 11
+    },
+    "note": "Remote catalog entries, not downloaded files. Per-file source remains 06_Architecture_and_Decisions/files.csv."
+  },
+  {
+    "study": "OSD-570",
+    "inventory_rows": 12,
+    "states": {
+      "Downloaded": 1,
+      "Catalog only": 11
+    },
+    "restricted_flags": {
+      "False": 12
+    },
+    "note": "Remote catalog entries, not downloaded files. Per-file source remains 06_Architecture_and_Decisions/files.csv."
+  },
+  {
+    "study": "OSD-571",
+    "inventory_rows": 14,
+    "states": {
+      "Downloaded": 9,
+      "Catalog only": 5
+    },
+    "restricted_flags": {
+      "False": 14
+    },
+    "note": "Remote catalog entries, not downloaded files. Per-file source remains 06_Architecture_and_Decisions/files.csv."
+  },
+  {
+    "study": "OSD-572",
+    "inventory_rows": 5404,
+    "states": {
+      "Downloaded": 1,
+      "Catalog only": 5403
+    },
+    "restricted_flags": {
+      "False": 5404
+    },
+    "note": "Remote catalog entries, not downloaded files. Per-file source remains 06_Architecture_and_Decisions/files.csv."
+  },
+  {
+    "study": "OSD-573",
+    "inventory_rows": 659,
+    "states": {
+      "Downloaded": 1,
+      "Catalog only": 658
+    },
+    "restricted_flags": {
+      "False": 659
+    },
+    "note": "Remote catalog entries, not downloaded files. Per-file source remains 06_Architecture_and_Decisions/files.csv."
+  },
+  {
+    "study": "OSD-574",
+    "inventory_rows": 164,
+    "states": {
+      "Downloaded": 1,
+      "Catalog only": 163
+    },
+    "restricted_flags": {
+      "False": 164
+    },
+    "note": "Remote catalog entries, not downloaded files. Per-file source remains 06_Architecture_and_Decisions/files.csv."
+  },
+  {
+    "study": "OSD-575",
+    "inventory_rows": 9,
+    "states": {
+      "Downloaded": 8,
+      "Catalog only": 1
+    },
+    "restricted_flags": {
+      "False": 9
+    },
+    "note": "Remote catalog entries, not downloaded files. Per-file source remains 06_Architecture_and_Decisions/files.csv."
+  },
+  {
+    "study": "OSD-630",
+    "inventory_rows": 150,
+    "states": {
+      "Downloaded": 1,
+      "Catalog only": 149
+    },
+    "restricted_flags": {
+      "False": 150
+    },
+    "note": "Remote catalog entries, not downloaded files. Per-file source remains 06_Architecture_and_Decisions/files.csv."
+  },
+  {
+    "study": "OSD-656",
+    "inventory_rows": 4,
+    "states": {
+      "Downloaded": 3,
+      "Catalog only": 1
+    },
+    "restricted_flags": {
+      "False": 4
+    },
+    "note": "Remote catalog entries, not downloaded files. Per-file source remains 06_Architecture_and_Decisions/files.csv."
+  },
+  {
+    "study": "OSD-687",
+    "inventory_rows": 87,
+    "states": {
+      "Downloaded": 1,
+      "Catalog only": 86
+    },
+    "restricted_flags": {
+      "False": 3,
+      "True": 84
+    },
+    "note": "Remote catalog entries, not downloaded files. Per-file source remains 06_Architecture_and_Decisions/files.csv."
+  }
+]

@@ -1,0 +1,1904 @@
+[
+  {
+    "url": "https://www.spaceappschallenge.org/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+    "occurrences": [
+      "research:S001",
+      "research:R011",
+      "validation:R01",
+      "engineering:N08",
+      "original:line-10"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "https://www.spaceappschallenge.org/resources/participant-faqs/",
+    "occurrences": [
+      "research:S002",
+      "research:R012",
+      "validation:R02",
+      "original:line-12"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "https://ntrs.nasa.gov/api/citations/20240001402",
+    "occurrences": [
+      "research:S003"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://ntrs.nasa.gov/api/citations/20240000914",
+    "occurrences": [
+      "research:S004"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://ntrs.nasa.gov/api/citations/20260001797",
+    "occurrences": [
+      "research:S005"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://ntrs.nasa.gov/api/citations/20190001996",
+    "occurrences": [
+      "research:S006"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/reference/standard-measures/",
+    "occurrences": [
+      "research:S007",
+      "engineering:N04"
+    ],
+    "family_ids": [
+      "F02"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2023/11/nasa-std-3001-vol-1-rev-c-with-signature.pdf",
+    "occurrences": [
+      "research:S008",
+      "original:line-34"
+    ],
+    "family_ids": [
+      "F02"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2025/05/nasa-std-3001-vol-2.pdf",
+    "occurrences": [
+      "research:S009",
+      "original:line-35"
+    ],
+    "family_ids": [
+      "F02"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/reference/6-0-medical-operations/",
+    "occurrences": [
+      "research:S010",
+      "validation:N02",
+      "engineering:N02"
+    ],
+    "family_ids": [
+      "F01",
+      "F02"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/directorates/esdmd/hhp/biomedical-flight-controllers/",
+    "occurrences": [
+      "research:S011"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/missions/station/faq-the-real-story-about-astronaut-health-care-in-space/",
+    "occurrences": [
+      "research:S012"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/ochmo/health-and-medical-systems/in-flight-medical-care/",
+    "occurrences": [
+      "research:S013"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/ochmo/health-and-medical-systems/pre-postflight-medical-care/",
+    "occurrences": [
+      "research:S014"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/hhp/human-system-risks/",
+    "occurrences": [
+      "research:S015"
+    ],
+    "family_ids": [
+      "F02"
+    ]
+  },
+  {
+    "url": "https://humanresearchroadmap.nasa.gov/Risks/",
+    "occurrences": [
+      "research:S016",
+      "original:line-39"
+    ],
+    "family_ids": [
+      "F02"
+    ]
+  },
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12612093/",
+    "occurrences": [
+      "research:S017",
+      "original:line-40"
+    ],
+    "family_ids": [
+      "F02"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/directorates/stmd/game-changing-development-program/autonomous-medical-operations-amo/",
+    "occurrences": [
+      "research:S018"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/human-systems-integration-division/human-computer-interaction/earth-independent-operations/",
+    "occurrences": [
+      "research:S019"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/reference/10-0-crew-interfaces-vol-2/",
+    "occurrences": [
+      "research:S020",
+      "engineering:N03"
+    ],
+    "family_ids": [
+      "F02",
+      "F13"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/reference/appendix-f-vol-2/",
+    "occurrences": [
+      "research:S021"
+    ],
+    "family_ids": [
+      "F02"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/osdr-api/",
+    "occurrences": [
+      "research:S022"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://visualization.osdr.nasa.gov/biodata/api/",
+    "occurrences": [
+      "research:S023",
+      "original:line-53"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://science.nasa.gov/reference/osdr-help-terms-and-conditions/",
+    "occurrences": [
+      "research:S024"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/reference/osdr-tutorials-requesting-controlled-access-datasets/",
+    "occurrences": [
+      "research:S025"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/osdr-latest-news-i4-mission-datasets/",
+    "occurrences": [
+      "research:S026"
+    ],
+    "family_ids": [
+      "F03"
+    ]
+  },
+  {
+    "url": "https://visualization.osdr.nasa.gov/radlab/gui/overview/",
+    "occurrences": [
+      "research:S027"
+    ],
+    "family_ids": [
+      "F10"
+    ]
+  },
+  {
+    "url": "https://visualization.osdr.nasa.gov/radlab/gui/data-api/",
+    "occurrences": [
+      "research:S028",
+      "engineering:N07"
+    ],
+    "family_ids": [
+      "F10"
+    ]
+  },
+  {
+    "url": "https://visualization.osdr.nasa.gov/radlab/gui/knowledgebase/absorbed_dose_rate",
+    "occurrences": [
+      "research:S029"
+    ],
+    "family_ids": [
+      "F10"
+    ]
+  },
+  {
+    "url": "https://visualization.osdr.nasa.gov/eda/",
+    "occurrences": [
+      "research:S030",
+      "original:line-51"
+    ],
+    "family_ids": [
+      "F10"
+    ]
+  },
+  {
+    "url": "https://ccmc.gsfc.nasa.gov/tools/DONKI/",
+    "occurrences": [
+      "research:S031",
+      "original:line-46"
+    ],
+    "family_ids": [
+      "F10"
+    ]
+  },
+  {
+    "url": "https://www.swpc.noaa.gov/products/goes-proton-flux",
+    "occurrences": [
+      "research:S032"
+    ],
+    "family_ids": [
+      "F10"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/humans-in-space/wearable-tech-for-space-station-research/",
+    "occurrences": [
+      "research:S033"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://nlsp.nasa.gov/view/lsdapub/lsda_hardware/IDP-LSDA_HARDWARE-0000000000000612",
+    "occurrences": [
+      "research:S034"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/blogs/stationreport/2017/03/08/iss-daily-summary-report-3-08-2017/",
+    "occurrences": [
+      "research:S035"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://api.hexoskin.com/docs/",
+    "occurrences": [
+      "research:S036"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://www.bluetooth.com/specifications/specs/heart-rate-service-1-0/",
+    "occurrences": [
+      "research:S037"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://hl7.org/fhir/R4/observation.html",
+    "occurrences": [
+      "research:S038"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://hl7.org/fhir/R4/device.html",
+    "occurrences": [
+      "research:S039"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://hl7.org/fhir/R4/specimen.html",
+    "occurrences": [
+      "research:S040"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://hl7.org/fhir/R4/diagnosticreport.html",
+    "occurrences": [
+      "research:S041"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://hl7.org/fhir/R4/questionnaireresponse.html",
+    "occurrences": [
+      "research:S042"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://hl7.org/fhir/R4/provenance.html",
+    "occurrences": [
+      "research:S043"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://hl7.org/fhir/R4/auditevent.html",
+    "occurrences": [
+      "research:S044"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://hl7.org/fhir/R4/consent.html",
+    "occurrences": [
+      "research:S045"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://ucum.org/ucum",
+    "occurrences": [
+      "research:S046"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://www.dicomstandard.org/current",
+    "occurrences": [
+      "research:S047"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/mission/hera/",
+    "occurrences": [
+      "research:S048"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/humans-in-space/chapea/",
+    "occurrences": [
+      "research:S049"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://ntrs.nasa.gov/api/citations/20240004905",
+    "occurrences": [
+      "research:S050"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://ntrs.nasa.gov/api/citations/20180008707",
+    "occurrences": [
+      "research:S051"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://physionet.org/content/bidmc/1.0.0/",
+    "occurrences": [
+      "research:S052"
+    ],
+    "family_ids": [
+      "F09"
+    ]
+  },
+  {
+    "url": "https://science.nasa.gov/universe/nasa-welcomes-all-ages-experience-levels-for-space-apps-challenge/",
+    "occurrences": [
+      "research:S053"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2025/08/ochmo-tb-044-medical-operations.pdf",
+    "occurrences": [
+      "research:S054"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://www.asc-csa.gc.ca/eng/sciences/bio-monitor.asp",
+    "occurrences": [
+      "research:S055",
+      "architecture:T030",
+      "engineering:C01"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/reference/5-0-training/",
+    "occurrences": [
+      "research:S056"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/ochmo/hsa-standards/ochmo-technical-briefs/",
+    "occurrences": [
+      "research:S057",
+      "original:line-36"
+    ],
+    "family_ids": [
+      "F02"
+    ]
+  },
+  {
+    "url": "https://esdcdoi.esac.esa.int/doi/html/data/hre/hreda/bb786212-92cc-4bfa-ac18-f88d2f8fbaee.html",
+    "occurrences": [
+      "research:S058"
+    ],
+    "family_ids": [
+      "F06"
+    ]
+  },
+  {
+    "url": "https://physionet.org/content/sleep-edf/1.0.0/",
+    "occurrences": [
+      "research:S059"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/reference/cipher/",
+    "occurrences": [
+      "research:S060"
+    ],
+    "family_ids": [
+      "F02"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/directorates/esdmd/hhp/immune-risk/",
+    "occurrences": [
+      "research:S061"
+    ],
+    "family_ids": [
+      "F03"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/directorates/esdmd/hhp/risk-of-bone-fracture-due-to-spaceflight-induced-changes-to-bone/",
+    "occurrences": [
+      "research:S062"
+    ],
+    "family_ids": [
+      "F08"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/directorates/esdmd/hhp/cv-risk/",
+    "occurrences": [
+      "research:S063"
+    ],
+    "family_ids": [
+      "F03"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/directorates/esdmd/hhp/behavioral-health-risk/",
+    "occurrences": [
+      "research:S064"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/directorates/esdmd/hhp/risk-of-performance-decrements-and-adverse-health-outcomes-resulting-from-sleep-loss-circadian-desynchronization-and-work-overload/",
+    "occurrences": [
+      "research:S065"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/directorates/esdmd/hhp/carbon-dioxide-risk/",
+    "occurrences": [
+      "research:S066"
+    ],
+    "family_ids": [
+      "F10"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/directorates/esdmd/hhp/risk-of-spaceflight-associated-neuro-ocular-syndrome/",
+    "occurrences": [
+      "research:S067"
+    ],
+    "family_ids": [
+      "F16"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2024/01/mars-communications-disruption-and-delay.pdf",
+    "occurrences": [
+      "research:S068"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://hreda.esac.esa.int/hreda-help/httpgeneric/index.html",
+    "occurrences": [
+      "research:S069"
+    ],
+    "family_ids": [
+      "F06"
+    ]
+  },
+  {
+    "url": "https://www.asc-csa.gc.ca/eng/iss/bio-analyzer.asp",
+    "occurrences": [
+      "research:S070"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://visualization.osdr.nasa.gov/eda/api_reference",
+    "occurrences": [
+      "research:S071",
+      "engineering:N06"
+    ],
+    "family_ids": [
+      "F10"
+    ]
+  },
+  {
+    "url": "https://nasa.github.io/openmct/",
+    "occurrences": [
+      "research:S072"
+    ],
+    "family_ids": [
+      "F13"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nasa/openmct/master/LICENSE.md",
+    "occurrences": [
+      "research:S073"
+    ],
+    "family_ids": [
+      "F13"
+    ]
+  },
+  {
+    "url": "https://github.com/a2ui-project/a2ui",
+    "occurrences": [
+      "research:S074",
+      "architecture:T027"
+    ],
+    "family_ids": [
+      "F13"
+    ]
+  },
+  {
+    "url": "https://docs.ag-ui.com/introduction",
+    "occurrences": [
+      "research:S075"
+    ],
+    "family_ids": [
+      "F13"
+    ]
+  },
+  {
+    "url": "https://developers.google.com/health-ai-developer-foundations/medgemma/model-card",
+    "occurrences": [
+      "research:S076",
+      "architecture:T026"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://developers.google.com/health-ai-developer-foundations/terms",
+    "occurrences": [
+      "research:S077",
+      "architecture:T045"
+    ],
+    "family_ids": [
+      "F14",
+      "F12"
+    ]
+  },
+  {
+    "url": "https://duckdb.org/docs/stable/data/parquet/overview",
+    "occurrences": [
+      "research:S078"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://github.com/sqlcipher/sqlcipher",
+    "occurrences": [
+      "research:S079"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://hl7.org/fhir/R4/license.html",
+    "occurrences": [
+      "research:S080"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://ucum.org/license",
+    "occurrences": [
+      "research:S081"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://ntrs.nasa.gov/api/citations/20230000783",
+    "occurrences": [
+      "research:S082"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2026/01/ochmo-mtb-007-venous-thrombosis-in-spaceflight.pdf?emrc=ca849d?emrc=ca849d",
+    "occurrences": [
+      "research:TB-01"
+    ],
+    "family_ids": [
+      "F18"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-017-automated-and-robotic-systems.pdf?emrc=9f8f00",
+    "occurrences": [
+      "research:TB-02"
+    ],
+    "family_ids": [
+      "F13"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-016-behavioral-health.pdf?emrc=605381",
+    "occurrences": [
+      "research:TB-03"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2026/02/ochmo-mtb-013-bone-loss.pdf?emrc=a32214",
+    "occurrences": [
+      "research:TB-04"
+    ],
+    "family_ids": [
+      "F08"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2026/03/ochmo-mtb-009-circadian-desynchrony.pdf?emrc=80a788",
+    "occurrences": [
+      "research:TB-05"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-032-cognitive-workload.pdf?emrc=f41936",
+    "occurrences": [
+      "research:TB-06"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-013-food-and-nutrition.pdf?emrc=20b030",
+    "occurrences": [
+      "research:TB-07"
+    ],
+    "family_ids": [
+      "F08"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2025/05/ochmo-tb-046-microbiology-rev-a.pdf?emrc=4f8b78",
+    "occurrences": [
+      "research:TB-08"
+    ],
+    "family_ids": [
+      "F17"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-019-orthostatic-intolerance.pdf?emrc=2aef44",
+    "occurrences": [
+      "research:TB-09"
+    ],
+    "family_ids": [
+      "F18"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-020-radiation-protection.pdf?emrc=c80351",
+    "occurrences": [
+      "research:TB-10"
+    ],
+    "family_ids": [
+      "F10"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-041-sleep-accommodations.pdf?emrc=be37fb",
+    "occurrences": [
+      "research:TB-11"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2024/02/ochmo-mtb-001-sans.pdf?emrc=c0cc22",
+    "occurrences": [
+      "research:TB-12"
+    ],
+    "family_ids": [
+      "F16"
+    ]
+  },
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7198903/",
+    "occurrences": [
+      "research:E001"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8862023/",
+    "occurrences": [
+      "research:E002"
+    ],
+    "family_ids": [
+      "F08"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/README.md",
+    "occurrences": [
+      "research:E003"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/documentation/products/PolarH10.md",
+    "occurrences": [
+      "research:E004",
+      "engineering:T03"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/documentation/TimeSystemExplained.md",
+    "occurrences": [
+      "research:E005"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/Polar_SDK_License.txt",
+    "occurrences": [
+      "research:E006"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/documentation/SdkOfflineRecordingExplained.md",
+    "occurrences": [
+      "research:E007"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://hl7.org/fhir/R4/datatypes.html",
+    "occurrences": [
+      "research:E008"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://hl7.org/fhir/R4/observation-definitions.html",
+    "occurrences": [
+      "research:E009"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://www.rfc-editor.org/rfc/rfc9171.txt",
+    "occurrences": [
+      "research:E010"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/communicating-with-missions/delay-disruption-tolerant-networking/",
+    "occurrences": [
+      "research:E011"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://physionet.org/content/treadmill-exercise-cardioresp/1.0.1/",
+    "occurrences": [
+      "research:R001"
+    ],
+    "family_ids": [
+      "F20"
+    ]
+  },
+  {
+    "url": "https://physionet.org/content/sleep-edfx/1.0.0/",
+    "occurrences": [
+      "research:R002",
+      "engineering:D02"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9755260/",
+    "occurrences": [
+      "research:R003"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://nlsp.nasa.gov/view/lsdapub/lsda_experiment/107dff26-293c-5075-81e2-a5298cbd9d62",
+    "occurrences": [
+      "research:R004"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/human-systems-integration-division/nasa-task-load-index-tlx/",
+    "occurrences": [
+      "research:R005"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/wp-content/uploads/2026/03/nasa-tlx-v1-0-searchable-text-and-forms.pdf",
+    "occurrences": [
+      "research:R006"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://www.redhat.com/en/blog/moon-and-beyond-ramalama-being-tested-nasa-potentially-support-medical-ai-assistant-future-deep-space-missions",
+    "occurrences": [
+      "research:R007",
+      "research:R007-note"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://cloud.google.com/blog/topics/public-sector/how-google-and-nasa-are-testing-ai-for-medical-care-in-space",
+    "occurrences": [
+      "research:R008"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://spinoff.nasa.gov/node/11517",
+    "occurrences": [
+      "research:R009"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/podcasts/curious-universe/encore-a-day-in-space/",
+    "occurrences": [
+      "research:R010"
+    ],
+    "family_ids": [
+      "F01"
+    ]
+  },
+  {
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "occurrences": [
+      "research:R013"
+    ],
+    "family_ids": [
+      "F13"
+    ]
+  },
+  {
+    "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+    "occurrences": [
+      "research:R014"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://physionet.org/content/treadmill-exercise-cardioresp/view-license/1.0.1/",
+    "occurrences": [
+      "research:R015"
+    ],
+    "family_ids": [
+      "F20"
+    ]
+  },
+  {
+    "url": "https://physionet.org/content/sleep-edfx/view-license/1.0.0/",
+    "occurrences": [
+      "research:R016"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://physionet.org/content/actes-cycloergometer-exercise/1.0.0/",
+    "occurrences": [
+      "research:R017",
+      "engineering:D01"
+    ],
+    "family_ids": [
+      "F08"
+    ]
+  },
+  {
+    "url": "https://physionet.org/content/actes-cycloergometer-exercise/view-license/1.0.0/",
+    "occurrences": [
+      "research:R018"
+    ],
+    "family_ids": [
+      "F08"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/help-nasa-find-practical-ways-to-monitor-astronaut-body-temperature-in-low-earth-orbit/",
+    "occurrences": [
+      "research:R019"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://www.edfplus.info/specs/edfplus.html",
+    "occurrences": [
+      "research:R020"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://spj.science.org/doi/10.34133/space.0547",
+    "occurrences": [
+      "research:R021"
+    ],
+    "family_ids": [
+      "F07"
+    ]
+  },
+  {
+    "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-51/",
+    "occurrences": [
+      "research:OSD-51"
+    ],
+    "family_ids": [
+      "F06"
+    ]
+  },
+  {
+    "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-195/",
+    "occurrences": [
+      "research:OSD-195"
+    ],
+    "family_ids": [
+      "F06"
+    ]
+  },
+  {
+    "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-198/",
+    "occurrences": [
+      "research:OSD-198"
+    ],
+    "family_ids": [
+      "F06"
+    ]
+  },
+  {
+    "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-569/",
+    "occurrences": [
+      "research:OSD-569"
+    ],
+    "family_ids": [
+      "F03"
+    ]
+  },
+  {
+    "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-575/",
+    "occurrences": [
+      "research:OSD-575"
+    ],
+    "family_ids": [
+      "F03"
+    ]
+  },
+  {
+    "url": "https://nuxt.com/docs/4.x/guide/concepts/rendering",
+    "occurrences": [
+      "architecture:T001"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://nuxt.com/docs/4.x/getting-started/deployment",
+    "occurrences": [
+      "architecture:T002"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://vite.dev/guide/static-deploy.html",
+    "occurrences": [
+      "architecture:T003"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://fastapi.tiangolo.com/how-to/extending-openapi/",
+    "occurrences": [
+      "architecture:T004"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://fastapi.tiangolo.com/tutorial/background-tasks/",
+    "occurrences": [
+      "architecture:T005"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://pydantic.dev/docs/validation/latest/concepts/strict_mode/",
+    "occurrences": [
+      "architecture:T006"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://fastify.dev/docs/latest/Reference/Validation-and-Serialization/",
+    "occurrences": [
+      "architecture:T007"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://www.sqlite.org/wal.html",
+    "occurrences": [
+      "architecture:T008",
+      "engineering:T02"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://www.sqlite.org/backup.html",
+    "occurrences": [
+      "architecture:T009"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://www.sqlite.org/fts5.html",
+    "occurrences": [
+      "architecture:T010"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://www.sqlite.org/news.html",
+    "occurrences": [
+      "architecture:T011"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://duckdb.org/docs/current/connect/concurrency",
+    "occurrences": [
+      "architecture:T012"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://duckdb.org/docs/current/data/parquet/overview",
+    "occurrences": [
+      "architecture:T013"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html",
+    "occurrences": [
+      "architecture:T014"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://alembic.sqlalchemy.org/en/latest/batch.html",
+    "occurrences": [
+      "architecture:T015"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://www.zetetic.net/sqlcipher/design/",
+    "occurrences": [
+      "architecture:T016"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://github.com/sqlcipher/sqlcipher/blob/master/LICENSE.md",
+    "occurrences": [
+      "architecture:T017"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist",
+    "occurrences": [
+      "architecture:T018"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API",
+    "occurrences": [
+      "architecture:T019"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts",
+    "occurrences": [
+      "architecture:T020"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md",
+    "occurrences": [
+      "architecture:T021",
+      "validation:T02"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://github.com/ggml-org/llama.cpp",
+    "occurrences": [
+      "architecture:T022"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://huggingface.co/api/models/Qwen/Qwen3.5-4B",
+    "occurrences": [
+      "architecture:T023"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3.5-4B",
+    "occurrences": [
+      "architecture:T024",
+      "validation:T03"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://huggingface.co/google/medgemma-1.5-4b-it",
+    "occurrences": [
+      "architecture:T025"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/a2ui-project/a2ui/main/docs/public/guides/defining-your-own-catalog.md",
+    "occurrences": [
+      "architecture:T028"
+    ],
+    "family_ids": [
+      "F13"
+    ]
+  },
+  {
+    "url": "https://github.com/polarofficial/polar-ble-sdk",
+    "occurrences": [
+      "architecture:T029",
+      "engineering:C03"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://docs.python.org/3/library/sqlite3.html",
+    "occurrences": [
+      "architecture:T031"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://docs.ollama.com/api/introduction",
+    "occurrences": [
+      "architecture:T032"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://docs.vllm.ai/en/latest/getting_started/installation/gpu/",
+    "occurrences": [
+      "architecture:T033"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://github.com/ml-explore/mlx-lm",
+    "occurrences": [
+      "architecture:T034"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://openapi-ts.dev/introduction",
+    "occurrences": [
+      "architecture:T035"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://opentelemetry.io/docs/security/handling-sensitive-data/",
+    "occurrences": [
+      "architecture:T036"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://docs.sqlalchemy.org/en/20/dialects/sqlite.html",
+    "occurrences": [
+      "architecture:T037"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://github.com/fastapi/fastapi",
+    "occurrences": [
+      "architecture:T038"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://github.com/pydantic/pydantic",
+    "occurrences": [
+      "architecture:T039"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://github.com/openapi-ts/openapi-typescript",
+    "occurrences": [
+      "architecture:T040"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://github.com/duckdb/duckdb",
+    "occurrences": [
+      "architecture:T040A"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://github.com/sqlalchemy/sqlalchemy",
+    "occurrences": [
+      "architecture:T041"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://github.com/sqlalchemy/alembic",
+    "occurrences": [
+      "architecture:T042"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://github.com/nuxt/nuxt",
+    "occurrences": [
+      "architecture:T043"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://www.sqlite.org/copyright.html",
+    "occurrences": [
+      "architecture:T044"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/reference/4-0-human-performance/",
+    "occurrences": [
+      "validation:N01",
+      "engineering:N01"
+    ],
+    "family_ids": [
+      "F02"
+    ]
+  },
+  {
+    "url": "https://github.com/ggml-org/llama.cpp/blob/master/tools/llama-bench/README.md",
+    "occurrences": [
+      "validation:T01"
+    ],
+    "family_ids": [
+      "F14"
+    ]
+  },
+  {
+    "url": "https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac",
+    "occurrences": [
+      "validation:T04"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://www.spaceappschallenge.org/2026/local-events/phnom-penh/",
+    "occurrences": [
+      "validation:R03",
+      "original:line-25"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "https://www.spaceappschallenge.org/2026/local-events/santiago-dominican-republic/",
+    "occurrences": [
+      "validation:R04"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "[private archive link omitted]",
+    "occurrences": [
+      "validation:I01"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "[private archive link omitted]",
+    "occurrences": [
+      "validation:I02"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-569",
+    "occurrences": [
+      "engineering:N05"
+    ],
+    "family_ids": [
+      "F03"
+    ]
+  },
+  {
+    "url": "https://api.hexoskin.com/docs/index.html",
+    "occurrences": [
+      "engineering:C02"
+    ],
+    "family_ids": [
+      "F11"
+    ]
+  },
+  {
+    "url": "https://www.sqlite.org/foreignkeys.html",
+    "occurrences": [
+      "engineering:T01"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "[private archive link omitted]",
+    "occurrences": [
+      "engineering:P01"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "[private archive link omitted]",
+    "occurrences": [
+      "engineering:P02"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "[private archive link omitted]",
+    "occurrences": [
+      "engineering:P03"
+    ],
+    "family_ids": [
+      "F15"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/reference/3-0-health-and-medical-care/",
+    "occurrences": [
+      "engineering:N09"
+    ],
+    "family_ids": [
+      "F02"
+    ]
+  },
+  {
+    "url": "https://www.spaceappschallenge.org/2026/",
+    "occurrences": [
+      "original:line-9"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "https://www.spaceappschallenge.org/2026/challenges/",
+    "occurrences": [
+      "original:line-11"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "https://www.spaceappschallenge.org/resources/team-formation-guide/",
+    "occurrences": [
+      "original:line-13"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "https://www.spaceappschallenge.org/resources/",
+    "occurrences": [
+      "original:line-14"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "https://www.spaceappschallenge.org/legal/",
+    "occurrences": [
+      "original:line-15"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "https://www.spaceappschallenge.org/2026/create-a-team/",
+    "occurrences": [
+      "original:line-16"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "https://www.spaceappschallenge.org/2026/space-agency-partners/",
+    "occurrences": [
+      "original:line-17"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "https://www.spaceappschallenge.org/2025/awards/global-winners/",
+    "occurrences": [
+      "original:line-18"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "[registration link omitted]",
+    "occurrences": [
+      "original:line-26"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "[event contact link omitted]",
+    "occurrences": [
+      "original:line-27"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "[private archive link omitted]",
+    "occurrences": [
+      "original:line-28"
+    ],
+    "family_ids": [
+      "F19"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/hrp/hazards/",
+    "occurrences": [
+      "original:line-37"
+    ],
+    "family_ids": [
+      "F02"
+    ]
+  },
+  {
+    "url": "https://www.nasa.gov/hrp/risks/",
+    "occurrences": [
+      "original:line-38"
+    ],
+    "family_ids": [
+      "F02"
+    ]
+  },
+  {
+    "url": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/",
+    "occurrences": [
+      "original:line-47"
+    ],
+    "family_ids": [
+      "F10"
+    ]
+  },
+  {
+    "url": "https://ccmc.gsfc.nasa.gov/news/major-updates",
+    "occurrences": [
+      "original:line-48"
+    ],
+    "family_ids": [
+      "F10"
+    ]
+  },
+  {
+    "url": "https://osdr.nasa.gov/",
+    "occurrences": [
+      "original:line-49"
+    ],
+    "family_ids": [
+      "F06"
+    ]
+  },
+  {
+    "url": "https://osdr.nasa.gov/osdr/data/search",
+    "occurrences": [
+      "original:line-50"
+    ],
+    "family_ids": [
+      "F12"
+    ]
+  },
+  {
+    "url": "https://visualization.osdr.nasa.gov/radlab/",
+    "occurrences": [
+      "original:line-52"
+    ],
+    "family_ids": [
+      "F10"
+    ]
+  },
+  {
+    "url": "https://nlsp.nasa.gov/explore/lsdahome",
+    "occurrences": [
+      "original:line-54"
+    ],
+    "family_ids": [
+      "F06"
+    ]
+  },
+  {
+    "url": "https://data.nasa.gov/",
+    "occurrences": [
+      "original:line-55"
+    ],
+    "family_ids": [
+      "F06"
+    ]
+  },
+  {
+    "url": "https://services.swpc.noaa.gov/",
+    "occurrences": [
+      "original:line-61"
+    ],
+    "family_ids": [
+      "F10"
+    ]
+  },
+  {
+    "url": "https://donnees-data.asc-csa.gc.ca/en/dataset",
+    "occurrences": [
+      "original:line-62"
+    ],
+    "family_ids": [
+      "F06"
+    ]
+  }
+]

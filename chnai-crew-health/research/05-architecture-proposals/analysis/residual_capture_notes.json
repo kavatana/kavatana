@@ -1,0 +1,17 @@
+[
+  {
+    "path": "sources/T011.html",
+    "sha256": "5d2bbebc35cf84e829250bd58138cd8544cef53e2e3c1f0ad26f5c362813ebec",
+    "state": "Residual capture from interrupted prior pass; not counted or relied upon"
+  },
+  {
+    "path": "sources/T011.links.json",
+    "sha256": "9f7243423d0429618b25cfbd010e05b3a7a2b9b7367f0081f47f903bc8d6644b",
+    "state": "Residual capture from interrupted prior pass; not counted or relied upon"
+  },
+  {
+    "path": "sources/T011.txt",
+    "sha256": "a3d7cce8b207c9043c2bdfef0ffab1b512db33afd0a217bb20c9f32669723a85",
+    "state": "Residual capture from interrupted prior pass; not counted or relied upon"
+  }
+]

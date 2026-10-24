@@ -1,0 +1,15 @@
+Component,Purpose,License evidence,Version / artifact policy,Decision,Evidence
+Nuxt / Vue / TypeScript,Static client,Nuxt MIT verified; record transitive Vue/TypeScript notices in release BOM,Nuxt 4 line; exact supported Node/dependency versions and lockfile during permitted build,Default,T001; T002; T043
+FastAPI / Pydantic,API and runtime validation,MIT verified for both projects,Pin compatible release pair and transitive server dependencies; record Python interpreter,Default,T038; T039; T006
+SQLAlchemy / Alembic,Persistence and migrations,MIT verified for both projects,SQLAlchemy 2.x; exact Alembic version and migration digest pinned after qualification,Default,T041; T042; T015; T037
+SQLite,Local transaction store,Public domain statement verified,"Record actual linked engine, compile options, WAL fix, journal/synchronous settings and backup method",Default; qualify build,T008; T009; T044
+DuckDB,Analytical query engine,MIT verified,Pin runtime/extension versions; no automatic remote extension installation in offline release,Staged analytics,T012; T013; T040A
+Parquet / original EDF files,Derived columnar data and original signal objects,Format access is distinct from each dataset license,"Record schema, writer, compression, input hashes and transformation version; originals retained",Staged analytics,T013; E008; R020
+openapi-typescript / openapi-fetch,Generated TypeScript client boundary,MIT repository verified,Pin generator; check generated output against published OpenAPI digest,Default,T035; T040
+llama.cpp,Local inference process,MIT repository verified,Pin build/commit and hardware backend; model/template compatibility tested as a pair,First runtime candidate,T021; T022
+Qwen3.5-4B,Bounded explanation/draft model,Publisher model card states Apache-2.0,Resolve immutable revision and permitted quantization artifact hash; measure on actual host,First model candidate,T024
+MedGemma 1.5 4B,Optional medical-research comparator,"HAI-DEF terms, not a permissive MIT/Apache substitute",Account/terms step required for weights; no weights downloaded or terms accepted in this package,Optional comparator,T025; T045
+SQLCipher,Candidate encrypted record store,Repository license permits redistribution with conditions; keep notices,"Qualify Python binding, crypto provider and actual merged SQLite version; encrypt blobs/backups too",Future real-data gate,T016; T017
+A2UI,Optional declarative component protocol,Apache-2.0 repository verified,Pin protocol/catalog/renderer together if adopted; stable controls remain application-owned,Optional; not required for MVP,T027
+Polar BLE SDK,Optional real-device gateway,Vendor license must be reviewed for exact SDK use,No flight API inferred; selected device/firmware and platform qualified separately,Optional; no integration claim,T029; E005
+OpenTelemetry,Optional local operational telemetry,Review chosen SDK/exporter notices at release,Allowlist nonclinical fields; no remote exporter by default; inspect emitted data,Optional after core path,T036

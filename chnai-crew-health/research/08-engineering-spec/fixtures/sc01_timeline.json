@@ -1,0 +1,76 @@
+{
+  "clock": "demonstration offsets, not mission medical timing",
+  "synthetic": true,
+  "events": [
+    {
+      "offset_s": 0,
+      "event": "begin_replay",
+      "subject": "SIM-C03",
+      "expected": "Simulation mode and Earth disconnected visible"
+    },
+    {
+      "offset_s": 1,
+      "event": "ingest_baseline",
+      "record": "SIM-C03-baseline-r1",
+      "expected": "Qualified demo input; no current comparison yet"
+    },
+    {
+      "offset_s": 2,
+      "event": "ingest_current",
+      "record": "SIM-C03-current-r1",
+      "expected": "39/50 = 78%; below 80% reference; clinical review pending"
+    },
+    {
+      "offset_s": 3,
+      "event": "prepare_explanation",
+      "expected": "Deterministic facts immediately; optional AI wording cannot change facts"
+    },
+    {
+      "offset_s": 5,
+      "event": "crew_requests_review",
+      "actor": "SIM-A03",
+      "expected": "One review episode and durable responsibility for SIM-A02"
+    },
+    {
+      "offset_s": 7,
+      "event": "onboard_review_recorded",
+      "actor": "SIM-A02",
+      "expected": "Human disposition recorded; no treatment recommendation auto-generated"
+    },
+    {
+      "offset_s": 8,
+      "event": "preview_ground_packet",
+      "actor": "SIM-A02",
+      "expected": "Recipient, purpose, exact revisions and hash visible; release still unapproved"
+    },
+    {
+      "offset_s": 10,
+      "event": "approve_demo_handoff",
+      "actor": "SIM-A02",
+      "expected": "Exact approved packet and outbox committed; queued while offline"
+    },
+    {
+      "offset_s": 15,
+      "event": "enable_simulated_earth_link",
+      "expected": "Same packet retried by durable transport emulator"
+    },
+    {
+      "offset_s": 18,
+      "event": "receiver_acknowledges",
+      "actor": "SIM-GROUND-01",
+      "expected": "Received; medical review not yet received"
+    },
+    {
+      "offset_s": 22,
+      "event": "ground_review_recorded",
+      "actor": "SIM-GROUND-01",
+      "expected": "Reviewed packet ID/hash shown; follow-up remains explicitly assigned"
+    },
+    {
+      "offset_s": 25,
+      "event": "restart_node",
+      "expected": "Episode and pending follow-up restored from durable state"
+    }
+  ],
+  "executed": false
+}

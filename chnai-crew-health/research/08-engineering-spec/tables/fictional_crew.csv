@@ -1,0 +1,7 @@
+Subject ID,Namespace,Mission,Label,Scenario role,Actor ID,Provenance
+SIM-C01,SIM-CHNAI-01,SIM-TRANSIT-01,Simulated Crew 01,commander,SIM-A01,Entirely fictional
+SIM-C02,SIM-CHNAI-01,SIM-TRANSIT-01,Simulated Crew 02,crew_medical_officer,SIM-A02,Entirely fictional
+SIM-C03,SIM-CHNAI-01,SIM-TRANSIT-01,Simulated Crew 03,systems_engineer,SIM-A03,Entirely fictional
+SIM-C04,SIM-CHNAI-01,SIM-TRANSIT-01,Simulated Crew 04,science_specialist,SIM-A04,Entirely fictional
+SIM-C05,SIM-CHNAI-01,SIM-TRANSIT-01,Simulated Crew 05,pilot,SIM-A05,Entirely fictional
+SIM-C06,SIM-CHNAI-01,SIM-TRANSIT-01,Simulated Crew 06,exercise_coordinator,SIM-A06,Entirely fictional

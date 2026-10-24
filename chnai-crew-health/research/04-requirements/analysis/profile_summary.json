@@ -1,0 +1,21 @@
+{
+  "publisher_hashes_checked": 8,
+  "publisher_hashes_match": 8,
+  "cycle_rows": 52062,
+  "cycle_participants": 18,
+  "cycle_subject_rows": 18,
+  "cycle_duplicate_rows": 0,
+  "cycle_missing": {
+    "ID": 0,
+    "time": 0,
+    "RR": 1148,
+    "VO2": 0,
+    "power": 0
+  },
+  "sleep_edf_files": 2,
+  "sleep_psg_sessions": 1,
+  "sleep_size_valid": true,
+  "cbc_rows": 553,
+  "cbc_key_duplicates": 0,
+  "analog_metadata_packages": 3
+}

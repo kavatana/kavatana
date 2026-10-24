@@ -1,0 +1,18 @@
+ID,Quantity,Shape,Unit,Adapter,Scope,Required context,Source IDs,Interpretation boundary
+Q01,Aerobic capacity / VO2max,scalar,mL/min/kg,A01,Core,Completed qualified assessment; subject-specific preflight baseline; comparable protocol,N01,V1 4003 relative comparison only; EVA criteria separate
+Q02,Heart rate,scalar,1/min,A06; A07; A10,Later,"Device, contact/quality flags, activity and sample/receipt time",C01; C02; C03,No universal clinical alert threshold approved
+Q03,ECG waveform,object,mV,A07; A10,Later,"Lead/site, sample rate, calibration and exact channel metadata",C01; C03,Waveform object; no diagnostic arrhythmia classifier specified
+Q04,Interbeat interval,scalar,ms,A03; A07,Importer test,Beat times and artifacts; retain missing intervals,D01; C03,"RR here is interbeat interval, not respiratory rate"
+Q05,Respiratory rate,scalar,1/min,A06,Later,"Measurement method, duration and quality",C01; C02,Distinct quantity ID from interbeat interval
+Q06,Oxygen uptake VO2,scalar,unresolved,A03,Importer test,"Source scale, units, body-mass normalization and protocol",D01,Blocked canonical interpretation while scale ambiguity unresolved
+Q07,Exercise power,scalar,W,A03,Importer test,Device/protocol and relative sample time,D01,Mechanical workload is not aerobic capacity
+Q08,Hemoglobin,scalar,g/dL,A02,Importer test,"Specimen, method, lab reference and source unit",N05,Transformed percent-unit mismatch must not be silently converted
+Q09,CBC cell counts,scalar,per analyte,A02,Importer test,Separate quantity per analyte; exact cell-count multiplier,N05,Million/uL and Thousand/uL require explicit mappings
+Q10,Sleep signal / annotated stage,object/coded,per channel,A04,Importer test,Signal calibration; annotation vocabulary; time alignment,D02,PSG is not actigraphy and labels are not an onboard diagnostic model
+Q11,Sleep/activity estimate,scalar/coded,method-specific,A05,Research gap,"Actigraphy method, wear time, missingness and schedule",N04,No acquired flight API; not assessed in core demo
+Q12,Cognitive test result,scalar/coded,test-specific,none,Research gap,"Test/version, practice exposure, baseline and task context",N04,No invented cognitive impairment score; instrument rights unresolved
+Q13,Mood/workload self-report,coded,instrument-specific,none,Research gap,"Instrument/version, consent, schedule and private scope",N04; N02,Do not infer mood from unrelated vitals or expose to commander by default
+Q14,Bone density / turnover,scalar,site/assay-specific,none,Research gap,"DXA site and pre/post interval, or specimen assay context",N01; N04,Exercise adherence cannot substitute for measured bone loss
+Q15,Cabin CO2/temperature/humidity,scalar,source-specific,A08,Later,"Station location, quantity, units, pressure and averaging window",N06,Cabin context; no assumed direct link to a particular crew exposure
+Q16,Radiation instrument measurement,scalar,source-specific,A09,Later,"Instrument, shielding/location, dose quantity and interval",N07,Not a personal dosimeter or medical risk estimate
+Q17,Ocular / ultrasound imaging,object,image metadata,none,Research gap,"Device, acquisition protocol, anatomy, orientation and trained interpretation",N09,No usable open flight series/API established; no automated SANS diagnosis

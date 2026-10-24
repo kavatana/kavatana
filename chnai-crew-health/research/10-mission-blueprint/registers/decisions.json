@@ -1,0 +1,62 @@
+[
+  {
+    "id": "D01",
+    "topic": "Core setting",
+    "decision": "Fictional long-duration transit with configurable link availability. ISS documents inform task patterns, not exact future staffing or habitat layout.",
+    "state": "Proposed"
+  },
+  {
+    "id": "D02",
+    "topic": "Core outcome",
+    "decision": "A qualified change becomes an understandable, owned and traceable follow-up even while Earth is unavailable.",
+    "state": "Proposed"
+  },
+  {
+    "id": "D03",
+    "topic": "Crew identity",
+    "decision": "Separate job, active duty, medical qualification, mission assignment, access grant and episode owner. Correct the single-CMO seed limitation without inventing real people.",
+    "state": "Required before operational realism claim"
+  },
+  {
+    "id": "D04",
+    "topic": "Data boundary",
+    "decision": "Keep research subjects, synthetic crew and any future operational records in separate namespaces and access domains.",
+    "state": "Required"
+  },
+  {
+    "id": "D05",
+    "topic": "3D scope",
+    "decision": "A spatial viewer over a deterministic scenario engine; no independent clinical logic or physiological truth in the renderer.",
+    "state": "Proposed; unbuilt"
+  },
+  {
+    "id": "D06",
+    "topic": "AI scope",
+    "decision": "Evaluate explanation and source retrieval against templates; structured rules and authorized humans own consequential actions. Fine-tuning awaits a justified task and evaluation.",
+    "state": "Proposed; unqualified"
+  },
+  {
+    "id": "D07",
+    "topic": "Next implementation",
+    "decision": "Visual crew brief, background fictional replay, real research CBC import/quality report, then accountable review/handoff.",
+    "state": "Proposed next release"
+  },
+  {
+    "id": "D08",
+    "topic": "Production meaning",
+    "decision": "Public synthetic demo and clinical mission deployment are different releases with different gates.",
+    "state": "Required"
+  },
+  {
+    "id": "D09",
+    "topic": "Current rules",
+    "decision": "Reconcile full objectives/resources and early-work eligibility when authoritative material is available; keep honest creation history.",
+    "state": "Open"
+  },
+  {
+    "id": "D10",
+    "topic": "Evidence review",
+    "decision": "A qualified health reviewer must validate interpretation, comparability and allowed follow-up; access does not equal approval.",
+    "state": "Open"
+  }
+]

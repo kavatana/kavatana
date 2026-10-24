@@ -20,6 +20,7 @@ jobs:
       - run: python -m venv .venv
       - run: .venv/bin/python -m pip install -r api/requirements.lock
       - run: npm run doctor
+      - run: npm run handoff:verify
       - run: npm run check
       - run: npm test
       - run: npm run test:api

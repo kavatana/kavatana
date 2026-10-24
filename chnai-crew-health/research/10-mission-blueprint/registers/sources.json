@@ -1,0 +1,137 @@
+[
+  {
+    "id": "J01",
+    "title": "Earth-Independent Medical Operations ConOps",
+    "url": "https://ntrs.nasa.gov/citations/20240001402",
+    "locator": "NASA, 2024 technical presentation",
+    "verified_claim": "Deep-space care faces communication, evacuation, resupply and vehicle-resource constraints. EIMO integrates care, planning and resource management.",
+    "limit": "Concept of operations, not a published CHNAI mission requirement.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J02",
+    "title": "NASA HRP use of AI technology to mitigate risk",
+    "url": "https://ntrs.nasa.gov/api/citations/20260001797/downloads/NASA%20HRP%20Use%20of%20AI%20Technology%20to%20Mitigate%20Risk.pdf",
+    "locator": "NASA NTRS 20260001797, slides 14 and 16",
+    "verified_claim": "Reports CMO and flight-surgeon digital-assistant working prototypes and BME proof of concept; includes a simulation demonstration.",
+    "limit": "No flight certification, open medical corpus or available integration API established.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J03",
+    "title": "Biomedical Flight Controllers",
+    "url": "https://www.nasa.gov/directorates/esdmd/hhp/biomedical-flight-controllers/",
+    "locator": "NASA; updated 9 March 2026",
+    "verified_claim": "BME supports crew-health hardware, data downlink, procedures, scheduling and troubleshooting with the flight surgeon.",
+    "limit": "ISS operational description; proposed access policy is ours.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J04",
+    "title": "Flight Surgeons",
+    "url": "https://www.nasa.gov/directorates/esdmd/hhp/flight-surgeons/",
+    "locator": "NASA role description",
+    "verified_claim": "Flight surgeons provide crew care and private conferences. Mission-impact information can reach the flight director without disclosing conference details.",
+    "limit": "Weekly conferences described in this context are not a universal deep-space schedule.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J05",
+    "title": "NASA-STD-3001 online: Training",
+    "url": "https://www.nasa.gov/reference/5-0-training/",
+    "locator": "V1 5003, 3006 and 5004",
+    "verified_claim": "CMOs receive specific training and need not be physicians. At least two CMOs are to be trained per vehicle/platform; training is verified.",
+    "limit": "Check governing revision, mission applicability and location coverage before making an operational compliance claim.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J06",
+    "title": "NASA-STD-3001 online: Medical Operations",
+    "url": "https://www.nasa.gov/reference/6-0-medical-operations/",
+    "locator": "V1 6001-6003, 6006, 6008-6009, 6010-6011",
+    "verified_claim": "Work/rest planning, private medical and psychological communication and mission-specific health operations are required. Delayed communication may use store-and-forward. EVA clearance remains a medical authority function.",
+    "limit": "Our scenario is not an approved CHOC, clinical protocol or EVA-clearance tool.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J07",
+    "title": "NASA-STD-3001 online: Crew Interfaces",
+    "url": "https://www.nasa.gov/reference/10-0-crew-interfaces-vol-2/",
+    "locator": "V2 10113, 10125-10126, 10129-10131, 10153, 10161-10164",
+    "verified_claim": "Task information, privacy, visible modes and automation, backup and recovery inform the design. Ground data-management access must consider protection and crew visibility.",
+    "limit": "Patterns are design inferences; no interface compliance or NASA branding approval is claimed.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J08",
+    "title": "Standard Measures",
+    "url": "https://www.nasa.gov/reference/standard-measures/",
+    "locator": "NASA research overview",
+    "verified_claim": "Research spans pre-, in- and postflight measures, including sleep/activity, cognition and biological samples.",
+    "limit": "Research measurement domains are not a continuous live clinical API.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J09",
+    "title": "Bio-Monitor: Keeping an eye on astronauts vital signs",
+    "url": "https://www.asc-csa.gc.ca/eng/sciences/bio-monitor.asp",
+    "locator": "Canadian Space Agency; updated 26 February 2026",
+    "verified_claim": "Wearable recording uses a tablet for activity context; docking the recorder enables transfer through station communications.",
+    "limit": "No exact tablet model, screen size or public flight SDK is established by this source.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J10",
+    "title": "Mission Control: Crew Health Consoles",
+    "url": "https://www.nasa.gov/podcasts/houston-we-have-a-podcast/mission-control-crew-health-consoles/",
+    "locator": "NASA, 21 March 2025; interview recorded 17 December 2024",
+    "verified_claim": "Flight surgeon, BME and ETHOS have distinct responsibilities. Joint simulations exercise failures and coordination.",
+    "limit": "ISS interview, not a future transit staffing plan or validation of our simulation.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J11",
+    "title": "A Day in Space",
+    "url": "https://www.nasa.gov/podcasts/curious-universe/encore-a-day-in-space/",
+    "locator": "NASA crew interview",
+    "verified_claim": "Crew activities include meals, exercise, research, maintenance and ground coordination.",
+    "limit": "The relative-time day in this blueprint is fictional; an ISS habitat is not a Mars vehicle.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J12",
+    "title": "NASA announces 2025 Space Apps global winners",
+    "url": "https://www.nasa.gov/learning-resources/stem-engagement-at-nasa/nasa-announces-2025-international-space-apps-challenge-global-winners/",
+    "locator": "NASA, 18 December 2025",
+    "verified_claim": "Official award descriptions provide observable project features, not judges private deliberations.",
+    "limit": "Linked team pages were unavailable during this pass; code quality, validation and causal reasons for winning were not verified.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J13",
+    "title": "Human Performance",
+    "url": "https://www.nasa.gov/reference/4-0-human-performance/",
+    "locator": "NASA-STD-3001 online; V1 4003",
+    "verified_claim": "In-mission aerobic capacity is compared with the individuals pre-mission capacity; the specified level is at least 80%.",
+    "limit": "Comparable method, units and baseline are prerequisites; this is not a diagnosis or acute cardiovascular-event detector.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J14",
+    "title": "Open MCT",
+    "url": "https://nasa.github.io/openmct/",
+    "locator": "NASA open-source visualization project",
+    "verified_claim": "A reference for coordinated historical and streaming mission-data views.",
+    "limit": "Not a clinical product or a reason to replace the present frontend without testing.",
+    "checked_at": "2026-10-21"
+  },
+  {
+    "id": "J15",
+    "title": "2026 selected challenge",
+    "url": "https://www.spaceappschallenge.org/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+    "locator": "User-supplied summary; current full page unavailable in preceding checks",
+    "verified_claim": "The supplied summary asks software to gather indicators and help astronauts evaluate and act, naming four health outcomes.",
+    "limit": "Full objectives, required resources and current submission/early-work rules remain pending verification; planned checks are already scheduled.",
+    "checked_at": "2026-10-21"
+  }
+]

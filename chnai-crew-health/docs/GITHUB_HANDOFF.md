@@ -12,3 +12,7 @@ Then follow the root project README for Python setup, testing and local startup.
 The existing private static Site is a separate deployment target. The GitHub folder does not provision a public API or medical database.
 
 For the v0.7.1 acceptance pass, run `npm run doctor` after dependency setup, then follow `docs/LOCAL_ACCEPTANCE.md`. The new client-transport checks cover lost responses, reload recovery, stale-role clearing and note-sharing choices. Actual Safari interaction and the target Mac remain unverified. Local reports stay under ignored `.runtime/qualification/`; do not commit them or the database.
+
+## Complete context handoff — 23 October 2026
+
+Open the project subfolder in VS Code and begin with `START_HERE.md` and `CODEX_HANDOFF_PROMPT.md`. `research/README.md` indexes the recovered research and engineering packages. `docs/handoff/PROJECT_STATE.md` resolves older proposals against the v0.8 implementation. Run `npm run handoff:verify` to check the included research copies and current navigation. The earlier checkpoint above retains its original validation scope.

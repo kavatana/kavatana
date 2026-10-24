@@ -1,0 +1,99 @@
+{
+  "as_of": "2026-10-20",
+  "sources": [
+    {
+      "id": "N01",
+      "title": "NASA-STD-3001: 4.0 Human Performance",
+      "url": "https://www.nasa.gov/reference/4-0-human-performance/",
+      "status": "Readable official page retrieved 2026-10-20",
+      "sections": [
+        "V1 4001",
+        "V1 4002",
+        "V1 4003"
+      ],
+      "use": "Relative aerobic-capacity criterion; separate mission-specific EVA capacity requirements. Exact revision is controlled by the retained S008 PDF and reviewed release."
+    },
+    {
+      "id": "N02",
+      "title": "NASA-STD-3001: 6.0 Medical Operations",
+      "url": "https://www.nasa.gov/reference/6-0-medical-operations/",
+      "status": "Readable official page retrieved 2026-10-20",
+      "sections": [
+        "V1 6006",
+        "V1 6008",
+        "V1 6009"
+      ],
+      "use": "Medical clearance and mission-specific operations/requirements are separate from a numeric comparison."
+    },
+    {
+      "id": "T01",
+      "title": "ggml-org llama-bench README",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/tools/llama-bench/README.md",
+      "status": "Readable upstream page retrieved 2026-10-20; mutable master",
+      "use": "Benchmark flags, repetitions, prompt+generation measurements; tokenization and sampling excluded."
+    },
+    {
+      "id": "T02",
+      "title": "ggml-org llama-server README",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md",
+      "status": "Readable upstream page retrieved 2026-10-20; mutable master",
+      "use": "Context, generation, concurrency, offline, cache and template controls. Installed build unqualified."
+    },
+    {
+      "id": "T03",
+      "title": "Qwen3.5-4B publisher model card",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-4B",
+      "status": "Readable publisher page retrieved 2026-10-20; model revision not pinned",
+      "use": "Model identity/format, license label and non-thinking option. No community GGUF selected."
+    },
+    {
+      "id": "T04",
+      "title": "Apple: View memory usage in Activity Monitor on Mac",
+      "url": "https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac",
+      "status": "Readable manufacturer page retrieved 2026-10-20",
+      "use": "Memory pressure, compressed memory and system-memory observations."
+    },
+    {
+      "id": "R01",
+      "title": "2026 health-monitoring challenge",
+      "url": "https://www.spaceappschallenge.org/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+      "status": "Current official search result found; direct fetch 502 on 2026-10-20",
+      "use": "Challenge identity only; no new full-statement or required-resource verification."
+    },
+    {
+      "id": "R02",
+      "title": "Participant FAQs",
+      "url": "https://www.spaceappschallenge.org/resources/participant-faqs/",
+      "status": "Current official search excerpt found; direct retrieval failed on 2026-10-20",
+      "use": "Indexed event-date corroboration only; central eligibility not freshly read."
+    },
+    {
+      "id": "R03",
+      "title": "Phnom Penh 2026 local event",
+      "url": "https://www.spaceappschallenge.org/2026/local-events/phnom-penh/",
+      "status": "Official search excerpt found; direct retrieval failed on 2026-10-20",
+      "use": "Indexed 28 October release and 14-15 November event dates; not complete local rules."
+    },
+    {
+      "id": "R04",
+      "title": "Santiago, Dominican Republic 2026 local event",
+      "url": "https://www.spaceappschallenge.org/2026/local-events/santiago-dominican-republic/",
+      "status": "Official search excerpt found; direct retrieval failed on 2026-10-20",
+      "use": "Indexed restriction on early development; corroboration, not central-rule adjudication."
+    },
+    {
+      "id": "I01",
+      "title": "CHNAI architecture v0.1 decision register",
+      "url": "[private archive link omitted]",
+      "status": "Existing project baseline; evaluation-gate snapshot read locally",
+      "use": "G01-G12 gate definitions; not external scientific evidence."
+    },
+    {
+      "id": "I02",
+      "title": "CHNAI workflow specification v0.1",
+      "url": "[private archive link omitted]",
+      "status": "Existing project baseline; current folder and linked guide verified",
+      "use": "SC01, WQ01-WQ32, role/action/state proposals. All cases Not run."
+    }
+  ]
+}

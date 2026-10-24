@@ -1,0 +1,461 @@
+{
+  "contract_version": "seed-design-0.1",
+  "notice": "Entirely fictional engineering fixture. No real crew identity, measurement or physiological validation. Roles are scenario choices, not a required NASA crew composition.",
+  "mission": {
+    "id": "SIM-TRANSIT-01",
+    "mode": "simulation",
+    "phase": "transit",
+    "earth_link": "disconnected"
+  },
+  "subjects": [
+    {
+      "subject_id": "SIM-C01",
+      "namespace": "SIM-CHNAI-01",
+      "mission": "SIM-TRANSIT-01",
+      "display_label": "Simulated Crew 01",
+      "role": "commander",
+      "actor_id": "SIM-A01",
+      "synthetic": true,
+      "demographics": null
+    },
+    {
+      "subject_id": "SIM-C02",
+      "namespace": "SIM-CHNAI-01",
+      "mission": "SIM-TRANSIT-01",
+      "display_label": "Simulated Crew 02",
+      "role": "crew_medical_officer",
+      "actor_id": "SIM-A02",
+      "synthetic": true,
+      "demographics": null
+    },
+    {
+      "subject_id": "SIM-C03",
+      "namespace": "SIM-CHNAI-01",
+      "mission": "SIM-TRANSIT-01",
+      "display_label": "Simulated Crew 03",
+      "role": "systems_engineer",
+      "actor_id": "SIM-A03",
+      "synthetic": true,
+      "demographics": null
+    },
+    {
+      "subject_id": "SIM-C04",
+      "namespace": "SIM-CHNAI-01",
+      "mission": "SIM-TRANSIT-01",
+      "display_label": "Simulated Crew 04",
+      "role": "science_specialist",
+      "actor_id": "SIM-A04",
+      "synthetic": true,
+      "demographics": null
+    },
+    {
+      "subject_id": "SIM-C05",
+      "namespace": "SIM-CHNAI-01",
+      "mission": "SIM-TRANSIT-01",
+      "display_label": "Simulated Crew 05",
+      "role": "pilot",
+      "actor_id": "SIM-A05",
+      "synthetic": true,
+      "demographics": null
+    },
+    {
+      "subject_id": "SIM-C06",
+      "namespace": "SIM-CHNAI-01",
+      "mission": "SIM-TRANSIT-01",
+      "display_label": "Simulated Crew 06",
+      "role": "exercise_coordinator",
+      "actor_id": "SIM-A06",
+      "synthetic": true,
+      "demographics": null
+    }
+  ],
+  "actors": [
+    {
+      "actor_id": "SIM-A01",
+      "kind": "human",
+      "fictional": true,
+      "role": "commander",
+      "self_subject_id": "SIM-C01"
+    },
+    {
+      "actor_id": "SIM-A02",
+      "kind": "human",
+      "fictional": true,
+      "role": "crew_medical_officer",
+      "self_subject_id": "SIM-C02"
+    },
+    {
+      "actor_id": "SIM-A03",
+      "kind": "human",
+      "fictional": true,
+      "role": "systems_engineer",
+      "self_subject_id": "SIM-C03"
+    },
+    {
+      "actor_id": "SIM-A04",
+      "kind": "human",
+      "fictional": true,
+      "role": "science_specialist",
+      "self_subject_id": "SIM-C04"
+    },
+    {
+      "actor_id": "SIM-A05",
+      "kind": "human",
+      "fictional": true,
+      "role": "pilot",
+      "self_subject_id": "SIM-C05"
+    },
+    {
+      "actor_id": "SIM-A06",
+      "kind": "human",
+      "fictional": true,
+      "role": "exercise_coordinator",
+      "self_subject_id": "SIM-C06"
+    },
+    {
+      "actor_id": "SIM-GROUND-01",
+      "kind": "human",
+      "fictional": true,
+      "role": "ground_reviewer",
+      "self_subject_id": null
+    },
+    {
+      "actor_id": "SIM-TECH-01",
+      "kind": "human",
+      "fictional": true,
+      "role": "technical_operator",
+      "self_subject_id": null
+    },
+    {
+      "actor_id": "SIM-SVC-01",
+      "kind": "service",
+      "fictional": true,
+      "role": "ingest_service",
+      "self_subject_id": null
+    }
+  ],
+  "relationships": [
+    {
+      "actor_id": "SIM-A01",
+      "subject_id": "SIM-C01",
+      "purpose": "self_review",
+      "permissions": [
+        "view_own",
+        "request_review"
+      ]
+    },
+    {
+      "actor_id": "SIM-A02",
+      "subject_id": "SIM-C02",
+      "purpose": "self_review",
+      "permissions": [
+        "view_own",
+        "request_review"
+      ]
+    },
+    {
+      "actor_id": "SIM-A03",
+      "subject_id": "SIM-C03",
+      "purpose": "self_review",
+      "permissions": [
+        "view_own",
+        "request_review"
+      ]
+    },
+    {
+      "actor_id": "SIM-A04",
+      "subject_id": "SIM-C04",
+      "purpose": "self_review",
+      "permissions": [
+        "view_own",
+        "request_review"
+      ]
+    },
+    {
+      "actor_id": "SIM-A05",
+      "subject_id": "SIM-C05",
+      "purpose": "self_review",
+      "permissions": [
+        "view_own",
+        "request_review"
+      ]
+    },
+    {
+      "actor_id": "SIM-A06",
+      "subject_id": "SIM-C06",
+      "purpose": "self_review",
+      "permissions": [
+        "view_own",
+        "request_review"
+      ]
+    },
+    {
+      "actor_id": "SIM-A02",
+      "subject_id": "SIM-C03",
+      "purpose": "onboard_review",
+      "permissions": [
+        "view_assigned",
+        "record_review",
+        "prepare_handoff",
+        "release_ground_packet"
+      ]
+    },
+    {
+      "actor_id": "SIM-GROUND-01",
+      "subject_id": "SIM-C03",
+      "purpose": "ground_review",
+      "permissions": [
+        "view_released_packet",
+        "record_review"
+      ]
+    }
+  ],
+  "assessment_records": [
+    {
+      "record_id": "SIM-C01-baseline-r1",
+      "subject_id": "SIM-C01",
+      "namespace": "SIM-CHNAI-01",
+      "mission_id": "SIM-TRANSIT-01",
+      "quantity_code": "Q01",
+      "revision": 1,
+      "role": "baseline",
+      "raw_value": "50",
+      "raw_unit": "mL/min/kg",
+      "method_ref": "SIM-CPET-DIRECT-1",
+      "time": {
+        "basis": "relative_event",
+        "anchor": "scenario_launch",
+        "expression": "L-30",
+        "utc": null
+      },
+      "provenance_kind": "simulated_operational",
+      "quality_state": "qualified",
+      "uncertainty": "not_specified",
+      "clinical_approval": false
+    },
+    {
+      "record_id": "SIM-C01-current-r1",
+      "subject_id": "SIM-C01",
+      "namespace": "SIM-CHNAI-01",
+      "mission_id": "SIM-TRANSIT-01",
+      "quantity_code": "Q01",
+      "revision": 1,
+      "role": "current",
+      "raw_value": "41",
+      "raw_unit": "mL/min/kg",
+      "method_ref": "SIM-CPET-DIRECT-1",
+      "time": {
+        "basis": "relative_event",
+        "anchor": "scenario_launch",
+        "expression": "MET+030d",
+        "utc": null
+      },
+      "provenance_kind": "simulated_operational",
+      "quality_state": "qualified",
+      "uncertainty": "not_specified",
+      "clinical_approval": false
+    },
+    {
+      "record_id": "SIM-C02-current-r1",
+      "subject_id": "SIM-C02",
+      "namespace": "SIM-CHNAI-01",
+      "mission_id": "SIM-TRANSIT-01",
+      "quantity_code": "Q01",
+      "revision": 1,
+      "role": "current",
+      "raw_value": "40",
+      "raw_unit": "mL/min/kg",
+      "method_ref": "SIM-CPET-DIRECT-1",
+      "time": {
+        "basis": "relative_event",
+        "anchor": "scenario_launch",
+        "expression": "MET+030d",
+        "utc": null
+      },
+      "provenance_kind": "simulated_operational",
+      "quality_state": "qualified",
+      "uncertainty": "not_specified",
+      "clinical_approval": false
+    },
+    {
+      "record_id": "SIM-C03-baseline-r1",
+      "subject_id": "SIM-C03",
+      "namespace": "SIM-CHNAI-01",
+      "mission_id": "SIM-TRANSIT-01",
+      "quantity_code": "Q01",
+      "revision": 1,
+      "role": "baseline",
+      "raw_value": "50",
+      "raw_unit": "mL/min/kg",
+      "method_ref": "SIM-CPET-DIRECT-1",
+      "time": {
+        "basis": "relative_event",
+        "anchor": "scenario_launch",
+        "expression": "L-30",
+        "utc": null
+      },
+      "provenance_kind": "simulated_operational",
+      "quality_state": "qualified",
+      "uncertainty": "not_specified",
+      "clinical_approval": false
+    },
+    {
+      "record_id": "SIM-C03-current-r1",
+      "subject_id": "SIM-C03",
+      "namespace": "SIM-CHNAI-01",
+      "mission_id": "SIM-TRANSIT-01",
+      "quantity_code": "Q01",
+      "revision": 1,
+      "role": "current",
+      "raw_value": "39",
+      "raw_unit": "mL/min/kg",
+      "method_ref": "SIM-CPET-DIRECT-1",
+      "time": {
+        "basis": "relative_event",
+        "anchor": "scenario_launch",
+        "expression": "MET+030d",
+        "utc": null
+      },
+      "provenance_kind": "simulated_operational",
+      "quality_state": "qualified",
+      "uncertainty": "not_specified",
+      "clinical_approval": false
+    },
+    {
+      "record_id": "SIM-C04-baseline-r1",
+      "subject_id": "SIM-C04",
+      "namespace": "SIM-CHNAI-01",
+      "mission_id": "SIM-TRANSIT-01",
+      "quantity_code": "Q01",
+      "revision": 1,
+      "role": "baseline",
+      "raw_value": "50",
+      "raw_unit": "mL/min/kg",
+      "method_ref": "SIM-CPET-DIRECT-1",
+      "time": {
+        "basis": "relative_event",
+        "anchor": "scenario_launch",
+        "expression": "L-30",
+        "utc": null
+      },
+      "provenance_kind": "simulated_operational",
+      "quality_state": "qualified",
+      "uncertainty": "not_specified",
+      "clinical_approval": false
+    },
+    {
+      "record_id": "SIM-C04-current-r1",
+      "subject_id": "SIM-C04",
+      "namespace": "SIM-CHNAI-01",
+      "mission_id": "SIM-TRANSIT-01",
+      "quantity_code": "Q01",
+      "revision": 1,
+      "role": "current",
+      "raw_value": "39",
+      "raw_unit": "L/min",
+      "method_ref": "SIM-CPET-DIRECT-1",
+      "time": {
+        "basis": "relative_event",
+        "anchor": "scenario_launch",
+        "expression": "MET+030d",
+        "utc": null
+      },
+      "provenance_kind": "simulated_operational",
+      "quality_state": "quarantined",
+      "uncertainty": "not_specified",
+      "clinical_approval": false
+    },
+    {
+      "record_id": "SIM-C05-baseline-r1",
+      "subject_id": "SIM-C05",
+      "namespace": "SIM-CHNAI-01",
+      "mission_id": "SIM-TRANSIT-01",
+      "quantity_code": "Q01",
+      "revision": 1,
+      "role": "baseline",
+      "raw_value": "50",
+      "raw_unit": "mL/min/kg",
+      "method_ref": "SIM-CPET-DIRECT-1",
+      "time": {
+        "basis": "relative_event",
+        "anchor": "scenario_launch",
+        "expression": "L-30",
+        "utc": null
+      },
+      "provenance_kind": "simulated_operational",
+      "quality_state": "qualified",
+      "uncertainty": "not_specified",
+      "clinical_approval": false
+    },
+    {
+      "record_id": "SIM-C05-current-r1",
+      "subject_id": "SIM-C05",
+      "namespace": "SIM-CHNAI-01",
+      "mission_id": "SIM-TRANSIT-01",
+      "quantity_code": "Q01",
+      "revision": 1,
+      "role": "current",
+      "raw_value": "40",
+      "raw_unit": "mL/min/kg",
+      "method_ref": "SIM-CPET-DIRECT-1",
+      "time": {
+        "basis": "relative_event",
+        "anchor": "scenario_launch",
+        "expression": "MET+030d",
+        "utc": null
+      },
+      "provenance_kind": "simulated_operational",
+      "quality_state": "qualified",
+      "uncertainty": "not_specified",
+      "clinical_approval": false
+    },
+    {
+      "record_id": "SIM-C06-baseline-r1",
+      "subject_id": "SIM-C06",
+      "namespace": "SIM-CHNAI-01",
+      "mission_id": "SIM-TRANSIT-01",
+      "quantity_code": "Q01",
+      "revision": 1,
+      "role": "baseline",
+      "raw_value": "50",
+      "raw_unit": "mL/min/kg",
+      "method_ref": "SIM-CPET-DIRECT-1",
+      "time": {
+        "basis": "relative_event",
+        "anchor": "scenario_launch",
+        "expression": "L-30",
+        "utc": null
+      },
+      "provenance_kind": "simulated_operational",
+      "quality_state": "qualified",
+      "uncertainty": "not_specified",
+      "clinical_approval": false
+    },
+    {
+      "record_id": "SIM-C06-current-r1",
+      "subject_id": "SIM-C06",
+      "namespace": "SIM-CHNAI-01",
+      "mission_id": "SIM-TRANSIT-01",
+      "quantity_code": "Q01",
+      "revision": 1,
+      "role": "current",
+      "raw_value": "39.995",
+      "raw_unit": "mL/min/kg",
+      "method_ref": "SIM-CPET-DIRECT-1",
+      "time": {
+        "basis": "relative_event",
+        "anchor": "scenario_launch",
+        "expression": "MET+030d",
+        "utc": null
+      },
+      "provenance_kind": "simulated_operational",
+      "quality_state": "qualified",
+      "uncertainty": "not_specified",
+      "clinical_approval": false
+    }
+  ],
+  "release_state": "demo_only",
+  "qualification_scope": "structural demonstration only; no clinical approval",
+  "uncertainty_policy": "SIM-POLICY-0.1 displays uncertainty unknown and clinical review pending; no medical decision",
+  "all_application_tests": "Not run"
+}

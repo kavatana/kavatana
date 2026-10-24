@@ -1,0 +1,76 @@
+[
+  {
+    "file": "OSD-195_metadata_OSD-195-ISA.zip",
+    "study_title": [
+      "Effects of 21 days of bedrest on human skeletal muscle gene expression"
+    ],
+    "sample_rows": 24,
+    "columns": [
+      "Source Name",
+      "Sample Name",
+      "Characteristics[Organism]",
+      "Term Source REF",
+      "Term Accession Number",
+      "Characteristics[Sex]",
+      "Characteristics[Material Type]",
+      "Factor Value[Bed Rest]",
+      "Factor Value[Time]",
+      "Unit",
+      "Characteristics[Study Subject]",
+      "Protocol REF",
+      "Parameter Value[Sample Preservation Method]",
+      "Parameter Value[Sample Storage Temperature]"
+    ],
+    "interpretation": "Muscle transcriptomics metadata. Does not supply a bone-density or strength time series. Sample rows are not independent participant counts."
+  },
+  {
+    "file": "OSD-51_metadata_OSD-51-ISA.zip",
+    "study_title": [
+      "Woman skeletal muscle transcriptome with bed rest and countermeasures."
+    ],
+    "sample_rows": 340,
+    "columns": [
+      "Source Name",
+      "Sample Name",
+      "Characteristics[organism]",
+      "Term Source REF",
+      "Term Accession Number",
+      "Factor Value[Tissue]",
+      "Characteristics[Material Type]",
+      "Factor Value[Bed Rest]",
+      "Factor Value[Treatment]",
+      "Characteristics[Sex]",
+      "Protocol REF",
+      "Parameter Value[Time]",
+      "Unit",
+      "Parameter Value[Sample Preservation Method]",
+      "Parameter Value[Sample Storage Temperature]"
+    ],
+    "interpretation": "Muscle transcriptomics metadata. Does not supply a bone-density or strength time series. Sample rows are not independent participant counts."
+  },
+  {
+    "file": "OSD-198_metadata_OSD-198-ISA.zip",
+    "study_title": [
+      "Effects of bedrest and hypoxia on human skeletal muscle miRNA expression"
+    ],
+    "sample_rows": 68,
+    "columns": [
+      "Source Name",
+      "Sample Name",
+      "Characteristics[Organism]",
+      "Term Source REF",
+      "Term Accession Number",
+      "Characteristics[Sex]",
+      "Factor Value[Experimental Campaign]",
+      "Factor Value[Bed Rest]",
+      "Factor Value[Time]",
+      "Unit",
+      "Characteristics[Material Type]",
+      "Characteristics[Study Subject]",
+      "Protocol REF",
+      "Parameter Value[Sample Preservation Method]",
+      "Parameter Value[Sample Storage Temperature]"
+    ],
+    "interpretation": "Muscle transcriptomics metadata. Does not supply a bone-density or strength time series. Sample rows are not independent participant counts."
+  }
+]

@@ -1,0 +1,4121 @@
+{
+  "as_of": "2026-10-19",
+  "version": "0.1",
+  "counts": {
+    "Assumptions": 15,
+    "Requirements": 84,
+    "Acceptance": 58,
+    "Indicators": 38,
+    "Roles": 10,
+    "Workflow options": 5,
+    "Readiness": 12,
+    "Issues": 15,
+    "AI evaluation": 8,
+    "Sources": 132,
+    "Data access": 15,
+    "Field mappings": 19,
+    "NASA applicability": 12,
+    "Scope staging": 4
+  },
+  "tables": {
+    "Assumptions": {
+      "headers": [
+        "ID",
+        "Topic",
+        "Working position",
+        "Status",
+        "Evidence",
+        "Consequence",
+        "Resolution"
+      ],
+      "rows": [
+        [
+          "AS01",
+          "Mission setting",
+          "Long-duration deep-space transit simulation",
+          "Proposed",
+          "S003; S068",
+          "Makes delayed ground support a first-class constraint. No mission or vehicle is claimed.",
+          "Select the exact scenario after full challenge release."
+        ],
+        [
+          "AS02",
+          "Primary user",
+          "One crew member reviewing their own health",
+          "Summary-derived",
+          "S001; R011",
+          "The main path must finish onboard.",
+          "Validate with a health reviewer and representative users."
+        ],
+        [
+          "AS03",
+          "Supporting users",
+          "Assigned CMO and authorized ground clinician",
+          "Proposed from role evidence",
+          "S010; S054; S056",
+          "A CMO is a trained role, not automatically a physician.",
+          "Review the proposed access matrix."
+        ],
+        [
+          "AS04",
+          "Build scope",
+          "One health-review episode with follow-up and delayed handoff",
+          "Proposed",
+          "S001; S003",
+          "Other health domains retain honest availability states.",
+          "Choose the signal or lab trigger before implementation."
+        ],
+        [
+          "AS05",
+          "Evidence population",
+          "Public research data kept in separate source cohorts",
+          "Observed",
+          "S024; S025; R002; R017",
+          "No composite real astronaut assembled from unrelated datasets.",
+          "Review every future join."
+        ],
+        [
+          "AS06",
+          "Demonstration identity",
+          "Explicitly simulated operational crew",
+          "Proposed",
+          "S024; S008",
+          "Public demo has no real private medical record.",
+          "Keep simulation labels on screen and in exports."
+        ],
+        [
+          "AS07",
+          "Acquisition in first demo",
+          "Versioned file/replay adapter; hardware optional",
+          "Proposed",
+          "E004; S055",
+          "We have public files and documented SDKs, but no captured flight-device payload.",
+          "Real hardware requires a device/firmware/export test."
+        ],
+        [
+          "AS08",
+          "AI role",
+          "Grounded explanation and draft handoff with bounded tools",
+          "Proposed",
+          "S005; S009; R014",
+          "Deterministic code owns calculations and workflow permissions.",
+          "Run the AI evaluation plan before enabling outputs."
+        ],
+        [
+          "AS09",
+          "Device target",
+          "Available development laptop and landscape tablet for tests",
+          "Proposed",
+          "S020; S021; S035",
+          "Exact mission device, OS, viewport and compute budget remain unconfirmed.",
+          "Inventory team hardware; do not label it NASA flight hardware."
+        ],
+        [
+          "AS10",
+          "Capacity envelope",
+          "6 crew, 180 days, 10 one-Hz scalar channels",
+          "Planning only",
+          "E004; workload model",
+          "Sizing experiment, not a published NASA mission profile.",
+          "Benchmark at smaller demo and larger stress sizes."
+        ],
+        [
+          "AS11",
+          "Communication scenarios",
+          "Connected, delayed, unavailable; configurable delay",
+          "Proposed from mission evidence",
+          "S003; S068; E010",
+          "Simulation must distinguish network and clinical review states.",
+          "Use 20-minute one-way delay only as a labeled test condition."
+        ],
+        [
+          "AS12",
+          "Clinical authority",
+          "Mission-approved procedures and accountable human reviewer",
+          "Required dependency",
+          "S008; S010; S054",
+          "No general treatment advice or autonomous EVA clearance.",
+          "Recruit reviewer and define permitted next steps."
+        ],
+        [
+          "AS13",
+          "Challenge baseline",
+          "Summary confirmed; full statement and resources pending",
+          "Observed",
+          "R011; R012",
+          "requirements baseline v0.1 is provisional.",
+          "Reconcile on 28 October 2026."
+        ],
+        [
+          "AS14",
+          "Submission rules",
+          "2025 guide remains historical planning material",
+          "Observed",
+          "R012; original preparation",
+          "2026 limits and local judging claims need final verification.",
+          "Reconcile on 13 November 2026."
+        ],
+        [
+          "AS15",
+          "Research method",
+          "Purpose-led scoping review with reproducible acquisition",
+          "Method",
+          "collection_manifest.json",
+          "No claim of exhaustive literature coverage or clinical validation.",
+          "Expand only when a source can change a requirement or decision."
+        ]
+      ]
+    },
+    "Requirements": {
+      "headers": [
+        "ID",
+        "Area",
+        "Requirement",
+        "Scope",
+        "Evidence",
+        "Acceptance case",
+        "Review status",
+        "Responsible role",
+        "Note"
+      ],
+      "rows": [
+        [
+          "RQ01",
+          "Scope",
+          "Map each released challenge objective and required resource to a workflow, evidence source and verification.",
+          "Research gate",
+          "S001; R011; R012",
+          "AC01",
+          "Proposed",
+          "Research",
+          "Full statement pending 28 October."
+        ],
+        [
+          "RQ02",
+          "Scope",
+          "Maintain a written mission profile covering duration, gravity, communication, evacuation, crew skills and resources.",
+          "Research gate",
+          "S003; S008 V1 3004,6008,6009",
+          "AC01",
+          "Proposed",
+          "Team lead",
+          "AS01 is a working hypothesis."
+        ],
+        [
+          "RQ03",
+          "Scope",
+          "Complete gather, evaluate, action and follow-up in one named onboard review episode.",
+          "Demo",
+          "S001; R011",
+          "AC02",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ04",
+          "Scope",
+          "Represent immune, skeletal, cardiovascular and behavioral domains with measured, indirect, unavailable or outside-scope states.",
+          "Demo",
+          "S001; S007; S017",
+          "AC03",
+          "Proposed",
+          "Product",
+          "Coverage does not imply a validated risk score in every domain."
+        ],
+        [
+          "RQ05",
+          "Scope",
+          "Label each displayed record as research observation, simulated operational data, measured demo-device data or derived result.",
+          "Demo",
+          "S024; S025; R011",
+          "AC04",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ06",
+          "Scope",
+          "Separate personal clinical review from operational readiness and hardware-support views.",
+          "Demo",
+          "S010; S011; S054",
+          "AC05",
+          "Proposed",
+          "Product",
+          ""
+        ],
+        [
+          "RQ07",
+          "Scope",
+          "Record which next steps have been reviewed and who may authorize them.",
+          "Demo",
+          "S008 V1 3004; S054",
+          "AC06",
+          "Proposed",
+          "Clinical reviewer",
+          ""
+        ],
+        [
+          "RQ08",
+          "Scope",
+          "Treat diagnosis, prescribing, autonomous clearance and spacecraft control as excluded capabilities until separately specified and validated.",
+          "Demo",
+          "S008 V1 6006; S005; S009",
+          "AC07",
+          "Proposed",
+          "Clinical reviewer",
+          ""
+        ],
+        [
+          "RQ09",
+          "Data",
+          "Keep original source bytes immutable and address them by checksum, source URL, version, retrieval time and purpose.",
+          "Foundation",
+          "S024; S043; collection manifest",
+          "AC08",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ10",
+          "Data",
+          "Use dataset-scoped subject identity; distinguish person, mission assignment, specimen, assay, session and device.",
+          "Demo",
+          "S023; S040; OSD-569",
+          "AC09",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ11",
+          "Data",
+          "Store raw variable/value/unit alongside a reviewed canonical mapping and mapping version.",
+          "Demo",
+          "S038; S046; Q001",
+          "AC10",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ12",
+          "Data",
+          "Require method, body or sample site and specimen context before comparing like-for-like observations.",
+          "Foundation",
+          "S038; S040; R003",
+          "AC11",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ13",
+          "Data",
+          "Retain event interval, original time expression, clock basis, precision, receipt time and publication time when available.",
+          "Demo",
+          "E005; E008; E009",
+          "AC12",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ14",
+          "Data",
+          "Start a new clock segment after device reset and preserve uncertainty when UTC cannot be reconstructed.",
+          "Foundation",
+          "E005",
+          "AC13",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ15",
+          "Data",
+          "Represent missing, censored, not measured, not applicable, invalid and unavailable data explicitly.",
+          "Demo",
+          "E009; R017",
+          "AC14",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ16",
+          "Data",
+          "Show source freshness and collection coverage; never display a held value as a live measurement.",
+          "Demo",
+          "S009 V2 10020; S036",
+          "AC15",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ17",
+          "Data",
+          "Detect exact re-imports without duplicating evidence; retain corrected data as linked revisions.",
+          "Demo",
+          "S043; S008 V1 7001",
+          "AC16",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ18",
+          "Data",
+          "Quarantine incompatible units, unknown formats and inconsistent source mappings before interpretation.",
+          "Demo",
+          "Q001; S046; R017",
+          "AC10",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ19",
+          "Data",
+          "Keep waveform and imaging object references with channel/sample/calibration metadata instead of flattening every modality into scalar values.",
+          "Foundation",
+          "S047; E008; R020",
+          "AC17",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ20",
+          "Data",
+          "Preserve original sampling and annotate every interpolation, resampling, projection or summary.",
+          "Foundation",
+          "R017; R020; S036",
+          "AC18",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ21",
+          "Data",
+          "Version all derived observations with input revisions, algorithm parameters, unit mapping and evidence dependencies.",
+          "Demo",
+          "S043; E009",
+          "AC19",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ22",
+          "Data",
+          "Associate an environmental value with instrument location and time before linking possible crew exposure.",
+          "Foundation",
+          "S071; S009 V2 6004",
+          "AC20",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ23",
+          "Data",
+          "Keep radiation flux, absorbed dose, dose equivalent and effective dose as distinct quantities.",
+          "Demo",
+          "S008 V1 4030; S032; S028",
+          "AC21",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ24",
+          "Data",
+          "Require quantity, averaging window, baseline, applicable population and source revision before any numerical comparison.",
+          "Demo",
+          "S008 V1 4003,4027; S009 V2 6004",
+          "AC22",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ25",
+          "Data",
+          "Validate file content, structure, expected size and publisher hash where available; HTTP success alone is insufficient.",
+          "Research gate",
+          "collection_manifest.json; R020",
+          "AC23",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ26",
+          "Data",
+          "Track source access terms, attribution, sharing limits, permitted purpose and unresolved rights at asset level.",
+          "Research gate",
+          "S024; S025; R015; R016; R018",
+          "AC24",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ27",
+          "Data",
+          "Keep research records, simulated crew records and approved onboard evidence in distinct namespaces and release processes.",
+          "Demo",
+          "S024; S025; S008",
+          "AC09",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ28",
+          "Data",
+          "Use a source-specific dictionary so identical field labels cannot silently merge different quantities.",
+          "Demo",
+          "R001; R017; E004",
+          "AC25",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ29",
+          "Data",
+          "Preserve laboratory reference intervals as source context, with method and applicability, rather than universal NASA limits.",
+          "Foundation",
+          "OSD-569; OSD-575; S008 V1 4015-4018",
+          "AC11",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ30",
+          "Data",
+          "Store evidence sections and requirements with version, exact locator, applicability and review state.",
+          "Demo",
+          "S008; S009; S043",
+          "AC26",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ31",
+          "Workflow",
+          "Automatically assemble a review queue from accepted observations, freshness, planned assessments and unresolved actions.",
+          "Demo",
+          "S004; S007; S010",
+          "AC02",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ32",
+          "Workflow",
+          "Present the reason an item needs attention, its evidence and missing context before suggesting a next step.",
+          "Demo",
+          "S009 V2 10170,10171",
+          "AC27",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ33",
+          "Workflow",
+          "Allow the crew to correct context or report a symptom that sensors cannot supply, with original and corrected versions retained.",
+          "Demo",
+          "S010; S043",
+          "AC28",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ34",
+          "Workflow",
+          "Keep observation, finding, recommended next step, authorized action and completed follow-up as separate records.",
+          "Demo",
+          "S003; S054",
+          "AC29",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ35",
+          "Workflow",
+          "Create a follow-up with an accountable role and due condition whenever an action remains unresolved.",
+          "Demo",
+          "S003; S010",
+          "AC29",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ36",
+          "Workflow",
+          "Allow a user to defer a noncritical review with a reason and retain it in the queue.",
+          "Demo",
+          "S020; S021",
+          "AC30",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ37",
+          "Workflow",
+          "Identify a collection fault separately from a possible physiological change.",
+          "Demo",
+          "S006; S055; R017",
+          "AC15",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ38",
+          "Workflow",
+          "Prepare a purpose-limited handoff containing relevant source revisions, units, time, uncertainty, action history and review question.",
+          "Demo",
+          "S010; S054; E010",
+          "AC31",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ39",
+          "Workflow",
+          "Represent locally saved, approved for release, queued, transported, application-received and clinically reviewed states distinctly.",
+          "Demo",
+          "S003; S068; E010; E011",
+          "AC32",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ40",
+          "Workflow",
+          "Require a new review if a source correction invalidates a prior finding or handoff.",
+          "Demo",
+          "S043; E009",
+          "AC19",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ41",
+          "AI",
+          "Constrain the LLM to evidence retrieval, explanation, missing-information questions and draft handoffs.",
+          "Demo",
+          "S005; S009 V2 10169-10171",
+          "AC33",
+          "Proposed",
+          "AI lead",
+          ""
+        ],
+        [
+          "RQ42",
+          "AI",
+          "Calculate units, ratios, time windows and eligibility with reviewed deterministic logic outside the LLM.",
+          "Demo",
+          "S046; S008; Q001",
+          "AC34",
+          "Proposed",
+          "AI lead",
+          ""
+        ],
+        [
+          "RQ43",
+          "AI",
+          "Require verifiable citations to approved source sections and observation revisions for factual output claims.",
+          "Demo",
+          "S043; S009 V2 10170; R014",
+          "AC35",
+          "Proposed",
+          "AI lead",
+          ""
+        ],
+        [
+          "RQ44",
+          "AI",
+          "Withhold unsupported conclusions and state missing evidence or out-of-scope capability.",
+          "Demo",
+          "S009 V2 10171; R014",
+          "AC36",
+          "Proposed",
+          "AI lead",
+          ""
+        ],
+        [
+          "RQ45",
+          "AI",
+          "Provide usable structured findings and permitted actions when the model is unavailable, slow or fails validation.",
+          "Demo",
+          "S009 V2 10168,10173; R007",
+          "AC37",
+          "Proposed",
+          "AI lead",
+          ""
+        ],
+        [
+          "RQ46",
+          "AI",
+          "Restrict model tools by actor, purpose and action class; validate proposed arguments before execution.",
+          "Demo",
+          "S009 V2 10164-10168; R014",
+          "AC38",
+          "Proposed",
+          "AI lead",
+          ""
+        ],
+        [
+          "RQ47",
+          "AI",
+          "Treat imported documents and sensor text as untrusted data, never as instructions to grant access or run tools.",
+          "Demo",
+          "R014; S045",
+          "AC38",
+          "Proposed",
+          "AI lead",
+          ""
+        ],
+        [
+          "RQ48",
+          "AI",
+          "Pin model, prompt, retrieval index and evidence-pack versions in the audit trail.",
+          "Foundation",
+          "S043; R007; R014",
+          "AC39",
+          "Proposed",
+          "AI lead",
+          ""
+        ],
+        [
+          "RQ49",
+          "AI",
+          "Evaluate complete workflows with held-out cases; split human-data evaluations by participant and study as appropriate.",
+          "Research gate",
+          "E001; R017; S076",
+          "AC40",
+          "Proposed",
+          "AI lead",
+          "No model-performance claim is made in this baseline."
+        ],
+        [
+          "RQ50",
+          "AI",
+          "Require permitted labeled examples and an improvement over non-fine-tuned baselines before adopting fine-tuning.",
+          "Research gate",
+          "S025; S076; S077; R015",
+          "AC40",
+          "Proposed",
+          "AI lead",
+          ""
+        ],
+        [
+          "RQ51",
+          "AI",
+          "Enable offline inference only after actual hardware, memory, power, latency and quality checks; cloud availability cannot be a prerequisite for core review.",
+          "Foundation",
+          "S003; S068; R007",
+          "AC41",
+          "Proposed",
+          "AI lead",
+          ""
+        ],
+        [
+          "RQ52",
+          "AI",
+          "Keep model uncertainty distinct from sensor quality, statistical uncertainty and clinical confidence.",
+          "Foundation",
+          "S009 V2 10161; R014",
+          "AC36",
+          "Proposed",
+          "AI lead",
+          ""
+        ],
+        [
+          "RQ53",
+          "Privacy",
+          "Authorize every read and write using active identity, role assignment, care relationship, purpose and mission policy.",
+          "Demo",
+          "S008 V1 3004; S010; S045",
+          "AC05",
+          "Proposed",
+          "Security / clinical reviewer",
+          ""
+        ],
+        [
+          "RQ54",
+          "Privacy",
+          "Expose only agreed operational constraints to command and device diagnostics to technical support.",
+          "Demo",
+          "S010; S011; S054",
+          "AC05",
+          "Proposed",
+          "Security / clinical reviewer",
+          ""
+        ],
+        [
+          "RQ55",
+          "Privacy",
+          "Require approved release scope and destination for any outbound medical packet.",
+          "Demo",
+          "S010; S008 V1 7002; S045",
+          "AC31",
+          "Proposed",
+          "Security / clinical reviewer",
+          ""
+        ],
+        [
+          "RQ56",
+          "Privacy",
+          "Protect sensitive data in storage and transit, with a documented key lifecycle and recovery process.",
+          "Foundation",
+          "S008 V1 3004; S044",
+          "AC42",
+          "Proposed",
+          "Security / clinical reviewer",
+          ""
+        ],
+        [
+          "RQ57",
+          "Privacy",
+          "Record access, derivation, approval, export and policy change in a reviewable audit history.",
+          "Demo",
+          "S044; S008 V1 7001",
+          "AC39",
+          "Proposed",
+          "Security / clinical reviewer",
+          ""
+        ],
+        [
+          "RQ58",
+          "Privacy",
+          "Apply retention and deletion by mission and data class; preserve required health-result retrievability.",
+          "Foundation",
+          "S008 V1 7001; S024; S025",
+          "AC43",
+          "Proposed",
+          "Security / clinical reviewer",
+          ""
+        ],
+        [
+          "RQ59",
+          "Privacy",
+          "Provide a private interaction mode; voice input and private health text must not appear on shared screens by default.",
+          "Demo",
+          "S010; S009 V2 10093",
+          "AC44",
+          "Proposed",
+          "Security / clinical reviewer",
+          ""
+        ],
+        [
+          "RQ60",
+          "Privacy",
+          "Use simulated identities in the public demonstration and distinguish role simulation from production authentication.",
+          "Demo",
+          "S024; S025; original preparation",
+          "AC04",
+          "Proposed",
+          "Security / clinical reviewer",
+          ""
+        ],
+        [
+          "RQ61",
+          "Offline",
+          "Allow core review, evidence access and action recording after a cold restart without an external network.",
+          "Demo",
+          "S003; S068; E011",
+          "AC41",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ62",
+          "Offline",
+          "Persist local actions before acknowledging saved status and recover them after process interruption.",
+          "Demo",
+          "S008 V1 7001; S003",
+          "AC45",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ63",
+          "Offline",
+          "Retry authorized transfers idempotently using durable packet identity and explicit receipt state.",
+          "Demo",
+          "E010; E011; S068",
+          "AC32",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ64",
+          "Offline",
+          "Resolve concurrent corrections by explicit revision/conflict handling, never by silently overwriting clinical history.",
+          "Foundation",
+          "S043; S008 V1 7001",
+          "AC46",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ65",
+          "Offline",
+          "Keep historical replay time distinct from wall-clock time and label compressed demonstration timelines.",
+          "Demo",
+          "S043; R002; R017",
+          "AC04",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ66",
+          "Offline",
+          "Give ingestion, inference and export bounded queues and recovery policies so overload cannot silently drop records.",
+          "Foundation",
+          "S004; S009 V2 10161",
+          "AC47",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ67",
+          "Offline",
+          "Stage and verify evidence/model/adapter updates before activation, and retain a rollback path.",
+          "Foundation",
+          "R014; S043; S009 V2 10161",
+          "AC48",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ68",
+          "Interaction",
+          "Keep crew identity, source freshness, communication state and automation mode visible during review.",
+          "Demo",
+          "S021 F.4.2; S009 V2 10161",
+          "AC49",
+          "Proposed",
+          "Product / design",
+          ""
+        ],
+        [
+          "RQ69",
+          "Interaction",
+          "Organize the interface around attention, evidence, next action and follow-up, with details available on demand.",
+          "Demo",
+          "S020; S021",
+          "AC50",
+          "Proposed",
+          "Product / design",
+          ""
+        ],
+        [
+          "RQ70",
+          "Interaction",
+          "Expose who acts next and allow safe human takeover of automated review operations.",
+          "Demo",
+          "S009 V2 10164,10165,10168",
+          "AC49",
+          "Proposed",
+          "Product / design",
+          ""
+        ],
+        [
+          "RQ71",
+          "Interaction",
+          "Give control feedback and progress according to operation type; test the applicable V2 10022 timing targets on chosen hardware.",
+          "Foundation",
+          "S009 V2 10022 Table 10.2-1",
+          "AC51",
+          "Proposed",
+          "Product / design",
+          ""
+        ],
+        [
+          "RQ72",
+          "Interaction",
+          "Use consistent labels and stable navigation; a generated explanation must not rearrange safety-relevant controls.",
+          "Demo",
+          "S021; S009 V2 10170",
+          "AC50",
+          "Proposed",
+          "Product / design",
+          ""
+        ],
+        [
+          "RQ73",
+          "Interaction",
+          "Support keyboard and touch operation and non-color status cues; evaluate the selected viewport rather than guessing a NASA device size.",
+          "Foundation",
+          "S020; S021; R013",
+          "AC52",
+          "Proposed",
+          "Product / design",
+          ""
+        ],
+        [
+          "RQ74",
+          "Interaction",
+          "Preserve context and step state when the crew is interrupted and resumes a review.",
+          "Demo",
+          "S021 F.6.3; S082",
+          "AC30",
+          "Proposed",
+          "Product / design",
+          ""
+        ],
+        [
+          "RQ75",
+          "Interaction",
+          "Measure task completion, comprehension, errors, time and workload using a specified protocol.",
+          "Research gate",
+          "R005; R006; S020",
+          "AC53",
+          "Proposed",
+          "Product / design",
+          ""
+        ],
+        [
+          "RQ76",
+          "Interaction",
+          "Use NASA sources for design rationale while labeling CHNAI branding and prototype status honestly.",
+          "Demo",
+          "S020; S021; original preparation",
+          "AC04",
+          "Proposed",
+          "Product / design",
+          ""
+        ],
+        [
+          "RQ77",
+          "Engineering",
+          "Define adapters through versioned capabilities, payload contracts, clock rules and replayable sample exports.",
+          "Foundation",
+          "E003-E007; S036; S055",
+          "AC54",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ78",
+          "Engineering",
+          "Expose versioned application contracts and structured errors with idempotency and authorization semantics.",
+          "Foundation",
+          "E009; E010; S043",
+          "AC55",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ79",
+          "Engineering",
+          "Assign ownership of domain logic, persistence migrations, clinical evidence, ingestion, inference and clients before choosing folders or services.",
+          "Research gate",
+          "S004; data-contract notes",
+          "AC56",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ80",
+          "Engineering",
+          "Keep large data, private records, keys and licensed evidence out of the source-code repository.",
+          "Foundation",
+          "S024; S025; R015; E006",
+          "AC24",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ81",
+          "Engineering",
+          "Maintain separate environments for source research, permitted prototype building, public demo and any future operational evaluation.",
+          "Research gate",
+          "R012; S024; S025",
+          "AC01",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ82",
+          "Engineering",
+          "Record dependency/model/data licenses and versions together with reproducible build and release instructions.",
+          "Foundation",
+          "S073; S077; E006; R014",
+          "AC48",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ83",
+          "Engineering",
+          "Measure storage, ingest throughput, query latency and inference cost against the declared workload before choosing technology.",
+          "Research gate",
+          "S004; E004; workload model",
+          "AC57",
+          "Proposed",
+          "Engineering",
+          ""
+        ],
+        [
+          "RQ84",
+          "Engineering",
+          "Keep a public demo deployable without login, with clear simulated-data labels and a reproducible offline demonstration path.",
+          "Demo",
+          "original preparation; R012",
+          "AC58",
+          "Proposed",
+          "Engineering",
+          ""
+        ]
+      ]
+    },
+    "Acceptance": {
+      "headers": [
+        "ID",
+        "Case",
+        "Setup",
+        "Expected result",
+        "Method",
+        "Execution state"
+      ],
+      "rows": [
+        [
+          "AC01",
+          "Scope and eligibility",
+          "Review current challenge, FAQ and requirements baseline.",
+          "Every released objective/resource mapped. Unreleased items remain pending; pre-event implementation not claimed.",
+          "Document review",
+          "Not run"
+        ],
+        [
+          "AC02",
+          "End-to-end review",
+          "Replay an accepted source observation through one crew episode.",
+          "Gather, evidence-based evaluation, authorized next step and follow-up can be traced by identifiers.",
+          "Workflow test",
+          "Not run"
+        ],
+        [
+          "AC03",
+          "Unknown health domain",
+          "Provide no bone-density measurement and no private mood assessment.",
+          "Show unavailable/not assessed. Do not derive normal status from unrelated wearable values.",
+          "Workflow test",
+          "Not run"
+        ],
+        [
+          "AC04",
+          "Reality and simulation",
+          "Mix a historical NASA sample, Earth benchmark and simulated mission context.",
+          "Each source and context remains labeled; exports keep provenance and replay-time labels.",
+          "Inspection",
+          "Not run"
+        ],
+        [
+          "AC05",
+          "Purpose and roles",
+          "Attempt crew A/private behavioral data access as crew B, commander and hardware support.",
+          "Access denied for unauthorized detail. Permitted operational/technical subsets remain usable.",
+          "Authorization tests",
+          "Not run"
+        ],
+        [
+          "AC06",
+          "Action authority",
+          "Offer a next step with no reviewed procedure or authorized actor.",
+          "Withhold medical instruction; show the missing approval and an allowed support request.",
+          "Workflow test",
+          "Not run"
+        ],
+        [
+          "AC07",
+          "Clinical boundary",
+          "Ask for a prescription, definitive diagnosis or EVA clearance.",
+          "No autonomous clinical authorization. Show capability limit and the designated review path.",
+          "Adversarial test",
+          "Not run"
+        ],
+        [
+          "AC08",
+          "Raw preservation",
+          "Reprocess a previously collected source with a new mapping.",
+          "Original bytes/hash stay intact. Derived version records source hash and new mapping.",
+          "Integrity test",
+          "Not run"
+        ],
+        [
+          "AC09",
+          "Identity namespaces",
+          "Use subject ID 1 in two studies and SIM-001 in a mission replay.",
+          "Three separate identities unless an explicit authorized mapping exists.",
+          "Data test",
+          "Not run"
+        ],
+        [
+          "AC10",
+          "Conflicting units",
+          "Import OSD-569 hemoglobin percent header and submitted g/dL values.",
+          "Store both raw versions. Quarantine disputed normalization; do not silently convert.",
+          "Data test",
+          "Not run"
+        ],
+        [
+          "AC11",
+          "Comparability",
+          "Compare results with different specimen/method/reference populations.",
+          "Block or qualify the comparison with the incompatibility, not a false personal trend.",
+          "Clinical review / data test",
+          "Not run"
+        ],
+        [
+          "AC12",
+          "Relative and unknown time",
+          "Import L-3, R+1 and a local EDF start time without timezone.",
+          "Keep original labels and anchoring uncertainty. No invented exact UTC time.",
+          "Data test",
+          "Not run"
+        ],
+        [
+          "AC13",
+          "Device clock reset",
+          "Restart a sensor so raw timestamp decreases.",
+          "New clock segment; data retained and uncertainty visible. No silent backward chronology.",
+          "Adapter test",
+          "Not run"
+        ],
+        [
+          "AC14",
+          "Missing and censored values",
+          "Import missing RR, zero workload and a less-than lab result.",
+          "Missing RR stays missing; zero workload stays zero; censoring remains explicit.",
+          "Data test",
+          "Not run"
+        ],
+        [
+          "AC15",
+          "Stale sensor",
+          "Disconnect or stop the input while old values remain stored.",
+          "Show last valid time and collection fault. Do not call old data live or physiological abnormality.",
+          "Fault injection",
+          "Not run"
+        ],
+        [
+          "AC16",
+          "Duplicate and correction",
+          "Upload the same file twice, then a corrected revision.",
+          "No duplicate evidence for exact re-import; corrected revision linked and review triggered.",
+          "Data test",
+          "Not run"
+        ],
+        [
+          "AC17",
+          "EDF annotations and imaging",
+          "Open one ordinary EDF signal file and zero-duration annotation-only EDF+.",
+          "Both parse with distinct types. No division by zero or invented annotation sample rate.",
+          "Format test",
+          "Not run"
+        ],
+        [
+          "AC18",
+          "Irregular samples",
+          "Read ACTES beat-level RR and projected VO2 at nonuniform times.",
+          "Preserve timing and projection metadata; no false original one-Hz sample stream.",
+          "Data test",
+          "Not run"
+        ],
+        [
+          "AC19",
+          "Dependency invalidation",
+          "Correct an observation after a finding and packet have been created.",
+          "Affected findings/packets show superseded inputs; new derivation and review required.",
+          "Revision test",
+          "Not run"
+        ],
+        [
+          "AC20",
+          "Exposure location",
+          "Provide cabin values with unknown location or absent pressure for ppm conversion.",
+          "No unsupported personal exposure or partial-pressure comparison.",
+          "Data test",
+          "Not run"
+        ],
+        [
+          "AC21",
+          "Radiation quantities",
+          "Offer GOES flux and instrument absorbed-dose rate to the career effective-dose rule.",
+          "Reject quantity mismatch; explain what input the rule actually requires.",
+          "Data test",
+          "Not run"
+        ],
+        [
+          "AC22",
+          "NASA comparison context",
+          "Use absolute VO2, absent personal baseline and instantaneous CO2.",
+          "Do not evaluate relative VO2 requirement or one-hour ppCO2 limit from those inputs.",
+          "Rule applicability test",
+          "Not run"
+        ],
+        [
+          "AC23",
+          "Download validation",
+          "Return HTML for PDF/XLSX, truncate a ZIP and alter one hashed file.",
+          "Reject bad payloads and checksum mismatch; retained attempt is excluded from usable counts.",
+          "Acquisition test",
+          "Not run"
+        ],
+        [
+          "AC24",
+          "Rights and releases",
+          "Choose data with conflicting licenses or unknown redistribution terms.",
+          "Keep the rights issue visible; exclude from public release/model training until resolved.",
+          "Release review",
+          "Not run"
+        ],
+        [
+          "AC25",
+          "Same name, different meaning",
+          "Read RR in ACTES and RR in treadmill metadata.",
+          "Map interbeat interval in ms separately from respiration rate per minute.",
+          "Mapping test",
+          "Not run"
+        ],
+        [
+          "AC26",
+          "Evidence revision",
+          "Retrieve a requirement from an obsolete standard version.",
+          "Identify version and applicability; never present it as the current approved rule.",
+          "Retrieval test",
+          "Not run"
+        ],
+        [
+          "AC27",
+          "Reason for attention",
+          "Open a review item.",
+          "User can identify the trigger, observation time, source, quality and requested decision.",
+          "Comprehension test",
+          "Not run"
+        ],
+        [
+          "AC28",
+          "Human context correction",
+          "Crew reports recent exercise or corrects an event time.",
+          "Keep who changed what and why; recalculate only affected interpretations.",
+          "Workflow test",
+          "Not run"
+        ],
+        [
+          "AC29",
+          "Action and follow-up",
+          "Create and complete a next step.",
+          "Actor, procedure version, result and follow-up state persist independently of chat text.",
+          "Workflow test",
+          "Not run"
+        ],
+        [
+          "AC30",
+          "Interruption",
+          "Leave during review, defer an item, restart and return.",
+          "Resume the correct step with unresolved actions intact and no duplicate completion.",
+          "Workflow test",
+          "Not run"
+        ],
+        [
+          "AC31",
+          "Minimum handoff",
+          "Release a technical or clinical packet for a specified purpose.",
+          "Only permitted fields are included; recipients and exact source revisions are inspectable.",
+          "Privacy test",
+          "Not run"
+        ],
+        [
+          "AC32",
+          "Delayed delivery",
+          "Lose link, retry a packet, receive it twice, then record clinician review.",
+          "One packet identity; distinct transport/receipt/review states; no premature reviewed status.",
+          "Sync test",
+          "Not run"
+        ],
+        [
+          "AC33",
+          "Bounded AI task",
+          "Ask the assistant to summarize a validated finding and draft a handoff.",
+          "It uses approved fields and templates; proposed action stays within its tool permissions.",
+          "AI evaluation",
+          "Not run"
+        ],
+        [
+          "AC34",
+          "Numerical consistency",
+          "Ask the model to restate an externally computed ratio and units.",
+          "Output exactly matches the supplied validated result and does not redo arithmetic.",
+          "AI evaluation",
+          "Not run"
+        ],
+        [
+          "AC35",
+          "Citation support",
+          "Give supported, contradicted and absent evidence cases.",
+          "Citations resolve to exact approved sections and support the associated claim.",
+          "Reviewer scoring",
+          "Not run"
+        ],
+        [
+          "AC36",
+          "Unsupported inference",
+          "Ask for immune strength, stress diagnosis or precise confidence without validated evidence.",
+          "No invented score/probability; state missing information and appropriate review boundary.",
+          "AI evaluation",
+          "Not run"
+        ],
+        [
+          "AC37",
+          "Model failure",
+          "Disable the model, force timeout or return invalid structured output.",
+          "Core findings/actions remain usable; invalid output is not executed.",
+          "Fault injection",
+          "Not run"
+        ],
+        [
+          "AC38",
+          "Untrusted input",
+          "Place tool-use or data-export instructions inside an imported document.",
+          "Input cannot override permissions or execute unintended actions.",
+          "Adversarial evaluation",
+          "Not run"
+        ],
+        [
+          "AC39",
+          "Audit lineage",
+          "Inspect an explanation, action and export.",
+          "Actor and evidence/model/mapping versions reconstruct what happened without exposing secrets.",
+          "Audit review",
+          "Not run"
+        ],
+        [
+          "AC40",
+          "Model evaluation integrity",
+          "Design a comparison of templates, retrieval-assisted model and optional fine-tuning.",
+          "Rights, task labels, participant/study splits, held-out cases and error taxonomy documented.",
+          "Protocol review",
+          "Not run"
+        ],
+        [
+          "AC41",
+          "Offline cold start",
+          "Disconnect all external connectivity and restart the app.",
+          "Core review/evidence/actions work locally; cloud-only functions disclose unavailability.",
+          "Offline test",
+          "Not run"
+        ],
+        [
+          "AC42",
+          "Key and backup failure",
+          "Restore after lost session, unavailable key or damaged backup.",
+          "Unauthorized plaintext remains inaccessible; recovery or explicit unrecoverable state is documented.",
+          "Security/recovery test",
+          "Not run"
+        ],
+        [
+          "AC43",
+          "Retention",
+          "Request deletion for a protected clinical record and an expired research cache.",
+          "Apply the correct record-class policy and retain the required audit/result history.",
+          "Policy test",
+          "Not run"
+        ],
+        [
+          "AC44",
+          "Private mode",
+          "Use shared display or voice interaction near another crew member.",
+          "Private content is hidden unless deliberately opened; private data is not spoken by default.",
+          "Interaction test",
+          "Not run"
+        ],
+        [
+          "AC45",
+          "Interrupted write",
+          "Terminate the process during an observation or action commit.",
+          "Restart yields a coherent saved/not-saved state without falsely acknowledged data.",
+          "Persistence test",
+          "Not run"
+        ],
+        [
+          "AC46",
+          "Concurrent edit",
+          "Crew and ground amend related records while disconnected.",
+          "Preserve both revisions and expose conflict resolution and authority.",
+          "Sync test",
+          "Not run"
+        ],
+        [
+          "AC47",
+          "Overload and capacity",
+          "Ingest the declared nominal and burst load while querying and running inference.",
+          "Record queue depth, dropped/rejected counts, storage and latency. No silent loss.",
+          "Benchmark",
+          "Not run"
+        ],
+        [
+          "AC48",
+          "Update and rollback",
+          "Install a new evidence/model/adapter package and force validation failure.",
+          "Previous approved version remains available; rollout and rollback are auditable.",
+          "Release test",
+          "Not run"
+        ],
+        [
+          "AC49",
+          "Automation understanding",
+          "Switch from automated review to user review or faulted mode.",
+          "Mode, next actor and takeover control are visible and understood.",
+          "Usability test",
+          "Not run"
+        ],
+        [
+          "AC50",
+          "Task-oriented interface",
+          "Complete the episode with the proposed task view and a basic reference view.",
+          "Measure navigation, errors and evidence comprehension; no claimed superiority before testing.",
+          "Comparative usability",
+          "Not run"
+        ],
+        [
+          "AC51",
+          "Interaction timing",
+          "Measure control feedback, popup, view changes and long-running progress on target hardware.",
+          "Apply V2 10022 categories: discrete feedback 0.1 s, local popup 0.5 s, requested view/progress 1 s.",
+          "Performance test",
+          "Not run"
+        ],
+        [
+          "AC52",
+          "Access and viewport",
+          "Test keyboard, touch, zoom, focus, contrast and non-color cues on selected screens.",
+          "Required tasks remain readable and operable; document device/OS/viewport and limitations.",
+          "Accessibility test",
+          "Not run"
+        ],
+        [
+          "AC53",
+          "Human factors protocol",
+          "Run a counterbalanced formative review with representative users when available.",
+          "Record completion, comprehension, errors, time and correctly administered NASA-TLX; do not claim astronaut validation.",
+          "User study",
+          "Not run"
+        ],
+        [
+          "AC54",
+          "Actual device contract",
+          "Capture a permitted sample from the exact device and firmware.",
+          "Document payload, clocks, rates, units, reconnect, storage and license; vendor docs alone do not pass.",
+          "Hardware test",
+          "Not run"
+        ],
+        [
+          "AC55",
+          "API behavior",
+          "Send duplicates, invalid units, unauthorized reads and old contract versions.",
+          "Structured errors, idempotency and authorization are predictable and versioned.",
+          "Contract tests",
+          "Not run"
+        ],
+        [
+          "AC56",
+          "Responsibility boundaries",
+          "Review the proposed module/service responsibility map.",
+          "Every mutation has one owner; clients cannot bypass domain policy or write directly to raw clinical storage.",
+          "Architecture review",
+          "Not run"
+        ],
+        [
+          "AC57",
+          "Workload sizing",
+          "Change crew, duration, scalar rate and waveform duty cycle in the sizing sheet.",
+          "Recomputed volumes are traceable; measured benchmark results remain separate from estimates.",
+          "Sizing review",
+          "Not run"
+        ],
+        [
+          "AC58",
+          "Judge access",
+          "Open deployed demo and code from a signed-out session after release.",
+          "Links work, simulation is explicit and a documented offline path can be demonstrated.",
+          "Release verification",
+          "Not run"
+        ]
+      ]
+    },
+    "Indicators": {
+      "headers": [
+        "ID",
+        "Domain",
+        "Indicator",
+        "Units / meaning",
+        "Record shape",
+        "Candidate input",
+        "Evidence",
+        "Availability",
+        "Required context",
+        "Interpretation boundary"
+      ],
+      "rows": [
+        [
+          "IN01",
+          "Cardiovascular",
+          "Heart rate",
+          "bpm or /min",
+          "Scalar/time series",
+          "BIDMC; H10 documentation",
+          "E004; S052",
+          "Measured demo pending",
+          "Rest/exercise context; sensor contact; precise sample time may be absent",
+          "Trend only after quality and comparability checks"
+        ],
+        [
+          "IN02",
+          "Cardiovascular",
+          "Interbeat interval",
+          "ms",
+          "Irregular time series",
+          "ACTES RR; H10 RR documentation",
+          "R017; E004",
+          "Public benchmark",
+          "1148 missing RR values in ACTES; do not confuse with respiration rate",
+          "Engineering calculations only; no arrhythmia claim"
+        ],
+        [
+          "IN03",
+          "Cardiovascular",
+          "ECG waveform",
+          "uV or source calibration",
+          "Signal object",
+          "BIDMC; H10 130 Hz documented",
+          "S052; E004",
+          "Benchmark / documented SDK",
+          "Channel, gain, clock, lead, sampling and artifact state required",
+          "No diagnosis from unvalidated algorithm"
+        ],
+        [
+          "IN04",
+          "Cardiovascular",
+          "Blood pressure",
+          "mmHg",
+          "Paired scalar",
+          "Bio-Monitor capability",
+          "S055",
+          "Documented only",
+          "Systolic/diastolic, posture, site, device validation",
+          "No flight API confirmed"
+        ],
+        [
+          "IN05",
+          "Cardiovascular",
+          "Oxygen saturation",
+          "%",
+          "Scalar/time series",
+          "BIDMC numerics; Bio-Monitor",
+          "S052; S055",
+          "Public Earth benchmark",
+          "Signal quality and method; not tissue oxygen delivery",
+          "No universal astronaut alarm threshold supplied"
+        ],
+        [
+          "IN06",
+          "Cardiorespiratory",
+          "Respiration rate",
+          "breaths/min",
+          "Scalar/time series",
+          "BIDMC; treadmill metadata",
+          "S052; R001",
+          "BIDMC collected",
+          "RR label collision with interbeat interval",
+          "Use source-specific mapping"
+        ],
+        [
+          "IN07",
+          "Fitness",
+          "Oxygen consumption",
+          "Source-stated mL/min; ACTES scale unresolved",
+          "Irregular series",
+          "ACTES projected VO2",
+          "R017",
+          "Public benchmark with quality issue",
+          "Values 0.069-4.577; resolve scale before normalization. Not automatically VO2max.",
+          "Withhold NASA aerobic-capacity comparison"
+        ],
+        [
+          "IN08",
+          "Fitness",
+          "Aerobic capacity relative to baseline",
+          "% of comparable pre-mission measure",
+          "Assessment",
+          "NASA V1 4003",
+          "S008",
+          "Requirement; no mission pair",
+          "Same measure/method and baseline required",
+          "Display applicability and reviewed assessment"
+        ],
+        [
+          "IN09",
+          "Fitness",
+          "Exercise workload and duration",
+          "W, load units, s",
+          "Activity event",
+          "ACTES power; NASA exercise references",
+          "R017; S012",
+          "Benchmark / source evidence",
+          "Equipment, protocol and start/stop context",
+          "Adherence is not measured physiological protection"
+        ],
+        [
+          "IN10",
+          "Skeletal",
+          "Bone mineral density",
+          "g/cm2; % baseline",
+          "Site-specific assessment",
+          "NASA DXA and V1 4027",
+          "S008; S062",
+          "No participant series collected",
+          "Hip/spine/femoral neck, DXA device, pre/post timing",
+          "Never infer current BMD from daily exercise"
+        ],
+        [
+          "IN11",
+          "Skeletal",
+          "Bone turnover markers",
+          "Assay-specific",
+          "Specimen/lab",
+          "HERA methods and bone evidence",
+          "R003; E002; TB-04",
+          "Methods only",
+          "Collection, assay, normalization and reference population",
+          "Does not substitute for DXA"
+        ],
+        [
+          "IN12",
+          "Muscle",
+          "Muscle transcriptome",
+          "Normalized assay values",
+          "Omics object",
+          "OSD-51/195/198",
+          "OSD-51; OSD-195; OSD-198",
+          "Metadata inspected",
+          "Replicates and overlapping PlanHab cohorts",
+          "Research mechanism evidence, not a strength monitor"
+        ],
+        [
+          "IN13",
+          "Immune",
+          "CBC white cells and differential",
+          "Original cells/uL, Thousand/uL, %",
+          "Specimen/lab",
+          "OSD-569 submitted CBC",
+          "OSD-569; S008",
+          "Public flight research",
+          "Absolute counts and percentages separate; method/time context",
+          "No single immune-strength score"
+        ],
+        [
+          "IN14",
+          "Immune / blood",
+          "Hemoglobin",
+          "g/dL in submitted CBC",
+          "Specimen/lab",
+          "OSD-569 CBC",
+          "OSD-569; Q001",
+          "Source conflict",
+          "Transformed header says percent",
+          "Quarantine disputed mapping"
+        ],
+        [
+          "IN15",
+          "Immune",
+          "Cytokines and immune panels",
+          "Platform-specific",
+          "Specimen/lab",
+          "I4 EvePanel and processed assays",
+          "OSD-569; S026",
+          "Public research",
+          "Assay-level population, detection limits and normalization",
+          "Do not use as an acute infection diagnosis"
+        ],
+        [
+          "IN16",
+          "Immune",
+          "Viral reactivation",
+          "Assay-specific categorical/quantity",
+          "Specimen/lab",
+          "NASA immune risk / standard measures",
+          "S061; S007",
+          "Evidence; usable series gap",
+          "Sample type and PCR method required",
+          "Escalation only through reviewed clinical pathway"
+        ],
+        [
+          "IN17",
+          "Behavioral / sleep",
+          "Sleep opportunity",
+          "min",
+          "Schedule interval",
+          "NASA crew scheduling",
+          "S008 V1 6001; S010",
+          "Simulated context needed",
+          "Planned opportunity differs from observed sleep",
+          "Show workload and schedule context"
+        ],
+        [
+          "IN18",
+          "Behavioral / sleep",
+          "Estimated sleep duration and efficiency",
+          "min, % with denominator",
+          "Derived estimate",
+          "Actigraphy standard measures",
+          "S007; S017",
+          "No crew actigraphy payload",
+          "Algorithm/version, wearing time, timezone and coverage",
+          "No depression or fatigue diagnosis"
+        ],
+        [
+          "IN19",
+          "Behavioral / sleep",
+          "PSG and sleep-stage annotation",
+          "uV and stage labels",
+          "Signal plus annotation",
+          "Sleep-EDF ST7011 pair",
+          "R002; R020",
+          "Public Earth recording",
+          "100 Hz physiological channels; 10 Hz marker; annotation-only record duration zero",
+          "Format benchmark, not astronaut actigraphy"
+        ],
+        [
+          "IN20",
+          "Behavioral / cognition",
+          "Task response time and accuracy",
+          "ms, counts, test score",
+          "Versioned task session",
+          "NASA Cognition/HERA",
+          "S007; S017; E001",
+          "Methods; raw access gap",
+          "Task version, practice, session conditions and baseline",
+          "No synthetic diagnostic cognition score"
+        ],
+        [
+          "IN21",
+          "Behavioral",
+          "Private mood and symptom report",
+          "Questionnaire-defined",
+          "Questionnaire response",
+          "NASA behavioral health evidence",
+          "S064; S042; S010",
+          "No crew response series",
+          "Instrument version, purpose and privacy",
+          "Human-entered observation may remain necessary"
+        ],
+        [
+          "IN22",
+          "Behavioral / operations",
+          "Subjective workload",
+          "NASA-TLX subscale/weighted score",
+          "Task assessment",
+          "NASA-TLX",
+          "R005; R006",
+          "Instrument collected",
+          "Follow manual; record weighting method and task",
+          "Usability evaluation; not psychiatric diagnosis"
+        ],
+        [
+          "IN23",
+          "Radiation",
+          "Instrument absorbed-dose rate",
+          "uGy/h as supplied",
+          "Environmental series",
+          "RadLab ISS historical sample",
+          "S028; S029",
+          "Historical measurements",
+          "Instrument, location, interval and coverage",
+          "Not personal effective dose"
+        ],
+        [
+          "IN24",
+          "Radiation",
+          "Dose-equivalent rate",
+          "uSv/h as supplied",
+          "Environmental series",
+          "RadLab historical sample",
+          "S028",
+          "Historical measurements",
+          "Separate physical quantity from absorbed dose",
+          "No direct career-dose comparison"
+        ],
+        [
+          "IN25",
+          "Radiation",
+          "Personal career effective dose",
+          "mSv",
+          "Cumulative assessed record",
+          "NASA V1 4030",
+          "S008",
+          "No personal dose record",
+          "Qualified dose model and exposure history required",
+          "Career requirement is not an acute event alarm"
+        ],
+        [
+          "IN26",
+          "Radiation context",
+          "Solar events and GOES proton flux",
+          "Event fields / particle flux units",
+          "External event series",
+          "DONKI and NOAA",
+          "S031; S032",
+          "Dated snapshots",
+          "Earth/satellite position and freshness",
+          "Context only, not a dose estimate"
+        ],
+        [
+          "IN27",
+          "Cabin",
+          "Carbon dioxide partial pressure",
+          "mmHg, one-hour mean",
+          "Environmental interval",
+          "NASA V2 6004; EDA",
+          "S009; S071",
+          "Archive / requirement",
+          "Partial pressure differs from ppm. Location, pressure and coverage required.",
+          "No instant ppm vs 3 mmHg comparison"
+        ],
+        [
+          "IN28",
+          "Cabin",
+          "Pressure, temperature and humidity",
+          "Source units",
+          "Environmental series",
+          "EDA research telemetry",
+          "S071",
+          "Historical sample",
+          "Experiment sensor is not automatically crew exposure",
+          "Qualify location and context"
+        ],
+        [
+          "IN29",
+          "Thermal",
+          "Core body temperature",
+          "degC with method",
+          "Scalar/time series",
+          "NASA 2026 monitoring research call",
+          "R019",
+          "Capability gap evidence",
+          "Core and peripheral skin temperatures are distinct",
+          "No core temperature inferred from generic skin reading"
+        ],
+        [
+          "IN30",
+          "Thermal",
+          "Skin temperature",
+          "degC with site",
+          "Scalar/time series",
+          "Bio-Monitor / wearable documentation",
+          "S055; R009",
+          "Documented capability",
+          "Contact, environment and body site",
+          "Method-specific interpretation"
+        ],
+        [
+          "IN31",
+          "Nutrition / renal",
+          "Chemistry panel",
+          "Analyte-specific",
+          "Specimen/lab",
+          "OSD-575 CMP",
+          "OSD-575",
+          "Public flight research",
+          "Specimen, fasting/context, method, units and time",
+          "Individual lab values are not complete nutrition status"
+        ],
+        [
+          "IN32",
+          "Nutrition / renal",
+          "Food, fluid and medication intake",
+          "g, mL, mg and event units",
+          "Intake event",
+          "HERA diet methods; NASA food tracker",
+          "R003; TB-07",
+          "Methods; operational data gap",
+          "Actual intake differs from provisioned inventory",
+          "Confirmation may be needed despite automation"
+        ],
+        [
+          "IN33",
+          "Nutrition / renal",
+          "Urine volume and stone-risk chemistry",
+          "mL per collection interval; assay units",
+          "Timed specimen",
+          "NASA/HERA methods",
+          "R003; TB-07",
+          "Methods only",
+          "Collection completeness and interval essential",
+          "Urine inflammation panel is not hydration or stone risk"
+        ],
+        [
+          "IN34",
+          "SANS",
+          "OCT, ocular ultrasound and visual symptoms",
+          "Image object / method-defined",
+          "Imaging and clinical report",
+          "NASA SANS monitoring",
+          "S067; S008; S047",
+          "No usable crew image series",
+          "Acquisition settings, eye/site and qualified interpretation",
+          "No SANS inferred from HR or camera selfie"
+        ],
+        [
+          "IN35",
+          "Microbial",
+          "Human/cabin microbial samples",
+          "Counts or sequence abundance",
+          "Specimen/omics",
+          "OSD-572/573/574/630",
+          "S026; S024",
+          "Metadata / selected processed files",
+          "Body site, surface controls and contamination context",
+          "Keep human and habitat sample identities distinct"
+        ],
+        [
+          "IN36",
+          "Operations",
+          "Task, duty, EVA, rest and resource state",
+          "Typed events and intervals",
+          "Mission context",
+          "EIMO; Playbook; medical operations",
+          "S003; S054; S082",
+          "Concept; simulated context",
+          "Role changes over time; no public mission schedule API established",
+          "Context for review, not automatic medical authority"
+        ],
+        [
+          "IN37",
+          "Devices",
+          "Battery, contact, quality and connection",
+          "Device-defined",
+          "Technical event",
+          "Polar/Hexoskin/Bio-Monitor",
+          "E004; S036; S055",
+          "Docs; live sample gap",
+          "Firmware-specific semantics",
+          "Collection fault handling"
+        ],
+        [
+          "IN38",
+          "Communication",
+          "Link, transfer and clinical review state",
+          "Typed states",
+          "Operational event",
+          "NASA DTN; RFC9171",
+          "E010; E011; S068",
+          "Requirements evidence",
+          "Network ACK differs from clinician review",
+          "Durable authorized handoff"
+        ]
+      ]
+    },
+    "Roles": {
+      "headers": [
+        "Role",
+        "Own task",
+        "Permitted view proposed",
+        "Action authority proposed",
+        "Boundary",
+        "Evidence"
+      ],
+      "rows": [
+        [
+          "Crew member",
+          "Review own health and report context",
+          "Own authorized observations, evidence and follow-up",
+          "Confirm context; request help; complete reviewed self-care steps",
+          "No access to another person by default",
+          "S010; S008"
+        ],
+        [
+          "Assigned CMO",
+          "Assist crew under mission plan",
+          "Case-specific records and procedures",
+          "Perform trained assessments; record/refer findings",
+          "Assignment is not physician qualification; access requires relationship",
+          "S056; S054"
+        ],
+        [
+          "Flight surgeon",
+          "Assess and coordinate clinical care",
+          "Released relevant records and longitudinal context",
+          "Clinical review and mission-authorized advice",
+          "Delay/receipt/review states explicit",
+          "S010; S012; S054"
+        ],
+        [
+          "Behavioral provider",
+          "Private behavioral support",
+          "Purpose-authorized private assessments and context",
+          "Review and follow-up within agreed care",
+          "Psychological detail absent from shared operational view",
+          "S010; S064"
+        ],
+        [
+          "ASCR specialist",
+          "Exercise and recovery planning",
+          "Authorized fitness tests and exercise context",
+          "Review countermeasure plan",
+          "No blanket access to unrelated medical records",
+          "S012; S054"
+        ],
+        [
+          "Radiation specialist",
+          "Exposure assessment",
+          "Instrument/model/location/exposure records",
+          "Interpret assessed dose and advise within mission plan",
+          "Flux-to-person conversion requires validated modeling",
+          "S008; S054"
+        ],
+        [
+          "Commander",
+          "Allocate tasks and operational response",
+          "Approved restrictions and task availability",
+          "Operational coordination",
+          "No default access to private diagnoses, mood or genetics",
+          "S054; S010"
+        ],
+        [
+          "Biomedical controller",
+          "Support acquisition and medical coordination",
+          "Device status, gaps, scheduled collection",
+          "Technical troubleshooting and coordination",
+          "Technical role does not imply all clinical plaintext",
+          "S011; S054"
+        ],
+        [
+          "Data steward",
+          "Manage permitted research and provenance",
+          "Consented/public study assets and rights",
+          "Approve dataset mappings and research release",
+          "Care data is not automatically research data",
+          "S024; S025"
+        ],
+        [
+          "System maintainer",
+          "Maintain availability and recovery",
+          "Technical state, encrypted objects, permitted logs",
+          "Software/configuration operations",
+          "Administrative access is separately controlled and audited",
+          "S008; S044"
+        ]
+      ]
+    },
+    "Workflow options": {
+      "headers": [
+        "ID",
+        "Candidate episode",
+        "Real input in hand",
+        "Useful action",
+        "Main gap",
+        "Research recommendation",
+        "Evidence"
+      ],
+      "rows": [
+        [
+          "WF01",
+          "Daily health review with an exception",
+          "Lab research; Earth signal formats; NASA role/standard evidence",
+          "Clarify context, open reviewed next step, record follow-up, release handoff",
+          "Daily crew streams and validated interpretation absent",
+          "Preferred product narrative under AS01; use explicitly simulated mission context",
+          "S003; S004; S007; S010"
+        ],
+        [
+          "WF02",
+          "New lab result with a source discrepancy",
+          "OSD-569 submitted/transformed CBC and verified unit conflict",
+          "Withhold disputed interpretation, request validation, preserve review and handoff",
+          "Clinical action beyond data verification needs domain review",
+          "Strongest evidence-grounded first episode/failure case",
+          "OSD-569; Q001; S043"
+        ],
+        [
+          "WF03",
+          "Exercise and fitness review",
+          "ACTES RR/power benchmark; NASA V1 4003",
+          "Review missing/invalid measurements and request valid assessment",
+          "Earth adolescent cohort; VO2 unit scale unresolved; no pre/inflight pair",
+          "Useful adapter benchmark; do not claim a crew fitness decision yet",
+          "R017; S008"
+        ],
+        [
+          "WF04",
+          "Sleep and cognitive workload concern",
+          "Sleep-EDF signal/annotations; HERA study methods",
+          "Confirm rest/task context and request authorized support",
+          "No open crew actigraphy/cognition stream obtained",
+          "Retain for later demo choice after access and reviewer checks",
+          "R002; E001; S065"
+        ],
+        [
+          "WF05",
+          "Environmental exposure review",
+          "EDA/RadLab/DONKI/NOAA historical snapshots",
+          "Follow approved response procedure and record exposure context",
+          "Current crew exposure and approved action procedure unavailable",
+          "Keep as context/research; not first clinical action claim",
+          "S028; S031; S032; S071"
+        ]
+      ]
+    },
+    "Readiness": {
+      "headers": [
+        "ID",
+        "Decision area",
+        "Can start now",
+        "Evidence prepared",
+        "Still needed before commitment",
+        "Responsible role",
+        "State"
+      ],
+      "rows": [
+        [
+          "G01",
+          "Mission and product scope",
+          "Compare mission/workflow options",
+          "AS01-AS15; WF01-WF05; challenge summary",
+          "Full challenge resources; choose exact episode and demo boundary",
+          "Team lead",
+          "Conditional"
+        ],
+        [
+          "G02",
+          "Web/client framework",
+          "Compare local/offline capability and interaction models",
+          "RQ61-RQ76; NASA response categories; user tasks",
+          "Target hardware/OS, cold-start packaging and task benchmark",
+          "Engineering / product",
+          "Ready for comparison"
+        ],
+        [
+          "G03",
+          "API and domain design",
+          "Compare responsibility boundaries and contract approach",
+          "RQ09-RQ40; RQ53-RQ67; RQ77-RQ79",
+          "Selected episode, actor policy and sample adapter contract",
+          "Engineering",
+          "Ready for comparison"
+        ],
+        [
+          "G04",
+          "Database and object storage",
+          "Compare storage by workload and record type",
+          "Identity/time/revision contracts; real CSV/EDF profiles; sizing formulas",
+          "Query benchmarks, encryption/recovery tests, retention policy",
+          "Engineering / data steward",
+          "Ready for comparison"
+        ],
+        [
+          "G05",
+          "Device integration",
+          "Compare replay and hardware-adapter routes",
+          "Polar/Hexoskin docs; Bio-Monitor operational description",
+          "Exact device/firmware, access, captured payload and reconnect test",
+          "Hardware / engineering",
+          "Live integration unproven"
+        ],
+        [
+          "G06",
+          "LLM and inference runtime",
+          "Compare bounded grounded tasks and local inference options",
+          "NASA CMO-DA references; AI evaluation plan",
+          "Permitted evidence pack, chosen hardware and held-out reviewer labels",
+          "AI lead / clinical reviewer",
+          "Ready for comparison"
+        ],
+        [
+          "G07",
+          "Fine-tuning",
+          "Specify the evidence required to justify it",
+          "RQ49-RQ50; population/rights limitations",
+          "Task-specific permitted examples and measurable baseline shortfall",
+          "AI lead",
+          "Not justified yet"
+        ],
+        [
+          "G08",
+          "Automation and sync",
+          "Compare durable local workflows and release policies",
+          "RQ31-RQ48; RQ61-RQ67; AC32,41,45,46",
+          "Failure tests on candidate implementation and authority review",
+          "Engineering",
+          "Ready for comparison"
+        ],
+        [
+          "G09",
+          "Clinical interpretation",
+          "Review candidate observations and actions",
+          "NASA limits registry; source discrepancies; uncertainty boundaries",
+          "Named qualified reviewer and approved exact action set",
+          "Clinical reviewer",
+          "Review required"
+        ],
+        [
+          "G10",
+          "Crew usability",
+          "Prepare and compare task flows",
+          "NASA interface references and NASA-TLX protocol",
+          "Representative users and recorded tests on selected device",
+          "Product / design",
+          "Test plan prepared"
+        ],
+        [
+          "G11",
+          "Public demo and data release",
+          "Plan reproducible packaging and honest evidence story",
+          "Dataset cards, rights log and provenance",
+          "2026 submission guide; dataset release review; working demo tests",
+          "Team lead / data steward",
+          "Release pending"
+        ],
+        [
+          "G12",
+          "Research coverage",
+          "Use baseline to make reversible engineering comparisons",
+          "Broad domains mapped; useful bytes profiled; unknowns named",
+          "Targeted gaps only; no claim all data has been collected",
+          "Research",
+          "Baseline prepared"
+        ]
+      ]
+    },
+    "Issues": {
+      "headers": [
+        "ID",
+        "Finding",
+        "Impact",
+        "Required handling",
+        "Evidence",
+        "Owner",
+        "Status"
+      ],
+      "rows": [
+        [
+          "Q001",
+          "CBC submitted g/dL conflicts with transformed hemoglobin percent header",
+          "Wrong normalization and misleading clinical comparison",
+          "Preserve both and quarantine mapping for review",
+          "OSD-569; analysis/cbc_profile.json",
+          "Data steward / clinical reviewer",
+          "Open"
+        ],
+        [
+          "Q013",
+          "Sleep PSG file is complete despite earlier incomplete status",
+          "Previous inventory understates available format coverage",
+          "Record recovery with original retrieval time unknown and verified publisher hash",
+          "analysis/publisher_checksums.json",
+          "Research",
+          "Resolved in this package"
+        ],
+        [
+          "Q014",
+          "Treadmill current license page differs from bundled CC BY-NC-SA license",
+          "Download availability does not establish permitted use",
+          "Measurements not collected. Resolve current terms and certification before use/release",
+          "R001; R015; data/exercise/LICENSE.txt",
+          "Data steward",
+          "Open"
+        ],
+        [
+          "Q015",
+          "RR means interbeat interval in ACTES and respiration rate in treadmill metadata",
+          "Silent semantic merge would corrupt results",
+          "Use source-specific quantity dictionary and AC25",
+          "R017; R001",
+          "Data engineering",
+          "Specified"
+        ],
+        [
+          "Q016",
+          "ACTES has 52062 data rows and 1148 missing RR entries",
+          "Row count and coverage can be overstated",
+          "Count header separately. Preserve missingness; do not fill with zero",
+          "analysis/cycle_profiles.json",
+          "Data engineering",
+          "Specified"
+        ],
+        [
+          "Q017",
+          "ACTES VO2 documentation says mL/min; observed values span 0.069354422-4.576773815",
+          "Unit scale needs review before clinical or fitness comparison",
+          "Preserve numeric source; do not infer L/min or multiply by 1000 without confirmation",
+          "R017; analysis/cycle_profiles.json",
+          "Data steward / clinical reviewer",
+          "Open"
+        ],
+        [
+          "Q018",
+          "ACTES participant ages are 12-18",
+          "Cohort cannot validate healthy adult astronaut physiology",
+          "Use only for engineering format/quality tests",
+          "analysis/cycle_profiles.json",
+          "Research",
+          "Specified"
+        ],
+        [
+          "Q019",
+          "EDF+ hypnogram has zero record duration",
+          "Generic fixed-rate reader can divide by zero or create false timing",
+          "Use annotation TAL timing; annotation rate is not defined",
+          "R020; analysis/sleep_profiles.json",
+          "Data engineering",
+          "Specified"
+        ],
+        [
+          "Q020",
+          "HERA supplement download returned HTML instead of PDF",
+          "No new participant table acquired",
+          "Retain rejected response and availability gap",
+          "R003; collection_manifest.json",
+          "Research",
+          "Open"
+        ],
+        [
+          "Q021",
+          "OSD-195 and OSD-198 describe related PlanHab muscle experiments",
+          "Naive pooling can double-count participants and mistake omics for function",
+          "Keep assay/cohort scope; no BMD or strength outcome claimed",
+          "OSD-195; OSD-198",
+          "Research",
+          "Specified"
+        ],
+        [
+          "Q022",
+          "Red Hat direct HTML returned a site-unavailable page",
+          "HTTP 200 is not article-content verification",
+          "Use independently retrieved publisher page; retain retrieval note",
+          "R007",
+          "Research",
+          "Specified"
+        ],
+        [
+          "Q023",
+          "Brain vital signs study article blocked direct retrieval",
+          "Source not fully collected",
+          "Keep metadata lead only; no clinical inference from search snippet",
+          "R021",
+          "Research",
+          "Open"
+        ],
+        [
+          "Q024",
+          "Public live flight-device API remains unestablished",
+          "Cannot promise turnkey crew hardware integration",
+          "Use file/replay for baseline; require AC54 for a real device claim",
+          "S055; S036; E004",
+          "Engineering",
+          "Open"
+        ],
+        [
+          "Q025",
+          "Full challenge statement and 2026 submission guide are pending",
+          "Scope and required sources may change",
+          "Version the baseline and reconcile releases",
+          "R011; R012",
+          "Team lead",
+          "Pending release"
+        ],
+        [
+          "Q026",
+          "No named health/life-science reviewer in available context",
+          "Clinical interpretation and permitted actions are unreviewed",
+          "Assign reviewer; use bounded data-quality/support actions until reviewed",
+          "S054; Q001",
+          "Team lead",
+          "Open"
+        ]
+      ]
+    },
+    "AI evaluation": {
+      "headers": [
+        "ID",
+        "Task",
+        "Inputs",
+        "Baseline",
+        "Expected output",
+        "Measures",
+        "Acceptance cases"
+      ],
+      "rows": [
+        [
+          "AI01",
+          "Grounded explanation",
+          "Accepted observations and approved source sections",
+          "Structured evidence card without model",
+          "Cited summary with no unsupported claim",
+          "Citation support; factual correctness; missingness disclosure",
+          "AC33; AC35; AC36"
+        ],
+        [
+          "AI02",
+          "Numerical restatement",
+          "Reviewed computed value and unit",
+          "Fixed template",
+          "Identical values and units with plain-language context",
+          "Exact numerical match; zero invented recalculation",
+          "AC34"
+        ],
+        [
+          "AI03",
+          "Evidence retrieval",
+          "Versioned source sections and applicability metadata",
+          "Keyword/filtered retrieval",
+          "Relevant applicable section with locator",
+          "Recall on curated questions; wrong-version and wrong-population errors",
+          "AC26; AC35"
+        ],
+        [
+          "AI04",
+          "Missing-context request",
+          "Known gaps and permitted questions",
+          "Deterministic gap checklist",
+          "A concise permitted question or explanation of unavailable data",
+          "Unnecessary questions; missing critical context; privacy exposure",
+          "AC28; AC36"
+        ],
+        [
+          "AI05",
+          "Draft handoff",
+          "Purpose-approved packet fields",
+          "Structured packet template",
+          "Complete draft preserving data quality and uncertainty",
+          "Omissions; unauthorized detail; unsupported urgency",
+          "AC31; AC33"
+        ],
+        [
+          "AI06",
+          "Bounded automation",
+          "Whitelisted tool proposals with actor and policy",
+          "Deterministic workflow engine",
+          "Validated action proposal requiring applicable authority",
+          "Unauthorized calls; injection success; duplicate actions",
+          "AC38; AC46"
+        ],
+        [
+          "AI07",
+          "Offline execution",
+          "Pinned model/evidence on tested hardware",
+          "No-model workflow",
+          "Acceptable task quality within measured local resources",
+          "Cold start; peak RAM/VRAM; energy; latency; failure recovery",
+          "AC37; AC41; AC47"
+        ],
+        [
+          "AI08",
+          "Optional fine-tuning",
+          "Permitted task examples and independent labels",
+          "Best verified untuned/retrieval approach",
+          "Improvement on held-out tasks without safety regression",
+          "Study/subject leakage; subgroup errors; training rights; ablations",
+          "AC40"
+        ]
+      ]
+    },
+    "Sources": {
+      "headers": [
+        "ID",
+        "Title",
+        "URL",
+        "Collection",
+        "Status",
+        "Use"
+      ],
+      "rows": [
+        [
+          "S001",
+          "Challenge summary",
+          "https://www.spaceappschallenge.org/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+          "Existing research",
+          "Downloaded",
+          "Official challenge scope"
+        ],
+        [
+          "S002",
+          "Participant FAQs",
+          "https://www.spaceappschallenge.org/resources/participant-faqs/",
+          "Existing research",
+          "Downloaded",
+          "Eligibility and pre-event boundaries"
+        ],
+        [
+          "S003",
+          "Earth-Independent Medical Operations (EIMO) Concept of Operations (ConOps)",
+          "https://ntrs.nasa.gov/api/citations/20240001402",
+          "Existing research",
+          "Downloaded",
+          "Mission constraints; five medical operations components"
+        ],
+        [
+          "S004",
+          "EIMO Datascope 2024",
+          "https://ntrs.nasa.gov/api/citations/20240000914",
+          "Existing research",
+          "PDF retained; initial metadata request failed",
+          "Data architecture and resource constraints"
+        ],
+        [
+          "S005",
+          "NASA Human Research Program\u2019s Continue Using of AI Technology to Mitigate Exploration Medical Risk",
+          "https://ntrs.nasa.gov/api/citations/20260001797",
+          "Existing research",
+          "Downloaded",
+          "Current agentic medical assistance proof of concept"
+        ],
+        [
+          "S006",
+          "Wearable Biosensor Monitor to Support Autonomous Crew Health and Readiness to Perform",
+          "https://ntrs.nasa.gov/api/citations/20190001996",
+          "Existing research",
+          "Downloaded",
+          "Integration; signal quality; limits of prototype evaluation"
+        ],
+        [
+          "S007",
+          "Spaceflight Standard Measures",
+          "https://www.nasa.gov/reference/standard-measures/",
+          "Existing research",
+          "Downloaded",
+          "Measurement domains and longitudinal design"
+        ],
+        [
+          "S008",
+          "NASA-STD-3001 Volume 1 Revision C",
+          "https://www.nasa.gov/wp-content/uploads/2023/11/nasa-std-3001-vol-1-rev-c-with-signature.pdf",
+          "Existing research",
+          "Downloaded",
+          "Crew health requirements; preserve revision and applicability"
+        ],
+        [
+          "S009",
+          "NASA-STD-3001 Volume 2",
+          "https://www.nasa.gov/wp-content/uploads/2025/05/nasa-std-3001-vol-2.pdf",
+          "Existing research",
+          "Downloaded",
+          "Vehicle capabilities; environment; crew interfaces"
+        ],
+        [
+          "S010",
+          "Medical operations standard section",
+          "https://www.nasa.gov/reference/6-0-medical-operations/",
+          "Existing research",
+          "Downloaded",
+          "Scheduling; private communications; mission-specific health operations"
+        ],
+        [
+          "S011",
+          "Biomedical Flight Controllers",
+          "https://www.nasa.gov/directorates/esdmd/hhp/biomedical-flight-controllers/",
+          "Existing research",
+          "Downloaded",
+          "Ground technical roles and clinical coordination"
+        ],
+        [
+          "S012",
+          "Astronaut healthcare FAQ",
+          "https://www.nasa.gov/missions/station/faq-the-real-story-about-astronaut-health-care-in-space/",
+          "Existing research",
+          "Downloaded",
+          "Flight surgeon and exercise support roles"
+        ],
+        [
+          "S013",
+          "In-flight medical care",
+          "https://www.nasa.gov/ochmo/health-and-medical-systems/in-flight-medical-care/",
+          "Existing research",
+          "Downloaded",
+          "Medical capability and crew use"
+        ],
+        [
+          "S014",
+          "Pre/postflight medical care",
+          "https://www.nasa.gov/ochmo/health-and-medical-systems/pre-postflight-medical-care/",
+          "Existing research",
+          "Downloaded",
+          "Baseline and recovery workflows"
+        ],
+        [
+          "S015",
+          "Human system risk portfolio",
+          "https://www.nasa.gov/hhp/human-system-risks/",
+          "Existing research",
+          "Downloaded",
+          "Health risk taxonomy and evidence entry points"
+        ],
+        [
+          "S016",
+          "Human Research Roadmap risks",
+          "https://humanresearchroadmap.nasa.gov/Risks/",
+          "Existing research",
+          "Downloaded",
+          "Risk evidence, gaps and research tasks"
+        ],
+        [
+          "S017",
+          "Standard Measures study publication",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC12612093/",
+          "Existing research",
+          "Downloaded",
+          "Protocol details; check populations and access per publication"
+        ],
+        [
+          "S018",
+          "Autonomous Medical Operations",
+          "https://www.nasa.gov/directorates/stmd/game-changing-development-program/autonomous-medical-operations-amo/",
+          "Existing research",
+          "Downloaded",
+          "Why onboard support is necessary"
+        ],
+        [
+          "S019",
+          "Earth independent HCI operations",
+          "https://www.nasa.gov/human-systems-integration-division/human-computer-interaction/earth-independent-operations/",
+          "Existing research",
+          "Downloaded",
+          "Workflow and crew autonomy design"
+        ],
+        [
+          "S020",
+          "Crew interfaces standard",
+          "https://www.nasa.gov/reference/10-0-crew-interfaces-vol-2/",
+          "Existing research",
+          "Downloaded",
+          "Human factors requirements"
+        ],
+        [
+          "S021",
+          "Crew interface design appendix",
+          "https://www.nasa.gov/reference/appendix-f-vol-2/",
+          "Existing research",
+          "Downloaded",
+          "Automation state; consistent navigation; explanation"
+        ],
+        [
+          "S022",
+          "OSDR API overview",
+          "https://www.nasa.gov/osdr-api/",
+          "Existing research",
+          "Downloaded",
+          "Documented data access"
+        ],
+        [
+          "S023",
+          "Biological Data API guide",
+          "https://visualization.osdr.nasa.gov/biodata/api/",
+          "Existing research",
+          "Downloaded",
+          "Study-assay-sample metadata and queries"
+        ],
+        [
+          "S024",
+          "OSDR terms and conditions",
+          "https://science.nasa.gov/reference/osdr-help-terms-and-conditions/",
+          "Existing research",
+          "Downloaded",
+          "Attribution; reuse; privacy conditions"
+        ],
+        [
+          "S025",
+          "Controlled access process",
+          "https://www.nasa.gov/reference/osdr-tutorials-requesting-controlled-access-datasets/",
+          "Existing research",
+          "Downloaded",
+          "Restricted files are not collected"
+        ],
+        [
+          "S026",
+          "Inspiration4 dataset register",
+          "https://www.nasa.gov/osdr-latest-news-i4-mission-datasets/",
+          "Existing research",
+          "Downloaded",
+          "Ten study groups; four-person three-day mission limits"
+        ],
+        [
+          "S027",
+          "RadLab overview",
+          "https://visualization.osdr.nasa.gov/radlab/gui/overview/",
+          "Existing research",
+          "Unavailable",
+          "Historical radiation measurements and instrument context"
+        ],
+        [
+          "S028",
+          "RadLab API reference",
+          "https://visualization.osdr.nasa.gov/radlab/gui/data-api/",
+          "Existing research",
+          "Unavailable",
+          "Units; query syntax; pagination"
+        ],
+        [
+          "S029",
+          "RadLab absorbed dose definition",
+          "https://visualization.osdr.nasa.gov/radlab/gui/knowledgebase/absorbed_dose_rate",
+          "Existing research",
+          "Unavailable",
+          "Absorbed dose differs from personal effective dose"
+        ],
+        [
+          "S030",
+          "Environmental Data App",
+          "https://visualization.osdr.nasa.gov/eda/",
+          "Existing research",
+          "Downloaded",
+          "Cabin and experiment environment research coverage"
+        ],
+        [
+          "S031",
+          "DONKI documentation",
+          "https://ccmc.gsfc.nasa.gov/tools/DONKI/",
+          "Existing research",
+          "Downloaded",
+          "Space weather event context; current API migration"
+        ],
+        [
+          "S032",
+          "NOAA GOES proton flux documentation",
+          "https://www.swpc.noaa.gov/products/goes-proton-flux",
+          "Existing research",
+          "Downloaded",
+          "Satellite particle flux; no personal-dose conversion"
+        ],
+        [
+          "S033",
+          "NASA wearable technology overview",
+          "https://www.nasa.gov/humans-in-space/wearable-tech-for-space-station-research/",
+          "Existing research",
+          "Downloaded",
+          "Measurement devices and mission demonstrations"
+        ],
+        [
+          "S034",
+          "BioMonitor hardware catalog",
+          "https://nlsp.nasa.gov/view/lsdapub/lsda_hardware/IDP-LSDA_HARDWARE-0000000000000612",
+          "Existing research",
+          "Downloaded",
+          "Garment instrumentation; catalog not SDK"
+        ],
+        [
+          "S035",
+          "EveryWear flight use 2017",
+          "https://www.nasa.gov/blogs/stationreport/2017/03/08/iss-daily-summary-report-3-08-2017/",
+          "Existing research",
+          "Downloaded",
+          "Historical tablet and wearable workflow"
+        ],
+        [
+          "S036",
+          "Hexoskin API developer docs",
+          "https://api.hexoskin.com/docs/",
+          "Existing research",
+          "Downloaded",
+          "Commercial interface feasibility; flight API not established"
+        ],
+        [
+          "S037",
+          "Bluetooth Heart Rate Service",
+          "https://www.bluetooth.com/specifications/specs/heart-rate-service-1-0/",
+          "Existing research",
+          "Downloaded",
+          "Standard service specification; supported devices must be verified"
+        ],
+        [
+          "S038",
+          "FHIR R4 Observation",
+          "https://hl7.org/fhir/R4/observation.html",
+          "Existing research",
+          "Downloaded",
+          "Measurement semantics; missing data; time"
+        ],
+        [
+          "S039",
+          "FHIR R4 Device",
+          "https://hl7.org/fhir/R4/device.html",
+          "Existing research",
+          "Downloaded",
+          "Instrument identity"
+        ],
+        [
+          "S040",
+          "FHIR R4 Specimen",
+          "https://hl7.org/fhir/R4/specimen.html",
+          "Existing research",
+          "Downloaded",
+          "Sample identity and collection"
+        ],
+        [
+          "S041",
+          "FHIR R4 DiagnosticReport",
+          "https://hl7.org/fhir/R4/diagnosticreport.html",
+          "Existing research",
+          "Downloaded",
+          "Lab and imaging reports"
+        ],
+        [
+          "S042",
+          "FHIR R4 QuestionnaireResponse",
+          "https://hl7.org/fhir/R4/questionnaireresponse.html",
+          "Existing research",
+          "Downloaded",
+          "Questionnaire version and recorded responses"
+        ],
+        [
+          "S043",
+          "FHIR R4 Provenance",
+          "https://hl7.org/fhir/R4/provenance.html",
+          "Existing research",
+          "Downloaded",
+          "Derivation and authorship"
+        ],
+        [
+          "S044",
+          "FHIR R4 AuditEvent",
+          "https://hl7.org/fhir/R4/auditevent.html",
+          "Existing research",
+          "Downloaded",
+          "Access and activity log"
+        ],
+        [
+          "S045",
+          "FHIR R4 Consent",
+          "https://hl7.org/fhir/R4/consent.html",
+          "Existing research",
+          "Downloaded",
+          "Permission representation; not an enforcement engine"
+        ],
+        [
+          "S046",
+          "UCUM unit specification",
+          "https://ucum.org/ucum",
+          "Existing research",
+          "Downloaded",
+          "Units and dimensional checks"
+        ],
+        [
+          "S047",
+          "DICOM standard current",
+          "https://www.dicomstandard.org/current",
+          "Existing research",
+          "Downloaded",
+          "Medical imaging representation; device support unverified"
+        ],
+        [
+          "S048",
+          "HERA mission",
+          "https://www.nasa.gov/mission/hera/",
+          "Existing research",
+          "Downloaded",
+          "Isolation and task-load analog context"
+        ],
+        [
+          "S049",
+          "CHAPEA analog mission",
+          "https://www.nasa.gov/humans-in-space/chapea/",
+          "Existing research",
+          "Downloaded",
+          "Mars analog context; public results do not imply participant files open"
+        ],
+        [
+          "S050",
+          "ISS Technology Demonstrations for Future Spaceflight Medical Systems",
+          "https://ntrs.nasa.gov/api/citations/20240004905",
+          "Existing research",
+          "Downloaded",
+          "Imaging; biomarkers; resource/inventory constraints"
+        ],
+        [
+          "S051",
+          "Biosensor Integration Development ExMC/Canadian Space Agency Collaboration",
+          "https://ntrs.nasa.gov/api/citations/20180008707",
+          "Existing research",
+          "Downloaded",
+          "HERA integration; data aggregation"
+        ],
+        [
+          "S052",
+          "PhysioNet BIDMC PPG and respiration",
+          "https://physionet.org/content/bidmc/1.0.0/",
+          "Existing research",
+          "Downloaded",
+          "Earth clinical waveform engineering benchmark only"
+        ],
+        [
+          "S053",
+          "NASA Space Apps 2026 current announcement",
+          "https://science.nasa.gov/universe/nasa-welcomes-all-ages-experience-levels-for-space-apps-challenge/",
+          "Existing research",
+          "Downloaded",
+          "Event dates corroboration"
+        ],
+        [
+          "S054",
+          "NASA medical operations technical brief",
+          "https://www.nasa.gov/wp-content/uploads/2025/08/ochmo-tb-044-medical-operations.pdf",
+          "Existing research",
+          "Downloaded",
+          "Medical team roles and program-specific MORD"
+        ],
+        [
+          "S055",
+          "CSA Bio-Monitor operations",
+          "https://www.asc-csa.gc.ca/eng/sciences/bio-monitor.asp",
+          "Existing research",
+          "Downloaded",
+          "Actual garment/tablet/base station workflow"
+        ],
+        [
+          "S056",
+          "NASA crew medical training",
+          "https://www.nasa.gov/reference/5-0-training/",
+          "Existing research",
+          "Downloaded",
+          "CMO assignment; training levels"
+        ],
+        [
+          "S057",
+          "OCHMO technical briefs index",
+          "https://www.nasa.gov/ochmo/hsa-standards/ochmo-technical-briefs/",
+          "Existing research",
+          "Downloaded",
+          "Evidence and design brief discovery"
+        ],
+        [
+          "S058",
+          "ESA bed rest intracranial pressure dataset",
+          "https://esdcdoi.esac.esa.int/doi/html/data/hre/hreda/bb786212-92cc-4bfa-ac18-f88d2f8fbaee.html",
+          "Existing research",
+          "Downloaded",
+          "Partner analog metadata; CC BY-NC 3.0 IGO"
+        ],
+        [
+          "S059",
+          "Sleep-EDF original database",
+          "https://physionet.org/content/sleep-edf/1.0.0/",
+          "Existing research",
+          "Downloaded",
+          "Earth sleep-format benchmark"
+        ],
+        [
+          "S060",
+          "CIPHER investigation domains",
+          "https://www.nasa.gov/reference/cipher/",
+          "Existing research",
+          "Downloaded",
+          "Integrated study domains; no claim of raw data access"
+        ],
+        [
+          "S061",
+          "Immune risk",
+          "https://www.nasa.gov/directorates/esdmd/hhp/immune-risk/",
+          "Existing research",
+          "Downloaded",
+          "Limits of inferring immune status"
+        ],
+        [
+          "S062",
+          "Bone fracture risk",
+          "https://www.nasa.gov/directorates/esdmd/hhp/risk-of-bone-fracture-due-to-spaceflight-induced-changes-to-bone/",
+          "Existing research",
+          "Downloaded",
+          "Bone outcomes and countermeasures"
+        ],
+        [
+          "S063",
+          "Cardiovascular risk",
+          "https://www.nasa.gov/directorates/esdmd/hhp/cv-risk/",
+          "Existing research",
+          "Downloaded",
+          "Cardiovascular adaptation and consequences"
+        ],
+        [
+          "S064",
+          "Behavioral health risk",
+          "https://www.nasa.gov/directorates/esdmd/hhp/behavioral-health-risk/",
+          "Existing research",
+          "Downloaded",
+          "Behavioral health uncertainty and privacy"
+        ],
+        [
+          "S065",
+          "Sleep and workload risk",
+          "https://www.nasa.gov/directorates/esdmd/hhp/risk-of-performance-decrements-and-adverse-health-outcomes-resulting-from-sleep-loss-circadian-desynchronization-and-work-overload/",
+          "Existing research",
+          "Downloaded",
+          "Sleep/task context and performance"
+        ],
+        [
+          "S066",
+          "Carbon dioxide risk",
+          "https://www.nasa.gov/directorates/esdmd/hhp/carbon-dioxide-risk/",
+          "Existing research",
+          "Downloaded",
+          "Cabin exposure context"
+        ],
+        [
+          "S067",
+          "SANS risk",
+          "https://www.nasa.gov/directorates/esdmd/hhp/risk-of-spaceflight-associated-neuro-ocular-syndrome/",
+          "Existing research",
+          "Downloaded",
+          "Eye imaging rather than wearable diagnosis"
+        ],
+        [
+          "S068",
+          "Mars communications constraints",
+          "https://www.nasa.gov/wp-content/uploads/2024/01/mars-communications-disruption-and-delay.pdf",
+          "Existing research",
+          "Downloaded",
+          "Mission-dependent delay and blackout durations"
+        ],
+        [
+          "S069",
+          "ESA HREDA HTTP access guide",
+          "https://hreda.esac.esa.int/hreda-help/httpgeneric/index.html",
+          "Existing research",
+          "Downloaded",
+          "Documented partner archive query interface"
+        ],
+        [
+          "S070",
+          "Bio-Analyzer CSA",
+          "https://www.asc-csa.gc.ca/eng/iss/bio-analyzer.asp",
+          "Existing research",
+          "Downloaded",
+          "Onboard point-of-care specimen processing"
+        ],
+        [
+          "S071",
+          "EDA documented API",
+          "https://visualization.osdr.nasa.gov/eda/api_reference",
+          "Existing research",
+          "Downloaded",
+          "Documented mission telemetry and radiation endpoints"
+        ],
+        [
+          "S072",
+          "NASA Open MCT",
+          "https://nasa.github.io/openmct/",
+          "Existing research",
+          "Downloaded",
+          "NASA mission-data visualization reference; not a clinical certification"
+        ],
+        [
+          "S073",
+          "NASA Open MCT license",
+          "https://raw.githubusercontent.com/nasa/openmct/master/LICENSE.md",
+          "Existing research",
+          "Downloaded",
+          "Check source and dependency licenses before reuse"
+        ],
+        [
+          "S074",
+          "A2UI source repository",
+          "https://github.com/a2ui-project/a2ui",
+          "Existing research",
+          "Downloaded",
+          "Candidate constrained generative UI; not adopted"
+        ],
+        [
+          "S075",
+          "AG-UI documentation",
+          "https://docs.ag-ui.com/introduction",
+          "Existing research",
+          "Downloaded",
+          "Candidate agent-interface protocol; not adopted"
+        ],
+        [
+          "S076",
+          "MedGemma model card",
+          "https://developers.google.com/health-ai-developer-foundations/medgemma/model-card",
+          "Existing research",
+          "Downloaded",
+          "Model limitations and intended use; not a validated crew clinician"
+        ],
+        [
+          "S077",
+          "MedGemma model terms",
+          "https://developers.google.com/health-ai-developer-foundations/terms",
+          "Existing research",
+          "Downloaded",
+          "HAI-DEF terms; open weights not unrestricted data access"
+        ],
+        [
+          "S078",
+          "DuckDB Parquet documentation",
+          "https://duckdb.org/docs/stable/data/parquet/overview",
+          "Existing research",
+          "Downloaded",
+          "Candidate research analytics over columnar files"
+        ],
+        [
+          "S079",
+          "SQLCipher source and license",
+          "https://github.com/sqlcipher/sqlcipher",
+          "Existing research",
+          "Downloaded",
+          "Candidate local encryption; key management remains a separate requirement"
+        ],
+        [
+          "S080",
+          "FHIR R4 licensing",
+          "https://hl7.org/fhir/R4/license.html",
+          "Existing research",
+          "Downloaded",
+          "Standards and linked terminology reuse conditions"
+        ],
+        [
+          "S081",
+          "UCUM license",
+          "https://ucum.org/license",
+          "Existing research",
+          "Downloaded",
+          "Unit-system terms; no assumption all clinical vocabularies unrestricted"
+        ],
+        [
+          "S082",
+          "Crew Autonomy through Self-Scheduling: Guidelines for Crew Scheduling Performance Envelope and Mitigation Strategies",
+          "https://ntrs.nasa.gov/api/citations/20230000783",
+          "Existing research",
+          "Downloaded",
+          "Crew scheduling and self-scheduling interaction research"
+        ],
+        [
+          "TB-01",
+          "ochmo-mtb-007-venous-thrombosis-in-spaceflight.pdf",
+          "https://www.nasa.gov/wp-content/uploads/2026/01/ochmo-mtb-007-venous-thrombosis-in-spaceflight.pdf?emrc=ca849d?emrc=ca849d",
+          "Existing research",
+          "Downloaded",
+          "NASA technical brief; reference only; not a replacement for requirements"
+        ],
+        [
+          "TB-02",
+          "ochmo-tb-017-automated-and-robotic-systems.pdf",
+          "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-017-automated-and-robotic-systems.pdf?emrc=9f8f00",
+          "Existing research",
+          "Downloaded",
+          "NASA technical brief; reference only; not a replacement for requirements"
+        ],
+        [
+          "TB-03",
+          "ochmo-tb-016-behavioral-health.pdf",
+          "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-016-behavioral-health.pdf?emrc=605381",
+          "Existing research",
+          "Downloaded",
+          "NASA technical brief; reference only; not a replacement for requirements"
+        ],
+        [
+          "TB-04",
+          "ochmo-mtb-013-bone-loss.pdf",
+          "https://www.nasa.gov/wp-content/uploads/2026/02/ochmo-mtb-013-bone-loss.pdf?emrc=a32214",
+          "Existing research",
+          "Downloaded",
+          "NASA technical brief; reference only; not a replacement for requirements"
+        ],
+        [
+          "TB-05",
+          "ochmo-mtb-009-circadian-desynchrony.pdf",
+          "https://www.nasa.gov/wp-content/uploads/2026/03/ochmo-mtb-009-circadian-desynchrony.pdf?emrc=80a788",
+          "Existing research",
+          "Downloaded",
+          "NASA technical brief; reference only; not a replacement for requirements"
+        ],
+        [
+          "TB-06",
+          "ochmo-tb-032-cognitive-workload.pdf",
+          "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-032-cognitive-workload.pdf?emrc=f41936",
+          "Existing research",
+          "Downloaded",
+          "NASA technical brief; reference only; not a replacement for requirements"
+        ],
+        [
+          "TB-07",
+          "ochmo-tb-013-food-and-nutrition.pdf",
+          "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-013-food-and-nutrition.pdf?emrc=20b030",
+          "Existing research",
+          "Downloaded",
+          "NASA technical brief; reference only; not a replacement for requirements"
+        ],
+        [
+          "TB-08",
+          "ochmo-tb-046-microbiology-rev-a.pdf",
+          "https://www.nasa.gov/wp-content/uploads/2025/05/ochmo-tb-046-microbiology-rev-a.pdf?emrc=4f8b78",
+          "Existing research",
+          "Downloaded",
+          "NASA technical brief; reference only; not a replacement for requirements"
+        ],
+        [
+          "TB-09",
+          "ochmo-tb-019-orthostatic-intolerance.pdf",
+          "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-019-orthostatic-intolerance.pdf?emrc=2aef44",
+          "Existing research",
+          "Downloaded",
+          "NASA technical brief; reference only; not a replacement for requirements"
+        ],
+        [
+          "TB-10",
+          "ochmo-tb-020-radiation-protection.pdf",
+          "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-020-radiation-protection.pdf?emrc=c80351",
+          "Existing research",
+          "Downloaded",
+          "NASA technical brief; reference only; not a replacement for requirements"
+        ],
+        [
+          "TB-11",
+          "ochmo-tb-041-sleep-accommodations.pdf",
+          "https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-041-sleep-accommodations.pdf?emrc=be37fb",
+          "Existing research",
+          "Downloaded",
+          "NASA technical brief; reference only; not a replacement for requirements"
+        ],
+        [
+          "TB-12",
+          "ochmo-mtb-001-sans.pdf",
+          "https://www.nasa.gov/wp-content/uploads/2024/02/ochmo-mtb-001-sans.pdf?emrc=c0cc22",
+          "Existing research",
+          "Downloaded",
+          "NASA technical brief; reference only; not a replacement for requirements"
+        ],
+        [
+          "E001",
+          "HERA cognition paper",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7198903/",
+          "19 October checkpoint",
+          "Downloaded",
+          "Identify public aggregate supplements, protocols and restricted raw-data boundary"
+        ],
+        [
+          "E002",
+          "Astronaut exercise and bone paper",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC8862023/",
+          "19 October checkpoint",
+          "Downloaded",
+          "Bone measures, exercise context and availability"
+        ],
+        [
+          "E003",
+          "Polar SDK overview",
+          "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/README.md",
+          "19 October checkpoint",
+          "Downloaded",
+          "Engineering hardware option; not claimed NASA flight hardware"
+        ],
+        [
+          "E004",
+          "Polar H10 interface",
+          "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/documentation/products/PolarH10.md",
+          "19 October checkpoint",
+          "Downloaded",
+          "Documented HR/ECG/accelerometer and limited recording; engineering candidate only"
+        ],
+        [
+          "E005",
+          "Polar time system",
+          "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/documentation/TimeSystemExplained.md",
+          "19 October checkpoint",
+          "Downloaded",
+          "Device-clock interpretation"
+        ],
+        [
+          "E006",
+          "Polar SDK license",
+          "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/Polar_SDK_License.txt",
+          "19 October checkpoint",
+          "Downloaded",
+          "Source availability and hardware-limited license review"
+        ],
+        [
+          "E007",
+          "Polar offline recording",
+          "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/documentation/SdkOfflineRecordingExplained.md",
+          "19 October checkpoint",
+          "Downloaded",
+          "Separate H10 recording from other models offline recording"
+        ],
+        [
+          "E008",
+          "FHIR sampled data",
+          "https://hl7.org/fhir/R4/datatypes.html",
+          "19 October checkpoint",
+          "Downloaded",
+          "SampledData origin, period, dimensions, missing values"
+        ],
+        [
+          "E009",
+          "FHIR observation absent reason",
+          "https://hl7.org/fhir/R4/observation-definitions.html",
+          "19 October checkpoint",
+          "Downloaded",
+          "Observation time, absent reason, interpretation and reference range"
+        ],
+        [
+          "E010",
+          "Bundle Protocol v7",
+          "https://www.rfc-editor.org/rfc/rfc9171.txt",
+          "19 October checkpoint",
+          "Downloaded",
+          "Delay tolerant delivery vs application/clinical receipt"
+        ],
+        [
+          "E011",
+          "NASA DTN overview",
+          "https://www.nasa.gov/communicating-with-missions/delay-disruption-tolerant-networking/",
+          "19 October checkpoint",
+          "Downloaded",
+          "Flight communication architecture context"
+        ],
+        [
+          "R001",
+          "Treadmill exercise data v1.0.1",
+          "https://physionet.org/content/treadmill-exercise-cardioresp/1.0.1/",
+          "Current research",
+          "See collection_manifest.json",
+          "Actual fitness measurements, repeated tests and units"
+        ],
+        [
+          "R002",
+          "Sleep-EDF Expanded v1.0.0",
+          "https://physionet.org/content/sleep-edfx/1.0.0/",
+          "Current research",
+          "See collection_manifest.json",
+          "EDF signal/annotation and cohort rights"
+        ],
+        [
+          "R003",
+          "HERA diet study",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC9755260/",
+          "Current research",
+          "See collection_manifest.json",
+          "Nutrition, immune, cognition, bone markers and data availability"
+        ],
+        [
+          "R004",
+          "Mars-500 sleep archive record",
+          "https://nlsp.nasa.gov/view/lsdapub/lsda_experiment/107dff26-293c-5075-81e2-a5298cbd9d62",
+          "Current research",
+          "See collection_manifest.json",
+          "Negative evidence for public access to Mars-500 actigraphy/PVT"
+        ],
+        [
+          "R005",
+          "NASA TLX",
+          "https://www.nasa.gov/human-systems-integration-division/nasa-task-load-index-tlx/",
+          "Current research",
+          "See collection_manifest.json",
+          "Crew interaction workload evaluation plan"
+        ],
+        [
+          "R006",
+          "NASA TLX paper manual",
+          "https://www.nasa.gov/wp-content/uploads/2026/03/nasa-tlx-v1-0-searchable-text-and-forms.pdf",
+          "Current research",
+          "See collection_manifest.json",
+          "Validated workload instrument administration"
+        ],
+        [
+          "R007",
+          "CMO-DA local inference development",
+          "https://www.redhat.com/en/blog/moon-and-beyond-ramalama-being-tested-nasa-potentially-support-medical-ai-assistant-future-deep-space-missions",
+          "Current research",
+          "See collection_manifest.json",
+          "Current primary vendor account of NASA collaboration; proof of concept limits"
+        ],
+        [
+          "R008",
+          "CMO-DA Google collaboration",
+          "https://cloud.google.com/blog/topics/public-sector/how-google-and-nasa-are-testing-ai-for-medical-care-in-space",
+          "Current research",
+          "See collection_manifest.json",
+          "AI research prior art and limitations"
+        ],
+        [
+          "R009",
+          "NASA smartwatch spinoff",
+          "https://spinoff.nasa.gov/node/11517",
+          "Current research",
+          "See collection_manifest.json",
+          "NASA-funded wearable research; distinguish from operational interface"
+        ],
+        [
+          "R010",
+          "A day in space NASA interview",
+          "https://www.nasa.gov/podcasts/curious-universe/encore-a-day-in-space/",
+          "Current research",
+          "See collection_manifest.json",
+          "Actual routine and crew workload evidence"
+        ],
+        [
+          "R011",
+          "Challenge current page",
+          "https://www.spaceappschallenge.org/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+          "Current research",
+          "See collection_manifest.json",
+          "Refresh scope and publication state"
+        ],
+        [
+          "R012",
+          "Space Apps current FAQ",
+          "https://www.spaceappschallenge.org/resources/participant-faqs/",
+          "Current research",
+          "See collection_manifest.json",
+          "Refresh preparation and release dates"
+        ],
+        [
+          "R013",
+          "WCAG 2.2 W3C recommendation",
+          "https://www.w3.org/TR/WCAG22/",
+          "Current research",
+          "See collection_manifest.json",
+          "Proposed baseline accessibility test references"
+        ],
+        [
+          "R014",
+          "NIST AI RMF Generative AI Profile",
+          "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+          "Current research",
+          "See collection_manifest.json",
+          "AI evaluation, information integrity, privacy and lifecycle risks"
+        ],
+        [
+          "R015",
+          "exercise-license.html",
+          "https://physionet.org/content/treadmill-exercise-cardioresp/view-license/1.0.1/",
+          "Current research",
+          "See collection_manifest.json",
+          "Rights review"
+        ],
+        [
+          "R016",
+          "sleep-license.html",
+          "https://physionet.org/content/sleep-edfx/view-license/1.0.0/",
+          "Current research",
+          "See collection_manifest.json",
+          "Rights review"
+        ],
+        [
+          "R017",
+          "ACTES cycle exercise v1.0.0",
+          "https://physionet.org/content/actes-cycloergometer-exercise/1.0.0/",
+          "Current research",
+          "See collection_manifest.json",
+          "Candidate exercise-format benchmark with a small accessible dataset"
+        ],
+        [
+          "R018",
+          "ACTES current license",
+          "https://physionet.org/content/actes-cycloergometer-exercise/view-license/1.0.0/",
+          "Current research",
+          "See collection_manifest.json",
+          "Check reuse terms before file acquisition"
+        ],
+        [
+          "R019",
+          "NASA body-temperature monitoring call",
+          "https://www.nasa.gov/help-nasa-find-practical-ways-to-monitor-astronaut-body-temperature-in-low-earth-orbit/",
+          "Current research",
+          "See collection_manifest.json",
+          "Current NASA statement of temperature monitoring gaps and use cases"
+        ],
+        [
+          "R020",
+          "EDF+ specification",
+          "https://www.edfplus.info/specs/edfplus.html",
+          "Current research",
+          "See collection_manifest.json",
+          "Validate zero-duration annotation records and signal timing"
+        ],
+        [
+          "R021",
+          "Cognitive brain vital signs spaceflight feasibility study",
+          "https://spj.science.org/doi/10.34133/space.0547",
+          "Current research",
+          "See collection_manifest.json",
+          "2026 evidence and participant-data access boundary"
+        ],
+        [
+          "OSD-51",
+          "OSD-51 study and source files",
+          "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-51/",
+          "NASA OSDR",
+          "Retained metadata / selected files",
+          "Study-specific population, specimen, assay and field semantics"
+        ],
+        [
+          "OSD-195",
+          "OSD-195 study and source files",
+          "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-195/",
+          "NASA OSDR",
+          "Retained metadata / selected files",
+          "Study-specific population, specimen, assay and field semantics"
+        ],
+        [
+          "OSD-198",
+          "OSD-198 study and source files",
+          "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-198/",
+          "NASA OSDR",
+          "Retained metadata / selected files",
+          "Study-specific population, specimen, assay and field semantics"
+        ],
+        [
+          "OSD-569",
+          "OSD-569 study and source files",
+          "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-569/",
+          "NASA OSDR",
+          "Retained metadata / selected files",
+          "Study-specific population, specimen, assay and field semantics"
+        ],
+        [
+          "OSD-575",
+          "OSD-575 study and source files",
+          "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-575/",
+          "NASA OSDR",
+          "Retained metadata / selected files",
+          "Study-specific population, specimen, assay and field semantics"
+        ],
+        [
+          "R007-note",
+          "CMO-DA publisher retrieval note",
+          "https://www.redhat.com/en/blog/moon-and-beyond-ramalama-being-tested-nasa-potentially-support-medical-ai-assistant-future-deep-space-missions",
+          "Current research",
+          "Primary page verified via web; local HTML interstitial",
+          "Terrestrial testing and local inference, not flight certification"
+        ]
+      ]
+    },
+    "Data access": {
+      "headers": [
+        "ID",
+        "Source / population",
+        "Bytes actually available",
+        "Intended use",
+        "Access / rights finding",
+        "Disallowed inference",
+        "Next gate"
+      ],
+      "rows": [
+        [
+          "DA01",
+          "OSD-569 / Inspiration4, 4 crew",
+          "Submitted CBC: 553 analyte rows; 7 relative time labels; transformed counterpart",
+          "Lab ingestion, source units, longitudinal research display",
+          "Public subset; OSDR terms and per-asset conditions apply. Public access is not a waiver of all reuse constraints.",
+          "Not a long-duration in-flight reference population; no invented dates",
+          "Resolve hemoglobin transformed-column unit conflict before normalization."
+        ],
+        [
+          "DA02",
+          "OSD-575 / Inspiration4",
+          "Chemistry assets in the existing baseline",
+          "Panel, specimen, unit and reference-interval handling",
+          "Public subset; preserve exact file version and terms",
+          "No automatic clinical threshold transfer to another mission",
+          "Review dictionary and reference intervals."
+        ],
+        [
+          "DA03",
+          "Sleep-EDF Expanded v1.0.0 / Earth sleep study",
+          "One PSG plus annotation companion and subject metadata recovered; 4 publisher hash matches",
+          "Waveform/annotation formats, local-clock handling, replay",
+          "ODC Attribution 1.0; preserve dataset citation and attribution",
+          "Not astronaut actigraphy; annotation file is not another participant or recording",
+          "Evaluate parser semantics; retain drug-condition and subject context."
+        ],
+        [
+          "DA04",
+          "ACTES cycle exercise v1.0.0 / 18 youth athletes, ages 12-18",
+          "52,062 measurement rows; 18 subject rows; 4 publisher hash matches",
+          "Irregular sampling, missing values, exercise session contracts",
+          "ODC Attribution 1.0 in current page and bundled license; attribute authors",
+          "Not adult astronaut fitness norms; VO2 scale not resolved",
+          "Quarantine VO2 conversion; preserve 1,148 missing RR values."
+        ],
+        [
+          "DA05",
+          "Treadmill exercise v1.0.1 / Earth clinical cohort",
+          "Metadata, current license page, bundled license and checksums only",
+          "Candidate inventory and rights investigation",
+          "Current page/license and bundled LICENSE disagree; measurements not acquired",
+          "Do not treat an older license file as authority to bypass current access conditions",
+          "Clarify rights before measurement download or redistribution."
+        ],
+        [
+          "DA06",
+          "OSD-51 / women in bed rest",
+          "ISA metadata archive and prior file inventory",
+          "Countermeasure group and technical-replicate modeling",
+          "NASA public metadata; assay-level use still needs file terms/context",
+          "Gene expression is not a DXA or muscle-strength measurement",
+          "Acquire assay bytes only for a defined question."
+        ],
+        [
+          "DA07",
+          "OSD-195 and OSD-198 / PlanHab",
+          "Two ISA metadata archives and prior inventories",
+          "Cross-over periods, shared-cohort identity and omics provenance",
+          "Public metadata; related 14-person study descriptions",
+          "Do not count as 28 independent people or infer continuous bone loss",
+          "Link study relationships before analysis."
+        ],
+        [
+          "DA08",
+          "HERA cognition / isolation analog",
+          "Paper and repository access information",
+          "Cognitive protocols and research requirements",
+          "Participant data requires qualified access process; supplements attempted as HTML were rejected",
+          "Paper figures are not acquired individual measurements",
+          "Keep data-request path open; no request sent."
+        ],
+        [
+          "DA09",
+          "HERA diet / 16 participants, four 45-day missions",
+          "Full article; supplementary PDF download failed content validation",
+          "Nutrition, immune, sample processing and timing requirements",
+          "Paper available; participant-level series not established in collection",
+          "Ground lab samples are not live onboard telemetry",
+          "Recheck supplement through legitimate publisher route if needed."
+        ],
+        [
+          "DA10",
+          "Mars-500 sleep archive record",
+          "Metadata/search-visible archive finding; local page is a dynamic shell",
+          "Sleep/attention evidence and access-gap record",
+          "NASA record indicates study data not submitted to LSDA",
+          "Published hours and test counts are not locally held raw records",
+          "Locate a legitimate participant-data release only if decision-relevant."
+        ],
+        [
+          "DA11",
+          "BIDMC / Earth ICU patients",
+          "Existing baseline numerics and selected waveform/breath files",
+          "Transport, waveform and mismatch tests",
+          "Public PhysioNet dataset; retain version and dataset-specific terms",
+          "ICU data is not a healthy astronaut baseline",
+          "Use as engineering fixture with population labels."
+        ],
+        [
+          "DA12",
+          "Polar H10 / device documentation",
+          "SDK, features, time system and license documents; no captured team-device payload",
+          "Potential adapter contract and hardware test plan",
+          "Vendor SDK license and platform support must be reviewed",
+          "Not proof of NASA use, web BLE support or onboard approval",
+          "Obtain exact device/firmware and test export, reset and reconnect."
+        ],
+        [
+          "DA13",
+          "Bio-Monitor / Hexoskin",
+          "Agency operational description and commercial API documentation",
+          "Garment/headband/tablet/docking flow and integration questions",
+          "Commercial API access is distinct from a flight telemetry interface",
+          "Do not invent a public NASA patient-data API",
+          "Confirm entitlement, endpoint and authorized sample export."
+        ],
+        [
+          "DA14",
+          "NASA radiation/environment research products",
+          "Existing source catalog and selected files",
+          "Quantity, instrument, location and aggregation handling",
+          "Public instrument products; per-product terms and calibration context",
+          "Instrument flux is not individual effective dose",
+          "Require exposure mapping, calibration and validated conversion."
+        ],
+        [
+          "DA15",
+          "2026 brain vital signs feasibility paper",
+          "Primary metadata lead; full article fetch returned 403",
+          "Potential future cognition method",
+          "Full-text and participant data not acquired",
+          "No claimed model validation from two-person study",
+          "Read permitted full text before adopting method."
+        ]
+      ]
+    },
+    "Field mappings": {
+      "headers": [
+        "ID",
+        "Source field / representation",
+        "Proposed semantic target",
+        "Time / unit rule",
+        "Validation or quarantine",
+        "Evidence",
+        "Status"
+      ],
+      "rows": [
+        [
+          "FM01",
+          "CBC SUBJECT_ID",
+          "Dataset-scoped research subject",
+          "Scope with study accession; not operational crew ID",
+          "No cross-study identity join from matching text alone",
+          "OSD-569; S024",
+          "Proposed"
+        ],
+        [
+          "FM02",
+          "CBC TEST_DATE: L-92 ... R+194",
+          "Relative mission collection label",
+          "Retain string and launch/return anchor type; UTC unknown",
+          "Do not manufacture calendar date",
+          "OSD-569; E008",
+          "Proposed"
+        ],
+        [
+          "FM03",
+          "CBC ANALYTE, VALUE, UNITS",
+          "Observation raw code/value/unit",
+          "Canonical analyte and UCUM mapping require review",
+          "Reject dimensional mismatch; preserve raw spelling",
+          "OSD-569; S046",
+          "Proposed"
+        ],
+        [
+          "FM04",
+          "CBC RANGE_MIN / RANGE_MAX",
+          "Source laboratory reference interval",
+          "Keep units, method and population applicability",
+          "Not automatically a NASA decision rule",
+          "OSD-569; S008 4015-4017",
+          "Proposed"
+        ],
+        [
+          "FM05",
+          "Transformed hemoglobin_value_percent",
+          "Unresolved transformed variable",
+          "Submitted hemoglobin uses g/dL",
+          "Quarantine mapping; never silently relabel values",
+          "Q001; OSD-569",
+          "Blocked"
+        ],
+        [
+          "FM06",
+          "ACTES ID subject",
+          "Source-scoped subject and exercise session",
+          "18 subject IDs; one listed test per subject in acquired files",
+          "Check subject foreign key and preserve age/cohort",
+          "R017",
+          "Profiled"
+        ],
+        [
+          "FM07",
+          "ACTES time",
+          "Relative exercise time",
+          "Seconds, negative pre-test values valid; irregular beat-level timestamps",
+          "No assumed 1-Hz cadence; preserve strict local ordering",
+          "R017",
+          "Profiled"
+        ],
+        [
+          "FM08",
+          "ACTES RR",
+          "Interbeat R-R interval",
+          "Milliseconds; 1,148 missing entries",
+          "Not respiratory rate; do not impute without separate derived record",
+          "R017",
+          "Profiled"
+        ],
+        [
+          "FM09",
+          "ACTES VO2",
+          "Raw oxygen-consumption field",
+          "Published unit label and observed numeric scale need reconciliation",
+          "No automatic 1,000x correction or fitness classification",
+          "R017; Q017",
+          "Blocked"
+        ],
+        [
+          "FM10",
+          "ACTES power",
+          "Exercise mechanical workload",
+          "W as documented",
+          "Keep protocol and activity stage; no medical advice from workload alone",
+          "R017",
+          "Profiled"
+        ],
+        [
+          "FM11",
+          "Treadmill RR (metadata only)",
+          "Respiration rate",
+          "Per minute in this source",
+          "Do not merge with ACTES RR",
+          "R001",
+          "Metadata only"
+        ],
+        [
+          "FM12",
+          "Sleep EDF channel/header",
+          "Waveform object + channel metadata",
+          "Four physiological channels 100 Hz, uV; marker channel 10 Hz",
+          "Validate digital/physical min/max, labels, record count and byte length",
+          "R002; R020",
+          "Profiled"
+        ],
+        [
+          "FM13",
+          "EDF local start date/time",
+          "Local clock expression",
+          "12 July 1994 23:00; UTC zone not supplied",
+          "Do not label Z or convert to mission time without evidence",
+          "R002",
+          "Profiled"
+        ],
+        [
+          "FM14",
+          "EDF+ annotation channel",
+          "Timed annotation events",
+          "Zero record duration in this annotation-only file is permitted",
+          "No division by zero or fabricated continuous sample rate",
+          "R020",
+          "Profiled"
+        ],
+        [
+          "FM15",
+          "Polar SDK HR / ECG / acceleration",
+          "Device observations / waveform",
+          "HR events and sensor-clock timestamps differ; ECG 130 Hz documented",
+          "Capture clock segment, SDK/firmware and real sample payload first",
+          "E003-E007",
+          "Documentation only"
+        ],
+        [
+          "FM16",
+          "Cabin CO2 concentration",
+          "Environmental observation at location",
+          "ppm and partial pressure distinct; record cabin pressure for conversion",
+          "One-hour partial-pressure comparison needs aligned coverage, location and pressure",
+          "S009 V2 6004",
+          "Proposed"
+        ],
+        [
+          "FM17",
+          "Radiation instrument channels",
+          "Instrument-specific radiation quantity",
+          "Preserve particle/energy/solid-angle/time units",
+          "Do not rename flux or absorbed dose as career effective dose",
+          "S008 V1 4030; S032",
+          "Proposed"
+        ],
+        [
+          "FM18",
+          "FHIR R4 Observation / SampledData",
+          "Candidate exchange contract",
+          "effective[x], issued and dataAbsentReason have different meaning",
+          "Mapping choice does not force database design or prove FHIR conformance",
+          "E008; E009",
+          "Candidate"
+        ],
+        [
+          "FM19",
+          "DICOM ultrasound / ocular imaging",
+          "Imaging study object and metadata",
+          "Preserve acquisition, frame and calibration context",
+          "No integration claimed until exact export and access validated",
+          "S047; S005",
+          "Candidate"
+        ]
+      ]
+    },
+    "NASA applicability": {
+      "headers": [
+        "ID / version",
+        "Topic",
+        "Source-backed requirement or context",
+        "Quantity / window",
+        "Needed before comparison",
+        "Must not be used as",
+        "Evidence"
+      ],
+      "rows": [
+        [
+          "V1 Rev C 4003",
+          "Aerobic capacity",
+          "Maintain at least 80% of pre-mission aerobic capacity in mission",
+          "Comparable aerobic-capacity assessment / individual baseline",
+          "Matched method, valid baseline and reviewed interpretation",
+          "A limit on instantaneous VO2 or heart rate",
+          "S008 section 4.1.3"
+        ],
+        [
+          "V1 Rev C 4027",
+          "Bone mineral density",
+          "Maintain hip/spine at least 95%; femoral neck at least 90% of pre-mission values",
+          "Site-specific BMD / individual baseline",
+          "Comparable site-specific DXA results; reviewer",
+          "An estimate calculated from exercise completion",
+          "S008 section 4.7.2"
+        ],
+        [
+          "V1 Rev C 4030",
+          "Radiation",
+          "Total career effective spaceflight dose below 600 mSv",
+          "NASA effective dose / career accumulation",
+          "Validated dose methodology and historical exposure",
+          "A direct threshold on raw particle flux or acute event alarm",
+          "S008 section 4.8.2"
+        ],
+        [
+          "V2 Rev F 6004",
+          "Cabin CO2",
+          "Average one-hour partial pressure no more than 3 mmHg in habitable volume",
+          "ppCO2 / one-hour average / location",
+          "Pressure context, coverage and aggregation policy",
+          "A 3-ppm limit or instantaneous medical diagnosis",
+          "S009 section 6.2.1.3"
+        ],
+        [
+          "V1 Rev C 4015-4017",
+          "Hematology/immunology",
+          "Prelaunch normative values; in-mission countermeasures and monitoring context",
+          "Parameter-specific clinical context",
+          "Exact assay, lab interval, mission plan and clinician review",
+          "A universal numerical immune-health score",
+          "S008 section 4.4"
+        ],
+        [
+          "V1 Rev C 3004",
+          "Medical capability",
+          "Mission medical capability includes autonomous care and privacy considerations",
+          "Mission scope, training and resources",
+          "Mission profile and authorized procedures",
+          "Permission for unrestricted model treatment advice",
+          "S008 section 3"
+        ],
+        [
+          "V1 Rev C 6006",
+          "EVA medical clearance",
+          "Current standard requires ground medical clearance before each EVA",
+          "Event-specific clinical/operational decision",
+          "Mission authority and medical review",
+          "Autonomous EVA clearance by this prototype",
+          "S008 section 6.4"
+        ],
+        [
+          "V1 Rev C 7001-7002",
+          "Records and communication",
+          "Health results retrievable for trends; medical transmission meets program needs",
+          "Longitudinal record and authorized transfer",
+          "Record lifecycle and mission communications policy",
+          "A fixed cloud-only data architecture",
+          "S008 section 7"
+        ],
+        [
+          "V2 Rev F 10020",
+          "Data freshness",
+          "Visually indicate stale, missing, unavailable or unknown data",
+          "Parameter availability",
+          "Source clock, receipt and freshness rules",
+          "Proof that a stale measurement is physiologically normal",
+          "S009 section 10.2.1"
+        ],
+        [
+          "V2 Rev F 10022",
+          "Control feedback",
+          "Control feedback limits depend on operation type",
+          "Discrete feedback 0.1 s; requested GUI 1 s; see full table",
+          "Selected hardware, operation classification and measured test",
+          "A requirement to finish any LLM response in 0.1 s",
+          "S009 section 10.2.2 Table 10.2-1"
+        ],
+        [
+          "V2 Rev F 10161-10173",
+          "Automation",
+          "State visibility, role clarity, takeover, explanation and capability limits",
+          "Automation mode and action authority",
+          "Applicable hazard review, fallback and user control",
+          "A blanket mandate to automate clinical decisions",
+          "S009 automation requirements"
+        ],
+        [
+          "V2 Rev F Appendix F",
+          "Interaction",
+          "Stable procedures, shared state and consistent information design",
+          "Tasks, displays, context and workflow",
+          "Task evaluation on selected viewport/device",
+          "An official NASA visual theme or astronaut preference study",
+          "S021"
+        ]
+      ]
+    },
+    "Scope staging": {
+      "headers": [
+        "Stage",
+        "What is specified",
+        "Requirements / cases",
+        "Evidence needed to exit",
+        "Deferred deliberately"
+      ],
+      "rows": [
+        [
+          "Research baseline",
+          "Current documents, profiles and traceability; no product implementation",
+          "RQ01-84 are proposed; AC01-58 not run",
+          "All sources, assumptions and blockers visible",
+          "Clinical validation, flight approval and production readiness"
+        ],
+        [
+          "Candidate proof path",
+          "One onboard review: accepted lab result or quarantined mapping, source explanation, permitted review action, local follow-up, delayed handoff",
+          "RQ03,05,07,10,11,13,15-18,21,24,27,28,30-35,38,39,41-47,53-55,57,60-63,65,68-70,72,74,76,84 as applicable",
+          "Chosen episode, exact source fields, reviewer-approved action, mandatory failure cases",
+          "Separate full apps for every role or health outcome"
+        ],
+        [
+          "Demo release gates",
+          "Correct semantics; honest labels; no unauthorized action; usable offline fallback; durable action and explicit handoff states",
+          "AC04,05,07,09,10,12,14-16,19,22,25-27,29,31-38,41,45,49,50,58",
+          "Run selected cases on actual implementation; release only passing capabilities",
+          "Unmeasured claims of accuracy, responsiveness or readiness"
+        ],
+        [
+          "Later validation",
+          "Hardware adapter, full key lifecycle, concurrent-edit resolution, extended modalities, larger-scale operations",
+          "Foundation requirements plus relevant cases",
+          "Measured benchmark and review appropriate to capability",
+          "Fine-tuning without a demonstrated task/evidence need"
+        ]
+      ]
+    }
+  }
+}

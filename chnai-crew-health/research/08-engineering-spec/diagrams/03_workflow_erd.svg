@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="550" viewBox="0 0 900 550">
+<rect width="100%" height="100%" fill="white"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#526879"/></marker></defs>
+<path d="M 350 92.0 L 290 92.0" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="288.0" y="37" width="64.0" height="16" fill="white"/>
+<text x="320.0" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">finding_id</text>
+<path d="M 560 92.0 L 620 92.0" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="558.0" y="37" width="64.0" height="16" fill="white"/>
+<text x="590.0" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">episode_id</text>
+<path d="M 185.0 230 L 725.0 124" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="423.0" y="159.0" width="64.0" height="16" fill="white"/>
+<text x="455.0" y="170.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">episode_id</text>
+<path d="M 350 262.0 L 290 262.0" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="291.2" y="207" width="57.6" height="16" fill="white"/>
+<text x="320.0" y="218" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">action_id</text>
+<path d="M 725.0 230 L 725.0 124" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="693.0" y="159.0" width="64.0" height="16" fill="white"/>
+<text x="725.0" y="170.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">episode_id</text>
+<path d="M 455.0 400 L 725.0 294" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="564.4" y="329.0" width="51.2" height="16" fill="white"/>
+<text x="590.0" y="340.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">draft_id</text>
+<path d="M 290 432.0 L 350 432.0" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="291.2" y="377" width="57.6" height="16" fill="white"/>
+<text x="320.0" y="388" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">packet_id</text>
+<path d="M 620 432.0 L 560 432.0" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="561.2" y="377" width="57.6" height="16" fill="white"/>
+<text x="590.0" y="388" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">packet_id</text>
+<rect x="80" y="60" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="185.0" y="97.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">finding</text>
+<rect x="350" y="60" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="455.0" y="97.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">episode_finding</text>
+<rect x="620" y="60" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="725.0" y="97.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">review_episode</text>
+<rect x="80" y="230" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="185.0" y="267.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">action_record</text>
+<rect x="350" y="230" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="455.0" y="267.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">follow_up</text>
+<rect x="620" y="230" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="725.0" y="267.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">handoff_draft</text>
+<rect x="80" y="400" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="185.0" y="437.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">transfer_receipt</text>
+<rect x="350" y="400" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="455.0" y="437.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">handoff_packet</text>
+<rect x="620" y="400" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="725.0" y="437.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">clinical_review</text>
+</svg>

@@ -1,0 +1,20 @@
+ID,Source field / representation,Proposed semantic target,Time / unit rule,Validation or quarantine,Evidence,Status
+FM01,CBC SUBJECT_ID,Dataset-scoped research subject,Scope with study accession; not operational crew ID,No cross-study identity join from matching text alone,OSD-569; S024,Proposed
+FM02,CBC TEST_DATE: L-92 ... R+194,Relative mission collection label,Retain string and launch/return anchor type; UTC unknown,Do not manufacture calendar date,OSD-569; E008,Proposed
+FM03,"CBC ANALYTE, VALUE, UNITS",Observation raw code/value/unit,Canonical analyte and UCUM mapping require review,Reject dimensional mismatch; preserve raw spelling,OSD-569; S046,Proposed
+FM04,CBC RANGE_MIN / RANGE_MAX,Source laboratory reference interval,"Keep units, method and population applicability",Not automatically a NASA decision rule,OSD-569; S008 4015-4017,Proposed
+FM05,Transformed hemoglobin_value_percent,Unresolved transformed variable,Submitted hemoglobin uses g/dL,Quarantine mapping; never silently relabel values,Q001; OSD-569,Blocked
+FM06,ACTES ID subject,Source-scoped subject and exercise session,18 subject IDs; one listed test per subject in acquired files,Check subject foreign key and preserve age/cohort,R017,Profiled
+FM07,ACTES time,Relative exercise time,"Seconds, negative pre-test values valid; irregular beat-level timestamps",No assumed 1-Hz cadence; preserve strict local ordering,R017,Profiled
+FM08,ACTES RR,Interbeat R-R interval,"Milliseconds; 1,148 missing entries",Not respiratory rate; do not impute without separate derived record,R017,Profiled
+FM09,ACTES VO2,Raw oxygen-consumption field,Published unit label and observed numeric scale need reconciliation,"No automatic 1,000x correction or fitness classification",R017; Q017,Blocked
+FM10,ACTES power,Exercise mechanical workload,W as documented,Keep protocol and activity stage; no medical advice from workload alone,R017,Profiled
+FM11,Treadmill RR (metadata only),Respiration rate,Per minute in this source,Do not merge with ACTES RR,R001,Metadata only
+FM12,Sleep EDF channel/header,Waveform object + channel metadata,"Four physiological channels 100 Hz, uV; marker channel 10 Hz","Validate digital/physical min/max, labels, record count and byte length",R002; R020,Profiled
+FM13,EDF local start date/time,Local clock expression,12 July 1994 23:00; UTC zone not supplied,Do not label Z or convert to mission time without evidence,R002,Profiled
+FM14,EDF+ annotation channel,Timed annotation events,Zero record duration in this annotation-only file is permitted,No division by zero or fabricated continuous sample rate,R020,Profiled
+FM15,Polar SDK HR / ECG / acceleration,Device observations / waveform,HR events and sensor-clock timestamps differ; ECG 130 Hz documented,"Capture clock segment, SDK/firmware and real sample payload first",E003-E007,Documentation only
+FM16,Cabin CO2 concentration,Environmental observation at location,ppm and partial pressure distinct; record cabin pressure for conversion,"One-hour partial-pressure comparison needs aligned coverage, location and pressure",S009 V2 6004,Proposed
+FM17,Radiation instrument channels,Instrument-specific radiation quantity,Preserve particle/energy/solid-angle/time units,Do not rename flux or absorbed dose as career effective dose,S008 V1 4030; S032,Proposed
+FM18,FHIR R4 Observation / SampledData,Candidate exchange contract,"effective[x], issued and dataAbsentReason have different meaning",Mapping choice does not force database design or prove FHIR conformance,E008; E009,Candidate
+FM19,DICOM ultrasound / ocular imaging,Imaging study object and metadata,"Preserve acquisition, frame and calibration context",No integration claimed until exact export and access validated,S047; S005,Candidate

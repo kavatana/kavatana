@@ -14,6 +14,7 @@
     "check": "node scripts/check.mjs",
     "contracts": ".venv/bin/python scripts/export-contracts.py",
     "doctor": "node scripts/doctor.mjs",
-    "research:import": ".venv/bin/python scripts/ingest-research.py"
+    "research:import": ".venv/bin/python scripts/ingest-research.py",
+    "handoff:verify": "node scripts/verify-handoff.mjs"
   }
 }

@@ -1,0 +1,15 @@
+Decision ID,When,Decision,Why,Evidence needed,State,Source IDs
+D01,First,Choose one mission setting,"ISS support, lunar sortie and Mars transit have different autonomy, resupply and evacuation constraints",Mission assumptions and actor/task map,Open,S003; S004; S054; S068
+D02,First,Map full challenge requirements on 28 October,Current public page does not yet provide all objectives and required resources,Objective-to-evidence checklist from released statement,Pending release,S001; S002
+D03,First,Recruit a health/life-science reviewer,"Unit mappings, interpretation and any action need domain review",Named reviewer and reviewed interpretation notes,Open,Q001; Q010
+D04,Next,Choose one demonstrable gather-evaluate-act workflow,Broad research coverage should support one finished path,"Available data, credible evaluation, approved next action, measurable benefit",Open,Coverage; Roles; Quality
+D05,Next,Verify actual acquisition interface,CSV research tables do not prove live device integration,"Sample device payload, transport, permissions and offline behavior",Open,Devices
+D06,Next,Specify data contracts before physical schema,"Missing values, method, time and identity need explicit meaning","Reviewed examples for scalar, waveform, lab, questionnaire and image",Open,Q001; Q011; S038-S047
+D07,Next,Select storage by workload,"Runtime health records, research arrays, imaging and evidence require different access patterns","Benchmarked queries, storage volume and device constraints",Open,S004; S078; S079
+D08,Next,Evaluate retrieval and deterministic analysis first,Small cohorts and documents alone cannot validate a diagnostic model,"Held-out tasks, grounded citations, abstention and failure tests",Open,S005; S076; S077
+D09,Later,Justify fine-tuning for a specific task,"Fine-tuning requires permitted examples, labels and independent evaluation","Baseline comparison, subject-separated split and error analysis",Open,S025; S076; S077
+D10,Next,Define medical privacy and release policy,"Authority, personal privacy and operational readiness are not one permission","Purpose-bound access, release rules and audit behavior",Open,S008; S010; S054
+D11,Later,Validate crew interaction,NASA interface rules are evidence; a new mockup is still a hypothesis,"Task timing, interruption recovery, explanation and workload evaluation",Open,S020; S021; S082
+D12,13 November,Recheck submission guide,2025 guide is historical planning material,"Confirmed limits, fields, AI disclosure and deadlines from 2026 guide",Pending release,S002; original preparation
+D13,Before building,Confirm permitted pre-event preparation,Official FAQ prohibits beginning challenge work before the hackathon,Organizer clarification for any existing prototype material; research pack remains preparation,Open,S002
+D14,Hackathon,Build and demonstrate one end-to-end path,"Include missing data, disconnected operation and transparent simulation labels","Working live demo, tested rule and reviewable evidence packet",Not started,D01-D13

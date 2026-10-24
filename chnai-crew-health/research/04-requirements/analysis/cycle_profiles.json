@@ -1,0 +1,270 @@
+[
+  {
+    "file": "subject-info.csv",
+    "rows": 18,
+    "columns": [
+      "ID",
+      "age",
+      "Weight",
+      "Height",
+      "P_vt1",
+      "P_vt2",
+      "sport"
+    ],
+    "duplicates": 0,
+    "missing": {
+      "ID": 0,
+      "age": 0,
+      "Weight": 0,
+      "Height": 0,
+      "P_vt1": 0,
+      "P_vt2": 0,
+      "sport": 0
+    },
+    "numeric_ranges": {
+      "ID": {
+        "n": 18,
+        "min": 1.0,
+        "max": 18.0
+      },
+      "age": {
+        "n": 18,
+        "min": 12.0,
+        "max": 18.0
+      },
+      "Weight": {
+        "n": 18,
+        "min": 39.7,
+        "max": 89.9
+      },
+      "Height": {
+        "n": 18,
+        "min": 156.0,
+        "max": 191.0
+      },
+      "P_vt1": {
+        "n": 18,
+        "min": 50.0,
+        "max": 215.0
+      },
+      "P_vt2": {
+        "n": 18,
+        "min": 108.0,
+        "max": 300.0
+      }
+    }
+  },
+  {
+    "file": "test_measure.csv",
+    "rows": 52062,
+    "columns": [
+      "ID",
+      "time",
+      "RR",
+      "VO2",
+      "power"
+    ],
+    "duplicates": 0,
+    "missing": {
+      "ID": 0,
+      "time": 0,
+      "RR": 1148,
+      "VO2": 0,
+      "power": 0
+    },
+    "numeric_ranges": {
+      "ID": {
+        "n": 52062,
+        "min": 1.0,
+        "max": 18.0
+      },
+      "time": {
+        "n": 52062,
+        "min": -219.872,
+        "max": 1504.056
+      },
+      "RR": {
+        "n": 50914,
+        "min": 252.0,
+        "max": 30500.0
+      },
+      "VO2": {
+        "n": 52062,
+        "min": 0.069354422,
+        "max": 4.576773815
+      },
+      "power": {
+        "n": 52062,
+        "min": 0.0,
+        "max": 335.0
+      }
+    },
+    "unique_participants": 18,
+    "subject_foreign_keys_resolve": true,
+    "timing_by_subject": [
+      {
+        "subject": "1",
+        "rows": 2403,
+        "min_seconds": -130.84,
+        "max_seconds": 856.316,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.37999999999999545,
+        "distinct_deltas": 143
+      },
+      {
+        "subject": "2",
+        "rows": 2000,
+        "min_seconds": -219.872,
+        "max_seconds": 727.48,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.41599999999994,
+        "distinct_deltas": 173
+      },
+      {
+        "subject": "3",
+        "rows": 3443,
+        "min_seconds": -182.272,
+        "max_seconds": 1404.164,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.44000000000005457,
+        "distinct_deltas": 157
+      },
+      {
+        "subject": "4",
+        "rows": 3694,
+        "min_seconds": -183.676,
+        "max_seconds": 1366.552,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.4119999999999209,
+        "distinct_deltas": 146
+      },
+      {
+        "subject": "5",
+        "rows": 3594,
+        "min_seconds": -180.324,
+        "max_seconds": 1383.428,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.39999999999997726,
+        "distinct_deltas": 157
+      },
+      {
+        "subject": "6",
+        "rows": 2683,
+        "min_seconds": -184.444,
+        "max_seconds": 1090.168,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.4399999999999977,
+        "distinct_deltas": 179
+      },
+      {
+        "subject": "7",
+        "rows": 2207,
+        "min_seconds": -182.568,
+        "max_seconds": 784.12,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.40799999999998704,
+        "distinct_deltas": 143
+      },
+      {
+        "subject": "8",
+        "rows": 2121,
+        "min_seconds": -182.248,
+        "max_seconds": 832.076,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.4399999999999977,
+        "distinct_deltas": 181
+      },
+      {
+        "subject": "9",
+        "rows": 2823,
+        "min_seconds": -216.136,
+        "max_seconds": 948.56,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.37999999999999545,
+        "distinct_deltas": 148
+      },
+      {
+        "subject": "10",
+        "rows": 2635,
+        "min_seconds": -182.56,
+        "max_seconds": 944.404,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.37999999999999545,
+        "distinct_deltas": 167
+      },
+      {
+        "subject": "11",
+        "rows": 3854,
+        "min_seconds": -168.6,
+        "max_seconds": 1504.056,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.4159999999999968,
+        "distinct_deltas": 157
+      },
+      {
+        "subject": "12",
+        "rows": 3648,
+        "min_seconds": -183.072,
+        "max_seconds": 1438.884,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.42399999999997817,
+        "distinct_deltas": 144
+      },
+      {
+        "subject": "13",
+        "rows": 3637,
+        "min_seconds": -184.356,
+        "max_seconds": 1410.304,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.4199999999999591,
+        "distinct_deltas": 131
+      },
+      {
+        "subject": "14",
+        "rows": 2808,
+        "min_seconds": -160.712,
+        "max_seconds": 1094.156,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.41600000000005366,
+        "distinct_deltas": 177
+      },
+      {
+        "subject": "15",
+        "rows": 2691,
+        "min_seconds": -184.588,
+        "max_seconds": 1008.04,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.40800000000001546,
+        "distinct_deltas": 167
+      },
+      {
+        "subject": "16",
+        "rows": 2840,
+        "min_seconds": -164.788,
+        "max_seconds": 1120.544,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.4199999999999591,
+        "distinct_deltas": 137
+      },
+      {
+        "subject": "17",
+        "rows": 2410,
+        "min_seconds": -182.408,
+        "max_seconds": 882.892,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.40399999999999636,
+        "distinct_deltas": 164
+      },
+      {
+        "subject": "18",
+        "rows": 2571,
+        "min_seconds": -181.476,
+        "max_seconds": 949.424,
+        "nonpositive_deltas": 0,
+        "median_delta_seconds": 0.41200000000003456,
+        "distinct_deltas": 151
+      }
+    ],
+    "interpretation": "RR is interbeat interval in milliseconds. VO2 is projected from breath-level measurements to beat-level timing, per publisher. Negative relative times are retained. Engineering benchmark only."
+  }
+]

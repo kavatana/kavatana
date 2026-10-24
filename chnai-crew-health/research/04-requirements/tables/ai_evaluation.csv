@@ -1,0 +1,9 @@
+ID,Task,Inputs,Baseline,Expected output,Measures,Acceptance cases
+AI01,Grounded explanation,Accepted observations and approved source sections,Structured evidence card without model,Cited summary with no unsupported claim,Citation support; factual correctness; missingness disclosure,AC33; AC35; AC36
+AI02,Numerical restatement,Reviewed computed value and unit,Fixed template,Identical values and units with plain-language context,Exact numerical match; zero invented recalculation,AC34
+AI03,Evidence retrieval,Versioned source sections and applicability metadata,Keyword/filtered retrieval,Relevant applicable section with locator,Recall on curated questions; wrong-version and wrong-population errors,AC26; AC35
+AI04,Missing-context request,Known gaps and permitted questions,Deterministic gap checklist,A concise permitted question or explanation of unavailable data,Unnecessary questions; missing critical context; privacy exposure,AC28; AC36
+AI05,Draft handoff,Purpose-approved packet fields,Structured packet template,Complete draft preserving data quality and uncertainty,Omissions; unauthorized detail; unsupported urgency,AC31; AC33
+AI06,Bounded automation,Whitelisted tool proposals with actor and policy,Deterministic workflow engine,Validated action proposal requiring applicable authority,Unauthorized calls; injection success; duplicate actions,AC38; AC46
+AI07,Offline execution,Pinned model/evidence on tested hardware,No-model workflow,Acceptable task quality within measured local resources,Cold start; peak RAM/VRAM; energy; latency; failure recovery,AC37; AC41; AC47
+AI08,Optional fine-tuning,Permitted task examples and independent labels,Best verified untuned/retrieval approach,Improvement on held-out tasks without safety regression,Study/subject leakage; subgroup errors; training rights; ablations,AC40

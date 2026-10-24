@@ -1,0 +1,10 @@
+erDiagram
+    review_episode ||--o{ episode_finding : "episode_id"
+    finding ||--o{ episode_finding : "finding_id"
+    review_episode ||--o{ action_record : "episode_id"
+    review_episode ||--o{ follow_up : "episode_id"
+    action_record ||--o{ follow_up : "action_id"
+    review_episode ||--o{ handoff_draft : "episode_id"
+    handoff_draft ||--o{ handoff_packet : "draft_id"
+    handoff_packet ||--o{ transfer_receipt : "packet_id"
+    handoff_packet ||--o{ clinical_review : "packet_id"

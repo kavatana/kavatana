@@ -1,0 +1,11 @@
+Role,Own task,Permitted view proposed,Action authority proposed,Boundary,Evidence
+Crew member,Review own health and report context,"Own authorized observations, evidence and follow-up",Confirm context; request help; complete reviewed self-care steps,No access to another person by default,S010; S008
+Assigned CMO,Assist crew under mission plan,Case-specific records and procedures,Perform trained assessments; record/refer findings,Assignment is not physician qualification; access requires relationship,S056; S054
+Flight surgeon,Assess and coordinate clinical care,Released relevant records and longitudinal context,Clinical review and mission-authorized advice,Delay/receipt/review states explicit,S010; S012; S054
+Behavioral provider,Private behavioral support,Purpose-authorized private assessments and context,Review and follow-up within agreed care,Psychological detail absent from shared operational view,S010; S064
+ASCR specialist,Exercise and recovery planning,Authorized fitness tests and exercise context,Review countermeasure plan,No blanket access to unrelated medical records,S012; S054
+Radiation specialist,Exposure assessment,Instrument/model/location/exposure records,Interpret assessed dose and advise within mission plan,Flux-to-person conversion requires validated modeling,S008; S054
+Commander,Allocate tasks and operational response,Approved restrictions and task availability,Operational coordination,"No default access to private diagnoses, mood or genetics",S054; S010
+Biomedical controller,Support acquisition and medical coordination,"Device status, gaps, scheduled collection",Technical troubleshooting and coordination,Technical role does not imply all clinical plaintext,S011; S054
+Data steward,Manage permitted research and provenance,Consented/public study assets and rights,Approve dataset mappings and research release,Care data is not automatically research data,S024; S025
+System maintainer,Maintain availability and recovery,"Technical state, encrypted objects, permitted logs",Software/configuration operations,Administrative access is separately controlled and audited,S008; S044

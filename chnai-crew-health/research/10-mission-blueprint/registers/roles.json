@@ -1,0 +1,74 @@
+[
+  {
+    "id": "R01",
+    "persona": "Crew member",
+    "task": "Personal brief, context, review and follow-up",
+    "proposed_access": "Self; private sharing grants",
+    "data_needed": "Wearable/session data, observations, assigned tasks",
+    "basis": "J08; J11"
+  },
+  {
+    "id": "R02",
+    "persona": "Crew medical officer",
+    "task": "Review a qualified episode; assign and track authorized next steps",
+    "proposed_access": "Current mission assignment, training and patient/care scope",
+    "data_needed": "Assessment methods, approved protocol, resource availability",
+    "basis": "J05"
+  },
+  {
+    "id": "R03",
+    "persona": "Commander / mission operations",
+    "task": "Coordinate duty changes and task ownership",
+    "proposed_access": "Operational impact summary; no automatic access to private notes",
+    "data_needed": "Task constraints, accepted work changes, backup coverage",
+    "basis": "J04; J06"
+  },
+  {
+    "id": "R04",
+    "persona": "Flight surgeon",
+    "task": "Review a released longitudinal packet and return a signed response",
+    "proposed_access": "Assigned care relationship and authorized scope",
+    "data_needed": "Evidence revision, packet history, unresolved questions",
+    "basis": "J04"
+  },
+  {
+    "id": "R05",
+    "persona": "Biomedical flight controller",
+    "task": "Investigate hardware and data acquisition problems",
+    "proposed_access": "Purpose-limited technical grant; clinical access only if authorized",
+    "data_needed": "Device identity, calibration, recording gaps, downlink state",
+    "basis": "J03"
+  },
+  {
+    "id": "R06",
+    "persona": "Behavioral health provider",
+    "task": "Private communication and reviewed follow-up",
+    "proposed_access": "Separate confidential channel and explicit policy",
+    "data_needed": "Consented self-report and appropriate history",
+    "basis": "J06"
+  },
+  {
+    "id": "R07",
+    "persona": "Environmental operations / ETHOS analogue",
+    "task": "Investigate cabin sensor and habitat conditions",
+    "proposed_access": "Environmental telemetry; person linkage requires permission and context",
+    "data_needed": "Cabin location, quantity, sample interval, sensor state",
+    "basis": "J10"
+  },
+  {
+    "id": "R08",
+    "persona": "Data steward / investigator",
+    "task": "Qualify study files, versions and permitted uses",
+    "proposed_access": "Research workspace; no conversion of subjects into live crew",
+    "data_needed": "File inventory, rights, transformations, unit exceptions",
+    "basis": "CHNAI proposed role"
+  },
+  {
+    "id": "R09",
+    "persona": "System maintainer / test operator",
+    "task": "Manage device adapters, evidence releases and scenario runs",
+    "proposed_access": "Technical administration is not medical authority",
+    "data_needed": "Build/config versions, backup health, audit export",
+    "basis": "CHNAI proposed role"
+  }
+]

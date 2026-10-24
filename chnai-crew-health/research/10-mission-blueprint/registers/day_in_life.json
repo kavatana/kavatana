@@ -1,0 +1,92 @@
+[
+  {
+    "time": "Wake +00:00",
+    "actor": "Crew member",
+    "activity": "Private morning brief",
+    "app_behavior": "Present last successful acquisition, coverage gaps and due tasks; no interruption if nothing requires review.",
+    "boundary": "Sleep opportunity is not measured sleep. A wearable may still hold untransferred data.",
+    "privacy_dependency": "Self; no Earth dependency",
+    "basis": "J08; J09"
+  },
+  {
+    "time": "+00:30",
+    "actor": "Crew + commander",
+    "activity": "Planning conference / task allocation",
+    "app_behavior": "Show operational constraints and responsible owners; private clinical content stays in care views.",
+    "boundary": "Role and duty can contextualize a measurement, not diagnose its cause.",
+    "privacy_dependency": "Operational summary only",
+    "basis": "J04; J06"
+  },
+  {
+    "time": "+02:00",
+    "actor": "Crew member",
+    "activity": "Research or maintenance block",
+    "app_behavior": "Background import with identity, time, unit and quality checks. Surface acquisition failure separately from a health concern.",
+    "boundary": "No full-time manual dashboard watching or per-sample approvals.",
+    "privacy_dependency": "Local adapter; fictional in demo",
+    "basis": "J11; CHNAI design"
+  },
+  {
+    "time": "+04:00",
+    "actor": "Crew + CMO",
+    "activity": "Scheduled assessment on this illustrative day",
+    "app_behavior": "Import a completed comparable capacity assessment; display 50 versus 39 and the 78% comparison from the existing fictional seed.",
+    "boundary": "This assessment is not claimed to happen every day or to be derived from a wrist sensor.",
+    "privacy_dependency": "Assigned care scope",
+    "basis": "J13; fictional fixture"
+  },
+  {
+    "time": "+04:10",
+    "actor": "Crew + CMO",
+    "activity": "Evidence review and next step",
+    "app_behavior": "Inspect method and uncertainty; choose a reviewed follow-up, owner and completion condition. Missing evidence can block a conclusion.",
+    "boundary": "No automatically generated treatment or EVA clearance.",
+    "privacy_dependency": "Onboard decisions within approved authority",
+    "basis": "J05; J06; CHNAI design"
+  },
+  {
+    "time": "+04:20",
+    "actor": "BME / technical support",
+    "activity": "Recorder or gateway fault, if present",
+    "app_behavior": "See connection state and acquisition metadata; recover queued data without erasing the clinical episode.",
+    "boundary": "Device repair is a separate task from caring for the person.",
+    "privacy_dependency": "Only authorized technical detail",
+    "basis": "J03"
+  },
+  {
+    "time": "+05:00",
+    "actor": "Crew / authorized sender",
+    "activity": "Prepare ground handoff",
+    "app_behavior": "Preview exact selected evidence and purpose; freeze a released packet in the local outbox during outage.",
+    "boundary": "Local task completion continues. Transmission and care have different states.",
+    "privacy_dependency": "Private; link may be unavailable",
+    "basis": "J06; CHNAI design"
+  },
+  {
+    "time": "+09:00 or later",
+    "actor": "Flight surgeon",
+    "activity": "Ground review when packet arrives",
+    "app_behavior": "Show source age, revisions and open questions. Return a response referencing the exact packet.",
+    "boundary": "No promise of an instantaneous reply or closure on receipt.",
+    "privacy_dependency": "Separate ground authority",
+    "basis": "J04; CHNAI design"
+  },
+  {
+    "time": "+12:00",
+    "actor": "Crew + backup CMO",
+    "activity": "Handover / follow-up check",
+    "app_behavior": "Accept ownership transfer or keep it visibly unresolved; record actual completion evidence.",
+    "boundary": "Being off duty does not silently clear an outstanding task.",
+    "privacy_dependency": "Scoped care handover",
+    "basis": "J05; CHNAI design"
+  },
+  {
+    "time": "Pre-sleep / next wake",
+    "actor": "Crew member",
+    "activity": "Quiet period and overnight collection",
+    "app_behavior": "Respect the planned rest window; continue acquisition and audit. Route only reviewed alert classes.",
+    "boundary": "Any duty-time and critical-alert policy needs mission/clinical approval.",
+    "privacy_dependency": "Private brief; explicit monitoring coverage",
+    "basis": "J06; CHNAI design"
+  }
+]

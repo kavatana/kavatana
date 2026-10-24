@@ -4,6 +4,10 @@ An evidence-led astronaut health workflow: gather a completed assessment, evalua
 
 **v0.8 adds a durable public-research ingestion registry alongside the local assessment-day workflow. All operational crew data is fictional.** NASA supplies named references and retained research files; this independent prototype is not clinically qualified or NASA-endorsed.
 
+## Continue with the complete project context
+
+Start with [START_HERE.md](START_HERE.md) and the [Codex handoff prompt](CODEX_HANDOFF_PROMPT.md). The [research map](research/README.md) now contains the recovered requirements, source catalogs, proposed database design, flowcharts, fixtures, engineering workbook, mission/UX studies and validation plans. [Current state](docs/handoff/PROJECT_STATE.md) separates implemented v0.8 behavior from those dated proposals.
+
 ## Start on your Mac
 
 Requires Node.js 22+ and Python 3.12. Tested here with Node 24 and Python 3.12; the actual M3 Pro / 18 GB Mac has not yet been tested.
@@ -46,6 +50,8 @@ For durable research inspection, open **http://127.0.0.1:4173/research-registry.
 | `data/catalog/` | Source register and evidence-use boundaries |
 | `data/fixtures/` | Ownership guide for fictional seeds and scenarios |
 | `scripts/` | Development host, web build, contract export and online backup |
+| `research/` | Recovered research/specification history, catalogs and provenance |
+| `docs/handoff/` | Founder context, current state, next gates and VS Code setup |
 | `docs/architecture/` | Architecture decision, schema map and API semantics |
 | `.github/workflows/` | Verification workflow; no deployment credentials |
 
@@ -76,6 +82,7 @@ npm run check
 npm test
 npm run test:api
 npm run contracts
+npm run handoff:verify
 ```
 
 Current local result: **86 Node checks + 34 API/storage integration checks pass**. The 12 in-app scenario checks and 12 client-transport checks are subsets of the 86; the 13 research-ingestion checks are a subset of the 34. The [GitHub workflow](https://github.com/kavatana/kavatana/actions/workflows/chnai-verify.yml) runs checks for each pushed revision. See [v0.8 validation](docs/VALIDATION_V08.md) for the browser/runtime limitation and exact scope.

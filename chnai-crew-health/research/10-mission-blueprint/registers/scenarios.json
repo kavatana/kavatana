@@ -1,0 +1,222 @@
+[
+  {
+    "id": "S01",
+    "name": "No change, no interruption",
+    "expected": "Routine comparable input does not create an invented concern; coverage and latest acquisition stay visible.",
+    "dimension": "Usability",
+    "basis": "J07",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Before broader workflow claims"
+  },
+  {
+    "id": "S02",
+    "name": "Below-baseline review",
+    "expected": "50 then 39 in compatible mL/min/kg yields 78%; open review, not diagnosis.",
+    "dimension": "Calculation",
+    "basis": "J13",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S03",
+    "name": "Exact boundary",
+    "expected": "50 then 40 is exactly 80%; 39.995 is below despite a rounded label.",
+    "dimension": "Calculation",
+    "basis": "Existing mock contract",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S04",
+    "name": "Missing / incomparable baseline",
+    "expected": "No baseline or method mismatch returns not evaluable, not normal.",
+    "dimension": "Quality",
+    "basis": "J13",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S05",
+    "name": "Conflicting source unit",
+    "expected": "Submitted versus transformed CBC hemoglobin discrepancy is quarantined; original files retained.",
+    "dimension": "Quality",
+    "basis": "v0.3 CBC allocation",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S06",
+    "name": "Wrong person / duplicate identity",
+    "expected": "Unresolved wearer assignment cannot attach observations to a crew health timeline.",
+    "dimension": "Identity",
+    "basis": "CHNAI proposed invariant",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S07",
+    "name": "Mixed clocks / late data",
+    "expected": "Retain observed and received times; uncertainty and relative time anchors remain visible.",
+    "dimension": "Time",
+    "basis": "CHNAI proposed invariant",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S08",
+    "name": "Duplicate / reordered delivery",
+    "expected": "Idempotent import creates one logical observation; replay order does not change accepted facts.",
+    "dimension": "Integrity",
+    "basis": "CHNAI proposed invariant",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S09",
+    "name": "Recording gap / exhausted battery",
+    "expected": "Mark missing coverage and technical issue; do not fill values or conclude healthy.",
+    "dimension": "Acquisition",
+    "basis": "J09",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S10",
+    "name": "Earth unavailable",
+    "expected": "Local review and follow-up work; authorized packet queues without simulated delivery.",
+    "dimension": "Resilience",
+    "basis": "J01; J06",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S11",
+    "name": "Tablet LAN unavailable",
+    "expected": "UI distinguishes unreachable local service from Earth outage; cached information is dated and writes are guarded.",
+    "dimension": "Resilience",
+    "basis": "J07; CHNAI design",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S12",
+    "name": "Local service crash / restart",
+    "expected": "Restore durable accepted data and pending outbox; no success acknowledgement for an uncommitted write.",
+    "dimension": "Recovery",
+    "basis": "J07",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S13",
+    "name": "Correction after release",
+    "expected": "Append a correction; preserve the old packet and make obsolete draft readiness visible.",
+    "dimension": "Integrity",
+    "basis": "Existing mock contract",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S14",
+    "name": "Ground receipt without review",
+    "expected": "Receipt updates transport state only; no automatic clinical approval or task closure.",
+    "dimension": "Authority",
+    "basis": "CHNAI proposed invariant",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S15",
+    "name": "Role swap / expired grant",
+    "expected": "A technician or expired care grant cannot read the clinical payload; record denied access.",
+    "dimension": "Privacy",
+    "basis": "J07",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S16",
+    "name": "LLM unavailable or unsupported claim",
+    "expected": "Fall back to structured facts; block fabricated references, diagnostic claims and unauthorised actions.",
+    "dimension": "AI",
+    "basis": "J02; CHNAI design",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S17",
+    "name": "Follow-up tool or consumable absent",
+    "expected": "Show resource conflict and seek an authorized alternative; do not issue an impossible task.",
+    "dimension": "Resources",
+    "basis": "J01",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Before broader workflow claims"
+  },
+  {
+    "id": "S18",
+    "name": "CMO unavailable / duty handover",
+    "expected": "Require an accepted backup assignment within training/scope; unresolved responsibility remains visible.",
+    "dimension": "Ownership",
+    "basis": "J05",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S19",
+    "name": "Protocol/evidence update mid-episode",
+    "expected": "Pin the old assessment to its evidence version; require explicit new review when applicability changes.",
+    "dimension": "Versioning",
+    "basis": "CHNAI proposed invariant",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  },
+  {
+    "id": "S20",
+    "name": "Packet tamper / failed restore",
+    "expected": "Reject altered content or unverified backup; show failure and preserve an independent recovery path.",
+    "dimension": "Security",
+    "basis": "J07",
+    "status": "Not run",
+    "fixture_origin": "Fictional unless a separately licensed research fixture is explicitly selected",
+    "coverage": "Deterministic software behavior; not clinical validation",
+    "priority": "Release gate"
+  }
+]

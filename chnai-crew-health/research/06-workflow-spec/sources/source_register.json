@@ -1,0 +1,66 @@
+[
+  {
+    "id": "W01",
+    "title": "NASA: 4.0 Human Performance",
+    "url": "https://www.nasa.gov/reference/4-0-human-performance/",
+    "locator": "Sections 4.1.1-4.1.3; V1 4001, 4002, 4003",
+    "status": "Readable official page rechecked 2026-10-20",
+    "use": "Criterion and limited scope; no clinical inference from the scenario."
+  },
+  {
+    "id": "W02",
+    "title": "NASA: 6.0 Medical Operations",
+    "url": "https://www.nasa.gov/reference/6-0-medical-operations/",
+    "locator": "V1 6006, 6008, 6009, 6011 and private communications context",
+    "status": "Readable official page rechecked 2026-10-20",
+    "use": "Mission-specific operations, privacy and separate clearance authority."
+  },
+  {
+    "id": "W03",
+    "title": "NASA: 7.0 Crew Health Records",
+    "url": "https://www.nasa.gov/reference/7-0-crew-health-records/",
+    "locator": "V1 7001-7003",
+    "status": "Readable official page rechecked 2026-10-20",
+    "use": "Retrievable records, operational transmission and security."
+  },
+  {
+    "id": "W04",
+    "title": "NASA-STD-3001 Volume 1 Revision C",
+    "url": "https://www.nasa.gov/wp-content/uploads/2023/11/nasa-std-3001-vol-1-rev-c-with-signature.pdf",
+    "locator": "Baseline source S008; retained in original research",
+    "status": "Existing source capture; not newly downloaded in this milestone",
+    "use": "Versioned source identity; current webpage is a supporting read, not a new PDF capture."
+  },
+  {
+    "id": "W05",
+    "title": "2026 astronaut health challenge",
+    "url": "https://www.spaceappschallenge.org/2026/challenges/create-health-monitoring-software-for-astronauts-on-space-missions/",
+    "locator": "Baseline R011 and user-provided summary",
+    "status": "Current retrieval failed: 502 on 2026-10-20",
+    "use": "Scope remains provisional; full details scheduled for later reconciliation."
+  },
+  {
+    "id": "W06",
+    "title": "Space Apps participant FAQs",
+    "url": "https://www.spaceappschallenge.org/resources/participant-faqs/",
+    "locator": "Baseline R012",
+    "status": "Current retrieval failed: 502 on 2026-10-20",
+    "use": "No new eligibility confirmation; preserve prior preparation restriction."
+  },
+  {
+    "id": "B01",
+    "title": "CHNAI requirements baseline, 19 October 2026",
+    "url": "[private archive link omitted]",
+    "locator": "84 proposed requirements; 58 unexecuted acceptance cases",
+    "status": "Prior team baseline; source JSON retained locally",
+    "use": "Requirements/acceptance mapping. Not an external scientific source."
+  },
+  {
+    "id": "B02",
+    "title": "CHNAI architecture decisions, 20 October 2026",
+    "url": "[private archive link omitted]",
+    "locator": "ADR01-18; G01-12; API operations; ownership",
+    "status": "Prior team recommendation; not benchmark-qualified",
+    "use": "Implementation boundary and evaluation plan. Not an external scientific source."
+  }
+]

@@ -1,0 +1,10 @@
+Workstream,Status,Concrete output,Remaining gate
+Database,Drafted,"42 entity tables with field-level types, keys and invariants","Review, migrations and DB execution pending"
+Codebase,Drafted,12 module/data ownership boundaries,Product code not implemented
+Interfaces,Drafted,12 task views and 16 API operation contracts,Rendered product UI and usability testing pending
+Seed data,Prepared,6 fictional crew; 9 principals; 11 assessment records,Not inserted into an application database
+Development cases,Specified,36 cases with inputs and expected behavior,Application execution: Not run
+Devices,Access mapped,"10 adapter paths, including unavailable flight interfaces",Optional real hardware adapter unqualified
+Clinical content,Unreviewed,One relative aerobic comparison and explicit limitations,Qualified reviewer and mission-specific policy required
+Hardware / AI,Unqualified,Existing M3 Pro 18GB and 40 AI-card validation protocol,Actual Mac inventory and model/app measurements missing
+Event eligibility,Unresolved,Preparation-only engineering artifacts,Reconcile with official full challenge and preparation rules

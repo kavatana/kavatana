@@ -1,0 +1,50 @@
+[
+  {
+    "priority": "P0",
+    "id_title": "B01 - Source and scope control",
+    "deliverable": "Reconcile current availability, namespaces, full challenge objectives and preparation eligibility.",
+    "exit": "This allocation is complete. Official current objectives/rules and reuse determination remain open."
+  },
+  {
+    "priority": "P0",
+    "id_title": "B02 - Visual crew brief",
+    "deliverable": "Build the proposed hierarchy, discrete assessment history, evidence drawer and visible gaps.",
+    "exit": "Four of five exploratory testers identify change and next actor within 10 seconds; report observed counts."
+  },
+  {
+    "priority": "P0",
+    "id_title": "B03 - Real research import",
+    "deliverable": "Parse retained CBC into a separate research namespace; preserve units/specimens/times; quarantine the hemoglobin conflict.",
+    "exit": "Reconciled row counts, lineage and duplicates; conflicting mapping cannot produce a clinical finding."
+  },
+  {
+    "priority": "P0",
+    "id_title": "B04 - Automatic fictional replay",
+    "deliverable": "Replay a documented scenario, deduplicate arrivals and show source/received time and quality.",
+    "exit": "One start action; no per-sample clicks; missing or stale inputs remain visibly missing/stale."
+  },
+  {
+    "priority": "P0",
+    "id_title": "B05 - Accountable complete path",
+    "deliverable": "Connect the brief to review, follow-up, exact release and independent ground review.",
+    "exit": "One success path plus source correction, offline receipt and privacy-denial failures; retain current invariants."
+  },
+  {
+    "priority": "P1",
+    "id_title": "B06 - Second domain selection",
+    "deliverable": "Choose lab review or private sleep/workload after objective and health review.",
+    "exit": "Reviewed interpretation, credible data source and a useful complete action; empty cards do not pass."
+  },
+  {
+    "priority": "P1",
+    "id_title": "B07 - Backend and local model qualification",
+    "deliverable": "Implement durable scoped storage; compare optional local LLM with template on existing cases and actual Mac.",
+    "exit": "Migration/recovery/access tests pass; measured model benefit and factuality before replacing template."
+  },
+  {
+    "priority": "P0 release",
+    "id_title": "B08 - Judge-ready proof",
+    "deliverable": "Produce a reproducible scenario, concise source-use explanation, timed demo and accessible submission links.",
+    "exit": "Fresh-browser trial, honest data labels, confirmed rules and measured demo comprehension."
+  }
+]

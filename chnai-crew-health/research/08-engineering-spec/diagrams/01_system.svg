@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="690" viewBox="0 0 900 690">
+<rect width="100%" height="100%" fill="white"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#526879"/></marker></defs>
+<path d="M 290 92.0 L 350 92.0" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="307.2" y="37" width="25.6" height="16" fill="white"/>
+<text x="320.0" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">uses</text>
+<path d="M 560 92.0 L 620 92.0" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="545.2" y="37" width="89.60000000000001" height="16" fill="white"/>
+<text x="590.0" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">authorized API</text>
+<path d="M 185.0 230 L 725.0 124" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="407.0" y="159.0" width="96.0" height="16" fill="white"/>
+<text x="455.0" y="170.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">versioned input</text>
+<path d="M 725.0 124 L 455.0 230" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="561.2" y="159.0" width="57.6" height="16" fill="white"/>
+<text x="590.0" y="170.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">use cases</text>
+<path d="M 560 262.0 L 620 262.0" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="551.6" y="207" width="76.80000000000001" height="16" fill="white"/>
+<text x="590.0" y="218" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">transactions</text>
+<path d="M 455.0 294 L 185.0 400" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="278.4" y="329.0" width="83.2" height="16" fill="white"/>
+<text x="320.0" y="340.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">bounded facts</text>
+<path d="M 455.0 294 L 455.0 400" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="407.0" y="329.0" width="96.0" height="16" fill="white"/>
+<text x="455.0" y="340.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">hash references</text>
+<path d="M 725.0 294 L 725.0 400" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="677.0" y="329.0" width="96.0" height="16" fill="white"/>
+<text x="725.0" y="340.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">released outbox</text>
+<path d="M 725.0 464 L 725.0 540" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="673.8" y="484.0" width="102.4" height="16" fill="white"/>
+<text x="725.0" y="495.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">approved packets</text>
+<rect x="80" y="60" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="185.0" y="88.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">Crew / onboard</text>
+<text x="185.0" y="106.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">reviewer</text>
+<rect x="350" y="60" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="455.0" y="97.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">Browser task views</text>
+<rect x="620" y="60" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="725.0" y="97.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">Local API and policy</text>
+<rect x="80" y="230" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="185.0" y="258.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">Replay / optional</text>
+<text x="185.0" y="276.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">gateway</text>
+<rect x="350" y="230" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="455.0" y="267.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">Rules and workflow</text>
+<rect x="620" y="230" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="725.0" y="267.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">SQLite and audit</text>
+<rect x="80" y="400" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="185.0" y="437.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">Optional local model</text>
+<rect x="350" y="400" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="455.0" y="437.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">Immutable objects</text>
+<rect x="620" y="400" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="725.0" y="437.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">Transfer worker</text>
+<rect x="620" y="540" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="725.0" y="568.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">Delayed ground</text>
+<text x="725.0" y="586.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">handoff</text>
+</svg>

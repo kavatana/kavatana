@@ -1,0 +1,11 @@
+erDiagram
+    quantity_definition ||--o{ field_mapping : "quantity_id"
+    observation_revision o|--o{ observation : "current_revision_id"
+    observation ||--o{ observation_revision : "observation_id"
+    subject o|--o{ observation_revision : "subject_id"
+    quantity_definition ||--o{ observation_revision : "quantity_id"
+    field_mapping ||--o{ observation_revision : "mapping_id"
+    time_context ||--o{ observation_revision : "time_context_id"
+    source_asset ||--o{ observation_revision : "source_asset_id"
+    derivation_run ||--o{ derivation_input : "run_id"
+    observation_revision ||--o{ derivation_input : "revision_id"

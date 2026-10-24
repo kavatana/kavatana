@@ -1,0 +1,94 @@
+[
+  {
+    "id": "UI-SG-01",
+    "source": "S03",
+    "action": "Toggle synergy-only checkbox",
+    "observed": "15 visible rows reduced to four",
+    "scope": "desktop public app"
+  },
+  {
+    "id": "UI-SG-02",
+    "source": "S03",
+    "action": "Open methodology",
+    "observed": "Formula, source and educational-use explanation displayed"
+  },
+  {
+    "id": "UI-SG-03",
+    "source": "S03",
+    "action": "Open use-case examples",
+    "observed": "Examples and live/conceptual wording displayed"
+  },
+  {
+    "id": "UI-SG-04",
+    "source": "S03",
+    "action": "Click Add another dataset",
+    "observed": "No importer visible in inspected state",
+    "status": "import not established"
+  },
+  {
+    "id": "UI-SG-05",
+    "source": "S03",
+    "action": "Check displayed numbers against displayed formula",
+    "observed": "Three flagged rows did not satisfy formula at displayed precision",
+    "status": "UI consistency issue; underlying scientific pipeline unverified"
+  },
+  {
+    "id": "UI-PF-01",
+    "source": "S05",
+    "action": "Change crew size from four to six",
+    "observed": "Resource/cost display changed",
+    "status": "UI propagation only; estimates unvalidated"
+  },
+  {
+    "id": "UI-PF-02",
+    "source": "S05",
+    "action": "Generate analysis and continue to briefing",
+    "observed": "Six crew retained; duration label 365 in form became 360 in subsequent pages"
+  },
+  {
+    "id": "UI-PF-03",
+    "source": "S05",
+    "action": "Inspect monitoring freshness",
+    "observed": "Real-time wording accompanied October 2025 dated events",
+    "status": "live API retrieval unverified"
+  },
+  {
+    "id": "UI-PF-04",
+    "source": "S05",
+    "action": "Start 3D simulation and reload once",
+    "observed": "Initialization overlay remained",
+    "status": "3D functionality not verified in this browser"
+  },
+  {
+    "id": "UI-AS-01",
+    "source": "S06",
+    "action": "Open solution page",
+    "observed": "Value proposition and roadmap stages visible",
+    "status": "no risk engine executed"
+  },
+  {
+    "id": "UI-AS-02",
+    "source": "S07",
+    "action": "Inspect submission hub",
+    "observed": "Technical/project document links grouped by purpose",
+    "status": "linked files not audited"
+  },
+  {
+    "id": "UI-NASA-01",
+    "source": "S12",
+    "action": "Render PDF page 2 and inspect figures",
+    "observed": "Timeline, detail pane, communication bands, violation marking and tablet photograph"
+  },
+  {
+    "id": "UI-NASA-02",
+    "source": "S13",
+    "action": "Render PDF page 6 and inspect figures 1c and 1d",
+    "observed": "Annotated single-model context versus multiple model outputs above task timelines"
+  },
+  {
+    "id": "UI-NASA-03",
+    "source": "S10",
+    "action": "Render PDF slide 16",
+    "observed": "Simulation demonstration photograph; no usable clinical screen specification"
+  }
+]

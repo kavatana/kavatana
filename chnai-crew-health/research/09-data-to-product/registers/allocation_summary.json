@@ -1,0 +1,41 @@
+{
+  "as_of": "2026-10-21",
+  "method": "Catalog-wide allocation plus recorded profiles and targeted primary-source checks; no claim that every paper or data row was reread.",
+  "source_occurrences": 243,
+  "distinct_url_keys": 207,
+  "base_source_index": 132,
+  "architecture_source_entries": 46,
+  "study_entries": 119,
+  "study_depths": {
+    "Metadata only": 106,
+    "ISA + selected results": 13
+  },
+  "remote_file_entries": 6532,
+  "baseline_asset_entries": 345,
+  "requirements_acquisition_entries": 37,
+  "asset_register_entries": 382,
+  "distinct_local_paths": 375,
+  "available_asset_entries": 375,
+  "verified_hash_entries": 374,
+  "hash_conflicts": [],
+  "missing_paths": [
+    "02_Mission_and_Standards/sources/S004.json",
+    "04_Environment_and_Radiation/data/EDA-RR1-radiation-2014-09-21.json",
+    "04_Environment_and_Radiation/sources/S027.html",
+    "04_Environment_and_Radiation/sources/S028.html",
+    "04_Environment_and_Radiation/sources/S029.html",
+    "requirements-2026-10-19/sources/R003-supplement.pdf",
+    "requirements-2026-10-19/sources/R021.html"
+  ],
+  "original_notes": 26,
+  "family_count": 20,
+  "held_lab_profiles": {
+    "CBC analyte rows": 553,
+    "CMP analyte rows": 531,
+    "cardiovascular EvePanel rows": 252,
+    "immune EvePanel rows": 1988,
+    "ACTES rows": 52062
+  },
+  "unimplemented_cases": "36 development specifications remain Not run; current mock has 28 recorded passing tests.",
+  "current_mock_commit": "67b5e93f5f3a772e54ad284e508cc4f457f7b122"
+}

@@ -1,0 +1,20 @@
+flowchart TD
+    crew["Crew / onboard reviewer"]
+    ui["Browser task views"]
+    api["Local API and policy"]
+    replay["Replay / optional gateway"]
+    domain["Rules and workflow"]
+    db["SQLite and audit"]
+    model["Optional local model"]
+    objects["Immutable objects"]
+    worker["Transfer worker"]
+    earth["Delayed ground handoff"]
+    crew -->|"uses"| ui
+    ui -->|"authorized API"| api
+    replay -->|"versioned input"| api
+    api -->|"use cases"| domain
+    domain -->|"transactions"| db
+    domain -->|"bounded facts"| model
+    domain -->|"hash references"| objects
+    db -->|"released outbox"| worker
+    worker -->|"approved packets"| earth

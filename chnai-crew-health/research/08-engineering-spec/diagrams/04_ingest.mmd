@@ -1,0 +1,14 @@
+flowchart TD
+    input["File or declared packet"]
+    bytes["Preserve bytes and hash"]
+    invalid["Reject malformed input"]
+    check["Check identity / unit / time"]
+    quarantine["Store with quality issue"]
+    valid["Qualified demo revision"]
+    evaluate["Compare exact dependencies"]
+    input -->|"receive"| bytes
+    bytes -->|"parse"| check
+    check -->|"structurally invalid"| invalid
+    check -->|"unknown semantics"| quarantine
+    check -->|"prerequisites met"| valid
+    valid -->|"versioned rule"| evaluate

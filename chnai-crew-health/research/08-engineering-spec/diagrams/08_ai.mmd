@@ -1,0 +1,14 @@
+flowchart TD
+    facts["Qualified versioned facts"]
+    template["Deterministic explanation"]
+    model["Bounded local model job"]
+    validate["Validate output and freshness"]
+    reject["Invalid / stale / timeout"]
+    accept["Display validated wording"]
+    facts -->|"immediate"| template
+    facts -->|"optional"| model
+    model -->|"draft"| validate
+    validate -->|"fails"| reject
+    reject -->|"fallback"| template
+    validate -->|"passes"| accept
+    template -->|"fallback wording"| accept

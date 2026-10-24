@@ -1,0 +1,16 @@
+flowchart TD
+    start["Own review / resume"]
+    gap["Resolve missing context"]
+    attention["Review change"]
+    evidence["Inspect source / revisions"]
+    request["Request onboard review"]
+    review["Assigned reviewer disposition"]
+    follow["Pending follow-up"]
+    handoff["Preview and approve handoff"]
+    start -->|"qualified data"| attention
+    start -->|"not evaluable"| gap
+    attention -->|"inspect"| evidence
+    attention -->|"request"| request
+    request -->|"assigned"| review
+    review -->|"responsibility"| follow
+    review -->|"if appropriate"| handoff

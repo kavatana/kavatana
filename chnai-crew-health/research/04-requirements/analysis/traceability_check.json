@@ -1,0 +1,7 @@
+{
+  "unique_requirement_ids": 84,
+  "unique_acceptance_ids": 58,
+  "every_requirement_has_case": true,
+  "every_case_is_referenced": true,
+  "implementation_tests_run": 0
+}

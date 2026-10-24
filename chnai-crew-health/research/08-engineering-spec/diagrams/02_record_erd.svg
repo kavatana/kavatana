@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="550" viewBox="0 0 900 550">
+<rect width="100%" height="100%" fill="white"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#526879"/></marker></defs>
+<path d="M 350 92.0 L 290 92.0" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="275.2" y="37" width="89.60000000000001" height="16" fill="white"/>
+<text x="320.0" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">observation_id</text>
+<path d="M 560 92.0 L 620 92.0" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="558.0" y="37" width="64.0" height="16" fill="white"/>
+<text x="590.0" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">subject_id</text>
+<path d="M 455.0 124 L 185.0 230" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="272.0" y="159.0" width="96.0" height="16" fill="white"/>
+<text x="320.0" y="170.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">source_asset_id</text>
+<path d="M 455.0 124 L 455.0 230" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="407.0" y="159.0" width="96.0" height="16" fill="white"/>
+<text x="455.0" y="170.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">time_context_id</text>
+<path d="M 455.0 124 L 725.0 230" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="558.0" y="159.0" width="64.0" height="16" fill="white"/>
+<text x="590.0" y="170.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">mapping_id</text>
+<path d="M 185.0 400 L 455.0 124" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="234.8" y="339" width="70.4" height="16" fill="white"/>
+<text x="270" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">revision_id</text>
+<path d="M 290 432.0 L 350 432.0" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="300.8" y="377" width="38.400000000000006" height="16" fill="white"/>
+<text x="320.0" y="388" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">run_id</text>
+<path d="M 725.0 294 L 725.0 400" stroke="#526879" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<rect x="689.8" y="329.0" width="70.4" height="16" fill="white"/>
+<text x="725.0" y="340.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40515f">quantity_id</text>
+<rect x="80" y="60" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="185.0" y="97.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">observation</text>
+<rect x="350" y="60" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="455.0" y="97.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">observation_revision</text>
+<rect x="620" y="60" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="725.0" y="97.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">subject</text>
+<rect x="80" y="230" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="185.0" y="267.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">source_asset</text>
+<rect x="350" y="230" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="455.0" y="267.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">time_context</text>
+<rect x="620" y="230" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="725.0" y="267.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">field_mapping</text>
+<rect x="80" y="400" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="185.0" y="437.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">derivation_input</text>
+<rect x="350" y="400" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="455.0" y="437.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">derivation_run</text>
+<rect x="620" y="400" width="210" height="64" rx="7" fill="#f3f6f8" stroke="#183e54" stroke-width="1.4"/>
+<text x="725.0" y="437.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#142d3d">quantity_definition</text>
+</svg>

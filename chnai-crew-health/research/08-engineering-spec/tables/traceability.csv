@@ -1,0 +1,11 @@
+ID,Evidence,Indicator / input,Storage,Processing,Interface,Test cases,Gate
+TR01,N01 V1 4003,Q01 / A01,observation_revision; baseline_selection; derivation_input,Exact decimal ratio; qualify context before comparison,UI02-03,DEV01-12,G03; G04
+TR02,N02 privacy and delayed communication,Purpose-limited packet,care_relationship; handoff_packet; packet_item,Release permission/hash recheck and transactional outbox,UI08-10,DEV24-29,G05; G10
+TR03,N03 simulation and automation responsibility,Mode and ownership,mission; job; model_run; follow_up,Separate automation status and next human actor,UI01; UI07; UI12,DEV23; DEV33-36,G07; G08
+TR04,N05 retained CBC files,Q08-Q09 / A02,source_asset; field_mapping; quality_issue,Quarantine incompatible source-unit metadata,UI03; UI11,DEV13; DEV14,G04
+TR05,D01 retained ACTES files,Q04; Q06-Q07 / A03,subject_namespace; time_context; object_manifest,"Retain youth research identity, missingness and irregular timing",UI11,DEV15; DEV19,G04
+TR06,D02 retained Sleep-EDF pair,Q10 / A04,object_manifest; signal_descriptor,Preserve waveforms/calibration and separate annotations,UI11,DEV16,G04
+TR07,C01-C03 device access distinctions,A05-A07,device_session; ingest_batch; time_context,"Flight API gap, optional vendor gateway and explicit emulation",UI11-12,DEV17-20; DEV31,G11 optional
+TR08,P01/P02 durable review,A01 / A10,review_episode; action_record; follow_up,Save/recover accountability; no false completion after retry,UI04-07,DEV21; DEV22; DEV30; DEV36,G05
+TR09,N04 multi-domain scope,Q11-Q17,Extension contracts only,Unassessed domains visible; no unsupported scores,UI01-02,DEV07; manual coverage review,G01; G03
+TR10,P03 AI evaluation protocol,Qualified findings only,derivation_run; job; model_run,Local explanation validator and deterministic fallback,UI02; UI12,DEV23; DEV33-35; existing 40 AI cards,G08; G09

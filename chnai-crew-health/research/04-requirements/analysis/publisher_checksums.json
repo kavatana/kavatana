@@ -1,0 +1,58 @@
+[
+  {
+    "dataset": "cycle-exercise",
+    "file": "LICENSE.txt",
+    "actual": "86c0ad300f6d380591298bc03652e30b81f65954bbf22435812bcfd46812ab06",
+    "expected": "86c0ad300f6d380591298bc03652e30b81f65954bbf22435812bcfd46812ab06",
+    "match": true
+  },
+  {
+    "dataset": "cycle-exercise",
+    "file": "medical_screening_questionnaire.pdf",
+    "actual": "e55d0366fd9925baf2f8e38129406bf559eab2e6083fe4b55d38a4986d97bde8",
+    "expected": "e55d0366fd9925baf2f8e38129406bf559eab2e6083fe4b55d38a4986d97bde8",
+    "match": true
+  },
+  {
+    "dataset": "cycle-exercise",
+    "file": "subject-info.csv",
+    "actual": "5ac7cdd41d9112c48121998f19927318bd6dc2241ead97a6baa5e9ae8b60c203",
+    "expected": "5ac7cdd41d9112c48121998f19927318bd6dc2241ead97a6baa5e9ae8b60c203",
+    "match": true
+  },
+  {
+    "dataset": "cycle-exercise",
+    "file": "test_measure.csv",
+    "actual": "14a9df027caf00ee1dc39f1493e708c27a7da88794ff69a59442326ef7aa0516",
+    "expected": "14a9df027caf00ee1dc39f1493e708c27a7da88794ff69a59442326ef7aa0516",
+    "match": true
+  },
+  {
+    "dataset": "sleep-edf",
+    "file": "ST-subjects.xls",
+    "actual": "b377133e03897559e3e9fa8ef468f4505becaecebe1bc0c988d39a9158267758",
+    "expected": "b377133e03897559e3e9fa8ef468f4505becaecebe1bc0c988d39a9158267758",
+    "match": true
+  },
+  {
+    "dataset": "sleep-edf",
+    "file": "RECORDS",
+    "actual": "444cb5be68f22dfcc1a4114e6b8b8f99319e28ce7cdd130750d75109b1408286",
+    "expected": "444cb5be68f22dfcc1a4114e6b8b8f99319e28ce7cdd130750d75109b1408286",
+    "match": true
+  },
+  {
+    "dataset": "sleep-edf",
+    "file": "ST7011J0-PSG.edf",
+    "actual": "6f14ca2c42184c5114e2d220d91c4f0d7bc627fb53f6760c4c9997272cf4319b",
+    "expected": "6f14ca2c42184c5114e2d220d91c4f0d7bc627fb53f6760c4c9997272cf4319b",
+    "match": true
+  },
+  {
+    "dataset": "sleep-edf",
+    "file": "ST7011JP-Hypnogram.edf",
+    "actual": "e4c8dcc87611e3daa559f633b43d51b47e0ba6ad1f246fc9af3327e4e4e885a8",
+    "expected": "e4c8dcc87611e3daa559f633b43d51b47e0ba6ad1f246fc9af3327e4e4e885a8",
+    "match": true
+  }
+]
