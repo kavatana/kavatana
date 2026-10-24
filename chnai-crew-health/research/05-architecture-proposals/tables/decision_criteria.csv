@@ -1,9 +1,0 @@
-Criterion,Requirement,What counts as evidence,Current conclusion
-Earth-independent core,Core records/evidence/actions work after offline cold start,G02/G05 observed on actual packaged host,Local node recommended; not tested
-Correct meaning,"Identity, quantity, unit, method, time basis and revision survive ingestion",G04 fixtures and reviewer-approved mappings,Typed adapter boundary required
-Durable actions,Acknowledged save survives tested interruptions; jobs/packets recover,G05 fault injection and restore report,Transactional owner/outbox required
-Accountable automation,A model cannot authorize clinical actions or exports,G08/G10 adversarial and access tests,Bounded model tasks plus backend policy
-Hardware fit,"Memory, CPU/GPU, latency, power and viewport match actual equipment",G02/G07/G09 measurements,Unknown; no best-runtime claim
-Team delivery,One complete episode can be explained and maintained by the actual team,Demonstrated framework/parser familiarity and implementation trial during eligible period,Default is provisional; no invented familiarity score
-Recoverable operation,Versioned evidence/model/data and tested restoration/rollback,G05/G12 manifests and recovery reports,Separate release/record/file boundaries
-Source and license suitability,"Permitted acquisition, redistribution and model use for the exact artifact","Rights register, publisher license and release BOM",Open software licenses checked; final artifact audit pending
