@@ -26,6 +26,7 @@
 ### Now
 
 - Running **CHNAI LAB** — owned products first, client builds second
+- Preparing for [**NASA Space Apps 2026**](https://www.spaceappschallenge.org/2026/) with **CHNAI LAB** — open-data research and team planning
 - **Year 1 Software Engineering**, BELTEI International University
 - Web systems and digital project support, **Angkor Byte**
 
